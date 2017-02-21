@@ -29,7 +29,7 @@ var configWebpack = {
 gulp.task('copyHTML', function() {
   return gulp.src('./app/index.html')
   .pipe(gulp.dest(dest))
-  .pipe(livereload());
+  .pipe(plugins.livereload());
 });
 
 gulp.task('webpack', function() {
