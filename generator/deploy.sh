@@ -2,13 +2,13 @@
 set -e # exit with nonzero exit code if anything fails
 
 # clear and re-create the out directory
-rm -rf ../dist || exit 0;
+rm -rf dist || exit 0;
 
 # run our compile script, discussed above
-./compile.sh
+./generator/compile.sh
 
 # go to the out directory and create a *new* Git repo
-cd ../dist
+cd dist
 git init
 
 # inside this git repo we'll pretend to be a new user
@@ -17,7 +17,7 @@ git config user.email "thibault.theologien@insa-rouen.fr"
 
 # The first and only commit to this new Git repo contains all the
 # files present with the commit message "Deploy to GitHub Pages".
-git add .
+git add *
 git commit -m "Deploy"
 
 # Force push from the current repo's master branch to the remote
