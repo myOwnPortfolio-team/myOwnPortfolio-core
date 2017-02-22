@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e # exit with nonzero exit code if anything fails
 
+echo https://MacBootglass:${GH_TOKEN}@${GH_REF}
+
 # clear and re-create the out directory
 rm -rf dist || exit 0;
 
@@ -24,4 +26,4 @@ git commit -m "Deploy"
 # repo's gh-pages branch. (All previous history on the gh-pages branch
 # will be lost, since we are overwriting it.) We redirect any output to
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
-git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master > /dev/null 2>&1
+git push -fq "https://${GH_TOKEN}@${GH_REF}"
