@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e # exit with nonzero exit code if anything fails
 
-echo "https://MacBootglass:${GH_TOKEN}@${GH_REF}"
-
 # clear and re-create the out directory
 rm -rf dist || exit 0;
 
@@ -11,8 +9,7 @@ rm -rf dist || exit 0;
 
 # go to the out directory and create a *new* Git repo
 cd dist
-ls
-git init
+sudo git init
 
 # inside this git repo we'll pretend to be a new user
 git config user.name "MacBootglass"
