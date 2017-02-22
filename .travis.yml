@@ -1,7 +1,11 @@
 sudo: required
 services:
   - docker
-script: chmod ugo+x ./generator/*.sh && bash ./generator/deploy.sh
+script:
+  - chmod ugo+x ./generator/*.sh
+  - bash ./generator/compile.sh
+after_success:
+  - bash ./generator/deploy.sh
 env:
   global:
     - GH_REF: github.com/MacBootglass/MacBootglass.github.io.git
