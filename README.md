@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/MacBootglass/myOwnPortfolio.svg?branch=master)](https://travis-ci.org/MacBootglass/myOwnPortfolio)
 
 ## Description du projet
-Permet la création et le déploiement rapide d'un portfolio personnalisé.
+Permet la création et le déploiement rapide d'un portfolio personnalisé et multilingue.
 
 Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de rendu possible.
 
@@ -28,6 +28,10 @@ TODO
  - [ ] [skills](./modules/skills)
  - [ ] [map](./modules/map)
  - [ ] [listing](./modules/listing)
+ - [ ] [forkmeongithub](./modules/forkmeongithub)
+ - [ ] [downloader](./modules/downloader)
+
+__NOTE__: _Pour plus de détails sur le fonctionnement de ces modules, merci de consulter le fichier README.md présent dans chacun des répertoires des modules._
 
 ## Utilisation:
 
