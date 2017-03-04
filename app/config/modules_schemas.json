@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "modules_list",
+  "description": "liste des modules utilisés au sein de l'application",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "description": "nom du module",
+        "type": "string"
+      },
+
+      "module_path": {
+        "description": "emplacement du module",
+        "type": "string"
+      },
+
+      "content_path": {
+        "description": "emplacement du contenu textuel",
+        "type": "string"
+      },
+
+      "style_path": {
+        "description": "emplacement du style",
+        "type": "string"
+      }
+    },
+    "minItems": 1,
+    "uniqueItems": true,
+    "required": ["name", "module_path"]
+  },
+  "required": ["modules_list"]
+}

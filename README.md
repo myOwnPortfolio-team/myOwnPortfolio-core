@@ -52,7 +52,6 @@ $ bash ./generator/local/exec.sh # à lancer depuis la racine du projet
 - [Redux]()
 - [Express.js]()
 - [Docker]()
-- [Docker-compose]()
 - [Gulp]()
 - [GitFlow]()
 - [Travis]()
