@@ -1,3 +1,4 @@
-FROM macbootglass/compile_porfolio
+FROM macbootglass/compile_portfolio
 MAINTAINER thibault.theologien@insa-rouen.fr
-CMD npm -v
+EXPOSE 3000
+CMD cd project && node ./tools/node/express.js
