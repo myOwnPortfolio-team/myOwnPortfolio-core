@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 script:
-  - chmod ugo+x ./generator/travis/*.sh
+  - chmod ugo+x ./tools/travis/*.sh
   - bash ./tools/travis/compile.sh
 after_success:
   - bash ./tools/travis/deploy.sh
