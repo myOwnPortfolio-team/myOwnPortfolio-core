@@ -15,7 +15,7 @@ var configWebpack = {
     loaders : [
       {
         test : /\.jsx?/,
-        include : path.resolve(__dirname, 'app/classes'),
+        include : path.resolve(__dirname, 'app'),
         loader : 'babel'
       },
       {
@@ -33,7 +33,7 @@ gulp.task('copyHTML', function() {
 });
 
 gulp.task('webpack', function() {
-  return gulp.src('./app/classes/index.jsx')
+  return gulp.src('./app/index.jsx')
   .pipe(plugins.webpack(configWebpack))
   .pipe(gulp.dest(dest + '/script'))
   .pipe(plugins.livereload());
