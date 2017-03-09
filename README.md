@@ -27,24 +27,37 @@ _Diagramme de package:_
 
 
 ## Fonctionnement et déploiement du projet
-Le répertoire `myOwnPortfolio/app/modules_config` contient l'ensemble de la configuration des modules du site, et donc du site en lui même.
-C'est dans le fichier `myOwnPortfolio/app/modules_config/modules_config.json` que sont spécifiés tous les modules utilisées, ainsi que les liens vers leurs fichiers de configuration.
+Le répertoire [myOwnPortfolio/app/config](./app/config) contient l'ensemble de la configuration des modules du site, et donc du site en lui même.
+C'est dans le fichier [myOwnPortfolio/app/config/modules_list.json](./app/config/modules_list.json) que sont spécifiés tous les modules utilisées, ainsi que les liens vers leurs fichiers de configuration.
 
 Il est important de noter que tous les fichiers JSON utilisées doivent répondre à un schéma JSON prédéfini (utilisation des normes [suivantes](http://json-schema.org/examples.html)). Vous pouvez en consulter la liste [ici](./doc/json-schemas).
 
 Afin de compiler le projet, il est nécéssaire d'exécuter depuis la racine du projet les commandes suivantes:
+- Si docker est installé sur votre machine
 ```bash
 $ bash ./tools/local/create_containers.sh # afin de créer les différents containers docker utilisés
 $ bash ./tools/local/compile.sh # afin de lancer le container docker de compilation
 ```
+- Si npm, gulp, sass et json-sass sont installés sur votre machine:
+```bash
+$ npm install
+$ gulp
+```
+
 Un répertoire `myOwnPortfolio/dist` contenant l'ensemble des fichiers du site généré.
+
 Plusieurs options sont maintenant possibles:
 - déployer cette archive sur [github pages](https://pages.github.com)
 - déployer cette archive sur un serveur web personnel
-- lancer le site web en local :
-```bash
-$ bash ./tools/local/exec.sh # à lancer depuis la racine du projet
-```
+- lancer le site web en local (localhost:3000):
+  - Si docker est installé sur votre machine:
+  ```bash
+  $ bash tools/local/exec.sh
+  ```
+  - Si nodejs est installé sur votre machine:
+  ```bash
+  $ node tools/node/express.js
+  ```
 
 
 ## Principales technologies et librairies utilisées
