@@ -3,9 +3,9 @@ services:
   - docker
 script:
   - chmod ugo+x ./generator/travis/*.sh
-  - bash ./generator/travis/compile.sh
+  - bash ./tools/travis/compile.sh
 after_success:
-  - bash ./generator/travis/deploy.sh
+  - bash ./tools/travis/deploy.sh
 env:
   global:
     - GH_REF: github.com/MacBootglass/MacBootglass.github.io.git

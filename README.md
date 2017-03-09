@@ -34,8 +34,8 @@ Il est important de noter que tous les fichiers JSON utilisées doivent répondr
 
 Afin de compiler le projet, il est nécéssaire d'exécuter depuis la racine du projet les commandes suivantes:
 ```bash
-$ bash ./generator/local/create_containers.sh # afin de créer les différents containers docker utilisés
-$ bash ./generator/local/compile.sh # afin de lancer le container docker de compilation
+$ bash ./tools/local/create_containers.sh # afin de créer les différents containers docker utilisés
+$ bash ./tools/local/compile.sh # afin de lancer le container docker de compilation
 ```
 Un répertoire `myOwnPortfolio/dist` contenant l'ensemble des fichiers du site généré.
 Plusieurs options sont maintenant possibles:
@@ -43,7 +43,7 @@ Plusieurs options sont maintenant possibles:
 - déployer cette archive sur un serveur web personnel
 - lancer le site web en local :
 ```bash
-$ bash ./generator/local/exec.sh # à lancer depuis la racine du projet
+$ bash ./tools/local/exec.sh # à lancer depuis la racine du projet
 ```
 
 
