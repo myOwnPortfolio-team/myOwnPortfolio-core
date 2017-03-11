@@ -22,7 +22,7 @@
         "type": "string"
       }
     },
-    "required": ["name", "module_path", "content_path"]
+    "required": ["name", "module_path"]
   },
   "minItems": 1,
   "uniqueItems": true

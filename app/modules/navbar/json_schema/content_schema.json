@@ -1,6 +1,6 @@
 {
-  "title": "module_navbar_schema",
-  "description": "schema du module navbar",
+  "title": "module_navbar-content_schema",
+  "description": "schema du contenu textuel du module navbar",
   "type": "object",
   "properties": {
     "title": {
