@@ -18,15 +18,32 @@ module.exports = React.createClass({
     if (!valid) {
       return (
         <div>
-          <h1>INVALID JSON ENTRY</h1>
+          <h1>INVALID JSON ENTRY (CONTENT.JSON)</h1>
           <span>{JSON.stringify(ajv.errors)}</span> <br/>
-          <span>Check the JSON-Schemas</span>
+          <span>JSON_SCHEMA:</span><br/>
+          <span>{JSON.stringify(content_schema)}</span><br/>
+          <span>THE JSON FILE:</span><br/>
+          <span>{JSON.stringify(this.props.content)}</span><br/>
+        </div>
+      );
+    }
+
+    valid = ajv.validate(style_schema, this.props.style);
+    if (!valid) {
+      return (
+        <div>
+          <h1>INVALID JSON ENTRY (STYLE.JSON)</h1>
+          <span>{JSON.stringify(ajv.errors)}</span> <br/>
+          <span>JSON_SCHEMA:</span><br/>
+          <span>{JSON.stringify(style_schema)}</span><br/>
+          <span>THE JSON FILE:</span><br/>
+          <span>{JSON.stringify(this.props.style)}</span><br/>
         </div>
       );
     }
 
     return (
-      <div>
+      <div style={this.props.style}>
         {this.props.content.title}
       </div>
     );
