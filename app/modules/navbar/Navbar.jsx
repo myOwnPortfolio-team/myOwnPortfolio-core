@@ -1,7 +1,7 @@
 import React from 'react';
 import Ajv from 'ajv';
 
-const Navbar = React.createClass({
+module.exports = React.createClass({
   getDefaultProps: function() {
     return({
       content_path: "./content.json",
@@ -9,9 +9,11 @@ const Navbar = React.createClass({
   },
 
   render: function() {
-    let data = require(this.props.content_path);
+    //let data = require(this.props.content_path);
+    var data = {
+      "title": "test",
+    }
     let schema = require("./content_schema.json");
-
     let ajv = new Ajv();
     let valid = ajv.validate(schema, data);
     if (!valid) {
@@ -24,6 +26,6 @@ const Navbar = React.createClass({
       );
     }
 
-    return (<div>{data.title}</div>);
+    return (<div>{data.title} YEAH</div>);
   }
-})
+});
