@@ -14,7 +14,7 @@ var configWebpack = {
   module : {
     loaders : [
       {
-        test : /\.jsx?/,
+        test : /\.jsx?$/,
         include : path.resolve(__dirname, 'app'),
         loader : 'babel'
       },
