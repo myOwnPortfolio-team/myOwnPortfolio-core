@@ -3,10 +3,10 @@
   "description": "schema du style du module navbar",
   "type": "object",
   "properties": {
-    "background-color": {
+    "backgroundColor": {
       "description": "propriété CSS du même nom",
       "type": "string"
     }
   },
-  "required": ["background-color"]
+  "required": ["backgroundColor"]
 }
