@@ -18,7 +18,7 @@ for (var i = 0; i < data.length; i++) {
       "name": "' + data[i].name + '", \n\
       "module": require("' + data[i].module_path + '"), \n';
 
-  if (data[i].content_path !== "") {
+  if (data[i].content_path !== undefined && data[i].content_path !== "") {
     content += '\
       "content": require("' + data[i].content_path + '"), \n';
   }
