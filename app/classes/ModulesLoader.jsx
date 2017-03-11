@@ -13,6 +13,10 @@ module.exports = React.createClass({
       );
     });
 
-    return (<div> {modules_list} </div>);
+    return (
+      <div>
+        {modules_list}
+      </div>
+   );
   }
 });
