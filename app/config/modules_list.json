@@ -3,8 +3,8 @@
     {
       "name": "navbar",
       "module_path": "../modules/navbar/Navbar.jsx",
-      "content_path": "./content.json",
-      "style_path": ""
+      "content_path": "../modules/navbar/content.json",
+      "style_path": "../modules/navbar/style.json"
     },
     {
       "name": "test",
