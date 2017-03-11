@@ -9,37 +9,32 @@ module.exports = React.createClass({
     });
   },
 
-  render: function() {
-    let content_schema = require("./json_schema/content_schema.json");
-    let style_schema = require("./json_schema/style_schema.json")
+  errors: function(schema, data, errors){
+    return (
+      <div>
+        <h1>INVALID JSON ENTRY</h1>
+        <span>{JSON.stringify(errors)}</span><br/><br/>
 
+        <h2>JSON_SCHEMA:</h2>
+        <span>{JSON.stringify(schema)}</span><br/><br/>
+
+        <h2>THE JSON FILE:</h2>
+        <span>{JSON.stringify(data)}</span><br/>
+      </div>
+    );
+  },
+
+  render: function() {
     let ajv = new Ajv();
-    let valid = ajv.validate(content_schema, this.props.content);
-    if (!valid) {
-      return (
-        <div>
-          <h1>INVALID JSON ENTRY (CONTENT.JSON)</h1>
-          <span>{JSON.stringify(ajv.errors)}</span> <br/>
-          <span>JSON_SCHEMA:</span><br/>
-          <span>{JSON.stringify(content_schema)}</span><br/>
-          <span>THE JSON FILE:</span><br/>
-          <span>{JSON.stringify(this.props.content)}</span><br/>
-        </div>
-      );
+    let content_schema = require("./json_schema/content_schema.json");
+    let style_schema = require("./json_schema/style_schema.json");
+
+    if (!ajv.validate(content_schema, this.props.content)) {
+      return this.errors(content_schema, this.props.content, ajv.errors);
     }
 
-    valid = ajv.validate(style_schema, this.props.style);
-    if (!valid) {
-      return (
-        <div>
-          <h1>INVALID JSON ENTRY (STYLE.JSON)</h1>
-          <span>{JSON.stringify(ajv.errors)}</span> <br/>
-          <span>JSON_SCHEMA:</span><br/>
-          <span>{JSON.stringify(style_schema)}</span><br/>
-          <span>THE JSON FILE:</span><br/>
-          <span>{JSON.stringify(this.props.style)}</span><br/>
-        </div>
-      );
+    if (!ajv.validate(style_schema, this.props.style)) {
+      return this.errors(style_schema, this.props.style, ajv.errors);
     }
 
     return (
