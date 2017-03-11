@@ -1,15 +1,15 @@
 {
   "modules_list": [
     {
-      "name": "module1",
-      "module_path": "",
-      "content_path": "",
+      "name": "navbar",
+      "module_path": "../modules/navbar/Navbar.jsx",
+      "content_path": "./content.json",
       "style_path": ""
     },
     {
-      "name": "module2",
-      "module_path": "",
-      "content_path": "",
+      "name": "test",
+      "module_path": "../classes/Test.jsx",
+      "content_path": "../../modules/navbar/content.json",
       "style_path": ""
     }
   ]
