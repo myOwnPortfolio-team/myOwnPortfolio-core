@@ -9,21 +9,6 @@ if (!valid) {
   return console.log(JSON.stringify(ajv.errors));
 }
 
-var file = 'module.exports = {\n\
-  "modules_list": [\n\
-    {\n\
-      "name": "navbar",\n\
-      "component": require("../modules/navbar/Navbar.jsx"),\n\
-      "content": require("../modules/navbar/content.json")\n\
-    },\n\
-    {\n\
-      "name": "test",\n\
-      "component": require("../classes/Test.jsx"),\n\
-      "content": ""\n\
-    }\n\
-  ]\n\
-}';
-
 var content = 'module.exports = { \n\
   "modules_list": [\n';
 
