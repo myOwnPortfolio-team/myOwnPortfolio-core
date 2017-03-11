@@ -4,8 +4,8 @@ import Ajv from 'ajv';
 module.exports = React.createClass({
   getDefaultProps: function() {
     return({
-      content: require('./content.json'),
-      style: require('./style.json'),
+      content: require('./json_config/content.json'),
+      style: require('./json_config/style.json'),
     });
   },
 
@@ -26,8 +26,8 @@ module.exports = React.createClass({
 
   render: function() {
     let ajv = new Ajv();
-    let content_schema = require("./json_schema/content_schema.json");
-    let style_schema = require("./json_schema/style_schema.json");
+    let content_schema = require("./json_schema/content.json");
+    let style_schema = require("./json_schema/style.json");
 
     if (!ajv.validate(content_schema, this.props.content)) {
       return this.errors(content_schema, this.props.content, ajv.errors);
