@@ -8,7 +8,7 @@ module.exports = React.createClass({
       let Module = data.component;
       return (
         <Component id={"module_" + data.name} key={data.name}>
-          <Module content={data.content} />
+          <Module content={data.module} />
         </Component>
       );
     });

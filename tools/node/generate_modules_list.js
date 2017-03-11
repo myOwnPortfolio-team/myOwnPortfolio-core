@@ -14,11 +14,30 @@ var content = 'module.exports = { \n\
 
 for (var i = 0; i < data.length; i++) {
   content += '\
-  { \n\
-    "name": "' + data[i].name + '", \n\
-    "component": require("' + data[i].module_path + '"), \n\
-    "content": "' + data[i].content_path + '" \n\
-  }';
+    { \n\
+      "name": "' + data[i].name + '", \n\
+      "module": require("' + data[i].module_path + '"), \n';
+
+  if (data[i].content_path !== "") {
+    content += '\
+      "content": require("' + data[i].content_path + '"), \n';
+  }
+  else {
+    content += '\
+      "content": "' + data[i].content_path + '", \n';
+  }
+
+  if (data[i].style_path !== undefined && data[i].style_path !== "") {
+    content += '\
+      "style": require("' + data[i].style_path + '") \n';
+  }
+  else {
+    content += '\
+      "style": "' + data[i].style_path + '" \n';
+  }
+
+  content += '\
+    }';
   if (i < data.length - 1) {
     content += ',';
   }

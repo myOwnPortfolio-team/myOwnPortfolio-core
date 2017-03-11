@@ -9,7 +9,7 @@
     {
       "name": "test",
       "module_path": "../classes/Test.jsx",
-      "content_path": "../../modules/navbar/content.json",
+      "content_path": "",
       "style_path": ""
     }
   ]
