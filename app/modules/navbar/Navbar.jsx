@@ -29,6 +29,14 @@ module.exports = React.createClass({
     let content_schema = require("./json_schema/content.json");
     let style_schema = require("./json_schema/style.json");
 
+    if (this.props.content === "") {
+      this.props.content = require('./json_config/content.json');
+    }
+
+    if (this.props.style === "") {
+      this.props.style = require('./json_config/style.json');
+    }
+
     if (!ajv.validate(content_schema, this.props.content)) {
       return this.errors(content_schema, this.props.content, ajv.errors);
     }

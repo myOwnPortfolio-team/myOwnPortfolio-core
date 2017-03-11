@@ -3,14 +3,11 @@
     {
       "name": "navbar",
       "module_path": "../modules/navbar/Navbar.jsx",
-      "content_path": "../modules/navbar/json_config/content.json",
-      "style_path": "../modules/navbar/json_config/style.json"
+      "style_path": "../config/style/navbar.json"
     },
     {
-      "name": "test",
-      "module_path": "../classes/Test.jsx",
-      "content_path": "",
-      "style_path": ""
+      "name": "navbar2",
+      "module_path": "../modules/navbar/Navbar.jsx"
     }
   ]
 }
