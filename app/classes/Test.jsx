@@ -5,12 +5,3 @@ module.exports = React.createClass({
     return(<div>Module de test</div>)
   }
 });
-//
-// export default Test;
-// class Test extends React.Component {
-//   render() {
-//     return <div>Module de test</div>;
-//   }
-// }
-
-// export default Test;
