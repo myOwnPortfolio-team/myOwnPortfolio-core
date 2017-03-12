@@ -1,8 +1,7 @@
 import React from 'react';
 import Component from './Component.jsx';
-var modules = require('../config/import.js').modules_list;
 
-console.log(modules);
+const modules = require('../config/import.js').modules_list;
 
 module.exports = React.createClass({
   render: function() {
