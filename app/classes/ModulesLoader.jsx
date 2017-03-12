@@ -18,7 +18,7 @@ module.exports = React.createClass({
       return (
         <Module
           id={"module_" + data.name}
-          key={data.name}
+          key={"module" + data.name}
           content={data.content}
           style={data.style}
           properties={properties}
