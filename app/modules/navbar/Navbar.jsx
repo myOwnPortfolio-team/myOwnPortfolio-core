@@ -12,7 +12,7 @@ module.exports = React.createClass({
       properties: {
         "id_list": [],
         "name_list": [],
-        "id_unreferenced": [],
+        "name_unreferenced": [],
       },
     }
   },
@@ -41,8 +41,8 @@ module.exports = React.createClass({
     }
 
     let links = this.props.properties.id_list.map((id, pos) => {
-      if (id !== this.props.id) {
-        return (<a href={"#"+id}>{this.props.properties.name_list[pos]}</a>)
+      if (id !== this.props.id && !Toolbox.is_name_unreferenced(this.props.properties.name_unreferenced, this.props.properties.name_list[pos])) {
+        return (<a href={"#"+id}> {this.props.properties.name_list[pos]} </a>)
       }
     });
 

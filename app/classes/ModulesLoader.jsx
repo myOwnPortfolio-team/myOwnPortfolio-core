@@ -8,7 +8,7 @@ module.exports = React.createClass({
     let properties = {
       "id_list" : [],
       "name_list": [],
-      "id_unreferenced": [],
+      "name_unreferenced": ["test2","test3"],
     };
     let modules_list = modules.map((data) => {
       let Module = data.module;
