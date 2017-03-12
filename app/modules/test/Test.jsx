@@ -5,7 +5,7 @@ module.exports = React.createClass({
     return(
       <div
         id={this.props.id}
-        style={{marginTop: "500"}}
+        style={{marginTop: 500}}
       >
         Module de test
       </div>
