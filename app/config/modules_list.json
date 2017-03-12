@@ -6,8 +6,24 @@
       "style_path": "../config/style/navbar.json"
     },
     {
-      "name": "navbar2",
-      "module_path": "../modules/navbar/Navbar.jsx"
+      "name": "module_test1",
+      "module_path": "../modules/test/Test.jsx"
+    },
+    {
+      "name": "module_test2",
+      "module_path": "../modules/test/Test.jsx"
+    },
+    {
+      "name": "module_test3",
+      "module_path": "../modules/test/Test.jsx"
+    },
+    {
+      "name": "module_test4",
+      "module_path": "../modules/test/Test.jsx"
+    },
+    {
+      "name": "module_test5",
+      "module_path": "../modules/test/Test.jsx"
     }
   ]
 }
