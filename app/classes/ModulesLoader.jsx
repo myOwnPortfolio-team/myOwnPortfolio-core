@@ -6,22 +6,23 @@ const modules = require('../config/import.js').modules_list;
 module.exports = React.createClass({
   render: function() {
     let properties = {
-      "ids" : [],
+      "id_list" : [],
+      "name_list": [],
+      "id_unreferenced": [],
     };
     let modules_list = modules.map((data) => {
       let Module = data.module;
-      properties.ids.push("module_"+data.name);
+      properties.id_list.push("module_"+data.name);
+      properties.name_list.push(data.name);
+
       return (
-        <Component
+        <Module
           id={"module_" + data.name}
           key={data.name}
-        >
-          <Module
-            content={data.content}
-            style={data.style}
-            properties={properties.ids}
-          />
-        </Component>
+          content={data.content}
+          style={data.style}
+          properties={properties}
+        />
       );
     });
     return (
