@@ -2,6 +2,8 @@ import React from 'react';
 import Component from './Component.jsx';
 var modules = require('../config/import.js').modules_list;
 
+console.log(modules);
+
 module.exports = React.createClass({
   render: function() {
     let modules_list = modules.map((data) => {

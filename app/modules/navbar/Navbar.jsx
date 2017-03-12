@@ -28,26 +28,31 @@ module.exports = React.createClass({
     let ajv = new Ajv();
     let content_schema = require("./json_schema/content.json");
     let style_schema = require("./json_schema/style.json");
+    let content = this.props.content;
+    let style = this.props.style;
 
-    if (this.props.content === "") {
-      this.props.content = require('./json_config/content.json');
+    if (content === "none") {
+      content = require('./json_config/content.json');
     }
 
-    if (this.props.style === "") {
-      this.props.style = require('./json_config/style.json');
+    if (style === "none") {
+      style = require('./json_config/style.json');
     }
 
-    if (!ajv.validate(content_schema, this.props.content)) {
-      return this.errors(content_schema, this.props.content, ajv.errors);
+    console.log(content);
+    console.log(style);
+
+    if (!ajv.validate(content_schema, content)) {
+      return this.errors(content_schema, content, ajv.errors);
     }
 
-    if (!ajv.validate(style_schema, this.props.style)) {
-      return this.errors(style_schema, this.props.style, ajv.errors);
+    if (!ajv.validate(style_schema, style)) {
+      return this.errors(style_schema, style, ajv.errors);
     }
 
     return (
-      <div style={this.props.style}>
-        {this.props.content.title}
+      <div style={style}>
+        {content.title}
       </div>
     );
   }

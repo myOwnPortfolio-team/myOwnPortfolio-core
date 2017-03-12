@@ -24,7 +24,7 @@ for (var i = 0; i < data.length; i++) {
   }
   else {
     content += '\
-      "content": "' + data[i].content_path + '", \n';
+      "content": "none", \n';
   }
 
   if (data[i].style_path !== undefined && data[i].style_path !== "") {
@@ -33,7 +33,7 @@ for (var i = 0; i < data.length; i++) {
   }
   else {
     content += '\
-      "style": "' + data[i].style_path + '" \n';
+      "style": "none" \n';
   }
 
   content += '\
