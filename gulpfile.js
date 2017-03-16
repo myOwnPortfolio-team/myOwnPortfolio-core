@@ -5,7 +5,7 @@ var plugins = require('gulp-load-plugins')();
 plugins.sass = require('gulp-ruby-sass');
 plugins.webpack = require('webpack-stream');
 
-var src = './modules/*'
+var src = './app'
 var dest = './dist';
 var configWebpack = {
   output: {
@@ -27,30 +27,30 @@ var configWebpack = {
 };
 
 gulp.task('copyHTML', function() {
-  return gulp.src('./app/index.html')
+  return gulp.src(src + '/index.html')
   .pipe(gulp.dest(dest))
   .pipe(plugins.livereload());
 });
 
 gulp.task('webpack', function() {
-  return gulp.src('./app/index.jsx')
+  return gulp.src(src + '/index.jsx')
   .pipe(plugins.webpack(configWebpack))
   .pipe(gulp.dest(dest + '/script'))
   .pipe(plugins.livereload());
 });
 
-// gulp.task('compileCSS', () =>
-//     sass(source + '/ressources/styles/index.scss', {
-//       sourcemap: false,
-//       require: ["sass-json-vars"]
-//     })
-//     .on('error', sass.logError)
-//     .pipe(plugins.csscomb())
-//     .pipe(plugins.cssbeautify({indent: '  '}))
-//     .pipe(plugins.autoprefixer())
-//     .pipe(gulp.dest(destination + '/ressources/styles/'))
-//     .pipe(livereload())
-// );
+gulp.task('compileCSS', () =>
+    plugins.sass(src + '/style/index.scss', {
+      sourcemap: false,
+      require: ["sass-json-vars"]
+    })
+    .on('error', plugins.sass.logError)
+    .pipe(plugins.csscomb())
+    .pipe(plugins.cssbeautify({indent: '  '}))
+    .pipe(plugins.autoprefixer())
+    .pipe(gulp.dest(dest + '/css/'))
+    .pipe(plugins.livereload())
+);
 
 
 
