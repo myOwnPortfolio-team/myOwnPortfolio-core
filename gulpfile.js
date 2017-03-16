@@ -48,39 +48,30 @@ gulp.task('compileCSS', () =>
     .pipe(plugins.csscomb())
     .pipe(plugins.cssbeautify({indent: '  '}))
     .pipe(plugins.autoprefixer())
-    .pipe(gulp.dest(dest + '/css/'))
+    .pipe(gulp.dest(dest + '/style/'))
     .pipe(plugins.livereload())
 );
 
 
 
 gulp.task('minifyCSS', function () {
-  return gulp.src(dest + '/css/index.css')
+  return gulp.src(dest + '/style/index.css')
     .pipe(plugins.csso())
     .pipe(plugins.rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(dest + '/css/'));
+    .pipe(gulp.dest(dest + '/style/'));
 });
 
 
-// gulp.task('minifyJS', function() {
-//   return gulp.src(destination + '/ressources/scripts/bundle.js')
-//     .pipe(plugins.uglify())
-//     .pipe(plugins.rename({
-//       suffix: '.min'
-//     }))
-//     .pipe(gulp.dest(destination + '/ressources/scripts/'));
-// });
-
-
-// gulp.task('minifyHTML', function() {
-//   return gulp.src(destination + '/index.html')
-//     .pipe(plugins.htmlmin({collapseWhitespace: true}))
-//     .pipe(gulp.dest(destination + '/'));
-// });
-
-
+gulp.task('minifyJS', function() {
+  return gulp.src(dest + '/script/bundle.js')
+    .pipe(plugins.uglify())
+    .pipe(plugins.rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(dest + '/script/'));
+});
 
 
 // gulp.task('watch', function () {
@@ -98,8 +89,7 @@ gulp.task('minifyCSS', function () {
 // });
 
 
-gulp.task('build', ['webpack', 'copyHTML']);
-// gulp.task('build', ['webpack', 'compileCSS', 'copyHTML']);
-// gulp.task('minify', ['minifyCSS', 'minifyJS', 'minifyHTML']);
-// gulp.task('prod', ['build',  'minify']);
+gulp.task('build', ['webpack', 'compileCSS', 'copyHTML']);
+gulp.task('minify', ['minifyCSS', 'minifyJS']);
+gulp.task('prod', ['build',  'minify']);
 gulp.task('default', ['build']);
