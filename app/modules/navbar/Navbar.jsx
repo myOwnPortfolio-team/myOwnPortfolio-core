@@ -56,10 +56,13 @@ module.exports = React.createClass({
 
     return (
       <nav className="navbar navbar-toggleable-md navbar-light bg-faded fixed-top container">
+        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
         <a className="navbar-brand" href="#">{content.title}</a>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-          {links}
+            {links}
           </div>
         </div>
       </nav>

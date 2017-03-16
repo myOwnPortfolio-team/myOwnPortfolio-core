@@ -26,7 +26,7 @@ module.exports = React.createClass({
       );
     });
     return (
-      <div>
+      <div className="container">
         {modules_list}
       </div>
    );

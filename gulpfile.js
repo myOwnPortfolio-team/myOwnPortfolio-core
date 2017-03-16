@@ -11,8 +11,8 @@ var configWebpack = {
   output: {
     filename: 'bundle.js'
   },
-  module : {
-    loaders : [
+  module: {
+    loaders: [
       {
         test : /\.jsx?$/,
         include : path.resolve(__dirname, 'app'),
@@ -52,8 +52,6 @@ gulp.task('compileCSS', () =>
     .pipe(plugins.livereload())
 );
 
-
-
 gulp.task('minifyCSS', function () {
   return gulp.src(dest + '/style/index.css')
     .pipe(plugins.csso())
@@ -62,7 +60,6 @@ gulp.task('minifyCSS', function () {
     }))
     .pipe(gulp.dest(dest + '/style/'));
 });
-
 
 gulp.task('minifyJS', function() {
   return gulp.src(dest + '/script/bundle.js')
@@ -73,6 +70,14 @@ gulp.task('minifyJS', function() {
     .pipe(gulp.dest(dest + '/script/'));
 });
 
+gulp.task('dependancies', function() {
+  gulp.src("node_modules/bootstrap/dist/js/bootstrap.min.js")
+    .pipe(gulp.dest(dest + ("/script")));
+  gulp.src("node_modules/jquery/dist/jquery.min.js")
+    .pipe(gulp.dest(dest + ("/script")));
+  gulp.src("node_modules/tether/dist/js/tether.min.js")
+    .pipe(gulp.dest(dest + ("/script")));
+});
 
 gulp.task('watch', function () {
   plugins.livereload.listen();
@@ -90,8 +95,7 @@ gulp.task('watch', function () {
   gulp.watch(src + '/index.html',  ['copyHTML']);
 });
 
-
-gulp.task('build', ['webpack', 'compileCSS', 'copyHTML']);
+gulp.task('build', ['webpack', 'compileCSS', 'copyHTML', 'dependancies']);
 gulp.task('minify', ['minifyCSS', 'minifyJS']);
 gulp.task('prod', ['build',  'minify']);
 gulp.task('default', ['build']);
