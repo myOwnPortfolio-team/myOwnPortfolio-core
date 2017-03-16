@@ -74,19 +74,21 @@ gulp.task('minifyJS', function() {
 });
 
 
-// gulp.task('watch', function () {
-//   livereload.listen();
-//   gulp.watch(source + '/ressources/styles/*.scss', ['compileCSS']);
-//   gulp.watch(source + '/ressources/styles/*/*.scss', ['compileCSS']);
-//   gulp.watch(source + '/ressources/styles/*/*/*.scss', ['compileCSS']);
-//   gulp.watch(source + '/ressources/app/*.js', ['webpack']);
-//   gulp.watch(source + '/ressources/app/*/*.js', ['webpack']);
-//   gulp.watch(source + '/ressources/app/*/*/*.js', ['webpack']);
-//   gulp.watch(source + '/ressources/app/*.jsx', ['webpack']);
-//   gulp.watch(source + '/ressources/data/*.json',  ['webpack']);
-//   gulp.watch(source + '/ressources/data/*/*.json',  ['webpack']);
-//   gulp.watch(source + '/index.html',  ['copyHTML']);
-// });
+gulp.task('watch', function () {
+  plugins.livereload.listen();
+
+  gulp.watch(src + '/style/*/*.scss', ['compileCSS']);
+  gulp.watch(src + '/style/*.scss', ['compileCSS']);
+
+  gulp.watch(src + '/modules/*/*.jsx', ['webpack']);
+  gulp.watch(src + '/classes/*.jsx', ['webpack']);
+  gulp.watch(src + '/*.jsx', ['webpack']);
+
+  gulp.watch(src + '/config/*.json',  ['webpack']);
+  gulp.watch(src + '/config/*/*.json',  ['webpack']);
+
+  gulp.watch(src + '/index.html',  ['copyHTML']);
+});
 
 
 gulp.task('build', ['webpack', 'compileCSS', 'copyHTML']);
