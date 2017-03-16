@@ -46,6 +46,7 @@ module.exports = React.createClass({
           <a
             key={"link_to_" + id}
             href={"#"+id}
+            className="nav-item nav-link"
           >
             {this.props.properties.name_list[pos]}
           </a>
@@ -54,13 +55,14 @@ module.exports = React.createClass({
     });
 
     return (
-      <div
-        id={this.props.id}
-        style={style}
-      >
-        {content.title}
-        {links}
-      </div>
+      <nav className="navbar navbar-toggleable-md navbar-light bg-faded fixed-top container">
+        <a className="navbar-brand" href="#">{content.title}</a>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+          {links}
+          </div>
+        </div>
+      </nav>
     );
   }
 });
