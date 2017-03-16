@@ -54,14 +54,14 @@ gulp.task('compileCSS', () =>
 
 
 
-// gulp.task('minifyCSS', function () {
-//   return gulp.src(destination + '/ressources/styles/index.css')
-//     .pipe(plugins.csso())
-//     .pipe(plugins.rename({
-//       suffix: '.min'
-//     }))
-//     .pipe(gulp.dest(destination + '/ressources/styles/'));
-// });
+gulp.task('minifyCSS', function () {
+  return gulp.src(dest + '/css/index.css')
+    .pipe(plugins.csso())
+    .pipe(plugins.rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(dest + '/css/'));
+});
 
 
 // gulp.task('minifyJS', function() {
