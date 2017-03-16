@@ -77,8 +77,6 @@ gulp.task('dependancies', function() {
     .pipe(gulp.dest(dest + ("/script")));
   gulp.src("node_modules/tether/dist/js/tether.min.js")
     .pipe(gulp.dest(dest + ("/script")));
-  gulp.src("node_modules/aos/dist/aos.js")
-    .pipe(gulp.dest(dest + ("/script")));
 });
 
 gulp.task('watch', function () {

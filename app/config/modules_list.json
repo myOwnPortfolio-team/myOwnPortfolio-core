@@ -6,6 +6,10 @@
       "style_path": "../config/style/navbar.json"
     },
     {
+      "name": "home",
+      "module_path": "../modules/home/Home.jsx"
+    },
+    {
       "name": "test1",
       "module_path": "../modules/test/Test.jsx"
     },
