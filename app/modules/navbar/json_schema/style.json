@@ -1,0 +1,12 @@
+{
+  "title": "module_navbar-style_schema",
+  "description": "schema du style du module navbar",
+  "type": "object",
+  "properties": {
+    "backgroundColor": {
+      "description": "propriété CSS du même nom",
+      "type": "string"
+    }
+  },
+  "required": ["backgroundColor"]
+}

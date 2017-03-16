@@ -1,17 +1,34 @@
 import React from 'react';
-import Ajv from 'ajv';
+import Component from './Component.jsx';
 
-const ModulesLoader = React.createClass({
+const modules = require('../config/import.js').modules_list;
+
+module.exports = React.createClass({
   render: function() {
-    let data = require("../config/modules_list.json").modules_list;
-    let schema = require("../config/modules_schemas.json");
+    let properties = {
+      "id_list" : [],
+      "name_list": [],
+      "name_unreferenced": ["test2","test3"],
+    };
+    let modules_list = modules.map((data) => {
+      let Module = data.module;
+      properties.id_list.push("module_"+data.name);
+      properties.name_list.push(data.name);
 
-    let ajv = new Ajv();
-    let valid = ajv.validate(schema, data);
-    if (!valid) console.log(ajv.errors);
-
-    return (<div>Hello World</div>);
+      return (
+        <Module
+          id={"module_" + data.name}
+          key={"module" + data.name}
+          content={data.content}
+          style={data.style}
+          properties={properties}
+        />
+      );
+    });
+    return (
+      <div className="container">
+        {modules_list}
+      </div>
+   );
   }
-})
-
-export default ModulesLoader;
+});

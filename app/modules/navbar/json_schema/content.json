@@ -1,0 +1,12 @@
+{
+  "title": "module_navbar-content_schema",
+  "description": "schema du contenu textuel du module navbar",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "titre de la barre de navigation",
+      "type": "string"
+    }
+  },
+  "required": ["title"]
+}

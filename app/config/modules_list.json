@@ -1,16 +1,33 @@
 {
   "modules_list": [
     {
-      "name": "module1",
-      "module_path": "",
-      "content_path": "",
-      "style_path": ""
+      "name": "navbar",
+      "module_path": "../modules/navbar/Navbar.jsx",
+      "style_path": "../config/style/navbar.json"
     },
     {
-      "name": "module2",
-      "module_path": "",
-      "content_path": "",
-      "style_path": ""
+      "name": "home",
+      "module_path": "../modules/home/Home.jsx"
+    },
+    {
+      "name": "test1",
+      "module_path": "../modules/test/Test.jsx"
+    },
+    {
+      "name": "test2",
+      "module_path": "../modules/test/Test.jsx"
+    },
+    {
+      "name": "test3",
+      "module_path": "../modules/test/Test.jsx"
+    },
+    {
+      "name": "test4",
+      "module_path": "../modules/test/Test.jsx"
+    },
+    {
+      "name": "test5",
+      "module_path": "../modules/test/Test.jsx"
     }
   ]
 }
