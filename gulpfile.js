@@ -2,11 +2,25 @@ var path = require('path');
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
+plugins.exec = require('gulp-exec');
 plugins.sass = require('gulp-ruby-sass');
 plugins.webpack = require('webpack-stream');
 
 var src = './app'
 var dest = './dist';
+
+var execOptions = {
+  continueOnError: false, // default = false, true means don't emit error event
+  pipeStdout: false, // default = false, true means stdout is written to file.contents
+  customTemplatingThing: "test" // content passed to gutil.template()
+};
+
+var execReportOptions = {
+  err: true, // default = true, false means don't write err
+  stderr: true, // default = true, false means don't write stderr
+  stdout: true // default = true, false means don't write stdout
+};
+
 var configWebpack = {
   output: {
     filename: 'bundle.js'
@@ -70,6 +84,18 @@ gulp.task('minifyJS', function() {
     .pipe(gulp.dest(dest + '/script/'));
 });
 
+gulp.task('generateModulesList', function() {
+  return gulp.src('./tools/node/generate_modules_list.js')
+    .pipe(plugins.exec('node <%= file.path %>', execOptions))
+    .pipe(plugins.exec.reporter(execReportOptions));
+});
+
+gulp.task('serverStart', function() {
+  return gulp.src('./tools/node/express.js')
+    .pipe(plugins.exec('node <%= file.path %>', execOptions))
+    .pipe(plugins.exec.reporter(execReportOptions));
+});
+
 gulp.task('dependancies', function() {
   gulp.src("node_modules/bootstrap/dist/js/bootstrap.min.js")
     .pipe(gulp.dest(dest + ("/script")));
@@ -95,7 +121,8 @@ gulp.task('watch', function () {
   gulp.watch(src + '/index.html',  ['copyHTML']);
 });
 
-gulp.task('build', ['webpack', 'compileCSS', 'copyHTML', 'dependancies']);
+gulp.task('build', ['generateModulesList', 'webpack', 'compileCSS', 'copyHTML', 'dependancies']);
+gulp.task('buildAndStart', ['build', 'serverStart']);
 gulp.task('minify', ['minifyCSS', 'minifyJS']);
 gulp.task('prod', ['build',  'minify']);
 gulp.task('default', ['build']);
