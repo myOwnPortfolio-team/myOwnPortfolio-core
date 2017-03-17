@@ -87,7 +87,8 @@ gulp.task('minifyJS', function() {
 gulp.task('generateModulesList', function() {
   return gulp.src('./tools/node/generate_modules_list.js')
     .pipe(plugins.exec('node <%= file.path %>', execOptions))
-    .pipe(plugins.exec.reporter(execReportOptions));
+    .pipe(plugins.exec.reporter(execReportOptions))
+    .pipe(plugins.livereload());
 });
 
 gulp.task('serverStart', function() {
@@ -115,7 +116,7 @@ gulp.task('watch', function () {
   gulp.watch(src + '/classes/*.jsx', ['webpack']);
   gulp.watch(src + '/*.jsx', ['webpack']);
 
-  gulp.watch(src + '/config/*.json',  ['webpack']);
+  gulp.watch(src + '/config/*.json',  ['generateModulesList', 'webpack']);
   gulp.watch(src + '/config/*/*.json',  ['webpack']);
 
   gulp.watch(src + '/index.html',  ['copyHTML']);
