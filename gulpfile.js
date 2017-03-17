@@ -116,14 +116,14 @@ gulp.task('watch', function () {
   gulp.watch(src + '/classes/*.jsx', ['webpack']);
   gulp.watch(src + '/*.jsx', ['webpack']);
 
-  gulp.watch(src + '/config/*.json',  ['generateModulesList', 'webpack']);
+  gulp.watch(src + '/config/*.json',  plugins.sequence('generateModulesList', 'webpack'));
   gulp.watch(src + '/config/*/*.json',  ['webpack']);
 
   gulp.watch(src + '/index.html',  ['copyHTML']);
 });
 
-gulp.task('build', ['generateModulesList', 'webpack', 'compileCSS', 'copyHTML', 'dependancies']);
+gulp.task('build', plugins.sequence('generateModulesList', 'webpack', ['compileCSS', 'copyHTML', 'dependancies']));
 gulp.task('dev', ['build', 'serverStart', 'watch']);
 gulp.task('minify', ['minifyCSS', 'minifyJS']);
-gulp.task('prod', ['build',  'minify']);
+gulp.task('prod', plugins.sequence('build',  'minify'));
 gulp.task('default', ['build']);
