@@ -122,7 +122,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('build', ['generateModulesList', 'webpack', 'compileCSS', 'copyHTML', 'dependancies']);
-gulp.task('buildAndStart', ['build', 'serverStart']);
+gulp.task('dev', ['build', 'serverStart', 'watch']);
 gulp.task('minify', ['minifyCSS', 'minifyJS']);
 gulp.task('prod', ['build',  'minify']);
 gulp.task('default', ['build']);
