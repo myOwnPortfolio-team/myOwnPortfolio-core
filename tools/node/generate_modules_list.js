@@ -1,3 +1,5 @@
+const Ajv = require('ajv');
+
 const main = function() {
   const data = require("../../app/config/modules_list.json").modules_list;
   const schema = require("../../app/config/modules_schema.json");
@@ -8,7 +10,7 @@ const main = function() {
   var importSCSS = '';
 
   for (var i = 0; i < data.length; i++) {
-    importJS += makeJS(data[i], i < data.length - 1);
+    importJS += makeJS(data[i], i === data.length - 1);
     importSCSS += makeSCSS(data[i]);
   }
 
@@ -16,17 +18,17 @@ const main = function() {
     ]\n\
   }';
 
-  writeFile(importJS, importSCSS);
+  writeFiles(importJS, importSCSS);
 }
 
 
 const validateJSON = function(jsonData, jsonSchema) {
-  var Ajv = require('ajv');
   var ajv = new Ajv();
   var valid = ajv.validate(jsonSchema, jsonData);
 
   if (!valid) {
-    return console.log(JSON.stringify(ajv.errors));
+    console.log(JSON.stringify(ajv.errors));
+    process.exit();
   }
 }
 
@@ -65,6 +67,7 @@ const makeJS = function(data, isTheLast) {
   return importJS;
 }
 
+
 const makeSCSS = function(data) {
   if (data.style_path !== undefined && data.style_path !== "") {
     return '@import "' + data.style_path + '";\n';
@@ -74,29 +77,40 @@ const makeSCSS = function(data) {
   }
 }
 
-const writeFile = function(importJS, importSCSS){
+
+const writeFiles = function(importJS, importSCSS){
   let fs = require('fs');
 
   fs.writeFile("./app/config/import.js", importJS, function(err) {
     if(err) {
-      return console.log(err);
+      console.log(err);
+      process.exit();
     }
     console.log("Script import.js généré");
   });
 
   fs.writeFile("./app/config/import.scss", importSCSS, function(err) {
     if(err) {
-      return console.log(err);
+      console.log(err);
+      process.exit();
     }
     console.log("Fichier import.scss généré");
   });
 }
 
+
 const makeStylePath = function(module_path) {
-  var firstPart = "../modules/";
-  var style_path = module_path.substring(firstPart.length);
-  style_path = style_path.substring(0, style_path.indexOf("/"));
-  return firstPart + style_path + "/style/json_config.json";
+  var first_part = "../modules/";
+  var app_path = "../../app/modules/";
+  var module_name = module_path.substring(first_part.length);
+  module_name = module_name.substring(0, module_name.indexOf("/"));
+  style_path = module_name + "/json_config/style.json";
+  schema_path = module_name + "/json_schema/style.json"
+
+  validateJSON(require(app_path + style_path), require(app_path + schema_path));
+
+  return first_part + style_path;
 }
+
 
 main();
