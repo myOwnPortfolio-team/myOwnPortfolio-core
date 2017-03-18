@@ -5,13 +5,10 @@
   "properties": {
     "module_navbar_height": {
       "type": "string"
-    }
-  },
-  "properties": {
+    },
     "module_navbar_background_color": {
       "type": "string"
     },
-  "properties": {
     "module_navbar_font_color": {
       "type": "string"
     }
