@@ -111,6 +111,7 @@ gulp.task('watch', function () {
 
   gulp.watch(src + '/style/*/*.scss', ['compileCSS']);
   gulp.watch(src + '/style/*.scss', ['compileCSS']);
+  gulp.watch(src + '/modules/*/style.scss', ['compileCSS']);
 
   gulp.watch(src + '/modules/*/*.jsx', ['webpack']);
   gulp.watch(src + '/classes/*.jsx', ['webpack']);
@@ -118,6 +119,7 @@ gulp.task('watch', function () {
 
   gulp.watch(src + '/config/*.json',  plugins.sequence('generateModulesList', 'webpack'));
   gulp.watch(src + '/config/*/*.json',  ['webpack']);
+  gulp.watch(src + '/modules/*/*.json',  ['webpack']);
 
   gulp.watch(src + '/index.html',  ['copyHTML']);
 });
