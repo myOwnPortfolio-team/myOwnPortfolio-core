@@ -1,1 +1,5 @@
-@import "./requirements/import.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/aos/src/sass/aos.scss";
+@import "../config/import.scss";
+@import "./mixins.scss";
+@import ".variables.scss";
