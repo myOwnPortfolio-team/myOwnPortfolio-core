@@ -63,10 +63,10 @@ const makeSCSS = function(data) {
   let first_part = "../modules/";
   let importSCSS = '@import "' + first_part + getModuleName(data.module_path, first_part) + '/style.scss";\n'
   if (data.style_path !== undefined && data.style_path !== "") {
-    return importSCSS + '@import "' + data.style_path + '";\n';
+    return '@import "' + data.style_path + '";\n' + importSCSS;
   }
   else {
-    return importSCSS + '@import "' + makeStylePath(data.module_path, first_part) + '";\n'
+    return '@import "' + makeStylePath(data.module_path, first_part) + '";\n' + importSCSS
   }
 }
 

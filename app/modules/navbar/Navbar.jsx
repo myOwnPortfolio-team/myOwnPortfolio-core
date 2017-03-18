@@ -44,7 +44,7 @@ module.exports = React.createClass({
     });
 
     return (
-      <nav className="navbar navbar-toggleable-md navbar-light bg-faded fixed-top container">
+      <nav className="navbar navbar-toggleable-md navbar-light bg-faded module_navbar container">
         <button
           className="navbar-toggler navbar-toggler-right"
           type="button"

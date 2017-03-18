@@ -119,7 +119,9 @@ gulp.task('watch', function () {
 
   gulp.watch(src + '/config/*.json',  plugins.sequence('generateModulesList', 'webpack'));
   gulp.watch(src + '/config/*/*.json',  ['webpack']);
-  gulp.watch(src + '/modules/*/*.json',  ['webpack']);
+  gulp.watch(src + '/modules/*/*.json',  ['webpack', 'compileCSS']);
+
+  gulp.watch('./tools/node/*.js', ['generateModulesList']);
 
   gulp.watch(src + '/index.html',  ['copyHTML']);
 });
