@@ -28,7 +28,7 @@ const validateJSON = function(jsonData, jsonSchema) {
 
   if (!valid) {
     console.log(JSON.stringify(ajv.errors));
-    process.exit();
+    process.exit(1);
   }
 }
 
@@ -46,15 +46,6 @@ const makeJS = function(data, isTheLast) {
   else {
     importJS += '\
       "content": "none", \n';
-  }
-
-  if (data.style_path !== undefined && data.style_path !== "") {
-    importJS += '\
-      "style": require("' + data.style_path + '") \n';
-  }
-  else {
-    importJS += '\
-      "style": "none" \n';
   }
 
   importJS += '\
@@ -84,7 +75,7 @@ const writeFiles = function(importJS, importSCSS){
   fs.writeFile("./app/config/import.js", importJS, function(err) {
     if(err) {
       console.log(err);
-      process.exit();
+      process.exit(1);
     }
     console.log("Script import.js généré");
   });
@@ -92,20 +83,39 @@ const writeFiles = function(importJS, importSCSS){
   fs.writeFile("./app/config/import.scss", importSCSS, function(err) {
     if(err) {
       console.log(err);
-      process.exit();
+      process.exit(1);
     }
     console.log("Fichier import.scss généré");
   });
 }
 
 
+const getModuleName = function(module_path, first_part) {
+  let module_name = module_path.substring(first_part.length);
+  return module_name.substring(0, module_name.indexOf("/"));
+}
+
+
 const makeStylePath = function(module_path) {
-  var first_part = "../modules/";
-  var app_path = "../../app/modules/";
-  var module_name = module_path.substring(first_part.length);
-  module_name = module_name.substring(0, module_name.indexOf("/"));
-  style_path = module_name + "/json_config/style.json";
-  schema_path = module_name + "/json_schema/style.json"
+  let first_part = "../modules/";
+  let app_path = "../../app/modules/";
+  let module_name = getModuleName(module_path, first_part);
+  let style_path = module_name + "/json_config/style.json";
+  let schema_path = module_name + "/json_schema/style.json"
+
+  validateJSON(require(app_path + style_path), require(app_path + schema_path));
+
+  return first_part + style_path;
+}
+
+
+
+const makeContentPath = function(module_path) {
+  let first_part = "../modules/";
+  let app_path = "../../app/modules/";
+  let module_name = getModuleName(module_path, first_part);
+  let style_path = module_name + "/json_config/style.json";
+  let schema_path = module_name + "/json_schema/style.json"
 
   validateJSON(require(app_path + style_path), require(app_path + schema_path));
 
