@@ -20,6 +20,10 @@
       "style_path": {
         "description": "emplacement du style",
         "type": "string"
+      },
+      "properties_path": {
+        "description": "emplacement des propriétés",
+        "type": "string"
       }
     },
     "required": ["name", "module_path"]

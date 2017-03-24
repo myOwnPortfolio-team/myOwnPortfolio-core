@@ -1,4 +1,4 @@
-# myOwnPortfolio
+# myOwnPortfolio (WORK IN PROGRESS)
 [![Build Status](https://travis-ci.org/MacBootglass/myOwnPortfolio.svg?branch=master)](https://travis-ci.org/MacBootglass/myOwnPortfolio)
 
 ## Description du projet

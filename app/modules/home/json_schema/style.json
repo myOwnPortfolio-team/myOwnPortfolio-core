@@ -1,0 +1,11 @@
+{
+  "title": "module_home-style_schema",
+  "description": "schema du style du module home",
+  "type": "object",
+  "properties": {
+    "none": {
+      "description": "",
+      "type": "string"
+    }
+  }
+}

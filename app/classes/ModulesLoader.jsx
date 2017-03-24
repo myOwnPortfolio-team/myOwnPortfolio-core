@@ -1,5 +1,4 @@
 import React from 'react';
-import Component from './Component.jsx';
 
 const modules = require('../config/import.js').modules_list;
 
@@ -8,7 +7,7 @@ module.exports = React.createClass({
     let properties = {
       "id_list" : [],
       "name_list": [],
-      "name_unreferenced": ["test2","test3"],
+      "name_unreferenced": [],
     };
     let modules_list = modules.map((data) => {
       let Module = data.module;
@@ -20,13 +19,12 @@ module.exports = React.createClass({
           id={"module_" + data.name}
           key={"module" + data.name}
           content={data.content}
-          style={data.style}
           properties={properties}
         />
       );
     });
     return (
-      <div className="container">
+      <div className="module_loader">
         {modules_list}
       </div>
    );

@@ -1,14 +1,16 @@
 import React from 'react';
 import Ajv from 'ajv';
+import Headroom from 'headroom.js';
 
-var Toolbox = require('../../classes/Toolbox.jsx');
+import Toolbox from '../../classes/Toolbox.jsx';
+
+const RANDOM_ID = "randomId" + parseInt(Math.random() * 10000);
 
 module.exports = React.createClass({
   getDefaultProps: function() {
     return {
       id: "navbar",
       content: "none",
-      style: "none",
       properties: {
         "id_list": [],
         "name_list": [],
@@ -17,27 +19,22 @@ module.exports = React.createClass({
     }
   },
 
+  componentDidMount: function() {
+    var headroom = new Headroom(document.getElementById(RANDOM_ID));
+    headroom.init();
+  },
+
   render: function() {
     let ajv = new Ajv();
     let content_schema = require("./json_schema/content.json");
-    let style_schema = require("./json_schema/style.json");
     let content = this.props.content;
-    let style = this.props.style;
 
     if (content === "none") {
       content = require('./json_config/content.json');
     }
 
-    if (style === "none") {
-      style = require('./json_config/style.json');
-    }
-
     if (!ajv.validate(content_schema, content)) {
       return Toolbox.json_validation_error(content_schema, content, ajv.errors);
-    }
-
-    if (!ajv.validate(style_schema, style)) {
-      return Toolbox.json_validation_error(style_schema, style, ajv.errors);
     }
 
     let links = this.props.properties.id_list.map((id, pos) => {
@@ -55,12 +52,23 @@ module.exports = React.createClass({
     });
 
     return (
-      <nav className="navbar navbar-toggleable-md navbar-light bg-faded fixed-top container">
-        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <nav id={RANDOM_ID} className="navbar navbar-toggleable-md navbar-light bg-faded fixed-top module_navbar">
+        <button
+          className="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
         <a className="navbar-brand" href="#">{content.title}</a>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div
+          className="collapse navbar-collapse"
+          id="navbarResponsive"
+        >
           <div className="navbar-nav">
             {links}
           </div>

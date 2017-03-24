@@ -3,10 +3,15 @@
   "description": "schema du style du module navbar",
   "type": "object",
   "properties": {
-    "backgroundColor": {
-      "description": "propriété CSS du même nom",
+    "module_navbar_height": {
+      "type": "string"
+    },
+    "module_navbar_background_color": {
+      "type": "string"
+    },
+    "module_navbar_font_color": {
       "type": "string"
     }
   },
-  "required": ["backgroundColor"]
+  "required": ["module_navbar_height", "module_navbar_background_color", "module_navbar_font_color"]
 }

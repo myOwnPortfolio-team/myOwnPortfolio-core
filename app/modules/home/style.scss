@@ -1,0 +1,49 @@
+$module_home_content_padding: 20%;
+$module_home_profile_picture_height: 200px;
+
+.module_home {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.module_home_content {
+  height: 100%;
+}
+
+.module_home_content::before {
+  height: $module_home_content_padding;
+  content: "";
+  display: block;
+}
+
+.module_home_content::after {
+  height: $module_home_content_padding;
+  content: "";
+  display: block;
+}
+
+.module_home_profile_picture {
+  width: $module_home_profile_picture_height;
+  height: $module_home_profile_picture_height;
+  border-radius: $module_home_profile_picture_height;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  @include shadowBox($gray);
+}
+
+.module_home_typewriter {
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.module_home_background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
