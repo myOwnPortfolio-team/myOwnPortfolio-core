@@ -110,7 +110,6 @@ const makeStylePath = function(module_path, first_part) {
 }
 
 
-
 const makeContentPath = function(module_path) {
   let first_part = "../modules/";
   let app_path = "../../app/modules/";

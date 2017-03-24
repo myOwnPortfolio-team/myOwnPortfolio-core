@@ -3,7 +3,7 @@ import Component from './Component.jsx';
 
 const modules = require('../config/import.js').modules_list;
 
-module.exports = React.createClass({
+module.exports = React.createClass({  
   render: function() {
     let properties = {
       "id_list" : [],
