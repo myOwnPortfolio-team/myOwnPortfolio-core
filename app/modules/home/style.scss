@@ -1,71 +1,44 @@
+$module_home_content_padding: 20%;
+$module_home_profile_picture_height: 200px;
+
 .module_home {
   height: 100%;
   width: 100%;
   text-align: center;
 }
 
-.module_home_info {
-  height: 90%;
+.module_home_content {
+  height: 100%;
 }
 
-.module_home_info::before {
-  height: 15%;
+.module_home_content::before {
+  height: $module_home_content_padding;
   content: "";
   display: block;
 }
 
-.module_home_info::after {
-  height: 15%;
+.module_home_content::after {
+  height: $module_home_content_padding;
   content: "";
   display: block;
 }
-
-
-
-.module_home_title {
-  font-size: 80px;
-  font-weight: bold;
-  display: block;
-}
-
-.module_home_title::after {
-  height: 10%;
-  content: "";
-  display: block;
-}
-
-
-
-.module_home_username {
-  font-size: 40px;
-  font-style: italic;
-  display: block;
-}
-
-.module_home_username::before {
-  height: 10%;
-  content: "";
-  display: block;
-}
-
-
 
 .module_home_profile_picture {
-  width: 200px;
-  height: 200px;
-  border-radius: 200px;
+  width: $module_home_profile_picture_height;
+  height: $module_home_profile_picture_height;
+  border-radius: $module_home_profile_picture_height;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  @include shadowBox($gray);
 }
 
-
-.module_info_next {
-  height: 10%;
-  font-size: 40px;
-  color: black;
+.module_home_typewriter {
+  margin-top: 50px;
+  font-size: 25px;
 }
 
-
-
-.background {
+.module_home_background {
   height: 100%;
   width: 100%;
   position: absolute;

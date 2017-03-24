@@ -4,7 +4,7 @@ import Particles from 'particlesjs';
 module.exports = React.createClass({
   componentDidMount: function() {
     Particles.init({
-      selector: '.background',
+      selector: '.module_home_background',
       color: this.props.color,
       maxParticles:	this.props.maxParticles,
       sizeVariations:	this.props.sizeVariations,
@@ -29,7 +29,7 @@ module.exports = React.createClass({
 
   render: function() {
     return(
-      <canvas className="background" />
+      <canvas className="module_home_background" />
     );
   }
 });
