@@ -112,6 +112,7 @@ gulp.task('watch', function () {
   gulp.watch(src + '/style/*/*.scss', ['compileCSS']);
   gulp.watch(src + '/style/*.scss', ['compileCSS']);
   gulp.watch(src + '/modules/*/style.scss', ['compileCSS']);
+  gulp.watch(src + '/modules/*/json_config/style.json', ['compileCSS']);
 
   gulp.watch(src + '/modules/*/*/*.jsx', ['webpack']);
   gulp.watch(src + '/modules/*/*.jsx', ['webpack']);

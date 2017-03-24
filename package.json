@@ -34,6 +34,7 @@
     "gulp-ruby-sass": "^2.1.1",
     "gulp-sequence": "^0.4.6",
     "gulp-uglify": "^2.0.1",
+    "headroom.js": "^0.9.3",
     "json-loader": "^0.5.4",
     "material-ui": "^0.17.0",
     "opener": "^1.4.3",

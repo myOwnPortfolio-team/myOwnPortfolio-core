@@ -1,7 +1,10 @@
 import React from 'react';
 import Ajv from 'ajv';
+import Headroom from 'headroom.js';
 
-var Toolbox = require('../../classes/Toolbox.jsx');
+import Toolbox from '../../classes/Toolbox.jsx';
+
+const RANDOM_ID = "randomId" + parseInt(Math.random() * 10000);
 
 module.exports = React.createClass({
   getDefaultProps: function() {
@@ -14,6 +17,11 @@ module.exports = React.createClass({
         "name_unreferenced": [],
       },
     }
+  },
+
+  componentDidMount: function() {
+    var headroom = new Headroom(document.getElementById(RANDOM_ID));
+    headroom.init();
   },
 
   render: function() {
@@ -44,7 +52,7 @@ module.exports = React.createClass({
     });
 
     return (
-      <nav className="navbar navbar-toggleable-md navbar-light bg-faded fixed-top container module_navbar">
+      <nav id={RANDOM_ID} className="navbar navbar-toggleable-md navbar-light bg-faded fixed-top module_navbar">
         <button
           className="navbar-toggler navbar-toggler-right"
           type="button"
