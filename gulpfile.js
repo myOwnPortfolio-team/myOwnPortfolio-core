@@ -113,6 +113,7 @@ gulp.task('watch', function () {
   gulp.watch(src + '/style/*.scss', ['compileCSS']);
   gulp.watch(src + '/modules/*/style.scss', ['compileCSS']);
 
+  gulp.watch(src + '/modules/*/*/*.jsx', ['webpack']);
   gulp.watch(src + '/modules/*/*.jsx', ['webpack']);
   gulp.watch(src + '/classes/*.jsx', ['webpack']);
   gulp.watch(src + '/*.jsx', ['webpack']);
