@@ -8,7 +8,7 @@ const relative_module_path = "./modules/";
 const main = function() {
   const data = require("../../app/config/modules_list.json").modules_list;
   const schema = require("../../app/config/modules_schema.json");
-  validateJSON(data, schema);
+  validateJSON(schema, data);
 
   var importJS = 'module.exports = { \n\
     "modules_list": [\n';
@@ -27,12 +27,12 @@ const main = function() {
 }
 
 
-const validateJSON = function(jsonData, jsonSchema) {
+const validateJSON = function(jsonSchema, jsonData) {
   var ajv = new Ajv();
   var valid = ajv.validate(jsonSchema, jsonData);
 
   if (!valid) {
-    throw new Error(JSON.stringify(ajv.errors));
+    throw new Error(jsonSchema.title + "\n" + JSON.stringify(ajv.errors));
   }
 }
 
