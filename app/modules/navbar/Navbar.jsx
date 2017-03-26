@@ -35,8 +35,8 @@ module.exports = React.createClass({
         return (
           <a
             key={"link_to_" + id}
+            className="module_navbar_link"
             href={"#"+id}
-            className="nav-item nav-link"
           >
             {this.props.links.name_list[pos]}
           </a>
@@ -45,26 +45,17 @@ module.exports = React.createClass({
     });
 
     return (
-      <nav id={RANDOM_ID} className="navbar navbar-toggleable-md navbar-light bg-faded fixed-top module_navbar">
-        <button
-          className="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <a className="navbar-brand" href="#">{content.title}</a>
-        <div
-          className="collapse navbar-collapse"
-          id="navbarResponsive"
-        >
-          <div className="navbar-nav">
-            {links}
-          </div>
+      <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module_navbar">
+        <div className="module_navbar_link_list">
+          {links}
+        </div>
+        <div className="module_navbar_logo_list" >
+          <a href="https://github.com/MacBootglass">
+            <img className="module_navbar_logo" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" />
+          </a>
+          <a href="https://www.linkedin.com/in/thibault-theologien/">
+            <img className="module_navbar_logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
+          </a>
         </div>
       </nav>
     );
