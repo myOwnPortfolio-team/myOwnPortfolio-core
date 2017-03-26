@@ -1,0 +1,11 @@
+{
+  "title": "module_home-properties_schema",
+  "description": "schema des propriétées du module home",
+  "type": "object",
+  "properties": {
+    "none": {
+      "type": "string"
+    }
+  },
+  "required": ["none"]
+}

@@ -30,7 +30,6 @@ module.exports = React.createClass({
       content = require('./json_config/content.json');
     }
 
-    console.log(content);
     let links = this.props.properties.id_list.map((id, pos) => {
       if (id !== this.props.id && !Toolbox.is_name_unreferenced(this.props.properties.name_unreferenced, this.props.properties.name_list[pos])) {
         return (

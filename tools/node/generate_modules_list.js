@@ -46,14 +46,15 @@ const fileExists = function(path) {
 
 
 const makeJS = function(data, isTheLast) {
-  var importJS = '\
+  let module_name = getModuleName(data.module_path);
+  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/content.json";
+  let json_data = pwd + absolute_module_path + module_name + "/json_config/content.json";
+
+  let importJS = '\
     { \n\
       "name": "' + data.name + '", \n\
       "module": require("' + data.module_path + '"), \n';
 
-  let module_name = getModuleName(data.module_path);
-  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/content.json";
-  let json_data = pwd + absolute_module_path + module_name + "/json_config/content.json";
 
   if (data.content_path !== undefined && data.content_path !== "") {
     json_data = pwd + "/app" + data.content_path.substring(1);
@@ -63,6 +64,19 @@ const makeJS = function(data, isTheLast) {
   else {
     importJS += '\
       "content": require("' + checkJSON(json_schema, json_data) + '"), \n';
+  }
+
+
+  json_schema = pwd + absolute_module_path + module_name + "/json_schema/properties.json";
+  json_data = pwd + absolute_module_path + module_name + "/json_config/properties.json";
+  if (data.properties_path !== undefined && data.properties_path !== "") {
+    json_data = pwd + "/app" + data.properties_path.substring(1);
+    importJS += '\
+      "properties": require("' + checkJSON(json_schema, json_data) + '"), \n';
+  }
+  else {
+    importJS += '\
+      "properties": require("' + checkJSON(json_schema, json_data) + '"), \n';
   }
 
   importJS += '\
