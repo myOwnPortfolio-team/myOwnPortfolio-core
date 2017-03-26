@@ -61,12 +61,14 @@ const makeJS = function(data, isTheLast) {
 
 const makeSCSS = function(data) {
   let first_part = "../modules/";
-  let importSCSS = '@import "' + first_part + getModuleName(data.module_path, first_part) + '/style.scss";\n'
+  let module_name = getModuleName(data.module_path, first_part);
+  let importSCSS = '@import "' + first_part + module_name  + '/style.scss";\n'
+
   if (data.style_path !== undefined && data.style_path !== "") {
     return '@import "' + data.style_path + '";\n' + importSCSS;
   }
   else {
-    return '@import "' + makeStylePath(data.module_path, first_part) + '";\n' + importSCSS
+    return '@import "' + makeStylePath(module_name, first_part) + '";\n' + importSCSS
   }
 }
 
@@ -98,28 +100,20 @@ const getModuleName = function(module_path, first_part) {
 }
 
 
-const makeStylePath = function(module_path, first_part) {
-  let app_path = "../../app/modules/";
-  let module_name = getModuleName(module_path, first_part);
+const makeStylePath = function(module_name, first_part) {
+  let local_path = "../../app/modules/";
   let style_path = module_name + "/json_config/style.json";
   let schema_path = module_name + "/json_schema/style.json"
 
-  validateJSON(require(app_path + style_path), require(app_path + schema_path));
+  validateJSON(require(local_path + style_path), require(local_path + schema_path));
 
   return first_part + style_path;
 }
 
 
-const makeContentPath = function(module_path) {
-  let first_part = "../modules/";
-  let app_path = "../../app/modules/";
-  let module_name = getModuleName(module_path, first_part);
-  let style_path = module_name + "/json_config/style.json";
-  let schema_path = module_name + "/json_schema/style.json"
-
-  validateJSON(require(app_path + style_path), require(app_path + schema_path));
-
-  return first_part + style_path;
+const makeContentPath = function(module_name, inapp_content_path, first_part) {
+  let local_path = "../../app/modules/";
+  // let content_path = module_name +
 }
 
 
