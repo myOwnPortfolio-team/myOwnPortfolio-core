@@ -1,0 +1,23 @@
+{
+  "background": {
+    "color": "#75A5B7",
+    "maxParticles": 100,
+    "sizeVariations": 3,
+    "speed": 0.5,
+    "minDistance": 120,
+    "connectParticles": true,
+    "responsive": []
+  },
+  "typewriter": {
+    "items": [
+      " un développeur Web ?",
+      " un développeur Java ?",
+      " peut être Thibault THEOLOGIEN !"
+    ],
+    "cursor": true,
+    "pause": 1500,
+    "emptyPause": 1000,
+    "typingInterval": 50,
+    "deletingInterval": 50
+  }
+}

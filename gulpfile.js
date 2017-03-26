@@ -54,7 +54,7 @@ gulp.task('webpack', function() {
 });
 
 gulp.task('compileCSS', () =>
-    plugins.sass(src + '/style/index.scss', {
+    plugins.sass(src + '/index.scss', {
       sourcemap: false,
       require: ["sass-json-vars"]
     })

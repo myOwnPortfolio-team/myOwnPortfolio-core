@@ -3,5 +3,5 @@
 node_modules
 .DS_Store
 dist
-app/config/import.js
-app/config/import.scss
+app/import.js
+app/import.scss

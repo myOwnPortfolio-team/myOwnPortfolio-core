@@ -1,9 +1,14 @@
 const Ajv = require('ajv');
+const fs = require('fs');
+
+const pwd = process.cwd();
+const absolute_module_path = "/app/modules/";
+const relative_module_path = "./modules/";
 
 const main = function() {
   const data = require("../../app/config/modules_list.json").modules_list;
   const schema = require("../../app/config/modules_schema.json");
-  validateJSON(data, schema);
+  validateJSON(schema, data);
 
   var importJS = 'module.exports = { \n\
     "modules_list": [\n';
@@ -22,30 +27,56 @@ const main = function() {
 }
 
 
-const validateJSON = function(jsonData, jsonSchema) {
+const validateJSON = function(jsonSchema, jsonData) {
   var ajv = new Ajv();
   var valid = ajv.validate(jsonSchema, jsonData);
 
   if (!valid) {
-    console.log(JSON.stringify(ajv.errors));
-    process.exit(1);
+    throw new Error(jsonSchema.title + "\n" + JSON.stringify(ajv.errors));
   }
 }
 
 
+const fileExists = function(path) {
+  if (fs.existsSync(path)) {
+    return true;
+  }
+  throw new Error("File " + path + " does not exist.");
+}
+
+
 const makeJS = function(data, isTheLast) {
-  var importJS = '\
+  let module_name = getModuleName(data.module_path);
+  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/content.json";
+  let json_data = pwd + absolute_module_path + module_name + "/json_config/content.json";
+
+  let importJS = '\
     { \n\
       "name": "' + data.name + '", \n\
       "module": require("' + data.module_path + '"), \n';
 
+
   if (data.content_path !== undefined && data.content_path !== "") {
+    json_data = pwd + "/app" + data.content_path.substring(1);
     importJS += '\
-      "content": require("' + data.content_path + '"), \n';
+      "content": require("' + checkJSON(json_schema, json_data) + '"), \n';
   }
   else {
     importJS += '\
-      "content": "none", \n';
+      "content": require("' + checkJSON(json_schema, json_data) + '"), \n';
+  }
+
+
+  json_schema = pwd + absolute_module_path + module_name + "/json_schema/properties.json";
+  json_data = pwd + absolute_module_path + module_name + "/json_config/properties.json";
+  if (data.properties_path !== undefined && data.properties_path !== "") {
+    json_data = pwd + "/app" + data.properties_path.substring(1);
+    importJS += '\
+      "properties": require("' + checkJSON(json_schema, json_data) + '"), \n';
+  }
+  else {
+    importJS += '\
+      "properties": require("' + checkJSON(json_schema, json_data) + '"), \n';
   }
 
   importJS += '\
@@ -60,32 +91,31 @@ const makeJS = function(data, isTheLast) {
 
 
 const makeSCSS = function(data) {
-  let first_part = "../modules/";
-  let importSCSS = '@import "' + first_part + getModuleName(data.module_path, first_part) + '/style.scss";\n'
+  let module_name = getModuleName(data.module_path);
+  let importSCSS = '@import "' + relative_module_path + module_name  + '/style.scss";\n'
+
+  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/style.json";
+  let json_data = pwd + absolute_module_path + module_name + "/json_config/style.json";
+
   if (data.style_path !== undefined && data.style_path !== "") {
-    return '@import "' + data.style_path + '";\n' + importSCSS;
+    json_data = pwd + "/app" + data.style_path.substring(1);
+    return '@import "' + checkJSON(json_schema, json_data) + '";\n' + importSCSS;
   }
-  else {
-    return '@import "' + makeStylePath(data.module_path, first_part) + '";\n' + importSCSS
-  }
+  return '@import "' + checkJSON(json_schema, json_data) + '";\n' + importSCSS
 }
 
 
 const writeFiles = function(importJS, importSCSS){
-  let fs = require('fs');
-
-  fs.writeFile("./app/config/import.js", importJS, function(err) {
+  fs.writeFile(pwd + "/app/import.js", importJS, function(err) {
     if(err) {
-      console.log(err);
-      process.exit(1);
+      throw new Error(err);
     }
     console.log("Script import.js généré");
   });
 
-  fs.writeFile("./app/config/import.scss", importSCSS, function(err) {
+  fs.writeFile(pwd + "/app/import.scss", importSCSS, function(err) {
     if(err) {
-      console.log(err);
-      process.exit(1);
+      throw new Error(err);
     }
     console.log("Fichier import.scss généré");
   });
@@ -93,34 +123,16 @@ const writeFiles = function(importJS, importSCSS){
 
 
 const getModuleName = function(module_path, first_part) {
-  let module_name = module_path.substring(first_part.length);
+  let module_name = module_path.substring(relative_module_path.length);
   return module_name.substring(0, module_name.indexOf("/"));
 }
 
 
-const makeStylePath = function(module_path, first_part) {
-  let app_path = "../../app/modules/";
-  let module_name = getModuleName(module_path, first_part);
-  let style_path = module_name + "/json_config/style.json";
-  let schema_path = module_name + "/json_schema/style.json"
-
-  validateJSON(require(app_path + style_path), require(app_path + schema_path));
-
-  return first_part + style_path;
+const checkJSON = function(json_schema, json_data) {
+  if (fileExists(json_schema) && fileExists(json_data)) {
+    validateJSON(require(json_schema), require(json_data));
+  }
+  return json_data;
 }
-
-
-const makeContentPath = function(module_path) {
-  let first_part = "../modules/";
-  let app_path = "../../app/modules/";
-  let module_name = getModuleName(module_path, first_part);
-  let style_path = module_name + "/json_config/style.json";
-  let schema_path = module_name + "/json_schema/style.json"
-
-  validateJSON(require(app_path + style_path), require(app_path + schema_path));
-
-  return first_part + style_path;
-}
-
 
 main();

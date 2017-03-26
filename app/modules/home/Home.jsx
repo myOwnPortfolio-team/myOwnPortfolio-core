@@ -5,17 +5,6 @@ import ReactRotatingText from 'react-rotating-text';
 
 
 module.exports = React.createClass({
-  getDefaultProps: function() {
-    return {
-      items: ['unItem'],
-      cursor: true,
-      pause: 1500,
-      emptyPause: 1000,
-      typingInterval: 50,
-      deletingInterval: 50,
-    }
-  },
-
   render: function() {
     return(
       <div
@@ -25,18 +14,18 @@ module.exports = React.createClass({
         <div className="module_home_content">
           <Avatar src="https://fr.gravatar.com/userimage/45448759/031c14bdffe709c881b0ed4bced8e433.jpg?size=200" />
           <div className="module_home_typewriter">
-            <span>Vous cherchez</span>
+            <span>{this.props.content.before_typewriter}</span>
             <ReactRotatingText
-              items={[' un développeur Web ?', ' un développeur Java ?', ' Thibault THEOLOGIEN !']}
-              cursor={this.props.cursor}
-              pause={this.props.pause}
-              emptyPause={this.props.emptyPause}
-              typingInterval={this.props.typingInterval}
-              deletingInterval={this.props.deletingInterval}
+              items={this.props.properties.typewriter.items}
+              cursor={this.props.properties.typewriter.cursor}
+              pause={this.props.properties.typewriter.pause}
+              emptyPause={this.props.properties.typewriter.emptyPause}
+              typingInterval={this.props.properties.typewriter.typingInterval}
+              deletingInterval={this.props.properties.typewriter.deletingInterval}
             />
           </div>
         </div>
-        <AnimatedBackground />
+        <AnimatedBackground properties={this.props.properties.background}/>
       </div>
     );
   }

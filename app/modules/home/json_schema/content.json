@@ -1,0 +1,12 @@
+{
+  "title": "module_home-content_schema",
+  "description": "schema du contenu textuel du module home",
+  "type": "object",
+  "properties": {
+    "before_typewriter": {
+      "description": "avant la machine à écrire",
+      "type": "string"
+    }
+  },
+  "required": ["before_typewriter"]
+}
