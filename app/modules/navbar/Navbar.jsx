@@ -1,5 +1,4 @@
 import React from 'react';
-import Ajv from 'ajv';
 import Headroom from 'headroom.js';
 
 import Toolbox from '../../classes/Toolbox.jsx';
@@ -25,18 +24,13 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    let ajv = new Ajv();
-    let content_schema = require("./json_schema/content.json");
     let content = this.props.content;
 
     if (content === "none") {
       content = require('./json_config/content.json');
     }
 
-    if (!ajv.validate(content_schema, content)) {
-      return Toolbox.json_validation_error(content_schema, content, ajv.errors);
-    }
-
+    console.log(content);
     let links = this.props.properties.id_list.map((id, pos) => {
       if (id !== this.props.id && !Toolbox.is_name_unreferenced(this.props.properties.name_unreferenced, this.props.properties.name_list[pos])) {
         return (

@@ -51,13 +51,18 @@ const makeJS = function(data, isTheLast) {
       "name": "' + data.name + '", \n\
       "module": require("' + data.module_path + '"), \n';
 
+  let module_name = getModuleName(data.module_path);
+  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/content.json";
+  let json_data = pwd + absolute_module_path + module_name + "/json_config/content.json";
+
   if (data.content_path !== undefined && data.content_path !== "") {
+    json_data = pwd + "/app" + data.content_path.substring(1);
     importJS += '\
-      "content": require("' + data.content_path + '"), \n';
+      "content": require("' + checkJSON(json_schema, json_data) + '"), \n';
   }
   else {
     importJS += '\
-      "content": "none", \n';
+      "content": require("' + checkJSON(json_schema, json_data) + '"), \n';
   }
 
   importJS += '\
@@ -79,7 +84,7 @@ const makeSCSS = function(data) {
   let json_data = pwd + absolute_module_path + module_name + "/json_config/style.json";
 
   if (data.style_path !== undefined && data.style_path !== "") {
-    let json_data = pwd + "/app" + data.style_path.substring(1);
+    json_data = pwd + "/app" + data.style_path.substring(1);
     return '@import "' + checkJSON(json_schema, json_data) + '";\n' + importSCSS;
   }
   return '@import "' + checkJSON(json_schema, json_data) + '";\n' + importSCSS
@@ -113,7 +118,6 @@ const checkJSON = function(json_schema, json_data) {
   if (fileExists(json_schema) && fileExists(json_data)) {
     validateJSON(require(json_schema), require(json_data));
   }
-
   return json_data;
 }
 
