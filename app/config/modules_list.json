@@ -2,11 +2,11 @@
   "modules_list": [
     {
       "name": "navbar",
-      "module_path": "../modules/navbar/Navbar.jsx"
+      "module_path": "./modules/navbar/Navbar.jsx"
     },
     {
       "name": "home",
-      "module_path": "../modules/home/Home.jsx"
+      "module_path": "./modules/home/Home.jsx"
     }
   ]
 }

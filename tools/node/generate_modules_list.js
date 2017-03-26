@@ -1,4 +1,9 @@
 const Ajv = require('ajv');
+const fs = require('fs');
+
+const pwd = process.cwd();
+const absolute_module_path = "/app/modules/";
+const relative_module_path = "./modules/";
 
 const main = function() {
   const data = require("../../app/config/modules_list.json").modules_list;
@@ -27,9 +32,16 @@ const validateJSON = function(jsonData, jsonSchema) {
   var valid = ajv.validate(jsonSchema, jsonData);
 
   if (!valid) {
-    console.log(JSON.stringify(ajv.errors));
-    process.exit(1);
+    throw new Error(JSON.stringify(ajv.errors));
   }
+}
+
+
+const fileExists = function(path) {
+  if (fs.existsSync(path)) {
+    return true;
+  }
+  throw new Error("File does not exist.");
 }
 
 
@@ -60,34 +72,29 @@ const makeJS = function(data, isTheLast) {
 
 
 const makeSCSS = function(data) {
-  let first_part = "../modules/";
-  let module_name = getModuleName(data.module_path, first_part);
-  let importSCSS = '@import "' + first_part + module_name  + '/style.scss";\n'
+  let module_name = getModuleName(data.module_path);
+  let importSCSS = '@import "' + relative_module_path + module_name  + '/style.scss";\n'
 
   if (data.style_path !== undefined && data.style_path !== "") {
     return '@import "' + data.style_path + '";\n' + importSCSS;
   }
   else {
-    return '@import "' + makeStylePath(module_name, first_part) + '";\n' + importSCSS
+    return '@import "' + makeStylePath(module_name) + '";\n' + importSCSS
   }
 }
 
 
 const writeFiles = function(importJS, importSCSS){
-  let fs = require('fs');
-
-  fs.writeFile("./app/config/import.js", importJS, function(err) {
+  fs.writeFile(pwd + "/app/import.js", importJS, function(err) {
     if(err) {
-      console.log(err);
-      process.exit(1);
+      throw new Error(err);
     }
     console.log("Script import.js généré");
   });
 
-  fs.writeFile("./app/config/import.scss", importSCSS, function(err) {
+  fs.writeFile(pwd + "/app/import.scss", importSCSS, function(err) {
     if(err) {
-      console.log(err);
-      process.exit(1);
+      throw new Error(err);
     }
     console.log("Fichier import.scss généré");
   });
@@ -95,19 +102,20 @@ const writeFiles = function(importJS, importSCSS){
 
 
 const getModuleName = function(module_path, first_part) {
-  let module_name = module_path.substring(first_part.length);
+  let module_name = module_path.substring(relative_module_path.length);
   return module_name.substring(0, module_name.indexOf("/"));
 }
 
 
-const makeStylePath = function(module_name, first_part) {
-  let local_path = "../../app/modules/";
-  let style_path = module_name + "/json_config/style.json";
-  let schema_path = module_name + "/json_schema/style.json"
+const makeStylePath = function(module_name) {
+  let json_data = pwd + absolute_module_path + module_name + "/json_config/style.json";
+  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/style.json";
 
-  validateJSON(require(local_path + style_path), require(local_path + schema_path));
+  if (fileExists(json_schema) && fileExists(json_data)) {
+    validateJSON(require(json_schema), require(json_data));
+  }
 
-  return first_part + style_path;
+  return json_data;
 }
 
 

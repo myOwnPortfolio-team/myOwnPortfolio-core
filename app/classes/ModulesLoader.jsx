@@ -1,6 +1,6 @@
 import React from 'react';
 
-const modules = require('../config/import.js').modules_list;
+const modules = require('../import.js').modules_list;
 
 module.exports = React.createClass({
   render: function() {
