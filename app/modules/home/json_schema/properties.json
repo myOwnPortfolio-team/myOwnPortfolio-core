@@ -1,11 +1,102 @@
 {
   "title": "module_home-properties_schema",
-  "description": "schema des propriétées du module home",
+  "description": "schema des propriétés du module home",
   "type": "object",
   "properties": {
-    "none": {
-      "type": "string"
+    "background": {
+      "type": "object",
+      "description": "propriétés du fond animé de la libraire particlesjs",
+      "properties": {
+        "color": {
+          "type": "string",
+          "description": "Color of particles and connecting lines"
+        },
+        "maxParticles": {
+          "type": "integer",
+          "description": "Maximum amount of particles"
+        },
+        "sizeVariations": {
+          "type": "integer",
+          "description": "Amount of size variations"
+        },
+        "speed": {
+          "type": "number",
+          "description": "Movement speed of the particles"
+        },
+        "minDistance": {
+          "type": "integer",
+          "description": "Distance in px for conntecting lines"
+        },
+        "connectParticles": {
+          "type": "boolean",
+          "description": "true/false if connecting lines should be drawn"
+        },
+        "responsive": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "type": "string",
+            "minItems": 0,
+            "uniqueItems": false
+          }
+        }
+      },
+      "required": [
+        "color",
+        "maxParticles",
+        "sizeVariations",
+        "speed",
+        "minDistance",
+        "connectParticles",
+        "responsive"
+      ]
+    },
+    "typewriter": {
+      "type": "object",
+      "description": "propriétés de la librairie type ReactRotatingText",
+      "properties": {
+        "items": {
+          "type": "array",
+          "description": "The array of strings to be cycled through",
+          "items": {
+            "type": "string",
+            "minItems": 1,
+            "uniqueItems": false
+          }
+        },
+        "cursor": {
+          "type": "boolean",
+          "description": "If set to true, it will display the cursor after the text."
+        },
+        "pause": {
+          "type": "integer",
+          "description": "The number of milliseconds to pause after the text has just finished being typed out."
+        },
+        "emptyPause": {
+          "type": "integer",
+          "description": "The number of milliseconds to pause while no text is being displayed (i.e. after deleting has just finished)."
+        },
+        "typingInterval": {
+          "type": "integer",
+          "description": "The number of milliseconds between each typing action."
+        },
+        "deletingInterval": {
+          "type": "integer",
+          "description": "The number of milliseconds between each deleting action."
+        }
+      },
+      "required": [
+        "items",
+        "cursor",
+        "pause",
+        "emptyPause",
+        "typingInterval",
+        "deletingInterval"
+      ]
     }
   },
-  "required": ["none"]
+  "required": [
+    "background",
+    "typewriter"
+  ]
 }

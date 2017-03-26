@@ -10,9 +10,9 @@
   },
   "typewriter": {
     "items": [
-      " word1",
-      " word2",
-      " word3"
+      " un développeur Web ?",
+      " un développeur Java ?",
+      " peut être Thibault THEOLOGIEN !"
     ],
     "cursor": true,
     "pause": 1500,

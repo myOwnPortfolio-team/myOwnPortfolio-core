@@ -10,7 +10,7 @@ module.exports = React.createClass({
     return {
       id: "navbar",
       content: "none",
-      properties: {
+      links: {
         "id_list": [],
         "name_list": [],
         "name_unreferenced": [],
@@ -30,15 +30,15 @@ module.exports = React.createClass({
       content = require('./json_config/content.json');
     }
 
-    let links = this.props.properties.id_list.map((id, pos) => {
-      if (id !== this.props.id && !Toolbox.is_name_unreferenced(this.props.properties.name_unreferenced, this.props.properties.name_list[pos])) {
+    let links = this.props.links.id_list.map((id, pos) => {
+      if (id !== this.props.id && !Toolbox.is_name_unreferenced(this.props.links.name_unreferenced, this.props.links.name_list[pos])) {
         return (
           <a
             key={"link_to_" + id}
             href={"#"+id}
             className="nav-item nav-link"
           >
-            {this.props.properties.name_list[pos]}
+            {this.props.links.name_list[pos]}
           </a>
         );
       }
