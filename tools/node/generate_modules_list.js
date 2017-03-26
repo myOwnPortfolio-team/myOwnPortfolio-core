@@ -41,7 +41,7 @@ const fileExists = function(path) {
   if (fs.existsSync(path)) {
     return true;
   }
-  throw new Error("File does not exist.");
+  throw new Error("File " + path + " does not exist.");
 }
 
 
@@ -75,12 +75,14 @@ const makeSCSS = function(data) {
   let module_name = getModuleName(data.module_path);
   let importSCSS = '@import "' + relative_module_path + module_name  + '/style.scss";\n'
 
+  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/style.json";
+  let json_data = pwd + absolute_module_path + module_name + "/json_config/style.json";
+
   if (data.style_path !== undefined && data.style_path !== "") {
-    return '@import "' + data.style_path + '";\n' + importSCSS;
+    let json_data = pwd + "/app" + data.style_path.substring(1);
+    return '@import "' + checkJSON(json_schema, json_data) + '";\n' + importSCSS;
   }
-  else {
-    return '@import "' + makeStylePath(module_name) + '";\n' + importSCSS
-  }
+  return '@import "' + checkJSON(json_schema, json_data) + '";\n' + importSCSS
 }
 
 
@@ -107,22 +109,12 @@ const getModuleName = function(module_path, first_part) {
 }
 
 
-const makeStylePath = function(module_name) {
-  let json_data = pwd + absolute_module_path + module_name + "/json_config/style.json";
-  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/style.json";
-
+const checkJSON = function(json_schema, json_data) {
   if (fileExists(json_schema) && fileExists(json_data)) {
     validateJSON(require(json_schema), require(json_data));
   }
 
   return json_data;
 }
-
-
-const makeContentPath = function(module_name, inapp_content_path, first_part) {
-  let local_path = "../../app/modules/";
-  // let content_path = module_name +
-}
-
 
 main();

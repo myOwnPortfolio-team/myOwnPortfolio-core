@@ -4,7 +4,7 @@
       "name": "navbar",
       "module_path": "./modules/navbar/Navbar.jsx",
       "content_path": "./config/content/fr/navbar.json",
-      "style_path": "./modules/navbar/json_config/style.json"
+      "style_path": "./config/style/navbar.json"
     },
     {
       "name": "home",
