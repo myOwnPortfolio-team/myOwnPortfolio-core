@@ -2,26 +2,25 @@ $module_navbar_logo_height: 40px;
 $module_navbar_space: 10px;
 
 .module_navbar {
-  // height: $module_navbar_height;
-  @include calc(height, $module_navbar_logo_height + " + 2 * " + module_navbar_space);
+  @include calc(height, $module_navbar_logo_height + " + 2 * " + $module_navbar_space);
   padding-top: $module_navbar_space;
   padding-bottom: $module_navbar_space;
   background-color: $module_navbar_background_color;
   color: $module_navbar_font_color;
-  opacity: 0.75;
   display: inline;
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
 
-.module_navbar:hover {
-  opacity: 1;
-  transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-out;
+.headroom--top {
+  opacity: 0.75;
 }
 
-// .module_navbar_title {
-//   font-size: 30px;
-//   font-weight: bold;
-//   color: white;
+// .module_navbar:hover {
+//   opacity: 1;
+//   transition: opacity 0.5s ease-in;
+//   transition: opacity 0.5s ease-out;
 // }
 
 .module_navbar_logo_list {
@@ -35,12 +34,23 @@ $module_navbar_space: 10px;
   border-width: 2px;
   border-style: solid;
   border-color: white;
-  margin-left: 5px;
+  margin-left: 20px;
+}
+
+.module_navbar_logo:hover {
+  height: $module_navbar_logo_height;
+  width: $module_navbar_logo_height;
+  border-radius: $module_navbar_logo_height;
+  border-color: black;
 }
 
 .module_navbar_link {
   color: white;
   text-decoration: none;
+}
+
+.module_navbar_link + .module_navbar_link {
+  margin-left: 10px;
 }
 
 .module_navbar_link:active {
@@ -49,6 +59,8 @@ $module_navbar_space: 10px;
 
 .module_navbar_link:hover {
   @extend .module_navbar_link;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .module_navbar_link:link {

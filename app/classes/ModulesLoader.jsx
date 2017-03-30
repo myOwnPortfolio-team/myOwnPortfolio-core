@@ -11,9 +11,11 @@ module.exports = React.createClass({
     };
     let modules_list = modules.map((data) => {
       let Module = data.module;
-      links.id_list.push("module_"+data.name);
+      links.id_list.push("module_" + data.name);
       links.name_list.push(data.name);
-
+      if (!data.referenced) {
+        links.name_unreferenced.push(data.name);
+      }
       return (
         <Module
           id={"module_" + data.name}

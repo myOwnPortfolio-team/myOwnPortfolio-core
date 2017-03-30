@@ -2,13 +2,32 @@
   "modules_list": [
     {
       "name": "navbar",
-      "module_path": "./modules/navbar/Navbar.jsx"
+      "module_path": "./modules/navbar/Navbar.jsx",
+      "referenced": false
     },
     {
-      "name": "home",
+      "name": "Accueil",
       "module_path": "./modules/home/Home.jsx",
       "content_path": "./config/content/fr/home.json",
-      "properties_path": "./config/properties/home.json"
+      "properties_path": "./config/properties/home.json",
+      "referenced": true
+    },
+    {
+      "name": "Experience",
+      "module_path": "./modules/rubrique/Rubrique.jsx",
+      "content_path": "./config/content/fr/rubrique_experience.json",
+      "referenced": true
+    },
+    {
+      "name": "Formation",
+      "module_path": "./modules/rubrique/Rubrique.jsx",
+      "content_path": "./config/content/fr/rubrique_education.json",
+      "referenced": true
+    },
+    {
+      "name": "footer",
+      "module_path": "./modules/footer/Footer.jsx",
+      "referenced": false
     }
   ]
 }

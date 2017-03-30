@@ -1,5 +1,5 @@
 {
   "module_navbar_height" : "60px",
-  "module_navbar_background_color" : "$blueApp",
-  "module_navbar_font_color" : "$gray"
+  "module_navbar_background_color" : "$primary-color",
+  "module_navbar_font_color" : "$primary-font-color"
 }

@@ -80,6 +80,7 @@ const makeJS = function(data, isTheLast) {
   }
 
   importJS += '\
+      "referenced": ' + data.referenced + ', \n\
     }';
   if (!isTheLast) {
     importJS += ',';

@@ -3,6 +3,24 @@
   "description": "schema des propriétés du module home",
   "type": "object",
   "properties": {
+    "avatar": {
+      "type": "object",
+      "description": "image centrale correspondant à une photo de profil",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "URI de l'image"
+        },
+        "alt": {
+          "type": "string",
+          "description": "texte à afficher si l'image est introuvable"
+        }
+      },
+      "required": [
+        "src",
+        "alt"
+      ]
+    },
     "background": {
       "type": "object",
       "description": "propriétés du fond animé de la libraire particlesjs",
@@ -96,6 +114,7 @@
     }
   },
   "required": [
+    "avatar",
     "background",
     "typewriter"
   ]

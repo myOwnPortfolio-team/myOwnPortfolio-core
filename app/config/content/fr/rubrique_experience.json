@@ -1,0 +1,30 @@
+{
+  "title": "Expérience",
+  "experience": [
+    {
+      "post": "Développeur",
+      "company": "Saagie",
+      "start": "janvier 2017",
+      "end": "?",
+      "place": "Rouen, FRANCE",
+      "description": "Projet de Deep Learning, en méthode agile, pour l'entreprise Saagie dans un groupe de 9 élèves ingénieurs à l'INSA de Rouen. Role : Développeur Full-Stack / Responsable infrastructure réseau et sytème d'exploitation de l'environnement de travail. Technologies : TensorFlow, Angular2 Contrôle de qualité : ISO 9001:2015"
+    },
+    {
+      "post": "Développeur web junior",
+      "company": "Mairie d'Ymare",
+      "start": "2013",
+      "end": "2013",
+      "place": "Ymare",
+      "description": "Une petite description pour faire joli"
+    },
+    {
+      "post": "Agent de voierie",
+      "company": "Espace Courbe",
+      "start": "avril 2015",
+      "end": "juin 2015",
+      "place": "Montréal, CANADA",
+      "description": "Une petite description pour faire joli"
+    }
+  ],
+  "education": []
+}

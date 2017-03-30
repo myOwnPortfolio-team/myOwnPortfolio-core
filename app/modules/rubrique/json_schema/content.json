@@ -1,0 +1,92 @@
+{
+  "title": "module_template-content_schema",
+  "description": "schema du contenu textuel du module template",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "titre de la rubrique",
+      "type": "string"
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "post": {
+            "type": "string",
+            "description": "poste occupé"
+          },
+          "company": {
+            "type": "string",
+            "description": "entreprise"
+          },
+          "start": {
+            "type": "string",
+            "description": "début du job"
+          },
+          "end": {
+            "type": "string",
+            "description": "fin du job"
+          },
+          "place": {
+            "type": "string",
+            "description": "lieux"
+          },
+          "description": {
+            "type": "string",
+            "description": "description du poste"
+          }
+        },
+        "required": [
+          "post",
+          "company"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": false
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "school": {
+            "type": "string",
+            "description": "poste occupé"
+          },
+          "degree": {
+            "type": "string",
+            "description": "entreprise"
+          },
+          "start": {
+            "type": "string",
+            "description": "début du job"
+          },
+          "end": {
+            "type": "string",
+            "description": "fin du job"
+          },
+          "place": {
+            "type": "string",
+            "description": "lieux"
+          },
+          "description": {
+            "type": "string",
+            "description": "description du poste"
+          }
+        },
+        "required": [
+          "school",
+          "degree"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": false
+    }
+  },
+  "required": [
+    "title",
+    "experience",
+    "education"
+  ]
+}

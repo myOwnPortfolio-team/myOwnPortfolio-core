@@ -4,7 +4,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import AOS from 'aos';
 
 import ModulesLoader from './classes/ModulesLoader.jsx';
-
+var app_properties = require('./config/app_properties.json');
 
 AOS.init();
 injectTapEventPlugin();

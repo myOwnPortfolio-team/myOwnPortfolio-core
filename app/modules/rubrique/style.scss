@@ -1,0 +1,19 @@
+$module_rubrique_space: 20px;
+
+.module_rubrique {
+  background-color: $secondary-color;
+  padding: 10%;
+  padding-top: $module_rubrique_space;
+  padding-bottom: $module_rubrique_space;
+
+  article {
+    margin-bottom: $module_rubrique_space;
+    border-bottom-color: $gray;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+}
+
+.module_rubrique:nth-child(2n+1) {
+  background-color: $primary-color;
+}
