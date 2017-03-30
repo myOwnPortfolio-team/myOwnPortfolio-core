@@ -1,0 +1,11 @@
+.module_rubrique {
+  background-color: $blueApp;
+  padding: 20px;
+
+  article {
+    margin-bottom: 20px;
+    border-bottom-color: $gray;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+}

@@ -11,6 +11,10 @@
       "properties_path": "./config/properties/home.json"
     },
     {
+      "name": "rubrique",
+      "module_path": "./modules/rubrique/Rubrique.jsx"
+    },
+    {
       "name": "footer",
       "module_path": "./modules/footer/Footer.jsx"
     }
