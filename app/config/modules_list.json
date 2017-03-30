@@ -6,7 +6,7 @@
       "referenced": false
     },
     {
-      "name": "home",
+      "name": "Accueil",
       "module_path": "./modules/home/Home.jsx",
       "content_path": "./config/content/fr/home.json",
       "properties_path": "./config/properties/home.json",
