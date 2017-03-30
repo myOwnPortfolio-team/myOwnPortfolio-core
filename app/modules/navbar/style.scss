@@ -11,11 +11,11 @@ $module_navbar_space: 10px;
   display: inline;
 }
 
-.module_navbar:hover {
-  opacity: 1;
-  transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-out;
-}
+// .module_navbar:hover {
+//   opacity: 1;
+//   transition: opacity 0.5s ease-in;
+//   transition: opacity 0.5s ease-out;
+// }
 
 .module_navbar_logo_list {
   float: right;
@@ -41,6 +41,10 @@ $module_navbar_space: 10px;
 .module_navbar_link {
   color: white;
   text-decoration: none;
+}
+
+.module_navbar_link + .module_navbar_link {
+  margin-left: 10px;
 }
 
 .module_navbar_link:active {
