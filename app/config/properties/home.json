@@ -1,4 +1,8 @@
 {
+  "avatar": {
+    "src": "https://fr.gravatar.com/userimage/45448759/031c14bdffe709c881b0ed4bced8e433.jpg?size=400",
+    "alt": "photo de profil"
+  },
   "background": {
     "color": "#75A5B7",
     "maxParticles": 100,
