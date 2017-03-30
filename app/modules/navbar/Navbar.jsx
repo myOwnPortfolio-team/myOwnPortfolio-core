@@ -1,36 +1,19 @@
 import React from 'react';
 import Headroom from 'headroom.js';
 
+import LogoLink from './classes/LogoLink.jsx';
 import Toolbox from '../../classes/Toolbox.jsx';
 
 const RANDOM_ID = "randomId" + parseInt(Math.random() * 10000);
 
 module.exports = React.createClass({
-  getDefaultProps: function() {
-    return {
-      id: "navbar",
-      content: "none",
-      links: {
-        "id_list": [],
-        "name_list": [],
-        "name_unreferenced": [],
-      },
-    }
-  },
-
   componentDidMount: function() {
     var headroom = new Headroom(document.getElementById(RANDOM_ID));
     headroom.init();
   },
 
-  render: function() {
-    let content = this.props.content;
-
-    if (content === "none") {
-      content = require('./json_config/content.json');
-    }
-
-    let links = this.props.links.id_list.map((id, pos) => {
+  generate_links: function(links) {
+    return links.map((id, pos) => {
       if (id !== this.props.id && !Toolbox.is_name_unreferenced(this.props.links.name_unreferenced, this.props.links.name_list[pos])) {
         return (
           <a
@@ -43,19 +26,27 @@ module.exports = React.createClass({
         );
       }
     });
+  },
 
+  generate_logos_links: function(links) {
+    return links.map((obj, pos) => {
+      return (
+        <LogoLink
+          key={"link_to_" + obj.alt}
+          properties={obj}
+        />
+      )
+    });
+  },
+
+  render: function() {
     return (
       <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module_navbar">
         <div className="module_navbar_link_list">
-          {links}
+          {this.generate_links(this.props.links.id_list)}
         </div>
         <div className="module_navbar_logo_list" >
-          <a href="https://github.com/MacBootglass">
-            <img className="module_navbar_logo" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" />
-          </a>
-          <a href="https://www.linkedin.com/in/thibault-theologien/">
-            <img className="module_navbar_logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
-          </a>
+          {this.generate_logos_links(this.props.properties.logoslinks)}
         </div>
       </nav>
     );
