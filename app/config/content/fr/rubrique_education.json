@@ -1,0 +1,14 @@
+{
+  "title": "Formation",
+  "experience": [],
+  "education": [
+    {
+      "school": "INSA Rouen Normandie",
+      "degree": "Ingénieur ASI (Architecture des Systèmes d'Information)",
+      "start": "2015",
+      "end": "2018",
+      "place": "Rouen, FRANCE",
+      "description": "Une autre petite description pour faire joli"
+    }
+  ]
+}

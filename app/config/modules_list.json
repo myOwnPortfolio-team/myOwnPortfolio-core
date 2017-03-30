@@ -13,8 +13,15 @@
       "referenced": true
     },
     {
-      "name": "rubrique",
+      "name": "Experience",
       "module_path": "./modules/rubrique/Rubrique.jsx",
+      "content_path": "./config/content/fr/rubrique_experience.json",
+      "referenced": true
+    },
+    {
+      "name": "Formation",
+      "module_path": "./modules/rubrique/Rubrique.jsx",
+      "content_path": "./config/content/fr/rubrique_education.json",
       "referenced": true
     },
     {

@@ -1,6 +1,5 @@
 import React from 'react';
 import Headroom from 'headroom.js';
-// import Headroom from 'react-headroom';
 
 import LogoLink from './classes/LogoLink.jsx';
 import Toolbox from '../../classes/Toolbox.jsx';

@@ -1,0 +1,14 @@
+{
+  "title": "Expérience",
+  "experience": [
+    {
+      "post": "Développeur web junior",
+      "company": "Espace Courbe",
+      "start": "avril 2015",
+      "end": "juin 2015",
+      "place": "Montréal, CANADA",
+      "description": "Une petite description pour faire joli"
+    }
+  ],
+  "education": []
+}
