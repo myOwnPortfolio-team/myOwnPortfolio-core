@@ -16,7 +16,6 @@ module.exports = React.createClass({
       if (!data.referenced) {
         links.name_unreferenced.push(data.name);
       }
-      console.log(links.name_unreferenced);
       return (
         <Module
           id={"module_" + data.name}

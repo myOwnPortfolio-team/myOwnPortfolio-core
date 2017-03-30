@@ -32,6 +32,7 @@ module.exports = React.createClass({
       <section
         id={this.props.id}
         className="module_rubrique"
+        data-aos="flip-down"
       >
         <h2>{this.props.content.title}</h2>
         {this.generateExeriences(this.props.content.experience)}
