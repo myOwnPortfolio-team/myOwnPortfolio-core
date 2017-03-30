@@ -7,8 +7,14 @@ $module_navbar_space: 10px;
   padding-bottom: $module_navbar_space;
   background-color: $module_navbar_background_color;
   color: $module_navbar_font_color;
-  opacity: 0.75;
   display: inline;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.headroom--top {
+  opacity: 0.75;
 }
 
 // .module_navbar:hover {

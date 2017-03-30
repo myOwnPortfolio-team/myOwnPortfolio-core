@@ -1,14 +1,17 @@
 import React from 'react';
 import Headroom from 'headroom.js';
+// import Headroom from 'react-headroom';
 
 import LogoLink from './classes/LogoLink.jsx';
 import Toolbox from '../../classes/Toolbox.jsx';
 
 const RANDOM_ID = "randomId" + parseInt(Math.random() * 10000);
+console.log(RANDOM_ID);
 
 module.exports = React.createClass({
   componentDidMount: function() {
     var headroom = new Headroom(document.getElementById(RANDOM_ID));
+    console.log(RANDOM_ID);
     headroom.init();
   },
 
@@ -41,14 +44,14 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module_navbar">
-        <div className="module_navbar_link_list">
-          {this.generate_links(this.props.links.id_list)}
-        </div>
-        <div className="module_navbar_logo_list" >
-          {this.generate_logos_links(this.props.properties.logoslinks)}
-        </div>
-      </nav>
+        <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module_navbar">
+          <div className="module_navbar_link_list">
+            {this.generate_links(this.props.links.id_list)}
+          </div>
+          <div className="module_navbar_logo_list" >
+            {this.generate_logos_links(this.props.properties.logoslinks)}
+          </div>
+        </nav>
     );
   }
 });
