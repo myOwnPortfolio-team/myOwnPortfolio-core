@@ -1,17 +1,12 @@
 import React from 'react';
 
 module.exports = React.createClass({
-  getDefaultProps: function() {
-    return {
-      src: "#"
-    }
-  },
 
   render: function() {
     return(
       <img
-        src={this.props.src}
-        alt="profile"
+        src={this.props.properties.src}
+        alt={this.props.properties.alt}
         className="module_home_profile_picture"
       />
     );

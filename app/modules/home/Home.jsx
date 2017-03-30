@@ -12,7 +12,7 @@ module.exports = React.createClass({
         className="module_home"
       >
         <div className="module_home_content">
-          <Avatar src="https://fr.gravatar.com/userimage/45448759/031c14bdffe709c881b0ed4bced8e433.jpg?size=200" />
+          <Avatar properties={this.props.properties.avatar}/>
           <div className="module_home_typewriter">
             <span>{this.props.content.before_typewriter}</span>
             <ReactRotatingText
