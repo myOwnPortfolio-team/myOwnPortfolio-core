@@ -6,12 +6,10 @@ import LogoLink from './classes/LogoLink.jsx';
 import Toolbox from '../../classes/Toolbox.jsx';
 
 const RANDOM_ID = "randomId" + parseInt(Math.random() * 10000);
-console.log(RANDOM_ID);
 
 module.exports = React.createClass({
   componentDidMount: function() {
     var headroom = new Headroom(document.getElementById(RANDOM_ID));
-    console.log(RANDOM_ID);
     headroom.init();
   },
 
