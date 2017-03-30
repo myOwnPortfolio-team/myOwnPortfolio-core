@@ -1,0 +1,12 @@
+{
+  "title": "module_template-style_schema",
+  "description": "schema du style du module template",
+  "type": "object",
+  "properties": {
+    "none": {
+      "description": "none",
+      "type": "string"
+    }
+  },
+  "required": ["none"]
+}
