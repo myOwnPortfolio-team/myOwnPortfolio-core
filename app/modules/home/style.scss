@@ -5,22 +5,12 @@ $module_home_profile_picture_height: 200px;
   height: 100%;
   width: 100%;
   text-align: center;
+  display: flex;
 }
 
 .module_home_content {
-  height: 100%;
-}
-
-.module_home_content::before {
-  height: $module_home_content_padding;
-  content: "";
-  display: block;
-}
-
-.module_home_content::after {
-  height: $module_home_content_padding;
-  content: "";
-  display: block;
+  margin: auto;
+  width: 100%;
 }
 
 .module_home_profile_picture {
