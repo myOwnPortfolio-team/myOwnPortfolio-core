@@ -24,9 +24,13 @@
       "properties_path": {
         "description": "emplacement des propriétés",
         "type": "string"
+      },
+      "referenced": {
+        "description": "reférence ou non le module",
+        "type": "boolean"
       }
     },
-    "required": ["name", "module_path"]
+    "required": ["name", "module_path", "referenced"]
   },
   "minItems": 1,
   "uniqueItems": true

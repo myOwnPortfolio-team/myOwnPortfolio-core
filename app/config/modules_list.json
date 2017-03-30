@@ -2,21 +2,25 @@
   "modules_list": [
     {
       "name": "navbar",
-      "module_path": "./modules/navbar/Navbar.jsx"
+      "module_path": "./modules/navbar/Navbar.jsx",
+      "referenced": false
     },
     {
       "name": "home",
       "module_path": "./modules/home/Home.jsx",
       "content_path": "./config/content/fr/home.json",
-      "properties_path": "./config/properties/home.json"
+      "properties_path": "./config/properties/home.json",
+      "referenced": true
     },
     {
       "name": "rubrique",
-      "module_path": "./modules/rubrique/Rubrique.jsx"
+      "module_path": "./modules/rubrique/Rubrique.jsx",
+      "referenced": true
     },
     {
       "name": "footer",
-      "module_path": "./modules/footer/Footer.jsx"
+      "module_path": "./modules/footer/Footer.jsx",
+      "referenced": false
     }
   ]
 }
