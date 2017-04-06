@@ -17,3 +17,18 @@ $module_rubrique_space: 20px;
 .module_rubrique:nth-child(2n+1) {
   background-color: $primary-color;
 }
+
+.module_rubrique_title {
+  text-align: center;
+}
+
+.module_rubrique_descriptor {
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.module_rubrique_content {
+  width: 90%;
+  margin-left: 10%;
+  font-size: 22px;
+}

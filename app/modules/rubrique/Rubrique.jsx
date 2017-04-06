@@ -34,7 +34,7 @@ module.exports = React.createClass({
         className="module_rubrique"
         data-aos="flip-down"
       >
-        <h2>{this.props.content.title}</h2>
+        <h2 className="module_rubrique_title">{this.props.content.title}</h2>
         {this.generateExeriences(this.props.content.experience)}
         {this.generateEducation(this.props.content.education)}
       </section>
