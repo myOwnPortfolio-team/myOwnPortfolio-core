@@ -1,3 +1,5 @@
 {
-  "none": "none"
+  "rubrique_animation": "flip-down",
+  "bloc_animation": "",
+  "line_animation": "flip-left"
 }

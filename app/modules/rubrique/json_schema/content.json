@@ -7,78 +7,37 @@
       "description": "titre de la rubrique",
       "type": "string"
     },
-    "experience": {
+    "rubrique": {
+      "description": "une rubrique",
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "post": {
-            "type": "string",
-            "description": "poste occupé"
+        "description": "sous blocs de la rubrique",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "description": "titre du sous bloc",
+              "type": "string"
+            },
+            "content": {
+              "description": "contenu du sous bloc sous la forme d'un tableau dont chaque cellule correspond à une ligne",
+              "type": "array",
+              "items": {
+                "description": "contenu textuel au format markdown: \n pour retourner à la ligne",
+                "type": "string",
+                "minItems": 1,
+                "uniqueItems": false
+              }
+            }
           },
-          "company": {
-            "type": "string",
-            "description": "entreprise"
-          },
-          "start": {
-            "type": "string",
-            "description": "début du job"
-          },
-          "end": {
-            "type": "string",
-            "description": "fin du job"
-          },
-          "place": {
-            "type": "string",
-            "description": "lieux"
-          },
-          "description": {
-            "type": "string",
-            "description": "description du poste"
-          }
+          "required": [
+            "title",
+            "content"
+          ]
         },
-        "required": [
-          "post",
-          "company"
-        ]
-      },
-      "minItems": 0,
-      "uniqueItems": false
-    },
-    "education": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "school": {
-            "type": "string",
-            "description": "poste occupé"
-          },
-          "degree": {
-            "type": "string",
-            "description": "entreprise"
-          },
-          "start": {
-            "type": "string",
-            "description": "début du job"
-          },
-          "end": {
-            "type": "string",
-            "description": "fin du job"
-          },
-          "place": {
-            "type": "string",
-            "description": "lieux"
-          },
-          "description": {
-            "type": "string",
-            "description": "description du poste"
-          }
-        },
-        "required": [
-          "school",
-          "degree"
-        ]
+        "minItems": 1,
+        "uniqueItems": false
       },
       "minItems": 0,
       "uniqueItems": false
@@ -86,7 +45,6 @@
   },
   "required": [
     "title",
-    "experience",
-    "education"
+    "rubrique"
   ]
 }

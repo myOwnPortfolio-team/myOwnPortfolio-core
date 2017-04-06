@@ -11,17 +11,12 @@ $module_navbar_space: 10px;
   position: fixed;
   top: 0px;
   left: 0px;
+  z-index: 10;
 }
 
 .headroom--top {
   opacity: 0.75;
 }
-
-// .module_navbar:hover {
-//   opacity: 1;
-//   transition: opacity 0.5s ease-in;
-//   transition: opacity 0.5s ease-out;
-// }
 
 .module_navbar_logo_list {
   float: right;
@@ -33,7 +28,7 @@ $module_navbar_space: 10px;
   border-radius: $module_navbar_logo_height;
   border-width: 2px;
   border-style: solid;
-  border-color: white;
+  border-color: $secondary-color;
   margin-left: 20px;
 }
 
@@ -45,7 +40,7 @@ $module_navbar_space: 10px;
 }
 
 .module_navbar_link {
-  color: white;
+  color: $primary-font-color;
   text-decoration: none;
 }
 
@@ -76,7 +71,7 @@ $module_navbar_space: 10px;
 
 .headroom {
   width: 100%;
-  background-color: $blueApp;
+  background-color: $primary-color;
   position: fixed;
   top: 0px;
   left: 0px;

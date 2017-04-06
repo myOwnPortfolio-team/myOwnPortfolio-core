@@ -1,30 +1,47 @@
 {
-  "title": "Formation",
-  "experience": [],
-  "education": [
-    {
-      "school": "INSA Rouen Normandie",
-      "degree": "Ingénieur ASI (Architecture des Systèmes d'Information)",
-      "start": "2015",
-      "end": "2018",
-      "place": "Rouen, FRANCE",
-      "description": "Une autre petite description pour faire joli"
-    },
-    {
-      "school": "IUT du Havre",
-      "degree": "DUT informatique",
-      "start": "2013",
-      "end": "2015",
-      "place": "Le Havre, FRANCE",
-      "description": "Une autre petite description pour faire joli"
-    },
-    {
-      "school": "Lycée Galilée",
-      "degree": "Baccalauréat scientifique spécialité mathématiques",
-      "start": "2010",
-      "end": "2013",
-      "place": "Franqueville Saint Pierre, FRANCE",
-      "description": "Une autre petite description pour faire joli"
-    }
+  "title": "FORMATION",
+  "rubrique": [
+    [
+      {
+        "title": "École",
+        "content": ["INSA Rouen Normandie"]
+      },
+      {
+        "title": "Diplôme",
+        "content": ["Ingénieur ASI (Architecture des Systèmes d'Information)"]
+      },
+      {
+        "title": "Détails",
+        "content": ["2015 à 2018 - _Rouen, FRANCE_"]
+      }
+    ],
+    [
+      {
+        "title": "École",
+        "content": ["IUT du Havre"]
+      },
+      {
+        "title": "Diplôme",
+        "content": ["DUT informatique"]
+      },
+      {
+        "title": "Détails",
+        "content": ["2013 à 2015 - _Le Havre, FRANCE_"]
+      }
+    ],
+    [
+      {
+        "title": "École",
+        "content": ["Lycée Galilée"]
+      },
+      {
+        "title": "Diplôme",
+        "content": ["Baccalauréat scientifique spécialité mathématiques"]
+      },
+      {
+        "title": "Détails",
+        "content": ["2010 à 2013 - _Franqueville Saint Pierre, FRANCE_"]
+      }
+    ]
   ]
 }

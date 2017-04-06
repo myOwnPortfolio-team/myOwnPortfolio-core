@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
 module.exports = React.createClass({
   render: function() {
@@ -7,7 +8,14 @@ module.exports = React.createClass({
         id={this.props.id}
         className="module_footer"
       >
-        Généré à partir de <a href="https://github.com/MacBootglass/myOwnPortfolio">myOwnPortfolio</a>
+        <ReactMarkdown
+          className="module_footer_content_left"
+          source={this.props.content.content_left}
+        />
+        <ReactMarkdown
+          className="module_footer_content_right"
+          source={this.props.content.content_right}
+        />
       </footer>
     );
   }

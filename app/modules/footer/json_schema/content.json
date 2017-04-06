@@ -3,10 +3,17 @@
   "description": "schema du contenu textuel du module template",
   "type": "object",
   "properties": {
-    "none": {
-      "description": "none",
+    "content_left": {
+      "description": "contenu textuel côté gauche (markdown supporté)",
+      "type": "string"
+    },
+    "content_right": {
+      "description": "contenu textuel côté gauche (markdown supporté)",
       "type": "string"
     }
   },
-  "required": ["none"]
+  "required": [
+    "content_left",
+    "content_right"
+  ]
 }
