@@ -1,0 +1,17 @@
+{
+  "title": "Compétences",
+  "skills": [
+    {
+      "name": "ReactJS",
+      "level": 70
+    },
+    {
+      "name": "JavaScript",
+      "level": 80
+    },
+    {
+      "name": "Java",
+      "level": 70
+    }
+  ]
+}

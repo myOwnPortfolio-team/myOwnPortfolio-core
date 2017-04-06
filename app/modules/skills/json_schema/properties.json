@@ -1,0 +1,12 @@
+{
+  "title": "module_template-properties_schema",
+  "description": "schema des propriétés du module template",
+  "type": "object",
+  "properties": {
+    "none": {
+      "description": "none",
+      "type": "string"
+    }
+  },
+  "required": ["none"]
+}

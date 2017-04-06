@@ -1,0 +1,41 @@
+{
+  "title": "module_template-content_schema",
+  "description": "schema du contenu textuel du module template",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "titre du module",
+      "type": "string"
+    },
+    "skills": {
+      "description": "liste des compétences",
+      "type": "array",
+      "items": {
+        "description": "une compétence",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "nom de la compétence",
+            "type": "string"
+          },
+          "level": {
+            "description": "niveau de la compétence",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "name",
+          "level"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "title",
+    "skills"
+  ]
+}
