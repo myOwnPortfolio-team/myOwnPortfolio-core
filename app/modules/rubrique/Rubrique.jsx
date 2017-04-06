@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Experience from './classes/Experience.js';
-import Education from './classes/Education.js';
+import Experience from './classes/Experience.jsx';
+import Education from './classes/Education.jsx';
 
 
 module.exports = React.createClass({
