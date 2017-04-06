@@ -9,6 +9,7 @@ module.exports = React.createClass({
         <Bloc
           key={"bloc_" + pos}
           content={obj}
+          properties={this.props.properties}
         />
       )
     })
@@ -19,7 +20,7 @@ module.exports = React.createClass({
       <section
         id={this.props.id}
         className="module_rubrique"
-        data-aos="flip-down"
+        data-aos={this.props.properties.rubrique_animation}
       >
         <h2 className="module_rubrique_title">{this.props.content.title}</h2>
         {this.generateRubrique(this.props.content.rubrique)}

@@ -6,7 +6,7 @@ module.exports = React.createClass({
     return bloc.map((obj, pos) => {
       return (
         <div
-          data-aos="flip-left"
+          data-aos={this.props.properties.line_animation}
           key={"bloc_" + obj.title + "_" + pos}
           className="module_rubrique_bloc"
         >
@@ -24,7 +24,7 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      <article>
+      <article data-aos={this.props.properties.bloc_animation}>
         {this.generateBlocs(this.props.content)}
       </article>
     );
