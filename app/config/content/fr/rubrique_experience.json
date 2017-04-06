@@ -7,8 +7,12 @@
       "start": "janvier 2017",
       "end": "?",
       "place": "Rouen, FRANCE",
-      "description": "test\\
-      other test"
+      "description": [
+        "__Resumé__ : Projet de Deep Learning, en méthode agile, pour l'entreprise Saagie dans un groupe de 9 élèves ingénieurs à l'INSA de Rouen. \n",
+        "__Role__ : Développeur Full-Stack / Responsable infrastructure réseau et sytème d'exploitation de l'environnement de travail. \n",
+        "__Technologies__ : TensorFlow, Angular2 \n",
+        "__Contrôle de qualité__ : ISO 9001:2015 \n"
+      ]
     },
     {
       "post": "Développeur web junior",
@@ -16,7 +20,7 @@
       "start": "2013",
       "end": "2013",
       "place": "Ymare",
-      "description": "Une petite description pour faire joli"
+      "description": ["Une petite description pour faire joli"]
     },
     {
       "post": "Agent de voierie",
@@ -24,7 +28,7 @@
       "start": "avril 2015",
       "end": "juin 2015",
       "place": "Montréal, CANADA",
-      "description": "Une petite description pour faire joli"
+      "description": ["Une petite description pour faire joli"]
     }
   ],
   "education": []

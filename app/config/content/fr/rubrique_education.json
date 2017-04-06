@@ -8,7 +8,7 @@
       "start": "2015",
       "end": "2018",
       "place": "Rouen, FRANCE",
-      "description": "Une autre petite description pour faire joli"
+      "description": ["Une autre petite description pour faire joli"]
     },
     {
       "school": "IUT du Havre",
@@ -16,7 +16,7 @@
       "start": "2013",
       "end": "2015",
       "place": "Le Havre, FRANCE",
-      "description": "Une autre petite description pour faire joli"
+      "description": ["Une autre petite description pour faire joli"]
     },
     {
       "school": "Lycée Galilée",
@@ -24,7 +24,7 @@
       "start": "2010",
       "end": "2013",
       "place": "Franqueville Saint Pierre, FRANCE",
-      "description": "Une autre petite description pour faire joli"
+      "description": ["Une autre petite description pour faire joli"]
     }
   ]
 }

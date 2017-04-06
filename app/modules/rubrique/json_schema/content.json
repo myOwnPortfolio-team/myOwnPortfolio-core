@@ -33,8 +33,14 @@
             "description": "lieux"
           },
           "description": {
-            "type": "string",
-            "description": "description du poste"
+            "type": "array",
+            "description": "description du poste",
+            "items": {
+              "type": "string",
+              "description": "une ligne"
+            },
+            "minItems": 0,
+            "uniqueItems": false
           }
         },
         "required": [
@@ -71,8 +77,14 @@
             "description": "lieux"
           },
           "description": {
-            "type": "string",
-            "description": "description du poste"
+            "type": "array",
+            "description": "description du poste",
+            "items": {
+              "type": "string",
+              "description": "une ligne"
+            },
+            "minItems": 0,
+            "uniqueItems": false
           }
         },
         "required": [
