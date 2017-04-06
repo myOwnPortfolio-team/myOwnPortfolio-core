@@ -1,6 +1,31 @@
+$module_footer_height: 50px;
+$module_footer_space: $space;
+
+
 .module_footer {
   width: 100%;
-  background-color: $blueApp;
-  padding: 5px;
-  @include shadowBox($gray);
+  height: $module_footer_height;
+  background-color: $primary-color;
+
+  p {
+    margin: 0px;
+  }
+}
+
+.module_footer_content_left {
+  float: left;
+  text-align: left;
+  height: $module_footer_height;
+  line-height: $module_footer_height;
+  vertical-align: middle;
+  margin-left: $module_footer_space;
+}
+
+.module_footer_content_right {
+  float: right;
+  text-align: right;
+  height: $module_footer_height;
+  line-height: $module_footer_height;
+  vertical-align: middle;
+  margin-right: $module_footer_space;
 }
