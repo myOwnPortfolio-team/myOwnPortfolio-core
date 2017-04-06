@@ -1,26 +1,13 @@
 import React from 'react';
 
-import Experience from './classes/Experience.jsx';
-import Education from './classes/Education.jsx';
-
+import Bloc from './classes/Bloc.jsx';
 
 module.exports = React.createClass({
-  generateExeriences: function(experience) {
-    return experience.map((obj, pos) => {
+  generateRubrique: function(rubrique) {
+    return rubrique.map((obj, pos) => {
       return (
-        <Experience
-          key={"exp_" + pos}
-          content={obj}
-        />
-      )
-    })
-  },
-
-  generateEducation: function(education) {
-    return education.map((obj, pos) => {
-      return (
-        <Education
-          key={"edu_" + pos}
+        <Bloc
+          key={"bloc_" + pos}
           content={obj}
         />
       )
@@ -35,8 +22,7 @@ module.exports = React.createClass({
         data-aos="flip-down"
       >
         <h2 className="module_rubrique_title">{this.props.content.title}</h2>
-        {this.generateExeriences(this.props.content.experience)}
-        {this.generateEducation(this.props.content.education)}
+        {this.generateRubrique(this.props.content.rubrique)}
       </section>
     );
   }
