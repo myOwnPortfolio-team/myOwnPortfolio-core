@@ -11,6 +11,7 @@ $module_rubrique_space: 20px;
     border-bottom-color: $gray;
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    padding: $module_rubrique_space;
   }
 }
 
@@ -20,6 +21,7 @@ $module_rubrique_space: 20px;
 
 .module_rubrique_title {
   text-align: right;
+  font-size: 40px;
 }
 
 .module_rubrique_descriptor {

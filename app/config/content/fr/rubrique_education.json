@@ -1,5 +1,5 @@
 {
-  "title": "Formation",
+  "title": "FORMATION",
   "rubrique": [
     [
       {
@@ -12,7 +12,7 @@
       },
       {
         "title": "Détails",
-        "content": ["2015 à 2018 - Rouen, FRANCE"]
+        "content": ["2015 à 2018 - _Rouen, FRANCE_"]
       }
     ],
     [
@@ -26,7 +26,7 @@
       },
       {
         "title": "Détails",
-        "content": ["2013 à 2015 - Le Havre, FRANCE"]
+        "content": ["2013 à 2015 - _Le Havre, FRANCE_"]
       }
     ],
     [
@@ -40,7 +40,7 @@
       },
       {
         "title": "Détails",
-        "content": ["2010 à 2013 - Franqueville Saint Pierre, FRANCE"]
+        "content": ["2010 à 2013 - _Franqueville Saint Pierre, FRANCE_"]
       }
     ]
   ]
