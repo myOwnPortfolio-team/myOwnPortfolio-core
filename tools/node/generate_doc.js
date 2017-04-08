@@ -14,9 +14,9 @@ var paths = [];
 
 
 fs.readdir(pwd + src, (err, modules_list) => {
-  for (var module_name in modules_list) {
-    for (var schema in schemas) {
-      paths.push(pwd + src + '/' + module_name + '/json_schema/' + schema);
+  for (var i=0; i < modules_list.length; i++) {
+    for (var j=0; j < schemas.length; j++) {
+      paths.push(pwd + src + '/' + modules_list[i] + '/json_schema/' + schemas[i]);
     }
   }
 
@@ -25,7 +25,7 @@ fs.readdir(pwd + src, (err, modules_list) => {
     "modules": modules_list,
     "paths": paths
   });
-    
+
   fs.writeFile(pwd + dist, output, function(err) {
     if(err) {
       throw new Error(err);
