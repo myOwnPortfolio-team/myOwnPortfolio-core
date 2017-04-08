@@ -40,6 +40,14 @@ var configWebpack = {
   }
 };
 
+gulp.task('documentation', function() {
+  return gulp.src('./tools/node/generate_doc.js')
+    .pipe(plugins.exec('node <%= file.path %>', execOptions))
+    .pipe(plugins.exec.reporter(execReportOptions))
+    .pipe(plugins.exec('browserify ./docs/json_schema/script.js -o ./docs/json_schema/bundle.js', execOptions))
+    .pipe(plugins.exec.reporter(execReportOptions))
+});
+
 gulp.task('copyHTML', function() {
   return gulp.src(src + '/index.html')
   .pipe(gulp.dest(dest))
