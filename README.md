@@ -11,6 +11,10 @@ Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de r
 - [Docker]()
 
 
+<script src="http://lbovet.github.io/docson/widget.js"
+        data-schema="/app/config/modules_schema.json">      
+    </script>
+
 ## Contexte du projet
 Pour tout étudiant, il est intéressant de disposer d'un site web faisant office de portfolio.
 
