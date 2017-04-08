@@ -7,7 +7,7 @@ Permet la création et le déploiement rapide d'un portfolio personnalisé et mu
 
 Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de rendu possible.
 
-[Documentation des schemas JSON](http://macbootglass.github.io/myOwnPortfolio/docs/index.html)
+[Documentation des schemas JSON](http://macbootglass.github.io/myOwnPortfolio/docs/json_schema/index.html)
 
 ## Pré-requis
 - [Docker]()

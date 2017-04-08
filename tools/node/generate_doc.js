@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const pwd = process.cwd();
 const src = "/app/modules";
-const dist = "/docs/import.js";
+const dist = "/docs/json_schema/import.js";
 
 const schemas_name = [
   "content.json",
@@ -11,7 +11,6 @@ const schemas_name = [
 ];
 
 var schemas = [];
-
 
 fs.readdir(pwd + src, (err, modules_list) => {
   for (var i=0; i < modules_list.length; i++) {
