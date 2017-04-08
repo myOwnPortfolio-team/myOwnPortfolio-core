@@ -1,10 +1,11 @@
 $module_skills_gauge_size: 50px;
+$module_skills_space: space;
 
 .module_skills {
   background-color: $secondary-color;
   padding: 10%;
-  padding-top: $module_rubrique_space;
-  padding-bottom: $module_rubrique_space;
+  padding-top: $module_skills_space;
+  padding-bottom: $module_skills_space;
 }
 
 .module_skills_gauge {
