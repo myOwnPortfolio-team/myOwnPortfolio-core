@@ -24,7 +24,7 @@ Pour les plus aguerris, il est possible de redéfinir l'apparence de certaines p
 
 ## Arborescence du projet
 _Diagramme de package:_
-![Diagramme de Package](./doc/diagrams/package_diagram.svg)
+![Diagramme de Package](./docs/diagrams/package_diagram.svg)
 
 
 ## Fonctionnement et déploiement du projet
