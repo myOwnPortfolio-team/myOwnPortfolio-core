@@ -1,6 +1,6 @@
 {
-  "title": "module_template-style_schema",
-  "description": "schema du style du module template",
+  "title": "module_footer-style_schema",
+  "description": "schema du style du module footer",
   "type": "object",
   "properties": {
     "none": {

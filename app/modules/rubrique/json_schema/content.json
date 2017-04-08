@@ -1,6 +1,6 @@
 {
-  "title": "module_template-content_schema",
-  "description": "schema du contenu textuel du module template",
+  "title": "module_rubrique-content_schema",
+  "description": "schema du contenu textuel du module rubrique",
   "type": "object",
   "properties": {
     "title": {

@@ -1,6 +1,6 @@
 {
-  "title": "module_template-properties_schema",
-  "description": "schema des propriétés du module template",
+  "title": "module_rubrique-properties_schema",
+  "description": "schema des propriétés du module rubrique",
   "type": "object",
   "properties": {
     "rubrique_animation": {

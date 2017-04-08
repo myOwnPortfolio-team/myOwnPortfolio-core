@@ -1,6 +1,6 @@
 {
-  "title": "module_template-content_schema",
-  "description": "schema du contenu textuel du module template",
+  "title": "module_footer-content_schema",
+  "description": "schema du contenu textuel du module footer",
   "type": "object",
   "properties": {
     "content_left": {

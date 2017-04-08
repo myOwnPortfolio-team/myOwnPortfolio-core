@@ -1,6 +1,6 @@
 {
-  "title": "module_template-properties_schema",
-  "description": "schema des propriétés du module template",
+  "title": "module_footer-properties_schema",
+  "description": "schema des propriétés du module footer",
   "type": "object",
   "properties": {
     "none": {

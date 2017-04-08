@@ -1,6 +1,6 @@
 {
-  "title": "module_template-style_schema",
-  "description": "schema du style du module template",
+  "title": "module_rubrique-style_schema",
+  "description": "schema du style du module rubrique",
   "type": "object",
   "properties": {
     "none": {
