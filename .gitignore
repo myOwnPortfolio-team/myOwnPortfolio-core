@@ -5,5 +5,3 @@ node_modules
 dist
 app/import.js
 app/import.scss
-docs/bundle.js
-docs/import.js
