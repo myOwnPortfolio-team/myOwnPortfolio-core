@@ -7,13 +7,11 @@ Permet la création et le déploiement rapide d'un portfolio personnalisé et mu
 
 Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de rendu possible.
 
+[Documentation des schemas JSON](./docs/schemas_json.html)
+
 ## Pré-requis
 - [Docker]()
 
-
-<script src="http://lbovet.github.io/docson/widget.js"
-        data-schema="/app/config/modules_schema.json">      
-    </script>
 
 ## Contexte du projet
 Pour tout étudiant, il est intéressant de disposer d'un site web faisant office de portfolio.
