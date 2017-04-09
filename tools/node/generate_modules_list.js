@@ -4,10 +4,12 @@ const fs = require('fs');
 const pwd = process.cwd();
 const absolute_module_path = "/app/modules/";
 const relative_module_path = "./modules/";
+const app_properties = require(pwd + "/app/config/app_properties");
 
 const main = function() {
-  const data = require("../../app/config/modules_list.json").modules_list;
-  const schema = require("../../app/config/modules_schema.json");
+  const data = require(pwd + "/app/config/modules_list.json").modules_list;
+  const schema = require(pwd + "/app/config/modules_schema.json");
+
   validateJSON(schema, data);
 
   var importJS = 'module.exports = { \n\
