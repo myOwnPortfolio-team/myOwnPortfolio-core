@@ -23,6 +23,11 @@ $module_skills_space: $space;
 .module_skills_group {
   width: 100%;
   margin-top: $module_skills_space;
+
+  h3 {
+    margin-bottom: $module_skills_space;
+    font-weight: 300;
+  }
 }
 
 .module_skills_block {

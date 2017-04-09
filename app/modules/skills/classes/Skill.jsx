@@ -10,10 +10,6 @@ module.exports = React.createClass({
     };
   },
 
-  componentDidMount: function() {
-    this.increase();
-  },
-
   increase: function() {
     let percent = this.state.percent + 1;
     let max = this.props.content.level;
