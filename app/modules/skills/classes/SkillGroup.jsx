@@ -64,9 +64,12 @@ module.exports = React.createClass({
       <Visible
         onChange={this.restart}
         bounce={true}
-        percent={100}
+        percent={50}
       >
-        <div className="module_skills_group">
+        <div
+          className="module_skills_group"
+          data-aos="flip-left"
+        >
           <h3>{this.props.content.name}</h3>
           {this.generateSkills(this.props.content.skills)}
         </div>
