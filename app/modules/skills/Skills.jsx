@@ -11,6 +11,17 @@ module.exports = React.createClass({
     }
   },
 
+  generateSkillGroup: function(skill_group) {
+    return skill_group.map((obj, pos) => {
+      return (
+        <div className="module_skills_group">
+          <h3>{obj.name}</h3>
+          {this.generateSkills(obj.skills)}
+        </div>
+      )
+    });
+  },
+
   generateSkills: function(skills) {
     return skills.map((obj, pos) => {
       return (
@@ -43,7 +54,7 @@ module.exports = React.createClass({
         >
           <h2 className="module_skills_title">{this.props.content.title}</h2>
           <div className="module_skills_group">
-            {this.generateSkills(this.props.content.skills)}
+            {this.generateSkillGroup(this.props.content.skill_group)}
           </div>
         </Visible>
       </section>

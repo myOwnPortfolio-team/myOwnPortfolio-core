@@ -1,17 +1,116 @@
 {
   "title": "Compétences",
-  "skills": [
+  "skill_group": [
     {
-      "name": "ReactJS",
-      "level": 70
+      "name": "Langages de programmation",
+      "skills": [
+        {
+          "name": "JavaScript",
+          "level": 80
+        },
+        {
+          "name": "HTML5",
+          "level": 90
+        },
+        {
+          "name": "CSS3",
+          "level": 85
+        },
+        {
+          "name": "Sass",
+          "level": 85
+        },
+        {
+          "name": "JSON",
+          "level": 100
+        },
+        {
+          "name": "Markdown",
+          "level": 100
+        },
+        {
+          "name": "XML",
+          "level": 90
+        },
+        {
+          "name": "Java",
+          "level": 70
+        },
+        {
+          "name": "NodeJS",
+          "level": 70
+        },
+        {
+          "name": "MathLab / Scilab",
+          "level": 65
+        },
+        {
+          "name": "SQL",
+          "level": 65
+        },
+        {
+          "name": "Bash",
+          "level": 80
+        },
+        {
+          "name": "Latex",
+          "level": 70
+        }
+      ]
     },
     {
-      "name": "JavaScript",
-      "level": 80
+      "name": "Frameworks",
+      "skills": [
+        {
+          "name": "ReactJS",
+          "level": 70
+        },
+        {
+          "name": "MaterialUI",
+          "level": 90
+        },
+        {
+          "name": "JQuery",
+          "level": 90
+        },
+        {
+          "name": "Bootstrap",
+          "level": 90
+        },
+        {
+          "name": "SpringBoot",
+          "level": 20
+        },
+        {
+          "name": "jHipster",
+          "level": 50
+        }
+      ]
     },
     {
-      "name": "Java",
-      "level": 70
+      "name": "Autres outils",
+      "skills": [
+        {
+          "name": "Gulp",
+          "level": 80
+        },
+        {
+          "name": "Docker / Docker-Compose",
+          "level": 70
+        },
+        {
+          "name": "Git",
+          "level": 90
+        },
+        {
+          "name": "Webpack",
+          "level": 60
+        },
+        {
+          "name": "npm",
+          "level": 90
+        }
+      ]
     }
   ]
 }
