@@ -1,5 +1,5 @@
 $module_skills_gauge_size: 50px;
-$module_skills_space: space;
+$module_skills_space: $space;
 
 .module_skills {
   background-color: $secondary-color;
@@ -20,8 +20,23 @@ $module_skills_space: space;
   font-weight: 200;
 }
 
+.module_skills_group {
+  width: 100%;
+  margin-top: $module_skills_space;
+}
+
 .module_skills_block {
-  margin-bottom: $space;
+  margin-bottom: $module_skills_space;
+  text-align: left;
+  display: inline-block;
+  width: 50%;
+  @include respond-to(medium) {
+    width: 33.33%;
+  };
+
+  @include respond-to(medium) {
+    width: 33.33%;
+  };
 }
 
 .module_skills_title {

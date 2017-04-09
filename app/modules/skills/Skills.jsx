@@ -14,12 +14,11 @@ module.exports = React.createClass({
   generateSkills: function(skills) {
     return skills.map((obj, pos) => {
       return (
-        <li key={"skill_" + obj.name + "_" + pos}>
-          <Skill
-            content={obj}
-            visible={this.state.visible}
-          />
-        </li>
+        <Skill
+          key={"skill_" + obj.name + "_" + pos}
+          content={obj}
+          visible={this.state.visible}
+        />
       )
     });
   },
@@ -43,9 +42,9 @@ module.exports = React.createClass({
           percent={100}
         >
           <h2 className="module_skills_title">{this.props.content.title}</h2>
-          <ul>
+          <div className="module_skills_group">
             {this.generateSkills(this.props.content.skills)}
-          </ul>
+          </div>
         </Visible>
       </section>
     );
