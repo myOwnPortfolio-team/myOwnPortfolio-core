@@ -11,7 +11,6 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function() {
-    console.log(this.props.content);
     this.increase();
   },
 
@@ -34,17 +33,23 @@ module.exports = React.createClass({
     });
   },
 
+  componentWillReceiveProps: function(nextProps) {
+    if (this.props.visible !== nextProps.visible && nextProps.visible === true) {
+      this.restart();
+    }
+  },
+
   render: function() {
     return (
       <div
         className="module_skills_block"
-        data-aos="flip-left"
+        data-aos=""
       >
         <Circle
           className="module_skills_gauge"
           percent={this.state.percent}
           strokeWidth="4"
-          strokeColor="#75A5B7"
+          strokeColor="white"
           gapDegree="0"
           gapPosition="bottom"
         />
