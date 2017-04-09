@@ -10,28 +10,12 @@ module.exports = React.createClass({
     };
   },
 
-  increase: function() {
-    let percent = this.state.percent + 1;
-    let max = this.props.content.level;
-    if (percent > max) {
-      percent = max;
-      clearTimeout(tm);
-      return;
-    }
-    this.setState({ percent });
-    tm = setTimeout(this.increase, 10);
-  },
-
-  restart() {
-    clearTimeout(tm);
-    this.setState({ percent: 0 }, () => {
-      this.increase();
-    });
-  },
-
   componentWillReceiveProps: function(nextProps) {
-    if (this.props.visible !== nextProps.visible && nextProps.visible === true) {
-      this.restart();
+    let percent = nextProps.percent;
+    if (percent <= this.props.content.level) {
+      this.setState({
+        percent: percent,
+      });
     }
   },
 

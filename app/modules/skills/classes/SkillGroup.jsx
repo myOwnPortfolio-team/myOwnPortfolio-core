@@ -3,18 +3,48 @@ import Visible from 'react-on-visible';
 
 import Skill from './Skill.jsx';
 
+let tm;
 
 module.exports = React.createClass({
   getInitialState: function() {
     return {
       visible: false,
+      percent: 0,
     }
   },
 
-  restartGauge: function(visible) {
-    this.setState({
-      visible: visible
-    });
+  increase: function() {
+    let percent = this.state.percent + 1;
+    let max = 100;
+    if (percent > max) {
+      percent = max;
+      clearTimeout(tm);
+      return;
+    }
+    this.setState({ percent });
+    tm = setTimeout(this.increase, 10);
+  },
+
+  restart(visible) {
+    if (this.state.visible !== visible && visible === true) {
+      clearTimeout(tm);
+      this.setState(
+        {
+          percent: 0,
+          visible: visible
+        },
+        () => {
+          this.increase();
+        }
+      );
+    }
+
+    if (this.state.visible !== visible && visible === false) {
+      this.setState({
+        percent: 0,
+        visible: visible
+      });
+    }
   },
 
   generateSkills: function(skills) {
@@ -23,7 +53,7 @@ module.exports = React.createClass({
         <Skill
           key={"skill_" + obj.name + "_" + pos}
           content={obj}
-          visible={this.state.visible}
+          percent={this.state.percent}
         />
       )
     });
@@ -32,7 +62,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <Visible
-        onChange={this.restartGauge}
+        onChange={this.restart}
         bounce={true}
         percent={100}
       >

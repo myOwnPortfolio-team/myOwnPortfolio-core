@@ -1,9 +1,5 @@
 import React from 'react';
-import Visible from 'react-on-visible';
-
 import SkillGroup from './classes/SkillGroup.jsx';
-import Skill from './classes/Skill.jsx';
-
 
 module.exports = React.createClass({
   generateSkillGroup: function(skill_group) {

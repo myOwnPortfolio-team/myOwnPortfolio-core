@@ -95,8 +95,12 @@
           "level": 80
         },
         {
-          "name": "Docker / Docker-Compose",
-          "level": 70
+          "name": "Docker",
+          "level": 90
+        },
+        {
+          "name": "Docker-compose",
+          "level": 80
         },
         {
           "name": "Git",
