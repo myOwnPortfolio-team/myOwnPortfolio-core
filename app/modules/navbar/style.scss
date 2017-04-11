@@ -1,9 +1,7 @@
-$module_navbar_logo_height: 40px;
 $module_navbar_space: 10px;
 $module_navbar_icon_size: 50px;
 
 .module_navbar {
-  // @include calc(height, $module_navbar_logo_height + " + 2 * " + $module_navbar_space);
   height: auto;
   padding-top: $module_navbar_space;
   padding-bottom: $module_navbar_space;
@@ -14,28 +12,6 @@ $module_navbar_icon_size: 50px;
   top: 0px;
   left: 0px;
   z-index: 10;
-}
-
-
-.module_navbar_logo_list {
-  float: right;
-}
-
-.module_navbar_logo {
-  height: $module_navbar_logo_height;
-  width: $module_navbar_logo_height;
-  border-radius: $module_navbar_logo_height;
-  border-width: 2px;
-  border-style: solid;
-  border-color: $secondary-color;
-  margin-left: 20px;
-}
-
-.module_navbar_logo:hover {
-  height: $module_navbar_logo_height;
-  width: $module_navbar_logo_height;
-  border-radius: $module_navbar_logo_height;
-  border-color: black;
 }
 
 .module_navbar_link {

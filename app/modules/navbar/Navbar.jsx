@@ -40,17 +40,6 @@ module.exports = React.createClass({
     });
   },
 
-  generate_logos_links: function(links) {
-    return links.map((obj, pos) => {
-      return (
-        <LogoLink
-          key={"link_to_" + obj.alt}
-          properties={obj}
-        />
-      )
-    });
-  },
-
   render: function() {
     return (
         <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module_navbar">
