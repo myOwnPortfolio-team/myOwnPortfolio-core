@@ -29,7 +29,7 @@ module.exports = React.createClass({
           className="module_skills_gauge"
           percent={this.state.percent}
           strokeWidth="4"
-          strokeColor="white"
+          strokeColor="black"
           gapDegree="0"
           gapPosition="bottom"
         />

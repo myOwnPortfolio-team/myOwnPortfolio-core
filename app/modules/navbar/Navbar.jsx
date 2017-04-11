@@ -1,7 +1,6 @@
 import React from 'react';
 import Headroom from 'headroom.js';
 
-import LogoLink from './classes/LogoLink.jsx';
 import Toolbox from '../../classes/Toolbox.jsx';
 
 const RANDOM_ID = "randomId" + parseInt(Math.random() * 10000);

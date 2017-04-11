@@ -1,6 +1,6 @@
 {
-  "title": "module_template-properties_schema",
-  "description": "schema des propriétés du module template",
+  "title": "module_skills-properties_schema",
+  "description": "schema des propriétés du module skills",
   "type": "object",
   "properties": {
     "none": {
