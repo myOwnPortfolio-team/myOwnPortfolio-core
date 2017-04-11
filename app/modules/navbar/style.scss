@@ -1,8 +1,10 @@
 $module_navbar_logo_height: 40px;
 $module_navbar_space: 10px;
+$module_navbar_icon_size: 50px;
 
 .module_navbar {
-  @include calc(height, $module_navbar_logo_height + " + 2 * " + $module_navbar_space);
+  // @include calc(height, $module_navbar_logo_height + " + 2 * " + $module_navbar_space);
+  height: auto;
   padding-top: $module_navbar_space;
   padding-bottom: $module_navbar_space;
   background-color: $module_navbar_background_color;
@@ -42,7 +44,7 @@ $module_navbar_space: 10px;
 }
 
 .module_navbar_link + .module_navbar_link {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .module_navbar_link:active {
@@ -59,25 +61,35 @@ $module_navbar_space: 10px;
   @extend .module_navbar_link;
 }
 
-.module_navbar_link_list {
-  font-size: 25px;
+.module_navbar_link_group {
   vertical-align: middle;
   float: left;
+  width: 100%;
+  text-align: center;
+
+  @include respond-to(medium) {
+      text-align: left;
+  }
+}
+
+.module_navbar_link_text {
+  font-size: 25px;
   display: none;
+
   @include respond-to(medium) {
     display: inline-block;
   }
 }
 
-.module_navbar_link_list_button {
+.module_navbar_link_icon {
   display: inline-block;
-  vertical-align: middle;
-  float: left;
-  cursor: pointer;
+  width: $module_navbar_icon_size;
+  text-align: center;
   @include respond-to(medium) {
     display: none;
   }
 }
+
 
 
 

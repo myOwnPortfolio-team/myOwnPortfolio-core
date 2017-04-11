@@ -39,7 +39,6 @@ module.exports = React.createClass({
           this.increase();
         }
       );
-      console.log(this.tm);
     }
 
     if (this.state.visible !== visible && visible === false) {

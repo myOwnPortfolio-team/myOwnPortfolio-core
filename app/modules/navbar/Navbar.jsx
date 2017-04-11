@@ -13,15 +13,27 @@ module.exports = React.createClass({
   },
 
   generate_links: function(links) {
+    let i = 0;
     return links.map((id, pos) => {
       if (id !== this.props.id && !Toolbox.is_name_unreferenced(this.props.links.name_unreferenced, this.props.links.name_list[pos])) {
+        var icon = this.props.properties.icons_list[i++];
+        if (icon === undefined) {
+          icon = "fa-question";
+        }
         return (
           <a
             key={"link_to_" + id}
             className="module_navbar_link"
             href={"#"+id}
           >
-            {this.props.links.name_list[pos]}
+            <span className="module_navbar_link_text">
+              {this.props.links.name_list[pos]}
+            </span>
+            <i
+              className={"fa fa-2x module_navbar_link_icon " + icon}
+              aria-hidden="true"
+              onClick={function() {console.log("click");}}
+            />
           </a>
         );
       }
@@ -42,18 +54,8 @@ module.exports = React.createClass({
   render: function() {
     return (
         <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module_navbar">
-          <div className="module_navbar_link_list">
+          <div className="module_navbar_link_group">
             {this.generate_links(this.props.links.id_list)}
-          </div>
-          <div className="module_navbar_link_list_button">
-            <i 
-              className="fa fa-bars fa-2x"
-              aria-hidden="true"
-              onClick={function() {console.log("click");}}
-            />
-          </div>
-          <div className="module_navbar_logo_list" >
-            {this.generate_logos_links(this.props.properties.logoslinks)}
           </div>
         </nav>
     );
