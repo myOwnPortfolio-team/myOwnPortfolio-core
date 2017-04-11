@@ -14,9 +14,6 @@ $module_navbar_space: 10px;
   z-index: 10;
 }
 
-.headroom--top {
-  opacity: 0.75;
-}
 
 .module_navbar_logo_list {
   float: right;
@@ -63,11 +60,26 @@ $module_navbar_space: 10px;
 }
 
 .module_navbar_link_list {
-  display: inline-block;
   font-size: 25px;
   vertical-align: middle;
   float: left;
+  display: none;
+  @include respond-to(medium) {
+    display: inline-block;
+  }
 }
+
+.module_navbar_link_list_button {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  cursor: pointer;
+  @include respond-to(medium) {
+    display: none;
+  }
+}
+
+
 
 .headroom {
   width: 100%;
@@ -77,6 +89,10 @@ $module_navbar_space: 10px;
   left: 0px;
   will-change: transform;
   transition: transform 200ms linear;
+}
+
+.headroom--top {
+  opacity: 0.75;
 }
 
 .headroom--pinned {

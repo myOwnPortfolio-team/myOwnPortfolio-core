@@ -45,6 +45,13 @@ module.exports = React.createClass({
           <div className="module_navbar_link_list">
             {this.generate_links(this.props.links.id_list)}
           </div>
+          <div className="module_navbar_link_list_button">
+            <i 
+              className="fa fa-bars fa-2x"
+              aria-hidden="true"
+              onClick={function() {console.log("click");}}
+            />
+          </div>
           <div className="module_navbar_logo_list" >
             {this.generate_logos_links(this.props.properties.logoslinks)}
           </div>
