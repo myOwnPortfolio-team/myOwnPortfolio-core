@@ -4,11 +4,14 @@ import Visible from 'react-on-visible';
 import Skill from './Skill.jsx';
 
 module.exports = React.createClass({
+  componentDidMount: function() {
+    this.tm = null;
+  },
+
   getInitialState: function() {
     return {
       visible: false,
       percent: 0,
-      tm: undefined,
     }
   },
 
@@ -17,18 +20,16 @@ module.exports = React.createClass({
     let max = 100;
     if (percent > max) {
       percent = max;
-      clearTimeout(this.state.tm);
+      clearTimeout(this.tm);
       return;
     }
-    this.setState({
-      percent,
-      tm: setTimeout(this.increase, 10)
-    });
+    this.setState({ percent });
+    this.tm = setTimeout(this.increase, 10);
   },
 
   restart(visible) {
     if (this.state.visible !== visible && visible === true) {
-      clearTimeout(this.state.tm);
+      clearTimeout(this.tm);
       this.setState(
         {
           percent: 0,
@@ -38,6 +39,7 @@ module.exports = React.createClass({
           this.increase();
         }
       );
+      console.log(this.tm);
     }
 
     if (this.state.visible !== visible && visible === false) {
