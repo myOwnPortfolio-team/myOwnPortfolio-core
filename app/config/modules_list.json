@@ -13,6 +13,11 @@
       "referenced": true
     },
     {
+      "name": "À propos de moi",
+      "module_path": "./modules/about/About.jsx",
+      "referenced": true
+    },
+    {
       "name": "Compétences",
       "module_path": "./modules/skills/Skills.jsx",
       "content_path": "./config/content/fr/skills.json",

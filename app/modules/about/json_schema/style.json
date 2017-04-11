@@ -1,0 +1,12 @@
+{
+  "title": "module_about-style_schema",
+  "description": "schema du style du module about",
+  "type": "object",
+  "properties": {
+    "none": {
+      "description": "none",
+      "type": "string"
+    }
+  },
+  "required": ["none"]
+}
