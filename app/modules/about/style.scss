@@ -1,0 +1,35 @@
+$module_about_space: $space;
+$module_about_logo_size: 60px;
+
+.module_about {
+  padding: 10%;
+  padding-top: $module_about_space;
+  padding-bottom: $module_about_space;
+  text-align: center;
+}
+
+.module_about_logo {
+  height: $module_about_logo_size;
+  width: $module_about_logo_size;
+  border-radius: $module_about_logo_size;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $primary-color;
+  margin-left: 20px;
+}
+
+.module_about_content {
+  padding-top: $module_about_space;
+  padding-bottom: $module_about_space;
+  border-bottom-style: solid;
+  border-bottom-color: $primary-font-color;
+  border-bottom-width: 1px;
+}
+
+.module_about_links {
+  padding-top: $module_about_space;
+}
+
+.module_about_logo:hover {
+  border-color: $secondary-color;
+}

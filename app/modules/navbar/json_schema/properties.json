@@ -3,34 +3,16 @@
   "description": "schema des propriétées du module navbar",
   "type": "object",
   "properties": {
-    "logoslinks": {
+    "icons_list": {
+      "description": "icones à afficher lors de l'affichage mobile -> nom de classes font-awesome",
       "type": "array",
       "description": "",
       "items": {
-        "type": "object",
-        "properties": {
-          "href": {
-            "type": "string",
-            "description": "lien vers lequelle pointe l'image"
-          },
-          "src": {
-            "type": "string",
-            "description": "lien de l'image du logo"
-          },
-          "alt": {
-            "type": "string",
-            "description": "texte à afficher si l'image n est pas trouvée"
-          }
-        },
-        "required": [
-          "href",
-          "src",
-          "alt"
-        ],
+        "type": "string",
         "minItems": 0,
         "uniqueItems": false
       }
     }
   },
-  "required": ["logoslinks"]
+  "required": ["icons_list"]
 }

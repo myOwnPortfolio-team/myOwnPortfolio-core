@@ -1,5 +1,6 @@
 $module_home_content_padding: 20%;
 $module_home_profile_picture_height: 200px;
+$module_home_button_size: 50px;
 
 .module_home {
   height: 100%;
@@ -36,4 +37,21 @@ $module_home_profile_picture_height: 200px;
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.module_home_button {
+  width: $module_home_button_size;
+  height: $module_home_button_size;
+  border-radius: $module_home_button_size;
+  position: absolute;
+  cursor:pointer;
+  background-color: $primary-color;
+  color: $primary-font-color;
+  opacity: 0.75;
+  @include calc(left, "50% - " + $module_home_button_size + " / 2");
+  @include calc(bottom, $module_home_button_size + " / 2");
+}
+
+.module_home_button:hover {
+  opacity: 1;
 }

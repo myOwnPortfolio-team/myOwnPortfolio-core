@@ -1,6 +1,6 @@
 {
-  "title": "module_skills-properties_schema",
-  "description": "schema des propriétés du module skills",
+  "title": "module_about-content_schema",
+  "description": "schema du contenu textuel du module about",
   "type": "object",
   "properties": {
     "none": {
