@@ -7,7 +7,7 @@ module.exports = React.createClass({
       return (
         <SkillGroup
           content={obj}
-          key={"module_skills_group_" + obj.name + "_" + pos}
+          key={"module_skill_list_group_" + obj.name + "_" + pos}
         />
       )
     });
@@ -17,10 +17,10 @@ module.exports = React.createClass({
     return (
       <section
         id={this.props.id}
-        className="module_skills"
+        className="module_skill_list"
         data-aos="flip-down"
       >
-        <h2 className="module_skills_title">{this.props.content.title}</h2>
+        <h2 className="module_skill_list_title">{this.props.content.title}</h2>
         {this.generateSkillGroup(this.props.content.skill_group)}
       </section>
     );

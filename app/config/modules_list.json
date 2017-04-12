@@ -26,8 +26,8 @@
     },
     {
       "name": "Compétences",
-      "module_path": "./modules/skills/Skills.jsx",
-      "content_path": "./config/content/fr/skills.json",
+      "module_path": "./modules/skill_list/SkillList.jsx",
+      "content_path": "./config/content/fr/skill_list.json",
       "referenced": true
     },
     {
