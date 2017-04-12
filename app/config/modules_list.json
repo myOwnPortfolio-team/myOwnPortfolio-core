@@ -15,12 +15,20 @@
     {
       "name": "À propos de moi",
       "module_path": "./modules/about/About.jsx",
+      "content_path": "./config/content/fr/about.json",
+      "properties_path": "./config/properties/about.json",
+      "referenced": true
+    },
+    {
+      "name": "Projets",
+      "module_path": "./modules/project_list/ProjectList.jsx",
+      "content_path": "./config/content/fr/project_list.json",
       "referenced": true
     },
     {
       "name": "Compétences",
-      "module_path": "./modules/skills/Skills.jsx",
-      "content_path": "./config/content/fr/skills.json",
+      "module_path": "./modules/skill_list/SkillList.jsx",
+      "content_path": "./config/content/fr/skill_list.json",
       "referenced": true
     },
     {

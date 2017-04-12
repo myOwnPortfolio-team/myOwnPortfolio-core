@@ -3,10 +3,23 @@
   "description": "schema du contenu textuel du module about",
   "type": "object",
   "properties": {
-    "none": {
-      "description": "none",
+    "title": {
+      "description": "titre du module",
       "type": "string"
+    },
+    "text": {
+      "description": "texte au format markdown à afficher",
+      "type": "array",
+      "items": {
+        "description": "une ligne du texte",
+        "type": "string"
+      },
+      "minItems": 0,
+      "uniqueItems": false
     }
   },
-  "required": ["none"]
+  "required": [
+    "title",
+    "text"
+  ]
 }

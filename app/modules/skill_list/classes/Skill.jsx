@@ -22,18 +22,18 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div
-        className="module_skills_block"
+        className="module_skill_list_block"
         data-aos=""
       >
         <Circle
-          className="module_skills_gauge"
+          className="module_skill_list_gauge"
           percent={this.state.percent}
           strokeWidth="4"
           strokeColor="black"
           gapDegree="0"
           gapPosition="bottom"
         />
-        <span className="module_skills_name">
+        <span className="module_skill_list_name">
           {this.props.content.name}
         </span>
       </div>

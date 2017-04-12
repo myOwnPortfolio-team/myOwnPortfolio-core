@@ -17,10 +17,14 @@ $module_navbar_icon_size: 50px;
 .module_navbar_link {
   color: $primary-font-color;
   text-decoration: none;
+  margin: 10px;
 }
 
 .module_navbar_link + .module_navbar_link {
-  margin-left: 20px;
+  @include respond-to(medium) {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
 }
 
 .module_navbar_link:active {
