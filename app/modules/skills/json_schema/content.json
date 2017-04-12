@@ -7,27 +7,47 @@
       "description": "titre du module",
       "type": "string"
     },
-    "skills": {
-      "description": "liste des compétences",
+    "skill_group": {
+      "description": "groupe de liste de compétences",
       "type": "array",
       "items": {
-        "description": "une compétence",
+        "description": "liste de compétences",
         "type": "object",
         "properties": {
           "name": {
-            "description": "nom de la compétence",
+            "description": "nom du groupe de compétences",
             "type": "string"
           },
-          "level": {
-            "description": "niveau de la compétence",
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 100
+          "skills": {
+            "description": "liste des compétences",
+            "type": "array",
+            "items": {
+              "description": "une compétence",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "nom de la compétence",
+                  "type": "string"
+                },
+                "level": {
+                  "description": "niveau de la compétence",
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 100
+                }
+              },
+              "required": [
+                "name",
+                "level"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
           }
         },
         "required": [
           "name",
-          "level"
+          "skills"
         ]
       },
       "minItems": 0,
@@ -36,6 +56,6 @@
   },
   "required": [
     "title",
-    "skills"
+    "skill_group"
   ]
 }

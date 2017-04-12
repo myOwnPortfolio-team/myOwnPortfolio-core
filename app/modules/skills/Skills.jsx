@@ -1,17 +1,14 @@
 import React from 'react';
-
-import Skill from './classes/Skill.jsx';
+import SkillGroup from './classes/SkillGroup.jsx';
 
 module.exports = React.createClass({
-  generateSkills: function(skills) {
-    console.log(skills);
-    return skills.map((obj, pos) => {
+  generateSkillGroup: function(skill_group) {
+    return skill_group.map((obj, pos) => {
       return (
-        <li key={"skill_" + obj.name + "_" + pos}>
-          <Skill
-            content={obj}
-          />
-        </li>
+        <SkillGroup
+          content={obj}
+          key={"module_skills_group_" + obj.name + "_" + pos}
+        />
       )
     });
   },
@@ -24,9 +21,7 @@ module.exports = React.createClass({
         data-aos="flip-down"
       >
         <h2 className="module_skills_title">{this.props.content.title}</h2>
-        <ul>
-          {this.generateSkills(this.props.content.skills)}
-        </ul>
+        {this.generateSkillGroup(this.props.content.skill_group)}
       </section>
     );
   }

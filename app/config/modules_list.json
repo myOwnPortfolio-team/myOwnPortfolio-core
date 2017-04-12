@@ -13,6 +13,19 @@
       "referenced": true
     },
     {
+      "name": "À propos de moi",
+      "module_path": "./modules/about/About.jsx",
+      "content_path": "./config/content/fr/about.json",
+      "properties_path": "./config/properties/about.json",
+      "referenced": true
+    },
+    {
+      "name": "Compétences",
+      "module_path": "./modules/skills/Skills.jsx",
+      "content_path": "./config/content/fr/skills.json",
+      "referenced": true
+    },
+    {
       "name": "Experience",
       "module_path": "./modules/rubrique/Rubrique.jsx",
       "content_path": "./config/content/fr/rubrique_experience.json",
@@ -22,12 +35,6 @@
       "name": "Formation",
       "module_path": "./modules/rubrique/Rubrique.jsx",
       "content_path": "./config/content/fr/rubrique_education.json",
-      "referenced": true
-    },
-    {
-      "name": "Compétences",
-      "module_path": "./modules/skills/Skills.jsx",
-      "content_path": "./config/content/fr/skills.json",
       "referenced": true
     },
     {

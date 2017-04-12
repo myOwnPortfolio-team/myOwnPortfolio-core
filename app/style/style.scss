@@ -9,3 +9,11 @@ html, body{
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+section {
+  background-color: $secondary-color;
+}
+
+section:nth-child(2n+1) {
+  background-color: $primary-color;
+}

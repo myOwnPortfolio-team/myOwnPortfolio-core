@@ -54,6 +54,12 @@ gulp.task('copyHTML', function() {
   .pipe(plugins.livereload());
 });
 
+gulp.task('copyFonts', function() {
+  return gulp.src('./node_modules/font-awesome/fonts/*')
+  .pipe(gulp.dest(dest + "/fonts"))
+  .pipe(plugins.livereload());
+});
+
 gulp.task('webpack', function() {
   return gulp.src(src + '/index.jsx')
   .pipe(plugins.webpack(configWebpack))
@@ -136,7 +142,7 @@ gulp.task('watch', function () {
   gulp.watch(src + '/index.html',  ['copyHTML']);
 });
 
-gulp.task('build', plugins.sequence('generateModulesList', 'webpack', ['compileCSS', 'copyHTML', 'dependancies']));
+gulp.task('build', plugins.sequence('generateModulesList', 'webpack', ['compileCSS', 'copyHTML', 'copyFonts', 'dependancies']));
 gulp.task('dev', ['build', 'serverStart', 'watch']);
 gulp.task('minify', ['minifyCSS', 'minifyJS']);
 gulp.task('prod', plugins.sequence('build',  'minify'));

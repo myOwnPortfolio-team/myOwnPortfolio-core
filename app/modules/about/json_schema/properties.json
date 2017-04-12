@@ -1,0 +1,48 @@
+{
+  "title": "module_about-properties_schema",
+  "description": "schema des propriétés du module about",
+  "type": "object",
+  "properties": {
+    "links": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "lien vers lequelle pointe l'image"
+          },
+          "src": {
+            "type": "string",
+            "description": "lien de l'image du logo"
+          },
+          "alt": {
+            "type": "string",
+            "description": "texte à afficher si l'image n est pas trouvée"
+          }
+        },
+        "required": [
+          "href",
+          "src",
+          "alt"
+        ],
+        "minItems": 0,
+        "uniqueItems": false
+      }
+    },
+    "module_animation": {
+      "description": "animation lors de l'apparition du module",
+      "type": "string"
+    },
+    "content_animation": {
+      "description": "animation lors de l'apparition d'un contenu textuel du module",
+      "type": "string"
+    }
+  },
+  "required": [
+    "links",
+    "module_animation",
+    "content_animation"
+  ]
+}

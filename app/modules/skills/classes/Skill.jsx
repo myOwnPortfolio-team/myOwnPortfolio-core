@@ -10,41 +10,26 @@ module.exports = React.createClass({
     };
   },
 
-  componentDidMount: function() {
-    console.log(this.props.content);
-    this.increase();
-  },
-
-  increase: function() {
-    let percent = this.state.percent + 1;
-    let max = this.props.content.level;
-    if (percent > max) {
-      percent = max;
-      clearTimeout(tm);
-      return;
+  componentWillReceiveProps: function(nextProps) {
+    let percent = nextProps.percent;
+    if (percent <= this.props.content.level) {
+      this.setState({
+        percent: percent,
+      });
     }
-    this.setState({ percent });
-    tm = setTimeout(this.increase, 10);
-  },
-
-  restart() {
-    clearTimeout(tm);
-    this.setState({ percent: 0 }, () => {
-      this.increase();
-    });
   },
 
   render: function() {
     return (
       <div
         className="module_skills_block"
-        data-aos="flip-left"
+        data-aos=""
       >
         <Circle
           className="module_skills_gauge"
           percent={this.state.percent}
           strokeWidth="4"
-          strokeColor="#75A5B7"
+          strokeColor="black"
           gapDegree="0"
           gapPosition="bottom"
         />

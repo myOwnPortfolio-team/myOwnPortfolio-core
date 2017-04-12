@@ -1,7 +1,8 @@
 $module_rubrique_space: $space;
+$module_rubrique_background: transparent;
 
 .module_rubrique {
-  background-color: $secondary-color;
+  background-color: $module_rubrique_background;
   padding: 10%;
   padding-top: $module_rubrique_space;
   padding-bottom: $module_rubrique_space;
@@ -13,10 +14,6 @@ $module_rubrique_space: $space;
     border-bottom-style: solid;
     padding: $module_rubrique_space;
   }
-}
-
-.module_rubrique:nth-child(2n+1) {
-  background-color: $primary-color;
 }
 
 .module_rubrique_title {

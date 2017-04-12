@@ -24,6 +24,14 @@ module.exports = React.createClass({
               deletingInterval={this.props.properties.typewriter.deletingInterval}
             />
           </div>
+          <button
+            className="module_home_button btn btn-default"
+            onClick={function() {
+              window.scrollTo(0, window.innerHeight);
+            }}
+          >
+            <i className="fa fa-chevron-down" aria-hidden="true"></i>
+          </button>
         </div>
         <AnimatedBackground properties={this.props.properties.background}/>
       </div>
