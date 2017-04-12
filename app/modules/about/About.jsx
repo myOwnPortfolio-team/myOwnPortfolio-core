@@ -16,26 +16,31 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra molestie purus, convallis condimentum magna ultrices ac. Curabitur semper vel purus eu posuere. Curabitur non libero non enim dapibus commodo venenatis a lacus. Maecenas pellentesque nisl lorem, et posuere eros convallis sit amet. Integer molestie vestibulum finibus. Donec eget maximus metus. Nulla congue fringilla turpis, nec vestibulum nibh condimentum sed. Integer gravida eros sit amet ante hendrerit, id molestie purus eleifend. Aenean ac varius nisl. Duis et venenatis est, suscipit faucibus lectus. Cras euismod auctor eros in imperdiet. Maecenas vulputate tempor urna non tincidunt."
     return (
       <section
-        id={this.props.id}
         className="module_about"
-        data-aos="flip-down"
+        id={this.props.id}
+        data-aos={this.props.properties.module_animation}
       >
         <h2
           className="module_about_title"
+          data-aos={this.props.properties.content_animation}
         >
-          Thibault THEOLOGIEN
+          {this.props.content.title}
         </h2>
 
-        <ReactMarkdown
+        <div
           className="module_about_content"
-          source={content}
-        />
+          data-aos={this.props.properties.content_animation}
+        >
+          <ReactMarkdown
+            source={this.props.content.text.join(" \n")}
+          />
+        </div>
 
         <div
           className="module_about_links"
+          data-aos={this.props.properties.content_animation}
         >
           {this.generate_logos_links(this.props.properties.links)}
         </div>

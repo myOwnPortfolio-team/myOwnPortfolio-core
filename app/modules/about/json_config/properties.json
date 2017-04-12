@@ -10,5 +10,7 @@
       "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
       "alt": "linkedin"
     }
-  ]
+  ],
+  "module_animation": "flip-down",
+  "content_animation": "flip-left"
 }

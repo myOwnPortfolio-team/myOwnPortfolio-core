@@ -30,7 +30,19 @@
         "minItems": 0,
         "uniqueItems": false
       }
+    },
+    "module_animation": {
+      "description": "animation lors de l'apparition du module",
+      "type": "string"
+    },
+    "content_animation": {
+      "description": "animation lors de l'apparition d'un contenu textuel du module",
+      "type": "string"
     }
   },
-  "required": ["links"]
+  "required": [
+    "links",
+    "module_animation",
+    "content_animation"
+  ]
 }
