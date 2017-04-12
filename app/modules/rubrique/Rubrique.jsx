@@ -7,9 +7,9 @@ module.exports = React.createClass({
     return rubrique.map((obj, pos) => {
       return (
         <Bloc
-          key={"bloc_" + pos}
           content={obj}
           properties={this.props.properties}
+          key={"bloc_" + pos}
         />
       )
     })
@@ -22,8 +22,15 @@ module.exports = React.createClass({
         className="module_rubrique"
         data-aos={this.props.properties.rubrique_animation}
       >
-        <h2 className="module_rubrique_title">{this.props.content.title}</h2>
-        {this.generateRubrique(this.props.content.rubrique)}
+        <h2
+          className="module_rubrique_title"
+        >
+          {this.props.content.title}
+        </h2>
+
+        <div className="timeline timeline-left gray-blue">
+        	{this.generateRubrique(this.props.content.rubrique)}
+        </div>
       </section>
     );
   }

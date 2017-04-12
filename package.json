@@ -13,6 +13,7 @@
   "author": "thibault.theologien@insa-rouen.fr",
   "license": "ISC",
   "dependencies": {
+    "Timelined": "^0.2.3",
     "ajv": "^5.0.1-beta.3",
     "aos": "^2.1.1",
     "babel-core": "^6.23.1",
