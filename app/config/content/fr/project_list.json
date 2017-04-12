@@ -3,12 +3,22 @@
   "project_list": [
     {
       "title": "myOwnPortfolio",
-      "description": "Permet la création et le déploiement rapide d'un portfolio personnalisé et multilingue.",
+      "description": "Application permettant la génération d'un portfolio composé de modules personnalisés définis dans des fichiers au format JSON.",
       "href": "https://github.com/MacBootglass/myOwnPortfolio"
     },
     {
-      "title": "myOwnPortfolio",
-      "description": "Permet la création et le déploiement rapide d'un portfolio personnalisé et multilingue."
+      "title": "evASIon",
+      "description": "Développement d'une application web permettant le partage d'évènements collaboratifs",
+      "href": "https://github.com/ASIJmEnnuie/evASIon"
+    },
+    {
+      "title": "Raspeberry-Dashboard",
+      "description": "Développement d'une plateforme web, pour raspeberry pi branchés sur téléviseur hd, permettant l'affichage et le défilement automatique de pdf. Des fils d'activités twitter et facebook sont également présents.",
+      "href": "https://github.com/MacBootglass/sosi_raspberry-dashboard"
+    },
+    {
+      "title": "NAO joue à Pong",
+      "description": "Programmation du robot NAO, en langage Python, afin de lui permettre de jouer seul au jeu pong à l'aide d'un joystick placé entre ses mains."
     }
   ],
   "button_text": "Lien vers le dépôt"
