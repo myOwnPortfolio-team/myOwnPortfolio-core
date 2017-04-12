@@ -1,0 +1,27 @@
+{
+  "title": "Liste de projets",
+  "project_list": [
+    {
+      "title": "myOwnPortfolio",
+      "description": "Permet la création et le déploiement rapide d'un portfolio personnalisé et multilingue.",
+      "href": "https://github.com/MacBootglass/myOwnPortfolio"
+    },
+    {
+      "title": "Project 1",
+      "description": "description 1"
+    },
+    {
+      "title": "Project 2",
+      "description": "description 2"
+    },
+    {
+      "title": "Project 3",
+      "description": "description 3"
+    },
+    {
+      "title": "Project 4",
+      "description": "description 4"
+    }
+  ],
+  "button_text": "Repo Link"
+}

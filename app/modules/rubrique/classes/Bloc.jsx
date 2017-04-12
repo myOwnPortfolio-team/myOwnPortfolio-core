@@ -24,9 +24,21 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      <article data-aos={this.props.properties.bloc_animation}>
-        {this.generateBlocs(this.props.content)}
-      </article>
+      <div className="timeline-block">
+        <div className="timeline-icon"></div>
+        <div
+          className="timeline-content"
+          data-aos={this.props.properties.bloc_animation}
+        >
+          <article>
+            {this.generateBlocs(this.props.content.bloc)}
+          </article>
+
+          <div className="timeline-date">
+            {this.props.content.date}
+          </div>
+        </div>
+      </div>
     );
   }
 });

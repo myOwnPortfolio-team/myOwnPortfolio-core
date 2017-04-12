@@ -12,34 +12,47 @@
       "type": "array",
       "items": {
         "description": "sous blocs de la rubrique",
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "description": "titre du sous bloc",
-              "type": "string"
-            },
-            "content": {
-              "description": "contenu du sous bloc sous la forme d'un tableau dont chaque cellule correspond à une ligne",
-              "type": "array",
-              "items": {
-                "description": "contenu textuel au format markdown: \n pour retourner à la ligne",
-                "type": "string",
-                "minItems": 1,
-                "uniqueItems": false
-              }
-            }
+        "type": "object",
+        "properties": {
+          "date": {
+            "description": "date",
+            "type": "integer"
           },
-          "required": [
-            "title",
-            "content"
-          ]
+          "bloc": {
+            "type": "array",
+            "items": {
+              "description": "tout le contenu des blocs de la rubrique",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "description": "titre du sous bloc",
+                  "type": "string"
+                },
+                "content": {
+                  "description": "contenu du sous bloc sous la forme d'un tableau dont chaque cellule correspond à une ligne",
+                  "type": "array",
+                  "items": {
+                    "description": "contenu textuel au format markdown: \n pour retourner à la ligne",
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "uniqueItems": false
+                }
+              },
+              "required": [
+                "title",
+                "content"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": false
+          }
         },
-        "minItems": 1,
-        "uniqueItems": false
+        "required": [
+          "bloc"
+        ]
       },
-      "minItems": 0,
+      "minItems": 1,
       "uniqueItems": false
     }
   },

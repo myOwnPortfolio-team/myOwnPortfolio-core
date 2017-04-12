@@ -1,18 +1,42 @@
 $module_rubrique_space: $space;
 $module_rubrique_background: transparent;
+$module_rubrique_timeline_space_mobile: 64px;
+$module_rubrique_timeline_space_desktop: 10%;
+
 
 .module_rubrique {
-  background-color: $module_rubrique_background;
-  padding: 10%;
-  padding-top: $module_rubrique_space;
-  padding-bottom: $module_rubrique_space;
+  padding: $module_rubrique_space;
 
-  article {
-    margin-bottom: $module_rubrique_space;
-    border-bottom-color: $gray;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    padding: $module_rubrique_space;
+  .timeline {
+    height: auto;
+  }
+
+  .timeline:before {
+    @include calc(margin-left, $module_rubrique_timeline_space_mobile + " - 34px");
+    @include respond-to(medium) {
+      @include calc(margin-left, $module_rubrique_timeline_space_desktop + " - 34px");
+    };
+  }
+
+  .timeline-block {
+    margin-left: $module_rubrique_timeline_space_mobile !important;
+    @include respond-to(medium) {
+      @include calc(margin-right, $module_rubrique_timeline_space_desktop + " - 34px");
+      margin-left: $module_rubrique_timeline_space_desktop !important;
+    };
+  }
+
+  .timeline-date {
+    text-align: right;
+    font-size: 20px;
+    display: none;
+    @include respond-to(medium) {
+      display: block;
+    };
+  }
+
+  .timeline-content {
+    border-radius: 5px;
   }
 }
 

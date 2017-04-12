@@ -69,7 +69,7 @@ module.exports = React.createClass({
         percent={50}
       >
         <div
-          className="module_skills_group"
+          className="module_skill_list_group"
           data-aos="flip-left"
         >
           <h3>{this.props.content.name}</h3>

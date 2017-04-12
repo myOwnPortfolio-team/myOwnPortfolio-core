@@ -1,0 +1,45 @@
+$module_project_list_space: $space;
+$module_project_list_background: transparent;
+
+.module_project_list {
+  padding: 10%;
+  padding-top: $module_project_list_space;
+  padding-bottom: $module_project_list_space;
+  @include respond-to(medium) {
+  };
+}
+
+.module_project_list_title {
+  text-align: right;
+  font-size: 40px;
+}
+
+.module_project_list_project {
+  @include calc(width, "100% - 2 * " + $module_project_list_space);
+  vertical-align: middle;
+  background-color: $primary-color;
+  border-width: 0px;
+  border-color: $gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: $module_project_list_space;
+  margin: $module_project_list_space;
+  text-align: center;
+  @include shadowBox($gray);
+  @include respond-to(medium) {
+    display: inline-block;
+    @include calc(width, "50% - 2 * " + $module_project_list_space);
+  }
+
+  h3 {
+    margin-bottom: $module_project_list_space;
+  }
+
+  div {
+    margin-bottom: $module_project_list_space;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
