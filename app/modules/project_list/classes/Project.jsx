@@ -3,7 +3,7 @@ import React from 'react';
 module.exports = React.createClass({
   render: function() {
     var button = undefined;
-    if (this.props.content.href !== "") {
+    if (this.props.content.href && this.props.content.href !== "" ) {
       button = (
         <button
           className="btn"
