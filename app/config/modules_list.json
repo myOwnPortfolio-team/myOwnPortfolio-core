@@ -20,6 +20,11 @@
       "referenced": true
     },
     {
+      "name": "Projets",
+      "module_path": "./modules/project_list/ProjectList.jsx",
+      "referenced": true
+    },
+    {
       "name": "Compétences",
       "module_path": "./modules/skills/Skills.jsx",
       "content_path": "./config/content/fr/skills.json",

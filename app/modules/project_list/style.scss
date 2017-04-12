@@ -1,0 +1,14 @@
+$module_project_list_space: $space;
+$module_project_list_background: transparent;
+
+.module_project_list {
+  background-color: $module_project_list_background;
+  padding: 10%;
+  padding-top: $module_project_list_space;
+  padding-bottom: $module_project_list_space;
+}
+
+.module_project_list_title {
+  text-align: right;
+  font-size: 40px;
+}
