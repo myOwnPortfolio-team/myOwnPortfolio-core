@@ -8,6 +8,7 @@ module.exports = React.createClass({
         <Project
           content={projet}
           animation="flip-left"
+          buttonText={this.props.content.button_text}
           key={"module_project_list_" + projet.title + "_" + pos}
         />
       );

@@ -13,7 +13,7 @@ module.exports = React.createClass({
           className="btn"
           onClick={function() { window.open(this.props.content.link); }}
         >
-          Lien vers le dépot
+          {this.props.buttonText}
         </button>
       </article>
     );
