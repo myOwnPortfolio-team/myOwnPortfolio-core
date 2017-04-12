@@ -1,56 +1,65 @@
 {
   "title": "EXPÉRIENCES",
   "rubrique": [
-    [
-      {
-        "title": "Poste",
-        "content": ["Développeur"]
-      },
-      {
-        "title": "Entreprise",
-        "content": ["Saagie"]
-      },
-      {
-        "title": "Détails",
-        "content": ["Depuis janvier 2017 - _Rouen, FRANCE_"]
-      },
-      {
-        "title": "Description",
-        "content": [
-          "__Resumé__ : Projet de Deep Learning, en méthode agile, pour l'entreprise Saagie dans un groupe de 9 élèves ingénieurs à l'INSA de Rouen. \n",
-          "__Role__ : Développeur Full-Stack / Responsable infrastructure réseau et sytème d'exploitation de l'environnement de travail. \n",
-          "__Technologies__ : TensorFlow, Angular2 \n",
-          "__Contrôle de qualité__ : ISO 9001:2015 \n"
-        ]
-      }
-    ],
-    [
-      {
-        "title": "Poste",
-        "content": ["Développeur web junior"]
-      },
-      {
-        "title": "Entreprise",
-        "content": ["Espace Courbe"]
-      },
-      {
-        "title": "Détails",
-        "content": ["Avril 2015 à juin 2015 - _Montréal, CANADA_"]
-      }
-    ],
-    [
-      {
-        "title": "Poste",
-        "content": ["Agent de voierie"]
-      },
-      {
-        "title": "Entreprise",
-        "content": ["Mairie de Ymare"]
-      },
-      {
-        "title": "Détails",
-        "content": ["Été 2013 - _Ymare, FRANCE_"]
-      }
-    ]
+    {
+      "date": 2017,
+      "bloc": [
+        {
+          "title": "Poste",
+          "content": ["Développeur"]
+        },
+        {
+          "title": "Entreprise",
+          "content": ["Saagie"]
+        },
+        {
+          "title": "Détails",
+          "content": ["Depuis janvier 2017 - _Rouen, FRANCE_"]
+        },
+        {
+          "title": "Description",
+          "content": [
+            "__Resumé__ : Projet de Deep Learning, en méthode agile, pour l'entreprise Saagie dans un groupe de 9 élèves ingénieurs à l'INSA de Rouen. \n",
+            "__Role__ : Développeur Full-Stack / Responsable infrastructure réseau et sytème d'exploitation de l'environnement de travail. \n",
+            "__Technologies__ : TensorFlow, Angular2 \n",
+            "__Contrôle de qualité__ : ISO 9001:2015 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "date": 2015,
+      "bloc": [
+        {
+          "title": "Poste",
+          "content": ["Développeur web junior"]
+        },
+        {
+          "title": "Entreprise",
+          "content": ["Espace Courbe"]
+        },
+        {
+          "title": "Détails",
+          "content": ["Avril 2015 à juin 2015 - _Montréal, CANADA_"]
+        }
+      ]
+    },
+    {
+      "date": 2013,
+      "bloc": [
+        {
+          "title": "Poste",
+          "content": ["Agent de voierie"]
+        },
+        {
+          "title": "Entreprise",
+          "content": ["Mairie de Ymare"]
+        },
+        {
+          "title": "Détails",
+          "content": ["Été 2013 - _Ymare, FRANCE_"]
+        }
+      ]
+    }
   ]
 }
