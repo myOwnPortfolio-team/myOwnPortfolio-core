@@ -68,22 +68,22 @@ Plusieurs options sont maintenant possibles:
 ## Liste des modules:
 
 ### [navbar](./modules/navbar/)
-<progress max="100" value="80"><propress/>
+![90%](http://progressed.io/bar/90 "Avancement du module")
 
 ### [home](./modules/home)
-<progress max="100" value="80"><propress/>
+![75%](http://progressed.io/bar/75 "Avancement du module")
 
 ### [about](./modules/about)
-<progress max="100" value="80"><propress/>
+![85%](http://progressed.io/bar/85 "Avancement du module")
 
 ### [skills](./modules/skills)
-<progress max="100" value="80"><propress/>
+![80%](http://progressed.io/bar/80 "Avancement du module")
 
 ### [rubrique](./modules/rubrique)
-<progress max="100" value="80"><propress/>
+![75%](http://progressed.io/bar/75 "Avancement du module")
 
 ### [footer](./modules/footer)
-<progress max="100" value="80"><propress/>
+![95%](http://progressed.io/bar/95 "Avancement du module")
 
 __NOTE__: _Pour plus de détails sur le fonctionnement de ces modules, merci de consulter le fichier README.md présent dans chacun des répertoires des modules._
 
