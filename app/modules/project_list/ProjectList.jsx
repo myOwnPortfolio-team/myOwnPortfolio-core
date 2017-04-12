@@ -1,6 +1,19 @@
 import React from 'react';
+import Project from './classes/Project.jsx'
 
 module.exports = React.createClass({
+  generateProjectList: function(projectList){
+    return projectList.map((projet, pos) => {
+      return (
+        <Project
+          content={projet}
+          animation="flip-left"
+          key={"module_project_list_" + projet.title + "_" + pos}
+        />
+      );
+    });
+  },
+
   render: function() {
     return (
       <section
@@ -11,52 +24,9 @@ module.exports = React.createClass({
         <h2
           className="module_project_list_title"
         >
-          Liste de projets
+          {this.props.title}
         </h2>
-
-        <article
-          className="module_project_list_project"
-          data-aos="flip-left"
-        >
-          <h3>myOwnPortfolio</h3>
-          <div>
-            Permet la création et le déploiement rapide d'un portfolio personnalisé et multilingue.
-          </div>
-          <button
-            className="btn"
-            onClick={function() { window.open("https://github.com/MacBootglass/myOwnPortfolio"); }}
-          >
-            Lien vers le dépot
-          </button>
-        </article>
-        <article
-          className="module_project_list_project"
-        >
-          <h3>Nom du projet</h3>
-          <div>
-            Description du projet
-          </div>
-          <a>Lien vers le dépot</a>
-        </article>
-        <article
-          className="module_project_list_project"
-        >
-          <h3>Nom du projet</h3>
-          <div>
-            Description du projet
-          </div>
-          <a>Lien vers le dépot</a>
-        </article>
-        <article
-          className="module_project_list_project"
-        >
-          <h3>Nom du projet</h3>
-          <div>
-            Description du projet
-          </div>
-          <a>Lien vers le dépot</a>
-        </article>
-
+        {this.generateProjectList(this.props.content.project_list)}
       </section>
     );
   }
