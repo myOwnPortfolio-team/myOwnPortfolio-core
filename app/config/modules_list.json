@@ -15,6 +15,8 @@
     {
       "name": "À propos de moi",
       "module_path": "./modules/about/About.jsx",
+      "content_path": "./config/content/fr/about.json",
+      "properties_path": "./config/properties/about.json",
       "referenced": true
     },
     {
