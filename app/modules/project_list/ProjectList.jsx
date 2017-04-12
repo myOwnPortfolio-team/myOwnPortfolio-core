@@ -25,7 +25,7 @@ module.exports = React.createClass({
         <h2
           className="module_project_list_title"
         >
-          {this.props.title}
+          {this.props.content.title}
         </h2>
         {this.generateProjectList(this.props.content.project_list)}
       </section>

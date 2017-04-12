@@ -16,6 +16,7 @@ $module_project_list_background: transparent;
 
 .module_project_list_project {
   @include calc(width, "100% - 2 * " + $module_project_list_space);
+  vertical-align: middle;
   background-color: $primary-color;
   border-width: 0px;
   border-color: $gray;

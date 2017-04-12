@@ -22,6 +22,7 @@
     {
       "name": "Projets",
       "module_path": "./modules/project_list/ProjectList.jsx",
+      "content_path": "./config/content/fr/project_list.json",
       "referenced": true
     },
     {
