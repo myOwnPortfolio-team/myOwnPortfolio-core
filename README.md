@@ -2,8 +2,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a6eb3104d78a43e7b16259f7f3d6be9f)](https://www.codacy.com/app/thibault-theologien/myOwnPortfolio?utm_source=github.com&utm_medium=referral&utm_content=MacBootglass/myOwnPortfolio&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/MacBootglass/myOwnPortfolio.svg?branch=master)](https://travis-ci.org/MacBootglass/myOwnPortfolio)
 
-__Avancement du projet:__
-<progress max="100" value="60"><propress/>
+![65%](http://progressed.io/bar/65 "Avancement du projet")
 
 ## Description du projet
 Permet la création et le déploiement rapide d'un portfolio personnalisé et multilingue.
@@ -69,22 +68,22 @@ Plusieurs options sont maintenant possibles:
 ## Liste des modules:
 
 ### [navbar](./modules/navbar/)
-<progress max="100" value="80"><propress/>
+![90%](http://progressed.io/bar/90 "Avancement du module")
 
 ### [home](./modules/home)
-<progress max="100" value="80"><propress/>
+![75%](http://progressed.io/bar/75 "Avancement du module")
 
 ### [about](./modules/about)
-<progress max="100" value="80"><propress/>
+![85%](http://progressed.io/bar/85 "Avancement du module")
 
 ### [skills](./modules/skills)
-<progress max="100" value="80"><propress/>
+![80%](http://progressed.io/bar/80 "Avancement du module")
 
 ### [rubrique](./modules/rubrique)
-<progress max="100" value="80"><propress/>
+![75%](http://progressed.io/bar/75 "Avancement du module")
 
 ### [footer](./modules/footer)
-<progress max="100" value="80"><propress/>
+![95%](http://progressed.io/bar/95 "Avancement du module")
 
 __NOTE__: _Pour plus de détails sur le fonctionnement de ces modules, merci de consulter le fichier README.md présent dans chacun des répertoires des modules._
 
