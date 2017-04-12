@@ -11,7 +11,7 @@ module.exports = React.createClass({
         <div>{this.props.content.description}</div>
         <button
           className="btn"
-          onClick={function() { window.open(this.props.content.link); }}
+          onClick={() => { window.open(this.props.content.href); }}
         >
           {this.props.buttonText}
         </button>
