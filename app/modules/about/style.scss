@@ -15,8 +15,10 @@ $module_about_logo_size: 60px;
   border-width: 2px;
   border-style: solid;
   border-color: $primary-color;
-  margin-left: 20px;
+  margin-left: $space / 2;
+  margin-right: $space / 2;
 }
+
 
 .module_about_content {
   font-size: 20px;
@@ -33,4 +35,9 @@ $module_about_logo_size: 60px;
 
 .module_about_logo:hover {
   border-color: $secondary-color;
+}
+
+.module_about_download {
+  margin-top: $space;
+  cursor: pointer;
 }

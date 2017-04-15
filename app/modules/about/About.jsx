@@ -44,6 +44,13 @@ module.exports = React.createClass({
         >
           {this.generate_logos_links(this.props.properties.links)}
         </div>
+
+        <button
+          className="btn module_about_download"
+          onClick={() => { window.open(this.props.properties.resume_link);}}
+        >
+          {this.props.content.download}
+        </button>
       </section>
     );
   }
