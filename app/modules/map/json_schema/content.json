@@ -1,0 +1,12 @@
+{
+  "title": "module_map-content_schema",
+  "description": "schema du contenu textuel du module map",
+  "type": "object",
+  "properties": {
+    "none": {
+      "description": "none",
+      "type": "string"
+    }
+  },
+  "required": ["none"]
+}

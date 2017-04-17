@@ -18,8 +18,13 @@
       "uniqueItems": false
     }
   },
+  "download": {
+    "description": "texte à afficher dans le bouton de téléchargement",
+    "type": "string"
+  },
   "required": [
     "title",
-    "text"
+    "text",
+    "download"
   ]
 }
