@@ -31,6 +31,10 @@
         "uniqueItems": false
       }
     },
+    "resume_link": {
+      "description": "lien vers le cv à télécharger",
+      "type": "string"
+    },
     "module_animation": {
       "description": "animation lors de l'apparition du module",
       "type": "string"
@@ -42,6 +46,7 @@
   },
   "required": [
     "links",
+    "resume_link",
     "module_animation",
     "content_animation"
   ]

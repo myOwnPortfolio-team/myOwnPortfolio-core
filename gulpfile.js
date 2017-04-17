@@ -37,6 +37,11 @@ var configWebpack = {
         loader: "json"
       }
     ]
+  },
+  resolve: {
+    alias: {
+      "react": __dirname + '/node_modules/react',
+    }
   }
 };
 
