@@ -11,6 +11,10 @@ Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de r
 
 [Documentation des schemas JSON](http://macbootglass.github.io/myOwnPortfolio/docs/json_schema/index.html)
 
+[TodoList](https://github.com/MacBootglass/myOwnPortfolio/projects/1)
+
+[Issues](https://github.com/MacBootglass/myOwnPortfolio/issues)
+
 ## Pré-requis
 
 ### Minimaliste:
@@ -106,8 +110,6 @@ Lors d'un scroll vers le bas de l'écran, la barre de navigation disparait autom
 
 ### [footer](./app/modules/footer)
 ![95%](http://progressed.io/bar/95 "Avancement du module")
-
-__NOTE__: _Pour plus de détails sur le fonctionnement de ces modules, merci de consulter le fichier README.md présent dans chacun des répertoires des modules._
 
 
 ## Librairies utilisées
