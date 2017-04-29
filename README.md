@@ -19,17 +19,17 @@ Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de r
 
 ### Minimaliste:
 
-- [Docker]()
+- [Docker](https://docs.docker.com)
 
 
 ### Optimal:
 
-- [npm]()
-- [nodejs]()
-- [gulp]()
-- [sass]()
-- [json-sass]()
-- [browserify]()
+- [npm](https://docs.npmjs.com)
+- [nodejs](https://nodejs.org/en/)
+- [gulp](http://gulpjs.com)
+- [sass](http://sass-lang.com)
+- [json-sass](https://github.com/vigetlabs/sass-json-vars)
+- [browserify](http://browserify.org) _(optionnel)_
 
 
 ## Contexte du projet
@@ -44,7 +44,7 @@ Pour les plus aguerris, il est possible de redéfinir l'apparence de certaines p
 
 
 ## Arborescence
-_Diagramme de package:_
+_Diagramme de package:_ (__deprecated__)
 ![Diagramme de Package](./docs/diagrams/package_diagram.svg)
 
 
@@ -96,21 +96,49 @@ Lors d'un scroll vers le bas de l'écran, la barre de navigation disparait autom
 ### [home](./app/modules/home)
 ![75%](http://progressed.io/bar/75 "Avancement du module")
 
+Ce module permet l'affichage d'un écran d'accueil. Il dispose d'un fond animé (par le biais de la librairie [particlesjs](https://github.com/marcbruederlin/particles.js)), d'une photo centrale (de préférence celle de l'utilisateur) ainsi qu'une zone de texte  animée, apparaissant et disparaissant de manière dynamique, comme si quelqu'un était en train de taper le texte à l'écran.
+
+Un bouton permet de passer au module suivant à l'aide d'un scroll automatique.
+
+Tous ces contenus sont bien entendu personnalisables.
+
 ### [about](./app/modules/about)
 ![85%](http://progressed.io/bar/85 "Avancement du module")
+
+Ce module permet à l'utilisateur de se décrire un peu plus en détails. On retrouve donc un titre (ayant pour vocation initiale d'accueillir le nom de l'utilisateur) et un bloc de texte central (pour la description). Une liste d'images redirigeant vers des uri définies peuvent également être affichées. Elle permettent par exemple une redirection vers un profil LinkedIn ou GitHub. Un dernier bouton permet une redirection vers le téléchargement du CV de l'utilisateur.
 
 ### [map](./app/modules/map)
 ![5%](http://progressed.io/bar/5 "Avancement du module")
 
-### [skills](./app/modules/skills)
+Ce module permet à l'utilisateur d'afficher une carte du monde de type planisphère et d'un indiqué tous les lieux qu'il a pu visiter.
+
+### [project_list](./app/modules/project_list)
+![90%](http://progressed.io/bar/90 "Avancement du module")
+
+Ce module permet à l'utilisateur de générer une liste de projets sur lesquels il a pu participer. Sur le rendu de chacun de ces projets, il faut  indiquer un titre, une courte description ainsi qu'un bouton (optionnel) de redirection vers le projet en question.
+
+### [skill_list](./app/modules/skill_list)
 ![80%](http://progressed.io/bar/80 "Avancement du module")
+
+Ce module a pour vocation de lister les compétences de l'utilisateur, selon des catégories qu'il aura lui même défini. Pour ces compétences, l'utilisateur devra systématiquement indiquer un nom et un niveau ([0;100]). Une animation faisant croitre la barre de progression de 0 jusqu'au niveau indiqué par l'utilisateur sera exécuté lors de l'apparition à l'écran du module (par le biais de la librairie [react-on-visible](https://github.com/dazld/react-on-visible)).
 
 ### [rubrique](./app/modules/rubrique)
 ![75%](http://progressed.io/bar/75 "Avancement du module")
 
+Ce module permet à l'utilisateur de rédiger des rubriques comprenant un titre global ainsi que des articles.
+
+Pour chacun de ces articles, l'utilisateur doit saisir une liste de blocs comprenant un titre ainsi qu'un contenu textuel (supporte le format markdown grâce à la librairie [react-markdown](https://github.com/rexxars/react-markdown)).
+
+Une timeline est automatique générée sur le côté de ces articles. L'utilisateur peut ainsi indiquer une date à côté des articles (non présente sur mobile).
+
 ### [footer](./app/modules/footer)
 ![95%](http://progressed.io/bar/95 "Avancement du module")
 
+Ce module permet d'indiquer toutes les références que l'utilisateur pourrait souhaiter voir présentes dans un pied de page (copyright, ...).
+
+Le module est découpé en deux partie textuelles (droite et gauche) supportant toutes deux le format markdown (grâce à la librairie [react-markdown](https://github.com/rexxars/react-markdown)).
+
+Un bouton au centre du module permet de remonter en haut de l'application web.
 
 ## Librairies utilisées
 
