@@ -85,7 +85,7 @@ $ docker start $container_name -d
 #### Note
 L'image [docker utilisée](https://hub.docker.com/r/macbootglass/myownportfolio/) est disponible [ici](./tools/Dockerfile) et peut être construite localement par le biais de la commande suivante:
 ```bash
-$ docker build ./tools/Dockerfile -t macbootglass/myownportfolio:latest
+$ docker build ./tools/Dockerfile/Dockerfile -t macbootglass/myownportfolio:latest
 ```
 
 ### Compilation (configuration optimale)
