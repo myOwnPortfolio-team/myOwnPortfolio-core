@@ -48,15 +48,19 @@ _Diagramme de package:_ (__deprecated__)
 ![Diagramme de Package](./docs/diagrams/package_diagram.svg)
 
 
-## Fonctionnement et déploiement
-Le répertoire [myOwnPortfolio/app/config](./app/config) contient l'ensemble de la configuration des modules du site, et donc du site en lui même.
-C'est dans le fichier [myOwnPortfolio/app/config/modules_list.json](./app/config/modules_list.json) que sont spécifiés tous les modules utilisées, ainsi que les liens vers leurs fichiers de configuration.
+## Fonctionnement
+Le répertoire [app/config](./app/config) contient l'ensemble de la configuration des modules du site, et donc du site en lui même.
+
+C'est dans le fichier [app/config/modules_list.json](./app/config/modules_list.json) que sont spécifiés tous les modules utilisées, ainsi que les liens vers leurs fichiers de configuration.
 
 Il est important de noter que tous les fichiers JSON utilisées doivent répondre à un schéma JSON prédéfini (utilisation des normes [suivantes](http://json-schema.org/examples.html)). Vous pouvez en consulter la liste [ici](./doc/json-schemas).
 
-Afin de compiler le projet, il est nécéssaire d'exécuter depuis la racine du projet les commandes suivantes:
+## Compilation
 
-### Compilation (configuration minimaliste)
+Un répertoire `dist` contenant l'ensemble des fichiers du site sera généré.
+
+
+### Configuration minimaliste
 
 #### Avec Docker
 - Création et lancement du container permettant la compilation:
@@ -85,17 +89,16 @@ $ docker start $container_name -d
 #### Note
 L'image [docker utilisée](https://hub.docker.com/r/macbootglass/myownportfolio/) est disponible [ici](./tools/Dockerfile) et peut être construite localement par le biais de la commande suivante:
 ```bash
-$ docker build ./tools/Dockerfile -t macbootglass/myownportfolio:latest
+$ docker build ./tools/Dockerfile/Dockerfile -t macbootglass/myownportfolio:latest
 ```
 
-### Compilation (configuration optimale)
+### Configuration optimale
 ```bash
 $ npm install
 $ gulp
 ```
 
-Un répertoire `myOwnPortfolio/dist` contenant l'ensemble des fichiers du site généré.
-
+## Déploiement
 Plusieurs options sont maintenant possibles:
 - déployer cette archive sur [github pages](https://pages.github.com)
 - déployer cette archive sur un serveur web personnel
