@@ -11,4 +11,6 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN gem install sass
 RUN gem install sass-json-vars
 RUN npm install --global gulp-cli
-CMD cd project && npm install && node tools/node/generate_modules_list.js && gulp
+COPY ./compile.sh /root/compile.sh
+COPY ./start_server.sh /root/start_server.sh
+CMD echo "Choose the script from docker-compose" && ls -l
