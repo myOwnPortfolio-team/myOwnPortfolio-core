@@ -19,17 +19,17 @@ Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de r
 
 ### Minimaliste:
 
-- [Docker]()
+- [Docker](https://docs.docker.com)
 
 
 ### Optimal:
 
-- [npm]()
-- [nodejs]()
-- [gulp]()
-- [sass]()
-- [json-sass]()
-- [browserify]()
+- [npm](https://docs.npmjs.com)
+- [nodejs](https://nodejs.org/en/)
+- [gulp](http://gulpjs.com)
+- [sass](http://sass-lang.com)
+- [json-sass](https://github.com/vigetlabs/sass-json-vars)
+- [browserify](http://browserify.org) _(optionnel)_
 
 
 ## Contexte du projet
