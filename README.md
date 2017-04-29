@@ -55,12 +55,40 @@ C'est dans le fichier [myOwnPortfolio/app/config/modules_list.json](./app/config
 Il est important de noter que tous les fichiers JSON utilisées doivent répondre à un schéma JSON prédéfini (utilisation des normes [suivantes](http://json-schema.org/examples.html)). Vous pouvez en consulter la liste [ici](./doc/json-schemas).
 
 Afin de compiler le projet, il est nécéssaire d'exécuter depuis la racine du projet les commandes suivantes:
-- Si docker est installé sur votre machine
+
+### Compilation (configuration minimaliste)
+
+#### Avec Docker
+- Création et lancement du container permettant la compilation:
 ```bash
-$ bash ./tools/local/create_containers.sh # afin de créer les différents containers docker utilisés
-$ bash ./tools/local/compile.sh # afin de lancer le container docker de compilation
+$ docker run --name=compile_myownportfolio --volume=$(pwd):/root/project -it macbootglass/myownportfolio bash compile.sh
 ```
-- Si npm, gulp, sass et json-sass sont installés sur votre machine:
+
+- Création et lancement du container permettant le lancement du serveur web sur le port 3000, et donc de visualiser l'affichage:
+```bash
+$ docker run --name=start_server_myownportfolio --volume=$(pwd):/root/project -it macbootglass/myownportfolio bash start_server.sh
+```
+
+#### Avec docker-compose
+- Création et lancement des deux containers ci-dessus:
+```bash
+$ docker-compose up -d
+```
+
+#### Dans les deux cas
+- Vous pouvez relancer les container par le biais de la commande:
+```
+$ docker start $container_name -d
+```
+(avec `$container_name` valant `compile_myownportfolio` ou `start_server_myownportfolio`).
+
+#### Note
+L'image [docker utilisée](https://hub.docker.com/r/macbootglass/myownportfolio/) est disponible [ici](./tools/Dockerfile) et peut être construite localement par le biais de la commande suivante:
+```bash
+$ docker build ./tools/Dockerfile -t macbootglass/myownportfolio:latest
+```
+
+### Compilation (configuration optimale)
 ```bash
 $ npm install
 $ gulp
