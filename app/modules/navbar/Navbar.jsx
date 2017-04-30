@@ -3,7 +3,7 @@ import Headroom from 'headroom.js';
 
 import Toolbox from '../../classes/Toolbox.jsx';
 
-const RANDOM_ID = "randomId" + parseInt(Math.random() * 10000);
+const RANDOM_ID = "random_id_" + parseInt(Math.random() * 10000);
 
 module.exports = React.createClass({
   componentDidMount: function() {

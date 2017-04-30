@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+const slug = require('slug');
 
 module.exports = React.createClass({
   generateBlocs: function(bloc) {
     return bloc.map((obj, pos) => {
+      let key = slug("module rubrique bloc " + obj.title + " " + pos, {lower: true, replacement: "_"});
       return (
         <div
+          key={key}
           data-aos={this.props.properties.line_animation}
-          key={"bloc_" + obj.title + "_" + pos}
           className="module_rubrique_bloc"
         >
           <div className="module_rubrique_descriptor">

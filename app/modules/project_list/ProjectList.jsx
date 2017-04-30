@@ -1,15 +1,17 @@
 import React from 'react';
-import Project from './classes/Project.jsx'
+import Project from './classes/Project.jsx';
+const slug = require('slug');
 
 module.exports = React.createClass({
   generateProjectList: function(projectList){
-    return projectList.map((projet, pos) => {
+    return projectList.map((project, pos) => {
+      let key = slug("module project list " + project.title + " post", {lower: true, replacement: "_"});
       return (
         <Project
-          content={projet}
+          content={project}
           animation="flip-left"
           buttonText={this.props.content.button_text}
-          key={"module_project_list_" + projet.title + "_" + pos}
+          key={key}
         />
       );
     });
