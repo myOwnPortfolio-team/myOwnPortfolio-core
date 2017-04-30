@@ -1,5 +1,6 @@
 import React from 'react';
 
+const slug = require('slug');
 const modules = require('../import.js').modules_list;
 
 module.exports = React.createClass({
@@ -10,16 +11,19 @@ module.exports = React.createClass({
       "name_unreferenced": [],
     };
     let modules_list = modules.map((data) => {
+      let name = slug("module " + data.name, {lower: true, replacement: "_"});
       let Module = data.module;
-      links.id_list.push("module_" + data.name);
+      links.id_list.push(name);
+
       links.name_list.push(data.name);
       if (!data.referenced) {
         links.name_unreferenced.push(data.name);
       }
+
       return (
         <Module
-          id={"module_" + data.name}
-          key={"module" + data.name}
+          id={name}
+          key={name}
           content={data.content}
           properties={data.properties}
           links={links}
