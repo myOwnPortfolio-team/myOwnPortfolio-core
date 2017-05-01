@@ -1,15 +1,16 @@
 import React from 'react';
-
 import Bloc from './classes/Bloc.jsx';
+const slug = require('slug');
 
 module.exports = React.createClass({
   generateRubrique: function(rubrique) {
     return rubrique.map((obj, pos) => {
+      let key = slug("module rubrique bloc " + pos, {lower: true, replacement: "_"});
       return (
         <Bloc
           content={obj}
           properties={this.props.properties}
-          key={"bloc_" + pos}
+          key={key}
         />
       )
     })

@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-
 import LogoLink from './classes/LogoLink.jsx';
+const slug = require('slug');
 
 module.exports = React.createClass({
   generate_logos_links: function(links) {
     return links.map((obj, pos) => {
+      let key = slug("link to " + obj.alt, {lower: true, replacement: "_"});
       return (
         <LogoLink
-          key={"link_to_" + obj.alt}
+          key={key}
           properties={obj}
         />
       )

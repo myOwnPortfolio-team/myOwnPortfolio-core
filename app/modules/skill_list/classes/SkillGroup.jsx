@@ -1,7 +1,7 @@
 import React from 'react';
 import Visible from 'react-on-visible';
-
 import Skill from './Skill.jsx';
+const slug = require('slug');
 
 module.exports = React.createClass({
   componentDidMount: function() {
@@ -51,9 +51,10 @@ module.exports = React.createClass({
 
   generateSkills: function(skills) {
     return skills.map((obj, pos) => {
+      let key = slug("skill " + obj.name + " " + pos, {lower: true, replacement: "_"});
       return (
         <Skill
-          key={"skill_" + obj.name + "_" + pos}
+          key={key}
           content={obj}
           percent={this.state.percent}
         />

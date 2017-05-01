@@ -4,15 +4,17 @@ const fs = require('fs');
 const pwd = process.cwd();
 const absolute_module_path = "/app/modules/";
 const relative_module_path = "./modules/";
-const app_properties = require(pwd + "/app/config/app_properties");
 
 const main = function() {
   const data = require(pwd + "/app/config/modules_list.json").modules_list;
-  const schema = require(pwd + "/app/config/modules_schema.json");
+  const schema = require(pwd + "/app/config/modules_list_schema.json");
 
   validateJSON(schema, data);
 
+// TODO: VALIDATE JSON_SCHEMA
+
   var importJS = 'module.exports = { \n\
+    "properties": require("' + pwd + '" + "/app/config/app_properties"), \n\
     "modules_list": [\n';
   var importSCSS = '';
 
