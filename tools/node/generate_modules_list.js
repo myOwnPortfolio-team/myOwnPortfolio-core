@@ -7,7 +7,7 @@ const relative_module_path = "./modules/";
 
 const main = function() {
   const data = require(pwd + "/app/config/modules_list.json").modules_list;
-  const schema = require(pwd + "/app/config/modules_schema.json");
+  const schema = require(pwd + "/app/config/modules_list_schema.json");
 
   validateJSON(schema, data);
 
