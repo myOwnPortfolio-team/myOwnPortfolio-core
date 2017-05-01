@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Helmet} from "react-helmet";
 const slug = require('slug');
 const modules = require('../import.js').modules_list;
 
@@ -32,6 +32,10 @@ module.exports = React.createClass({
     });
     return (
       <div className="module_loader">
+        <Helmet>
+          <title>Portfolio de Thibault</title>
+          <link rel="icon" href="https://fr.gravatar.com/userimage/45448759/031c14bdffe709c881b0ed4bced8e433.jpg?size=48"/>
+        </Helmet>
         {modules_list}
       </div>
    );
