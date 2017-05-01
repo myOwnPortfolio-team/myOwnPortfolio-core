@@ -11,6 +11,8 @@ const main = function() {
 
   validateJSON(schema, data);
 
+// TODO: VALIDATE JSON_SCHEMA
+
   var importJS = 'module.exports = { \n\
     "properties": require("' + pwd + '" + "/app/config/app_properties"), \n\
     "modules_list": [\n';

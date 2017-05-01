@@ -13,6 +13,12 @@ const schemas_name = [
 var schemas = [];
 
 fs.readdir(pwd + src, (err, modules_list) => {
+  schemas.push(require(pwd + "/app/config/modules_schema"));
+  schemas[schemas.length-1].group = "modules_list";
+
+  schemas.push(require(pwd + "/app/config/app_properties_schema"));
+  schemas[schemas.length-1].group = "app_properties";
+
   for (var i=0; i < modules_list.length; i++) {
     for (var j=0; j < schemas_name.length; j++) {
       schemas.push(require(pwd + src + '/' + modules_list[i] + '/json_schema/' + schemas_name[j]));
