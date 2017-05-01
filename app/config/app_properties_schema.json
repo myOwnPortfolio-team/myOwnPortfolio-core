@@ -1,0 +1,45 @@
+{
+  "title": "app_properties",
+  "description": "Liste des propriétés globales de l'application",
+  "type": "object",
+  "properties": {
+    "primary-color": {
+      "description": "couleur principale des composants",
+      "type": "string"
+    },
+    "secondary-color": {
+      "description": "couleur secondaire des composants",
+      "type": "string"
+    },
+    "primary-font-color": {
+      "description": "couleur de police principale",
+      "type": "string"
+    },
+    "secondary-font-color": {
+      "description": "couleur secondaire des composants",
+      "type": "string"
+    },
+    "title": {
+      "description": "titre de l'application, affiché au niveau de l'onglet",
+      "type": "string"
+    },
+    "lang": {
+      "description": "tableau comprenant les noms des langues utilisées",
+      "type": "array",
+      "items": {
+        "description": "un nom de langue correspondant au dossier les contenant",
+        "type": "string",
+        "minItems": 1,
+        "uniqueItems": true
+      }
+    }
+  },
+  "required": [
+    "primary-color",
+    "secondary-color",
+    "primary-font-color",
+    "secondary-font-color",
+    "title",
+    "lang"
+  ]
+}
