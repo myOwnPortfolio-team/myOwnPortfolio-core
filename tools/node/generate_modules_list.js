@@ -4,7 +4,6 @@ const fs = require('fs');
 const pwd = process.cwd();
 const absolute_module_path = "/app/modules/";
 const relative_module_path = "./modules/";
-const app_properties = require(pwd + "/app/config/app_properties");
 
 const main = function() {
   const data = require(pwd + "/app/config/modules_list.json").modules_list;
@@ -13,6 +12,7 @@ const main = function() {
   validateJSON(schema, data);
 
   var importJS = 'module.exports = { \n\
+    "properties": require("' + pwd + '" + "/app/config/app_properties"), \n\
     "modules_list": [\n';
   var importSCSS = '';
 
