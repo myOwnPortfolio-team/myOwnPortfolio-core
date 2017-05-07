@@ -16,14 +16,11 @@ Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de r
 [Issues](https://github.com/MacBootglass/myOwnPortfolio/issues)
 
 ## Pré-requis
-
 ### Minimaliste:
-
 - [Docker](https://docs.docker.com)
-
+- [docker-compose]() (préférable mais non obligatoire)
 
 ### Optimal:
-
 - [npm](https://docs.npmjs.com)
 - [nodejs](https://nodejs.org/en/)
 - [gulp](http://gulpjs.com)
@@ -31,21 +28,7 @@ Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de r
 - [json-sass](https://github.com/vigetlabs/sass-json-vars)
 - [browserify](http://browserify.org) _(optionnel)_
 
-
-## Contexte du projet
-Pour tout étudiant, il est intéressant de disposer d'un site web faisant office de portfolio.
-
-Cependant, même si l'on dispose des connaissance en informatique nécessaires à sa création, ce travail peut être long et fastidieux.
-
-Le but de ce projet est donc de faciliter cette étape de création en demandant uniquement à l'utilisateur de compléter des fichiers au formats JSON.
-Ces derniers spécifient les modules que le site contiendra (barre de navigation, bouton de téléchargement de fichiers, ect ...) ainsi que leur contenu textuel. Plusieurs langues peuvent également être définies par l'utilisateur.
-
-Pour les plus aguerris, il est possible de redéfinir l'apparence de certaines parties du site, et ce toujours à partir de fichiers JSON, mais aussi de participer au développement en créant de nouveaux modules (l'ensemble du projet étant codé en React, leurs intégration est aisée).
-
-
-## Arborescence
-_Diagramme de package:_ (__deprecated__)
-![Diagramme de Package](./docs/diagrams/package_diagram.svg)
+__Note__: L'utilisation de docker n'est pas requise avec cette configuration
 
 
 ## Fonctionnement
@@ -55,13 +38,11 @@ C'est dans le fichier [app/config/modules_list.json](./app/config/modules_list.j
 
 Il est important de noter que tous les fichiers JSON utilisées doivent répondre à un schéma JSON prédéfini (utilisation des normes [suivantes](http://json-schema.org/examples.html)). Vous pouvez en consulter la liste [ici](./doc/json-schemas).
 
-## Compilation
 
+## Compilation
 Un répertoire `dist` contenant l'ensemble des fichiers du site sera généré.
 
-
 ### Configuration minimaliste
-
 #### Avec Docker
 - Création et lancement du container permettant la compilation:
 ```bash
@@ -98,6 +79,7 @@ $ npm install
 $ gulp
 ```
 
+
 ## Déploiement
 Plusieurs options sont maintenant possibles:
 - déployer cette archive sur [github pages](https://pages.github.com)
@@ -113,8 +95,23 @@ Plusieurs options sont maintenant possibles:
   ```
 
 
-## Liste des modules:
+## Contexte du projet
+Pour tout étudiant, il est intéressant de disposer d'un site web faisant office de portfolio.
 
+Cependant, même si l'on dispose des connaissance en informatique nécessaires à sa création, ce travail peut être long et fastidieux.
+
+Le but de ce projet est donc de faciliter cette étape de création en demandant uniquement à l'utilisateur de compléter des fichiers au formats JSON.
+Ces derniers spécifient les modules que le site contiendra (barre de navigation, bouton de téléchargement de fichiers, ect ...) ainsi que leur contenu textuel. Plusieurs langues peuvent également être définies par l'utilisateur.
+
+Pour les plus aguerris, il est possible de redéfinir l'apparence de certaines parties du site, et ce toujours à partir de fichiers JSON, mais aussi de participer au développement en créant de nouveaux modules (l'ensemble du projet étant codé en React, leurs intégration est aisée).
+
+
+## Arborescence
+_Diagramme de package:_ (__deprecated__)
+![Diagramme de Package](./docs/diagrams/package_diagram.svg)
+
+
+## Liste des modules
 ### [navbar](./app/modules/navbar/)
 ![90%](http://progressed.io/bar/90 "Avancement du module")
 
@@ -171,6 +168,7 @@ Le module est découpé en deux partie textuelles (droite et gauche) supportant 
 
 Un bouton au centre du module permet de remonter en haut de l'application web.
 
+
 ## Librairies utilisées
 
 ### [Timelined](https://github.com/andriussev/timelined)
@@ -223,8 +221,8 @@ Permet le rendu de texte déterminés "comme s'ils étaient saisis en direct". E
 Permet de transformer des chaines de caractères selon la norme RFC 3986.
 Cette librairie est utilisée pour la génération des ids des modules à partir du nom indiqué dans le fichier [modules_list.json](./app/config/modules_list.json) ainsi que pour les attributs keys parfois requis par ReactJS.
 
-## Commandes gulp
 
+## Commandes gulp disponibles
 * `serverStart`: Exécute la commande nodejs permettant le lancement du serveur http (utilisation de la librairie express.js) sur le port 3000.
 * `build`: Lance la compilation de l'ensemble du projet.
 * `watch`: Surveille les fichiers susceptibles être modifiés et relance la compilation en conséquence.
