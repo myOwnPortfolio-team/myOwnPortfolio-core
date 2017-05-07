@@ -206,6 +206,10 @@ Permet l'affichage de barre de progression dynamiques. Est utilisé dans le modu
 ### [react-d3-map](https://github.com/react-d3/react-d3-map)
 Permet l'affichage d'une carte du monde. Est utilisé dans le module [map](./app/modules/map).
 
+### [react-helmet](https://github.com/nfl/react-helmet)
+Permet de modifier le contenu du bloc `<head>`.
+Ainsi, il est possible de modifier la balise `<title>` (nom dans l'onglet) ou encore le favicon à partir du fichier de configuration [app_properties](./app/config/app_properties.json).
+
 ### [react-markdown](https://github.com/rexxars/react-markdown)
 Permet le rendu de contenu textuel au format markdown. Est utilisé dans les modules [rubrique](./app/modules/rubrique) et [footer](./app/modules/footer).
 
@@ -215,6 +219,9 @@ Permet de lancer des événements selon le pourcentage déterminé de l'affichag
 ### [react-rotating-text](https://github.com/adrianmcli/react-rotating-text)
 Permet le rendu de texte déterminés "comme s'ils étaient saisis en direct". Est utilisé dans le module [home](./app/modules/home)
 
+### [slug](https://github.com/dodo/node-slug)
+Permet de transformer des chaines de caractères selon la norme RFC 3986.
+Cette librairie est utilisée pour la génération des ids des modules à partir du nom indiqué dans le fichier [modules_list.json](./app/config/modules_list.json) ainsi que pour les attributs keys parfois requis par ReactJS.
 
 ## Commandes gulp
 
