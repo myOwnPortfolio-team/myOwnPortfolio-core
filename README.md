@@ -1,8 +1,13 @@
 # myOwnPortfolio (WORK IN PROGRESS)
+__Auteur__: [Thibault THÉOLOGIEN](https://github.com/MacBootglass/)
+
+__Langues__: [FR](./README.md) - [EN](./README_EN.md)
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a6eb3104d78a43e7b16259f7f3d6be9f)](https://www.codacy.com/app/thibault-theologien/myOwnPortfolio?utm_source=github.com&utm_medium=referral&utm_content=MacBootglass/myOwnPortfolio&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/MacBootglass/myOwnPortfolio.svg?branch=master)](https://travis-ci.org/MacBootglass/myOwnPortfolio)
 
 ![65%](http://progressed.io/bar/65 "Avancement du projet")
+
 
 ## Description du projet
 Permet la création et le déploiement rapide d'un portfolio personnalisé et multilingue.
@@ -20,7 +25,7 @@ __[Issues](https://github.com/MacBootglass/myOwnPortfolio/issues)__
 ## Pré-requis
 ### Minimaliste:
 - [Docker](https://docs.docker.com)
-- [docker-compose]() (préférable mais non obligatoire)
+- [docker-compose]() _(préférable mais non obligatoire)_
 
 ### Optimal:
 - [npm](https://docs.npmjs.com)
@@ -86,15 +91,7 @@ $ gulp
 Plusieurs options sont maintenant possibles:
 - déployer cette archive sur [github pages](https://pages.github.com)
 - déployer cette archive sur un serveur web personnel
-- lancer le site web en local (localhost:3000):
-  - Si docker est installé sur votre machine:
-  ```bash
-  $ bash tools/local/exec.sh
-  ```
-  - Si nodejs est installé sur votre machine:
-  ```bash
-  $ node tools/node/express.js
-  ```
+- lancer le site web en local (localhost:3000)
 
 
 ## Contexte du projet
