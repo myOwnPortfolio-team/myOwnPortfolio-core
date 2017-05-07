@@ -1,6 +1,6 @@
 {
-  "title": "module_template-style_schema",
-  "description": "schema du style du module template",
+  "title": "module_skill_list-style_schema",
+  "description": "schema du style du module skill_list",
   "type": "object",
   "properties": {
     "none": {

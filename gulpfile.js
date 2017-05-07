@@ -116,15 +116,6 @@ gulp.task('serverStart', function() {
     .pipe(plugins.exec.reporter(execReportOptions));
 });
 
-gulp.task('dependancies', function() {
-  gulp.src("node_modules/bootstrap/dist/js/bootstrap.min.js")
-    .pipe(gulp.dest(dest + ("/script")));
-  gulp.src("node_modules/jquery/dist/jquery.min.js")
-    .pipe(gulp.dest(dest + ("/script")));
-  gulp.src("node_modules/tether/dist/js/tether.min.js")
-    .pipe(gulp.dest(dest + ("/script")));
-});
-
 gulp.task('watch', function () {
   plugins.livereload.listen();
 
@@ -147,7 +138,7 @@ gulp.task('watch', function () {
   gulp.watch(src + '/index.html',  ['copyHTML']);
 });
 
-gulp.task('build', plugins.sequence('generateModulesList', 'webpack', ['compileCSS', 'copyHTML', 'copyFonts', 'dependancies']));
+gulp.task('build', plugins.sequence('generateModulesList', 'webpack', ['compileCSS', 'copyHTML', 'copyFonts']));
 gulp.task('dev', ['build', 'serverStart', 'watch']);
 gulp.task('minify', ['minifyCSS', 'minifyJS']);
 gulp.task('prod', plugins.sequence('build',  'minify'));

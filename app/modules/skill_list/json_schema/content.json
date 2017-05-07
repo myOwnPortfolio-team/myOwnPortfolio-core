@@ -1,6 +1,6 @@
 {
-  "title": "module_template-content_schema",
-  "description": "schema du contenu textuel du module template",
+  "title": "module_skill_list-content_schema",
+  "description": "schema du contenu textuel du module skill_list",
   "type": "object",
   "properties": {
     "title": {
