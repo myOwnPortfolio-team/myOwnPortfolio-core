@@ -7,13 +7,15 @@
 ## Description du projet
 Permet la création et le déploiement rapide d'un portfolio personnalisé et multilingue.
 
-Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de rendu possible.
+Cliquez __[ici](https://macbootglass.github.io)__ afin de visualiser un exemple de rendu possible.
 
-[Documentation des schemas JSON](http://macbootglass.github.io/myOwnPortfolio/docs/json_schema/index.html)
+Une présentation Reveal.js du projet est disponible __[ici](http://macbootglass-presentations.azurewebsites.net/presentations/myOwnPortfolio/#/)__.
 
-[TodoList](https://github.com/MacBootglass/myOwnPortfolio/projects/1)
+__[Documentation des schemas JSON](http://macbootglass.github.io/myOwnPortfolio/docs/json_schema/index.html)__
 
-[Issues](https://github.com/MacBootglass/myOwnPortfolio/issues)
+__[TodoList](https://github.com/MacBootglass/myOwnPortfolio/projects/1)__
+
+__[Issues](https://github.com/MacBootglass/myOwnPortfolio/issues)__
 
 ## Pré-requis
 ### Minimaliste:
@@ -28,7 +30,7 @@ Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de r
 - [json-sass](https://github.com/vigetlabs/sass-json-vars)
 - [browserify](http://browserify.org) _(optionnel)_
 
-__Note__: L'utilisation de docker n'est pas requise avec cette configuration
+__NOTE__: L'utilisation de docker n'est pas requise avec cette configuration
 
 
 ## Fonctionnement
