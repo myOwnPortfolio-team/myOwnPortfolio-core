@@ -1,29 +1,33 @@
 # myOwnPortfolio (WORK IN PROGRESS)
+__Auteur__: [Thibault THÉOLOGIEN](https://github.com/MacBootglass/)
+
+__Langues__: [FR](./README.md) - [EN](./README_EN.md)
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a6eb3104d78a43e7b16259f7f3d6be9f)](https://www.codacy.com/app/thibault-theologien/myOwnPortfolio?utm_source=github.com&utm_medium=referral&utm_content=MacBootglass/myOwnPortfolio&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/MacBootglass/myOwnPortfolio.svg?branch=master)](https://travis-ci.org/MacBootglass/myOwnPortfolio)
 
 ![65%](http://progressed.io/bar/65 "Avancement du projet")
 
+
 ## Description du projet
 Permet la création et le déploiement rapide d'un portfolio personnalisé et multilingue.
 
-Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de rendu possible.
+Cliquez __[ici](https://macbootglass.github.io)__ afin de visualiser un exemple de rendu possible.
 
-[Documentation des schemas JSON](http://macbootglass.github.io/myOwnPortfolio/docs/json_schema/index.html)
+Une présentation Reveal.js du projet est disponible __[ici](http://macbootglass-presentations.azurewebsites.net/presentations/myOwnPortfolio/#/)__.
 
-[TodoList](https://github.com/MacBootglass/myOwnPortfolio/projects/1)
+__[Documentation des schemas JSON](http://macbootglass.github.io/myOwnPortfolio/docs/json_schema/index.html)__
 
-[Issues](https://github.com/MacBootglass/myOwnPortfolio/issues)
+__[TodoList](https://github.com/MacBootglass/myOwnPortfolio/projects/1)__
+
+__[Issues](https://github.com/MacBootglass/myOwnPortfolio/issues)__
 
 ## Pré-requis
-
 ### Minimaliste:
-
 - [Docker](https://docs.docker.com)
-
+- [docker-compose]() _(préférable mais non obligatoire)_
 
 ### Optimal:
-
 - [npm](https://docs.npmjs.com)
 - [nodejs](https://nodejs.org/en/)
 - [gulp](http://gulpjs.com)
@@ -31,21 +35,7 @@ Cliquez [ici](https://macbootglass.github.io) afin de visualiser un exemple de r
 - [json-sass](https://github.com/vigetlabs/sass-json-vars)
 - [browserify](http://browserify.org) _(optionnel)_
 
-
-## Contexte du projet
-Pour tout étudiant, il est intéressant de disposer d'un site web faisant office de portfolio.
-
-Cependant, même si l'on dispose des connaissance en informatique nécessaires à sa création, ce travail peut être long et fastidieux.
-
-Le but de ce projet est donc de faciliter cette étape de création en demandant uniquement à l'utilisateur de compléter des fichiers au formats JSON.
-Ces derniers spécifient les modules que le site contiendra (barre de navigation, bouton de téléchargement de fichiers, ect ...) ainsi que leur contenu textuel. Plusieurs langues peuvent également être définies par l'utilisateur.
-
-Pour les plus aguerris, il est possible de redéfinir l'apparence de certaines parties du site, et ce toujours à partir de fichiers JSON, mais aussi de participer au développement en créant de nouveaux modules (l'ensemble du projet étant codé en React, leurs intégration est aisée).
-
-
-## Arborescence
-_Diagramme de package:_ (__deprecated__)
-![Diagramme de Package](./docs/diagrams/package_diagram.svg)
+__NOTE__: L'utilisation de docker n'est pas requise avec cette configuration
 
 
 ## Fonctionnement
@@ -55,13 +45,11 @@ C'est dans le fichier [app/config/modules_list.json](./app/config/modules_list.j
 
 Il est important de noter que tous les fichiers JSON utilisées doivent répondre à un schéma JSON prédéfini (utilisation des normes [suivantes](http://json-schema.org/examples.html)). Vous pouvez en consulter la liste [ici](./doc/json-schemas).
 
-## Compilation
 
+## Compilation
 Un répertoire `dist` contenant l'ensemble des fichiers du site sera généré.
 
-
 ### Configuration minimaliste
-
 #### Avec Docker
 - Création et lancement du container permettant la compilation:
 ```bash
@@ -98,23 +86,31 @@ $ npm install
 $ gulp
 ```
 
+
 ## Déploiement
 Plusieurs options sont maintenant possibles:
 - déployer cette archive sur [github pages](https://pages.github.com)
 - déployer cette archive sur un serveur web personnel
-- lancer le site web en local (localhost:3000):
-  - Si docker est installé sur votre machine:
-  ```bash
-  $ bash tools/local/exec.sh
-  ```
-  - Si nodejs est installé sur votre machine:
-  ```bash
-  $ node tools/node/express.js
-  ```
+- lancer le site web en local (localhost:3000)
 
 
-## Liste des modules:
+## Contexte du projet
+Pour tout étudiant, il est intéressant de disposer d'un site web faisant office de portfolio.
 
+Cependant, même si l'on dispose des connaissance en informatique nécessaires à sa création, ce travail peut être long et fastidieux.
+
+Le but de ce projet est donc de faciliter cette étape de création en demandant uniquement à l'utilisateur de compléter des fichiers au formats JSON.
+Ces derniers spécifient les modules que le site contiendra (barre de navigation, bouton de téléchargement de fichiers, ect ...) ainsi que leur contenu textuel. Plusieurs langues peuvent également être définies par l'utilisateur.
+
+Pour les plus aguerris, il est possible de redéfinir l'apparence de certaines parties du site, et ce toujours à partir de fichiers JSON, mais aussi de participer au développement en créant de nouveaux modules (l'ensemble du projet étant codé en React, leurs intégration est aisée).
+
+
+## Arborescence
+_Diagramme de package:_ (__deprecated__)
+![Diagramme de Package](./docs/diagrams/package_diagram.svg)
+
+
+## Liste des modules
 ### [navbar](./app/modules/navbar/)
 ![90%](http://progressed.io/bar/90 "Avancement du module")
 
@@ -171,6 +167,7 @@ Le module est découpé en deux partie textuelles (droite et gauche) supportant 
 
 Un bouton au centre du module permet de remonter en haut de l'application web.
 
+
 ## Librairies utilisées
 
 ### [Timelined](https://github.com/andriussev/timelined)
@@ -206,6 +203,10 @@ Permet l'affichage de barre de progression dynamiques. Est utilisé dans le modu
 ### [react-d3-map](https://github.com/react-d3/react-d3-map)
 Permet l'affichage d'une carte du monde. Est utilisé dans le module [map](./app/modules/map).
 
+### [react-helmet](https://github.com/nfl/react-helmet)
+Permet de modifier le contenu du bloc `<head>`.
+Ainsi, il est possible de modifier la balise `<title>` (nom dans l'onglet) ou encore le favicon à partir du fichier de configuration [app_properties](./app/config/app_properties.json).
+
 ### [react-markdown](https://github.com/rexxars/react-markdown)
 Permet le rendu de contenu textuel au format markdown. Est utilisé dans les modules [rubrique](./app/modules/rubrique) et [footer](./app/modules/footer).
 
@@ -215,9 +216,12 @@ Permet de lancer des événements selon le pourcentage déterminé de l'affichag
 ### [react-rotating-text](https://github.com/adrianmcli/react-rotating-text)
 Permet le rendu de texte déterminés "comme s'ils étaient saisis en direct". Est utilisé dans le module [home](./app/modules/home)
 
+### [slug](https://github.com/dodo/node-slug)
+Permet de transformer des chaines de caractères selon la norme RFC 3986.
+Cette librairie est utilisée pour la génération des ids des modules à partir du nom indiqué dans le fichier [modules_list.json](./app/config/modules_list.json) ainsi que pour les attributs keys parfois requis par ReactJS.
 
-## Commandes gulp
 
+## Commandes gulp disponibles
 * `serverStart`: Exécute la commande nodejs permettant le lancement du serveur http (utilisation de la librairie express.js) sur le port 3000.
 * `build`: Lance la compilation de l'ensemble du projet.
 * `watch`: Surveille les fichiers susceptibles être modifiés et relance la compilation en conséquence.
