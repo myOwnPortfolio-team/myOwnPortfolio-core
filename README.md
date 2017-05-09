@@ -107,7 +107,7 @@ Pour les plus aguerris, il est possible de redéfinir l'apparence de certaines p
 
 ## Arborescence
 _Diagramme de package:_ (__deprecated__)
-![Diagramme de Package](./docs/diagrams/package_diagram.svg)
+![Diagramme de Package](./docs/diagrams/package_diagram_v2.0.svg)
 
 
 ## Liste des modules
