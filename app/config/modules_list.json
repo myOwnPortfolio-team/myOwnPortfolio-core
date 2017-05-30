@@ -1,52 +1,50 @@
-{
-  "modules_list": [
-    {
-      "name": "navbar",
-      "module_path": "./modules/navbar/Navbar.jsx",
-      "referenced": false
-    },
-    {
-      "name": "Accueil",
-      "module_path": "./modules/home/Home.jsx",
-      "content_path": "./config/content/fr/home.json",
-      "properties_path": "./config/properties/home.json",
-      "referenced": true
-    },
-    {
-      "name": "À propos de moi",
-      "module_path": "./modules/about/About.jsx",
-      "content_path": "./config/content/fr/about.json",
-      "properties_path": "./config/properties/about.json",
-      "referenced": true
-    },
-    {
-      "name": "Projets",
-      "module_path": "./modules/project_list/ProjectList.jsx",
-      "content_path": "./config/content/fr/project_list.json",
-      "referenced": true
-    },
-    {
-      "name": "Compétences",
-      "module_path": "./modules/skill_list/SkillList.jsx",
-      "content_path": "./config/content/fr/skill_list.json",
-      "referenced": true
-    },
-    {
-      "name": "Experience",
-      "module_path": "./modules/rubrique/Rubrique.jsx",
-      "content_path": "./config/content/fr/rubrique_experience.json",
-      "referenced": true
-    },
-    {
-      "name": "Formation",
-      "module_path": "./modules/rubrique/Rubrique.jsx",
-      "content_path": "./config/content/fr/rubrique_education.json",
-      "referenced": true
-    },
-    {
-      "name": "footer",
-      "module_path": "./modules/footer/Footer.jsx",
-      "referenced": false
-    }
-  ]
-}
+[
+  {
+    "name": "navbar",
+    "module_path": "./modules/navbar/Navbar.jsx",
+    "referenced": false
+  },
+  {
+    "name": "Accueil",
+    "module_path": "./modules/home/Home.jsx",
+    "content_path": "./config/content/fr/home.json",
+    "properties_path": "./config/properties/home.json",
+    "referenced": true
+  },
+  {
+    "name": "À propos de moi",
+    "module_path": "./modules/about/About.jsx",
+    "content_path": "./config/content/fr/about.json",
+    "properties_path": "./config/properties/about.json",
+    "referenced": true
+  },
+  {
+    "name": "Projets",
+    "module_path": "./modules/project_list/ProjectList.jsx",
+    "content_path": "./config/content/fr/project_list.json",
+    "referenced": true
+  },
+  {
+    "name": "Compétences",
+    "module_path": "./modules/skill_list/SkillList.jsx",
+    "content_path": "./config/content/fr/skill_list.json",
+    "referenced": true
+  },
+  {
+    "name": "Experience",
+    "module_path": "./modules/rubrique/Rubrique.jsx",
+    "content_path": "./config/content/fr/rubrique_experience.json",
+    "referenced": true
+  },
+  {
+    "name": "Formation",
+    "module_path": "./modules/rubrique/Rubrique.jsx",
+    "content_path": "./config/content/fr/rubrique_education.json",
+    "referenced": true
+  },
+  {
+    "name": "footer",
+    "module_path": "./modules/footer/Footer.jsx",
+    "referenced": false
+  }
+]

@@ -6,12 +6,13 @@ const absolute_module_path = '/app/modules/';
 const relative_module_path = './modules/';
 
 const main = function() {
-  const data = require(pwd + '/app/config/modules_list.json').modules_list;
+  const data = require(pwd + '/app/config/modules_list.json');
   const schema = require(pwd + '/app/config/modules_list_schema.json');
 
   validateJSON(schema, data);
 
-  var appProperties = require(pwd + '/')
+  var appProperties = require(pwd + '/app/config/app_properties.json');
+  var appPropertiesSchema = require(pwd + '/app/config/app_properties_schema.json');
 
 // TODO: VALIDATE JSON_SCHEMA
 
