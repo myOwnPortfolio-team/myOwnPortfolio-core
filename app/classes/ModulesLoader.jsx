@@ -13,7 +13,7 @@ class ModuleLoader extends React.Component {
       name_unreferenced: [],
     };
     let modules_list = modules.map((data) => {
-      let name = slug("module " + data.name, {lower: true, replacement: "_"});
+      let name = slug('module ' + data.name, {lower: true, replacement: '_'});
       let Module = data.module;
       links.id_list.push(name);
 
