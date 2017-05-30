@@ -1,8 +1,6 @@
 import React from 'react';
 import Headroom from 'headroom.js';
 
-import Toolbox from '../../classes/Toolbox.jsx';
-
 const RANDOM_ID = "random_id_" + parseInt(Math.random() * 10000);
 
 module.exports = React.createClass({
@@ -14,7 +12,7 @@ module.exports = React.createClass({
   generate_links: function(links) {
     let i = 0;
     return links.map((id, pos) => {
-      if (id !== this.props.id && !Toolbox.is_name_unreferenced(this.props.links.name_unreferenced, this.props.links.name_list[pos])) {
+      if (id !== this.props.id && !this.is_name_unreferenced(this.props.links.name_unreferenced, this.props.links.name_list[pos])) {
         var icon = this.props.properties.icons_list[i++];
         if (icon === undefined) {
           icon = "fa-question";
@@ -37,6 +35,15 @@ module.exports = React.createClass({
         );
       }
     });
+  },
+
+  is_name_unreferenced: function(unreferenced_name, current_name) {
+    for (var i = 0; i < unreferenced_name.length; i++) {
+      if (unreferenced_name[i] === current_name) {
+        return true;
+      }
+    }
+    return false;
   },
 
   render: function() {
