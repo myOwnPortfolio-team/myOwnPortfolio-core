@@ -66,7 +66,7 @@ const makeJS = function(data, isTheLast) {
 
 
   if (data.content_path !== undefined && data.content_path !== "") {
-    JSONData = pwd + "/app" + data.content_path.substring(1);
+    JSONData = pwd + '/app' + data.content_path.substring(1);
   }
   importJS += '\
     "content": require("' + checkJSON(JSONSchema, JSONData) + '"), \n';
@@ -74,7 +74,7 @@ const makeJS = function(data, isTheLast) {
   JSONSchema = pwd + absoluteModulePath + moduleName + '/json_schema/properties.json';
   JSONData = pwd + absoluteModulePath + moduleName + '/json_config/properties.json';
   if (data.properties_path !== undefined && data.properties_path !== "") {
-    JSONData = pwd + "/app" + data.properties_path.substring(1);
+    JSONData = pwd + '/app' + data.properties_path.substring(1);
   }
   importJS += '\
     "properties": require("' + checkJSON(JSONSchema, JSONData) + '"), \n\
