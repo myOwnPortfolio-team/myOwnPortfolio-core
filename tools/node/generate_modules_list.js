@@ -19,8 +19,8 @@ const main = function() {
 // TODO: VALIDATE JSON_SCHEMA
 
   var importJS = 'module.exports = { \n\
-    "properties": require("' + pwd + '" + "/app/config/app_properties"), \n\
-    "modules_list": [\n';
+  "properties": require("' + pwd + '" + "/app/config/app_properties"), \n\
+  "modules_list": [\n';
   var importSCSS = '';
 
   for (var i = 0; i < data.length; i++) {
@@ -60,9 +60,9 @@ const makeJS = function(data, isTheLast) {
   let JSONData = pwd + absoluteModulePath + moduleName + '/json_config/content.json';
 
   let importJS = '\
-    { \n\
-      "name": "' + data.name + '", \n\
-      "module": require("' + data.module_path + '"), \n';
+  { \n\
+    "name": "' + data.name + '", \n\
+    "module": require("' + data.module_path + '"), \n';
 
 
   if (data.content_path !== undefined && data.content_path !== "") {
