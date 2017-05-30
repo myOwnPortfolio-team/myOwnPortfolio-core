@@ -5,12 +5,12 @@ const slug = require('slug');
 const modules = require('../import.js').modules_list;
 const properties = require('../import.js').properties;
 
-module.exports = React.createClass({
-  render: function() {
+class ModuleLoader extends React.Component {
+  render() {
     let links = {
-      "id_list" : [],
-      "name_list": [],
-      "name_unreferenced": [],
+      id_list : [],
+      name_list: [],
+      name_unreferenced: [],
     };
     let modules_list = modules.map((data) => {
       let name = slug("module " + data.name, {lower: true, replacement: "_"});
@@ -42,4 +42,6 @@ module.exports = React.createClass({
       </div>
    );
   }
-});
+}
+
+module.exports = ModuleLoader;
