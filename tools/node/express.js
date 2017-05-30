@@ -9,4 +9,4 @@ app.listen(port, () => {
   console.log('Server listening on port ' + port + '!')
 });
 
-opener('http://localhost:' + port + '/');
+// opener('http://localhost:' + port + '/');
