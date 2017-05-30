@@ -14,6 +14,8 @@ const main = function() {
   var appProperties = require(pwd + '/app/config/app_properties.json');
   var appPropertiesSchema = require(pwd + '/app/config/app_properties_schema.json');
 
+  validateJSON(appPropertiesSchema, appProperties);
+
 // TODO: VALIDATE JSON_SCHEMA
 
   var importJS = 'module.exports = { \n\
