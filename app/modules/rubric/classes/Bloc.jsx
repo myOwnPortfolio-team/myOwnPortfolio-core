@@ -2,8 +2,8 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 const slug = require('slug');
 
-module.exports = React.createClass({
-  generateBlocs: function(bloc) {
+class Bloc extends React.Component {
+  generateBlocs(bloc) {
     return bloc.map((obj, pos) => {
       let key = slug("module rubric bloc " + obj.title + " " + pos, {lower: true, replacement: "_"});
       return (
@@ -22,9 +22,9 @@ module.exports = React.createClass({
         </div>
       )
     });
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div className="timeline-block">
         <div className="timeline-icon"></div>
@@ -43,4 +43,6 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+module.exports = Bloc;

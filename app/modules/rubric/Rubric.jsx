@@ -2,8 +2,8 @@ import React from 'react';
 import Bloc from './classes/Bloc.jsx';
 const slug = require('slug');
 
-module.exports = React.createClass({
-  generateRubric: function(rubric) {
+class Rubric extends React.Component {
+  generateRubric(rubric) {
     return rubric.map((obj, pos) => {
       let key = slug("module rubric bloc " + pos, {lower: true, replacement: "_"});
       return (
@@ -13,10 +13,10 @@ module.exports = React.createClass({
           key={key}
         />
       )
-    })
-  },
+    });
+  }
 
-  render: function() {
+  render() {
     return (
       <section
         id={this.props.id}
@@ -35,4 +35,6 @@ module.exports = React.createClass({
       </section>
     );
   }
-});
+}
+
+module.exports = Rubric;
