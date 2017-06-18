@@ -1,7 +1,7 @@
 import React from 'react';
 
-module.exports = React.createClass({
-  render: function() {
+class LogoLink extends React.Component {
+  render() {
     return (
       <a href={this.props.properties.href}>
         <img
@@ -12,4 +12,6 @@ module.exports = React.createClass({
       </a>
     );
   }
-});
+}
+
+module.exports = LogoLink;
