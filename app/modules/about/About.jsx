@@ -3,8 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import LogoLink from './classes/LogoLink.jsx';
 const slug = require('slug');
 
-module.exports = React.createClass({
-  generate_logos_links: function(links) {
+class About extends React.Component {
+  generate_logos_links(links) {
     return links.map((obj, pos) => {
       let key = slug("link to " + obj.alt, {lower: true, replacement: "_"});
       return (
@@ -14,9 +14,9 @@ module.exports = React.createClass({
         />
       )
     });
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <section
         className="module_about"
@@ -55,4 +55,6 @@ module.exports = React.createClass({
       </section>
     );
   }
-});
+}
+
+module.exports = About;

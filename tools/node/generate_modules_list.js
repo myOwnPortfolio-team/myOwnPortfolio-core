@@ -2,20 +2,25 @@ const Ajv = require('ajv');
 const fs = require('fs');
 
 const pwd = process.cwd();
-const absolute_module_path = "/app/modules/";
-const relative_module_path = "./modules/";
+const absoluteModulePath = '/app/modules/';
+const relativeModulePath = './modules/';
 
 const main = function() {
-  const data = require(pwd + "/app/config/modules_list.json").modules_list;
-  const schema = require(pwd + "/app/config/modules_list_schema.json");
+  const data = require(pwd + '/app/config/modules_list.json');
+  const schema = require(pwd + '/app/config/modules_list_schema.json');
 
   validateJSON(schema, data);
+
+  var appProperties = require(pwd + '/app/config/app_properties.json');
+  var appPropertiesSchema = require(pwd + '/app/config/app_properties_schema.json');
+
+  validateJSON(appPropertiesSchema, appProperties);
 
 // TODO: VALIDATE JSON_SCHEMA
 
   var importJS = 'module.exports = { \n\
-    "properties": require("' + pwd + '" + "/app/config/app_properties"), \n\
-    "modules_list": [\n';
+  "properties": require("' + pwd + '" + "/app/config/app_properties"), \n\
+  "modules_list": [\n';
   var importSCSS = '';
 
   for (var i = 0; i < data.length; i++) {
@@ -45,47 +50,37 @@ const fileExists = function(path) {
   if (fs.existsSync(path)) {
     return true;
   }
-  throw new Error("File " + path + " does not exist.");
+  throw new Error('File ' + path + ' does not exist.');
 }
 
 
 const makeJS = function(data, isTheLast) {
-  let module_name = getModuleName(data.module_path);
-  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/content.json";
-  let json_data = pwd + absolute_module_path + module_name + "/json_config/content.json";
+  let moduleName = getModuleName(data.module_path);
+  let JSONSchema = pwd + absoluteModulePath + moduleName + '/json_schema/content.json';
+  let JSONData = pwd + absoluteModulePath + moduleName + '/json_config/content.json';
 
   let importJS = '\
-    { \n\
-      "name": "' + data.name + '", \n\
-      "module": require("' + data.module_path + '"), \n';
+  { \n\
+    "name": "' + data.name + '", \n\
+    "module": require("' + data.module_path + '"), \n';
 
 
   if (data.content_path !== undefined && data.content_path !== "") {
-    json_data = pwd + "/app" + data.content_path.substring(1);
-    importJS += '\
-      "content": require("' + checkJSON(json_schema, json_data) + '"), \n';
+    JSONData = pwd + '/app' + data.content_path.substring(1);
   }
-  else {
-    importJS += '\
-      "content": require("' + checkJSON(json_schema, json_data) + '"), \n';
-  }
-
-
-  json_schema = pwd + absolute_module_path + module_name + "/json_schema/properties.json";
-  json_data = pwd + absolute_module_path + module_name + "/json_config/properties.json";
-  if (data.properties_path !== undefined && data.properties_path !== "") {
-    json_data = pwd + "/app" + data.properties_path.substring(1);
-    importJS += '\
-      "properties": require("' + checkJSON(json_schema, json_data) + '"), \n';
-  }
-  else {
-    importJS += '\
-      "properties": require("' + checkJSON(json_schema, json_data) + '"), \n';
-  }
-
   importJS += '\
-      "referenced": ' + data.referenced + ', \n\
-    }';
+    "content": require("' + checkJSON(JSONSchema, JSONData) + '"), \n';
+
+  JSONSchema = pwd + absoluteModulePath + moduleName + '/json_schema/properties.json';
+  JSONData = pwd + absoluteModulePath + moduleName + '/json_config/properties.json';
+  if (data.properties_path !== undefined && data.properties_path !== "") {
+    JSONData = pwd + '/app' + data.properties_path.substring(1);
+  }
+  importJS += '\
+    "properties": require("' + checkJSON(JSONSchema, JSONData) + '"), \n\
+    "referenced": ' + data.referenced + ', \n\
+  }';
+
   if (!isTheLast) {
     importJS += ',';
   }
@@ -96,48 +91,48 @@ const makeJS = function(data, isTheLast) {
 
 
 const makeSCSS = function(data) {
-  let module_name = getModuleName(data.module_path);
-  let importSCSS = '@import "' + relative_module_path + module_name  + '/style.scss";\n'
+  let moduleName = getModuleName(data.module_path);
+  let importSCSS = '@import "' + relativeModulePath + moduleName  + '/style.scss";\n'
 
-  let json_schema = pwd + absolute_module_path + module_name + "/json_schema/style.json";
-  let json_data = pwd + absolute_module_path + module_name + "/json_config/style.json";
+  let JSONSchema = pwd + absoluteModulePath + moduleName + '/json_schema/style.json';
+  let JSONData = pwd + absoluteModulePath + moduleName + '/json_config/style.json';
 
   if (data.style_path !== undefined && data.style_path !== "") {
-    json_data = pwd + "/app" + data.style_path.substring(1);
-    return '@import "' + checkJSON(json_schema, json_data) + '";\n' + importSCSS;
+    JSONData = pwd + '/app' + data.style_path.substring(1);
+    return '@import "' + checkJSON(JSONSchema, JSONData) + '";\n' + importSCSS;
   }
-  return '@import "' + checkJSON(json_schema, json_data) + '";\n' + importSCSS
+  return '@import "' + checkJSON(JSONSchema, JSONData) + '";\n' + importSCSS
 }
 
 
 const writeFiles = function(importJS, importSCSS){
-  fs.writeFile(pwd + "/app/import.js", importJS, function(err) {
+  fs.writeFile(pwd + '/app/import.js', importJS, function(err) {
     if(err) {
       throw new Error(err);
     }
-    console.log("Script import.js généré");
+    console.log('Script import.js généré');
   });
 
-  fs.writeFile(pwd + "/app/import.scss", importSCSS, function(err) {
+  fs.writeFile(pwd + '/app/import.scss', importSCSS, function(err) {
     if(err) {
       throw new Error(err);
     }
-    console.log("Fichier import.scss généré");
+    console.log('Fichier import.scss généré');
   });
 }
 
 
-const getModuleName = function(module_path, first_part) {
-  let module_name = module_path.substring(relative_module_path.length);
-  return module_name.substring(0, module_name.indexOf("/"));
+const getModuleName = function(modulePath, firstPart) {
+  let moduleName = modulePath.substring(relativeModulePath.length);
+  return moduleName.substring(0, moduleName.indexOf('/'));
 }
 
 
-const checkJSON = function(json_schema, json_data) {
-  if (fileExists(json_schema) && fileExists(json_data)) {
-    validateJSON(require(json_schema), require(json_data));
+const checkJSON = function(JSONSchema, JSONData) {
+  if (fileExists(JSONSchema) && fileExists(JSONData)) {
+    validateJSON(require(JSONSchema), require(JSONData));
   }
-  return json_data;
+  return JSONData;
 }
 
 main();
