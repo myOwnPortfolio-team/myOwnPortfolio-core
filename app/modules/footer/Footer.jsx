@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-module.exports = React.createClass({
-  render: function() {
+class Footer extends React.Component {
+  render() {
     return (
       <footer
         id={this.props.id}
@@ -31,4 +31,6 @@ module.exports = React.createClass({
       </footer>
     );
   }
-});
+}
+
+module.exports = Footer;
