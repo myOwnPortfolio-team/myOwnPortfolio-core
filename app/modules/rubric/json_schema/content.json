@@ -1,17 +1,17 @@
 {
-  "title": "module_rubrique-content_schema",
-  "description": "schema du contenu textuel du module rubrique",
+  "title": "module_rubric-content_schema",
+  "description": "schema du contenu textuel du module rubric",
   "type": "object",
   "properties": {
     "title": {
-      "description": "titre de la rubrique",
+      "description": "titre de la rubric",
       "type": "string"
     },
-    "rubrique": {
-      "description": "une rubrique",
+    "rubric": {
+      "description": "une rubric",
       "type": "array",
       "items": {
-        "description": "sous blocs de la rubrique",
+        "description": "sous blocs de la rubric",
         "type": "object",
         "properties": {
           "date": {
@@ -21,7 +21,7 @@
           "bloc": {
             "type": "array",
             "items": {
-              "description": "tout le contenu des blocs de la rubrique",
+              "description": "tout le contenu des blocs de la rubric",
               "type": "object",
               "properties": {
                 "title": {
@@ -58,6 +58,6 @@
   },
   "required": [
     "title",
-    "rubrique"
+    "rubric"
   ]
 }

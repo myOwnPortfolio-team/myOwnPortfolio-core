@@ -5,18 +5,18 @@ const slug = require('slug');
 module.exports = React.createClass({
   generateBlocs: function(bloc) {
     return bloc.map((obj, pos) => {
-      let key = slug("module rubrique bloc " + obj.title + " " + pos, {lower: true, replacement: "_"});
+      let key = slug("module rubric bloc " + obj.title + " " + pos, {lower: true, replacement: "_"});
       return (
         <div
           key={key}
           data-aos={this.props.properties.line_animation}
-          className="module_rubrique_bloc"
+          className="module_rubric_bloc"
         >
-          <div className="module_rubrique_descriptor">
+          <div className="module_rubric_descriptor">
             {obj.title}
           </div>
           <ReactMarkdown
-            className="module_rubrique_content"
+            className="module_rubric_content"
             source={obj.content.join(" \n")}
           />
         </div>
