@@ -1,8 +1,8 @@
 import React from 'react';
 var Map = require('react-d3-map').Map;
 
-module.exports = React.createClass({
-  render: function() {
+class Map extends React.Component {
+  render() {
     var width = window.screen.width;
 
     return (
@@ -21,4 +21,6 @@ module.exports = React.createClass({
       </section>
     );
   }
-});
+}
+
+module.exports = Map;
