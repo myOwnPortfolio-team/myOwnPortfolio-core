@@ -2,8 +2,8 @@ import React from 'react';
 import Project from './classes/Project.jsx';
 const slug = require('slug');
 
-module.exports = React.createClass({
-  generateProjectList: function(projectList){
+class ProjectList extends React.Component {
+  generateProjectList(projectList) {
     return projectList.map((project, pos) => {
       let key = slug("module project list " + project.title + " post", {lower: true, replacement: "_"});
       return (
@@ -15,9 +15,9 @@ module.exports = React.createClass({
         />
       );
     });
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <section
         className="module_project_list"
@@ -33,4 +33,6 @@ module.exports = React.createClass({
       </section>
     );
   }
-});
+}
+
+module.exports = ProjectList;

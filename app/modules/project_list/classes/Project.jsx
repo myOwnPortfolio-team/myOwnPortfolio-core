@@ -1,7 +1,7 @@
 import React from 'react';
 
-module.exports = React.createClass({
-  render: function() {
+class Project extends React.Component {
+  render() {
     var button = undefined;
     if (this.props.content.href && this.props.content.href !== "" ) {
       button = (
@@ -25,4 +25,6 @@ module.exports = React.createClass({
       </article>
     );
   }
-});
+}
+
+module.exports = Project;
