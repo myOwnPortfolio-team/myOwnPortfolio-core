@@ -1,8 +1,7 @@
 import React from 'react';
 
-module.exports = React.createClass({
-
-  render: function() {
+class Avatar extends React.Component {
+  render() {
     return(
       <img
         src={this.props.properties.src}
@@ -11,4 +10,6 @@ module.exports = React.createClass({
       />
     );
   }
-});
+}
+
+module.exports = Avatar;
