@@ -18,18 +18,18 @@
             "description": "date",
             "type": "integer"
           },
-          "bloc": {
+          "block": {
             "type": "array",
             "items": {
               "description": "tout le contenu des blocs de la rubric",
               "type": "object",
               "properties": {
                 "title": {
-                  "description": "titre du sous bloc",
+                  "description": "titre du sous block",
                   "type": "string"
                 },
                 "content": {
-                  "description": "contenu du sous bloc sous la forme d'un tableau dont chaque cellule correspond à une ligne",
+                  "description": "contenu du sous block sous la forme d'un tableau dont chaque cellule correspond à une ligne",
                   "type": "array",
                   "items": {
                     "description": "contenu textuel au format markdown: \n pour retourner à la ligne",
@@ -49,7 +49,7 @@
           }
         },
         "required": [
-          "bloc"
+          "block"
         ]
       },
       "minItems": 1,

@@ -132,7 +132,7 @@ Tous ces contenus sont bien entendu personnalisables.
 ### [about](./app/modules/about)
 ![85%](http://progressed.io/bar/85 "Avancement du module")
 
-Ce module permet à l'utilisateur de se décrire un peu plus en détails. On retrouve donc un titre (ayant pour vocation initiale d'accueillir le nom de l'utilisateur) et un bloc de texte central (pour la description). Une liste d'images redirigeant vers des uri définies peuvent également être affichées. Elle permettent par exemple une redirection vers un profil LinkedIn ou GitHub. Un dernier bouton permet une redirection vers le téléchargement du CV de l'utilisateur.
+Ce module permet à l'utilisateur de se décrire un peu plus en détails. On retrouve donc un titre (ayant pour vocation initiale d'accueillir le nom de l'utilisateur) et un block de texte central (pour la description). Une liste d'images redirigeant vers des uri définies peuvent également être affichées. Elle permettent par exemple une redirection vers un profil LinkedIn ou GitHub. Un dernier bouton permet une redirection vers le téléchargement du CV de l'utilisateur.
 
 ### [map](./app/modules/map)
 ![5%](http://progressed.io/bar/5 "Avancement du module")
@@ -204,7 +204,7 @@ Permet l'affichage de barre de progression dynamiques. Est utilisé dans le modu
 Permet l'affichage d'une carte du monde. Est utilisé dans le module [map](./app/modules/map).
 
 ### [react-helmet](https://github.com/nfl/react-helmet)
-Permet de modifier le contenu du bloc `<head>`.
+Permet de modifier le contenu du block `<head>`.
 Ainsi, il est possible de modifier la balise `<title>` (nom dans l'onglet) ou encore le favicon à partir du fichier de configuration [app_properties](./app/config/app_properties.json).
 
 ### [react-markdown](https://github.com/rexxars/react-markdown)

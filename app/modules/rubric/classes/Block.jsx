@@ -2,10 +2,10 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 const slug = require('slug');
 
-class Bloc extends React.Component {
-  generateBlocs(bloc) {
-    return bloc.map((obj, pos) => {
-      let key = slug("module rubric bloc " + obj.title + " " + pos, {lower: true, replacement: "_"});
+class Block extends React.Component {
+  generateBlocs(block) {
+    return block.map((obj, pos) => {
+      let key = slug("module rubric block " + obj.title + " " + pos, {lower: true, replacement: "_"});
       return (
         <div
           key={key}
@@ -33,7 +33,7 @@ class Bloc extends React.Component {
           data-aos={this.props.properties.bloc_animation}
         >
           <article>
-            {this.generateBlocs(this.props.content.bloc)}
+            {this.generateBlocs(this.props.content.block)}
           </article>
 
           <div className="timeline-date">
@@ -45,4 +45,4 @@ class Bloc extends React.Component {
   }
 }
 
-module.exports = Bloc;
+module.exports = Block;

@@ -1,13 +1,13 @@
 import React from 'react';
-import Bloc from './classes/Bloc.jsx';
+import Block from './classes/Block.jsx';
 const slug = require('slug');
 
 class Rubric extends React.Component {
   generateRubric(rubric) {
     return rubric.map((obj, pos) => {
-      let key = slug("module rubric bloc " + pos, {lower: true, replacement: "_"});
+      let key = slug("module rubric block " + pos, {lower: true, replacement: "_"});
       return (
-        <Bloc
+        <Block
           content={obj}
           properties={this.props.properties}
           key={key}

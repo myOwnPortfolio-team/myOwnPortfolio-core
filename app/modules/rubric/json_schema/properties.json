@@ -8,11 +8,11 @@
       "type": "string"
     },
     "bloc_animation": {
-      "description": "animation lors de l'apparition d'un bloc de la rubric",
+      "description": "animation lors de l'apparition d'un block de la rubric",
       "type": "string"
     },
     "line_animation": {
-      "description": "animation lors de l'apparition d'une ligne d'un bloc de la rubric",
+      "description": "animation lors de l'apparition d'une ligne d'un block de la rubric",
       "type": "string"
     }
   },
