@@ -6,6 +6,7 @@ plugins.exec = require('gulp-exec');
 plugins.sass = require('gulp-ruby-sass');
 plugins.webpack = require('webpack-stream');
 
+// var webpack = require('webpack');
 var src = './app'
 var dest = './dist';
 
@@ -42,7 +43,15 @@ var configWebpack = {
     alias: {
       "react": __dirname + '/node_modules/react',
     }
-  }
+  },
+  // plugins: [
+  //   new webpack.DefinePlugin({
+  //     'process.env': {
+  //       NODE_ENV: JSON.stringify('production')
+  //     }
+  //   }),
+  //   new webpack.optimize.UglifyJsPlugin()
+  // ]
 };
 
 gulp.task('documentation', function() {
