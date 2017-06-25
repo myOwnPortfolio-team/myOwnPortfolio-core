@@ -1,35 +1,35 @@
 {
-  "title": "module_rubrique-content_schema",
-  "description": "schema du contenu textuel du module rubrique",
+  "title": "module_rubric-content_schema",
+  "description": "schema du contenu textuel du module rubric",
   "type": "object",
   "properties": {
     "title": {
-      "description": "titre de la rubrique",
+      "description": "titre de la rubric",
       "type": "string"
     },
-    "rubrique": {
-      "description": "une rubrique",
+    "rubric": {
+      "description": "une rubric",
       "type": "array",
       "items": {
-        "description": "sous blocs de la rubrique",
+        "description": "sous blocs de la rubric",
         "type": "object",
         "properties": {
           "date": {
             "description": "date",
             "type": "integer"
           },
-          "bloc": {
+          "block": {
             "type": "array",
             "items": {
-              "description": "tout le contenu des blocs de la rubrique",
+              "description": "tout le contenu des blocs de la rubric",
               "type": "object",
               "properties": {
                 "title": {
-                  "description": "titre du sous bloc",
+                  "description": "titre du sous block",
                   "type": "string"
                 },
                 "content": {
-                  "description": "contenu du sous bloc sous la forme d'un tableau dont chaque cellule correspond à une ligne",
+                  "description": "contenu du sous block sous la forme d'un tableau dont chaque cellule correspond à une ligne",
                   "type": "array",
                   "items": {
                     "description": "contenu textuel au format markdown: \n pour retourner à la ligne",
@@ -49,7 +49,7 @@
           }
         },
         "required": [
-          "bloc"
+          "block"
         ]
       },
       "minItems": 1,
@@ -58,6 +58,6 @@
   },
   "required": [
     "title",
-    "rubrique"
+    "rubric"
   ]
 }

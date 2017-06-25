@@ -3,9 +3,8 @@ import AnimatedBackground from './classes/AnimatedBackground.jsx';
 import Avatar from './classes/Avatar.jsx';
 import ReactRotatingText from 'react-rotating-text';
 
-
-module.exports = React.createClass({
-  render: function() {
+class Home extends React.Component {
+  render() {
     return(
       <div
         id={this.props.id}
@@ -37,4 +36,6 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+module.exports = Home;

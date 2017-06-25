@@ -132,7 +132,7 @@ Tous ces contenus sont bien entendu personnalisables.
 ### [about](./app/modules/about)
 ![85%](http://progressed.io/bar/85 "Avancement du module")
 
-Ce module permet à l'utilisateur de se décrire un peu plus en détails. On retrouve donc un titre (ayant pour vocation initiale d'accueillir le nom de l'utilisateur) et un bloc de texte central (pour la description). Une liste d'images redirigeant vers des uri définies peuvent également être affichées. Elle permettent par exemple une redirection vers un profil LinkedIn ou GitHub. Un dernier bouton permet une redirection vers le téléchargement du CV de l'utilisateur.
+Ce module permet à l'utilisateur de se décrire un peu plus en détails. On retrouve donc un titre (ayant pour vocation initiale d'accueillir le nom de l'utilisateur) et un block de texte central (pour la description). Une liste d'images redirigeant vers des uri définies peuvent également être affichées. Elle permettent par exemple une redirection vers un profil LinkedIn ou GitHub. Un dernier bouton permet une redirection vers le téléchargement du CV de l'utilisateur.
 
 ### [map](./app/modules/map)
 ![5%](http://progressed.io/bar/5 "Avancement du module")
@@ -149,10 +149,10 @@ Ce module permet à l'utilisateur de générer une liste de projets sur lesquels
 
 Ce module a pour vocation de lister les compétences de l'utilisateur, selon des catégories qu'il aura lui même défini. Pour ces compétences, l'utilisateur devra systématiquement indiquer un nom et un niveau ([0;100]). Une animation faisant croitre la barre de progression de 0 jusqu'au niveau indiqué par l'utilisateur sera exécuté lors de l'apparition à l'écran du module (par le biais de la librairie [react-on-visible](https://github.com/dazld/react-on-visible)).
 
-### [rubrique](./app/modules/rubrique)
+### [rubric](./app/modules/rubric)
 ![75%](http://progressed.io/bar/75 "Avancement du module")
 
-Ce module permet à l'utilisateur de rédiger des rubriques comprenant un titre global ainsi que des articles.
+Ce module permet à l'utilisateur de rédiger des rubrics comprenant un titre global ainsi que des articles.
 
 Pour chacun de ces articles, l'utilisateur doit saisir une liste de blocs comprenant un titre ainsi qu'un contenu textuel (supporte le format markdown grâce à la librairie [react-markdown](https://github.com/rexxars/react-markdown)).
 
@@ -171,7 +171,7 @@ Un bouton au centre du module permet de remonter en haut de l'application web.
 ## Librairies utilisées
 
 ### [Timelined](https://github.com/andriussev/timelined)
-Permet l'affichage d'une timeline. Est utilisé dans le module [rubrique](./app/modules/rubrique).
+Permet l'affichage d'une timeline. Est utilisé dans le module [rubric](./app/modules/rubric).
 
 ### [ajv](https://github.com/epoberezkin/ajv)
 Permet la validation des schémas JSON. Est utilisé par le script de génération [generate_modules_list.js](./tools/node/generate_modules_list.js).
@@ -204,11 +204,11 @@ Permet l'affichage de barre de progression dynamiques. Est utilisé dans le modu
 Permet l'affichage d'une carte du monde. Est utilisé dans le module [map](./app/modules/map).
 
 ### [react-helmet](https://github.com/nfl/react-helmet)
-Permet de modifier le contenu du bloc `<head>`.
+Permet de modifier le contenu du block `<head>`.
 Ainsi, il est possible de modifier la balise `<title>` (nom dans l'onglet) ou encore le favicon à partir du fichier de configuration [app_properties](./app/config/app_properties.json).
 
 ### [react-markdown](https://github.com/rexxars/react-markdown)
-Permet le rendu de contenu textuel au format markdown. Est utilisé dans les modules [rubrique](./app/modules/rubrique) et [footer](./app/modules/footer).
+Permet le rendu de contenu textuel au format markdown. Est utilisé dans les modules [rubric](./app/modules/rubric) et [footer](./app/modules/footer).
 
 ### [react-on-visible](https://github.com/dazld/react-on-visible)
 Permet de lancer des événements selon le pourcentage déterminé de l'affichage d'un élément sur l'écran de l'utilisateur. Est utilisé dans le module [skill_list](./app/modules/skill_list) afin de lancer l'animation de chargement des barres de progression.

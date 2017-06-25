@@ -2,9 +2,9 @@ import React from 'react';
 import SkillGroup from './classes/SkillGroup.jsx';
 const slug = require('slug');
 
-module.exports = React.createClass({
-  generateSkillGroup: function(skill_group) {
-    return skill_group.map((obj, pos) => {
+class SkillList extends React.Component {
+  generateSkillGroup(skillGroup) {
+    return skillGroup.map((obj, pos) => {
       let key = slug("module skill list group " + obj.name + " " + pos, {lower: true, replacement: "_"});
       return (
         <SkillGroup
@@ -13,9 +13,9 @@ module.exports = React.createClass({
         />
       )
     });
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <section
         id={this.props.id}
@@ -27,4 +27,6 @@ module.exports = React.createClass({
       </section>
     );
   }
-});
+}
+
+module.exports = SkillList;

@@ -1,6 +1,6 @@
 {
-  "title": "module_rubrique-style_schema",
-  "description": "schema du style du module rubrique",
+  "title": "module_rubric-style_schema",
+  "description": "schema du style du module rubric",
   "type": "object",
   "properties": {
     "none": {

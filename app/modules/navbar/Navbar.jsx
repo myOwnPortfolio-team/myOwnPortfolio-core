@@ -3,16 +3,16 @@ import Headroom from 'headroom.js';
 
 const RANDOM_ID = "random_id_" + parseInt(Math.random() * 10000);
 
-module.exports = React.createClass({
-  componentDidMount: function() {
+class Navbar extends React.Component {
+  componentDidMount() {
     var headroom = new Headroom(document.getElementById(RANDOM_ID));
     headroom.init();
-  },
+  }
 
-  generate_links: function(links) {
+  generateLinks(links) {
     let i = 0;
     return links.map((id, pos) => {
-      if (id !== this.props.id && !this.is_name_unreferenced(this.props.links.name_unreferenced, this.props.links.name_list[pos])) {
+      if (id !== this.props.id && !this.isNameUnreferenced(this.props.links.name_unreferenced, this.props.links.name_list[pos])) {
         var icon = this.props.properties.icons_list[i++];
         if (icon === undefined) {
           icon = "fa-question";
@@ -35,24 +35,26 @@ module.exports = React.createClass({
         );
       }
     });
-  },
+  }
 
-  is_name_unreferenced: function(unreferenced_name, current_name) {
-    for (var i = 0; i < unreferenced_name.length; i++) {
-      if (unreferenced_name[i] === current_name) {
+  isNameUnreferenced(unreferencedName, currentName) {
+    for (var i = 0; i < unreferencedName.length; i++) {
+      if (unreferencedName[i] === currentName) {
         return true;
       }
     }
     return false;
-  },
+  }
 
-  render: function() {
+  render() {
     return (
         <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module_navbar">
           <div className="module_navbar_link_group">
-            {this.generate_links(this.props.links.id_list)}
+            {this.generateLinks(this.props.links.id_list)}
           </div>
         </nav>
     );
   }
-});
+}
+
+module.exports = Navbar;

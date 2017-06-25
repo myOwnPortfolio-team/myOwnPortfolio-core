@@ -1,9 +1,9 @@
 {
   "title": "EXPÉRIENCES",
-  "rubrique": [
+  "rubric": [
     {
       "date": 2017,
-      "bloc": [
+      "block": [
         {
           "title": "Poste",
           "content": ["Développeur"]
@@ -29,7 +29,7 @@
     },
     {
       "date": 2015,
-      "bloc": [
+      "block": [
         {
           "title": "Poste",
           "content": ["Développeur web junior"]
@@ -46,7 +46,7 @@
     },
     {
       "date": 2013,
-      "bloc": [
+      "block": [
         {
           "title": "Poste",
           "content": ["Agent de voierie"]

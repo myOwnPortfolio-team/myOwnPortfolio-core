@@ -1,25 +1,24 @@
 import React from 'react';
 import {Line, Circle} from 'rc-progress';
 
-let tm;
-
-module.exports = React.createClass({
-  getInitialState: function() {
-    return {
+class Skill extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       percent: 0,
     };
-  },
+  }
 
-  componentWillReceiveProps: function(nextProps) {
+  componentWillReceiveProps(nextProps) {
     let percent = nextProps.percent;
     if (percent <= this.props.content.level) {
       this.setState({
         percent: percent,
       });
     }
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div
         className="module_skill_list_block"
@@ -39,4 +38,6 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+module.exports =Skill;

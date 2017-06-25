@@ -1,9 +1,9 @@
 {
   "title": "FORMATION",
-  "rubrique": [
+  "rubric": [
     {
       "date": 2018,
-      "bloc": [
+      "block": [
         {
           "title": "École",
           "content": ["INSA Rouen Normandie"]
@@ -20,7 +20,7 @@
     },
     {
       "date": 2015,
-      "bloc": [
+      "block": [
         {
           "title": "École",
           "content": ["IUT du Havre"]
@@ -37,7 +37,7 @@
     },
     {
       "date": 2013,
-      "bloc": [
+      "block": [
         {
           "title": "École",
           "content": ["Lycée Galilée"]

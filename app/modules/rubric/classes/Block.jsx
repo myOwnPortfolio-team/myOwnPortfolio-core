@@ -2,29 +2,29 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 const slug = require('slug');
 
-module.exports = React.createClass({
-  generateBlocs: function(bloc) {
-    return bloc.map((obj, pos) => {
-      let key = slug("module rubrique bloc " + obj.title + " " + pos, {lower: true, replacement: "_"});
+class Block extends React.Component {
+  generateBlocs(block) {
+    return block.map((obj, pos) => {
+      let key = slug("module rubric block " + obj.title + " " + pos, {lower: true, replacement: "_"});
       return (
         <div
           key={key}
           data-aos={this.props.properties.line_animation}
-          className="module_rubrique_bloc"
+          className="module_rubric_bloc"
         >
-          <div className="module_rubrique_descriptor">
+          <div className="module_rubric_descriptor">
             {obj.title}
           </div>
           <ReactMarkdown
-            className="module_rubrique_content"
+            className="module_rubric_content"
             source={obj.content.join(" \n")}
           />
         </div>
       )
     });
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div className="timeline-block">
         <div className="timeline-icon"></div>
@@ -33,7 +33,7 @@ module.exports = React.createClass({
           data-aos={this.props.properties.bloc_animation}
         >
           <article>
-            {this.generateBlocs(this.props.content.bloc)}
+            {this.generateBlocs(this.props.content.block)}
           </article>
 
           <div className="timeline-date">
@@ -43,4 +43,6 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+module.exports = Block;

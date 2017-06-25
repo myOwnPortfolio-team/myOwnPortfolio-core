@@ -1,0 +1,24 @@
+{
+  "title": "module_rubric-properties_schema",
+  "description": "schema des propriétés du module rubric",
+  "type": "object",
+  "properties": {
+    "rubric_animation": {
+      "description": "animation lors de l'apparition de la rubric",
+      "type": "string"
+    },
+    "bloc_animation": {
+      "description": "animation lors de l'apparition d'un block de la rubric",
+      "type": "string"
+    },
+    "line_animation": {
+      "description": "animation lors de l'apparition d'une ligne d'un block de la rubric",
+      "type": "string"
+    }
+  },
+  "required": [
+    "rubric_animation",
+    "bloc_animation",
+    "line_animation"
+  ]
+}
