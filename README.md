@@ -41,9 +41,9 @@ __NOTE__: L'utilisation de docker n'est pas requise avec cette configuration
 ## Fonctionnement
 Le répertoire [app/config](./app/config) contient l'ensemble de la configuration des modules du site, et donc du site en lui même.
 
-C'est dans le fichier [app/config/modules_list.json](./app/config/modules_list.json) que sont spécifiés tous les modules utilisées, ainsi que les liens vers leurs fichiers de configuration.
+C'est dans le fichier [app/config/modules_list.json](./app/config/modules_list.json) que sont spécifiés tous les modules utilisés, ainsi que les liens vers leurs fichiers de configuration.
 
-Il est important de noter que tous les fichiers JSON utilisées doivent répondre à un schéma JSON prédéfini (utilisation des normes [suivantes](http://json-schema.org/examples.html)). Vous pouvez en consulter la liste [ici](./doc/json-schemas).
+Il est important de noter que tous les fichiers JSON utilisés doivent répondre à un schéma JSON prédéfini (utilisation des normes [suivantes](http://json-schema.org/examples.html)). Vous pouvez en consulter la liste [ici](./doc/json-schemas).
 
 
 ## Compilation
@@ -68,7 +68,7 @@ $ docker-compose up -d
 ```
 
 #### Dans les deux cas
-- Vous pouvez relancer les container par le biais de la commande:
+- Vous pouvez relancer les containers par le biais de la commande:
 ```
 $ docker start $container_name -d
 ```
@@ -97,9 +97,9 @@ Plusieurs options sont maintenant possibles:
 ## Contexte du projet
 Pour tout étudiant, il est intéressant de disposer d'un site web faisant office de portfolio.
 
-Cependant, même si l'on dispose des connaissance en informatique nécessaires à sa création, ce travail peut être long et fastidieux.
+Cependant, même si l'on dispose des connaissances en informatique nécessaires à sa création, ce travail peut être long et fastidieux.
 
-Le but de ce projet est donc de faciliter cette étape de création en demandant uniquement à l'utilisateur de compléter des fichiers au formats JSON.
+Le but de ce projet est donc de faciliter cette étape de création en demandant uniquement à l'utilisateur de compléter des fichiers au format JSON.
 Ces derniers spécifient les modules que le site contiendra (barre de navigation, bouton de téléchargement de fichiers, ect ...) ainsi que leur contenu textuel. Plusieurs langues peuvent également être définies par l'utilisateur.
 
 Pour les plus aguerris, il est possible de redéfinir l'apparence de certaines parties du site, et ce toujours à partir de fichiers JSON, mais aussi de participer au développement en créant de nouveaux modules (l'ensemble du projet étant codé en React, leurs intégration est aisée).
@@ -114,11 +114,11 @@ _Diagramme de package:_ (__deprecated__)
 ### [navbar](./app/modules/navbar/)
 ![90%](http://progressed.io/bar/90 "Avancement du module")
 
-Ce module permet l'affichage d'une barre de navigation référençant l'ensembles des modules dont l'attribut `referenced` vaut `true`dans le fichier [modules_list.json](./app/config/modules_list.json).
+Ce module permet l'affichage d'une barre de navigation référençant l'ensemble des modules dont l'attribut `referenced` vaut `true`dans le fichier [modules_list.json](./app/config/modules_list.json).
 
 Lors de l'affichage sur mobile (résolution < 900px), des icônes déterminés dans le fichiers [properties.json](./app/modules/navbar/json_config/properties.json) sont affichés à la place du nom de module à afficher. Ces icônes sont référencés à l'aide de noms de classes de la libraire [font-awesome](http://fontawesome.io/icons/).
 
-Lors d'un scroll vers le bas de l'écran, la barre de navigation disparait automatiquement, et réapparait lors d'un scroll vers le haut.
+Lors d'un scroll vers le bas de l'écran, la barre de navigation disparaît automatiquement, et réapparait lors d'un scroll vers le haut.
 
 ### [home](./app/modules/home)
 ![75%](http://progressed.io/bar/75 "Avancement du module")
@@ -137,7 +137,7 @@ Ce module permet à l'utilisateur de se décrire un peu plus en détails. On ret
 ### [map](./app/modules/map)
 ![5%](http://progressed.io/bar/5 "Avancement du module")
 
-Ce module permet à l'utilisateur d'afficher une carte du monde de type planisphère et d'un indiqué tous les lieux qu'il a pu visiter.
+Ce module permet à l'utilisateur d'afficher une carte du monde de type planisphère et d'indiquer tous les lieux qu'il a pu visiter.
 
 ### [project_list](./app/modules/project_list)
 ![90%](http://progressed.io/bar/90 "Avancement du module")
@@ -147,7 +147,7 @@ Ce module permet à l'utilisateur de générer une liste de projets sur lesquels
 ### [skill_list](./app/modules/skill_list)
 ![80%](http://progressed.io/bar/80 "Avancement du module")
 
-Ce module a pour vocation de lister les compétences de l'utilisateur, selon des catégories qu'il aura lui même défini. Pour ces compétences, l'utilisateur devra systématiquement indiquer un nom et un niveau ([0;100]). Une animation faisant croitre la barre de progression de 0 jusqu'au niveau indiqué par l'utilisateur sera exécuté lors de l'apparition à l'écran du module (par le biais de la librairie [react-on-visible](https://github.com/dazld/react-on-visible)).
+Ce module a pour vocation de lister les compétences de l'utilisateur, selon des catégories qu'il aura lui même défini. Pour ces compétences, l'utilisateur devra systématiquement indiquer un nom et un niveau ([0;100]). Une animation faisant croître la barre de progression de 0 jusqu'au niveau indiqué par l'utilisateur sera exécutée lors de l'apparition à l'écran du module (par le biais de la librairie [react-on-visible](https://github.com/dazld/react-on-visible)).
 
 ### [rubric](./app/modules/rubric)
 ![75%](http://progressed.io/bar/75 "Avancement du module")
@@ -156,7 +156,7 @@ Ce module permet à l'utilisateur de rédiger des rubrics comprenant un titre gl
 
 Pour chacun de ces articles, l'utilisateur doit saisir une liste de blocs comprenant un titre ainsi qu'un contenu textuel (supporte le format markdown grâce à la librairie [react-markdown](https://github.com/rexxars/react-markdown)).
 
-Une timeline est automatique générée sur le côté de ces articles. L'utilisateur peut ainsi indiquer une date à côté des articles (non présente sur mobile).
+Une timeline est automatiquement générée sur le côté de ces articles. L'utilisateur peut ainsi indiquer une date à côté des articles (non présente sur mobile).
 
 ### [footer](./app/modules/footer)
 ![95%](http://progressed.io/bar/95 "Avancement du module")
@@ -198,7 +198,7 @@ Permet de gérer l'apparition (affichage) du module [navbar](./app/modules/navba
 Permet l'affichage d'un fond animé. Est utilisé dans le module [home](./app/modules/home)
 
 ### [rc-progress](https://github.com/fis-components/rc-progress)
-Permet l'affichage de barre de progression dynamiques. Est utilisé dans le module [skill_list](./app/modules/skill_list).
+Permet l'affichage de barres de progression dynamiques. Est utilisé dans le module [skill_list](./app/modules/skill_list).
 
 ### [react-d3-map](https://github.com/react-d3/react-d3-map)
 Permet l'affichage d'une carte du monde. Est utilisé dans le module [map](./app/modules/map).
@@ -214,10 +214,10 @@ Permet le rendu de contenu textuel au format markdown. Est utilisé dans les mod
 Permet de lancer des événements selon le pourcentage déterminé de l'affichage d'un élément sur l'écran de l'utilisateur. Est utilisé dans le module [skill_list](./app/modules/skill_list) afin de lancer l'animation de chargement des barres de progression.
 
 ### [react-rotating-text](https://github.com/adrianmcli/react-rotating-text)
-Permet le rendu de texte déterminés "comme s'ils étaient saisis en direct". Est utilisé dans le module [home](./app/modules/home)
+Permet le rendu de textes déterminés "comme s'ils étaient saisis en direct". Est utilisé dans le module [home](./app/modules/home)
 
 ### [slug](https://github.com/dodo/node-slug)
-Permet de transformer des chaines de caractères selon la norme RFC 3986.
+Permet de transformer des chaînes de caractères selon la norme RFC 3986.
 Cette librairie est utilisée pour la génération des ids des modules à partir du nom indiqué dans le fichier [modules_list.json](./app/config/modules_list.json) ainsi que pour les attributs keys parfois requis par ReactJS.
 
 
