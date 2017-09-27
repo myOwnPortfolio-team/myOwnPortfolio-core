@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class LogoLink extends React.Component {
   render() {
@@ -13,5 +14,13 @@ class LogoLink extends React.Component {
     );
   }
 }
+
+LogoLink.propTypes = {
+  properties: PropTypes.shape({
+    href: PropTypes.string,
+    src: PropTypes.string,
+    alt: PropTypes.string,
+  }).isRequired,
+};
 
 module.exports = LogoLink;
