@@ -3,8 +3,7 @@ __Auteur__: [Thibault THÉOLOGIEN](https://github.com/MacBootglass/)
 
 __Langues__: [FR](./README.md) - [EN](./README_EN.md)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a6eb3104d78a43e7b16259f7f3d6be9f)](https://www.codacy.com/app/thibault-theologien/myOwnPortfolio?utm_source=github.com&utm_medium=referral&utm_content=MacBootglass/myOwnPortfolio&utm_campaign=badger)
-[![Build Status](https://travis-ci.org/MacBootglass/myOwnPortfolio.svg?branch=master)](https://travis-ci.org/MacBootglass/myOwnPortfolio)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d0ce439dd8404795bbed5e48f84b6185)](https://www.codacy.com/app/MacBootglass/myOwnPortfolio-core?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=myOwnPortfolio-team/myOwnPortfolio-core&amp;utm_campaign=Badge_Grade)
 
 ![65%](http://progressed.io/bar/65 "Avancement du projet")
 
@@ -16,11 +15,7 @@ Cliquez __[ici](https://macbootglass.github.io)__ afin de visualiser un exemple 
 
 Une présentation Reveal.js du projet est disponible __[ici](http://macbootglass-presentations.azurewebsites.net/presentations/myOwnPortfolio/#/)__.
 
-__[Documentation des schemas JSON](http://macbootglass.github.io/myOwnPortfolio/docs/json_schema/index.html)__
-
-__[TodoList](https://github.com/MacBootglass/myOwnPortfolio/projects/1)__
-
-__[Issues](https://github.com/MacBootglass/myOwnPortfolio/issues)__
+__[Documentation des schemas JSON](https://myownportfolio-team.github.io/myOwnPortfolio-core/docs/json_schema/index.html)__
 
 ## Pré-requis
 ### Minimaliste:
