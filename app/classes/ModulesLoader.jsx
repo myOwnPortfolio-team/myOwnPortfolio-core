@@ -1,5 +1,5 @@
 import React from 'react';
-import {Helmet} from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 const slug = require('slug');
 const modules = require('../import.js').modules_list;
@@ -7,14 +7,14 @@ const properties = require('../import.js').properties;
 
 class ModuleLoader extends React.Component {
   render() {
-    let links = {
-      id_list : [],
+    const links = {
+      id_list: [],
       name_list: [],
       name_unreferenced: [],
     };
-    let modules_list = modules.map((data) => {
-      let name = slug('module ' + data.name, {lower: true, replacement: '_'});
-      let Module = data.module;
+    const modulesList = modules.map((data) => {
+      const name = slug(`module ${data.name}`, { lower: true, replacement: '_' });
+      const Module = data.module;
       links.id_list.push(name);
 
       links.name_list.push(data.name);
@@ -36,11 +36,11 @@ class ModuleLoader extends React.Component {
       <div className="module_loader">
         <Helmet>
           <title>{properties.title}</title>
-          <link rel="icon" href=""/>
+          <link rel="icon" href="" />
         </Helmet>
-        {modules_list}
+        { modulesList }
       </div>
-   );
+    );
   }
 }
 
