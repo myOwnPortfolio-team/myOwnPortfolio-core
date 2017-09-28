@@ -44,14 +44,6 @@ const configWebpack = {
       react: path.join(__dirname, '/node_modules/react'),
     },
   },
-  // plugins: [
-  //   new webpack.DefinePlugin({
-  //     'process.env': {
-  //       NODE_ENV: JSON.stringify('production')
-  //     }
-  //   }),
-  //   new webpack.optimize.UglifyJsPlugin()
-  // ]
 };
 
 gulp.task('documentation', () => gulp.src('./etc/scripts/generate_doc.js')
@@ -77,26 +69,10 @@ gulp.task('compileCSS', () => plugins.sass(`${src}/index.scss`, {
   sourcemap: false,
   require: ['sass-json-vars'],
 }).on('error', plugins.sass.logError)
-  .pipe(plugins.csscomb())
-  .pipe(plugins.cssbeautify({ indent: '  ' }))
-  .pipe(plugins.autoprefixer())
+  .pipe(plugins.csso())
   .pipe(gulp.dest(`${dest}/style/`))
   .pipe(plugins.livereload()),
 );
-
-gulp.task('minifyCSS', () => gulp.src(`${dest}/style/index.css`)
-  .pipe(plugins.csso())
-  .pipe(plugins.rename({
-    suffix: '.min',
-  }))
-  .pipe(gulp.dest(`${dest}/style/`)));
-
-gulp.task('minifyJS', () => gulp.src(`${dest}/script/bundle.js`)
-  .pipe(plugins.uglify())
-  .pipe(plugins.rename({
-    suffix: '.min',
-  }))
-  .pipe(gulp.dest(`${dest}/script/`)));
 
 gulp.task('generateModulesList', () => gulp.src('./etc/scripts/generate_modules_list.js')
   .pipe(plugins.exec('node <%= file.path %>', execOptions))
@@ -118,6 +94,5 @@ gulp.task('watch', () => {
 
 gulp.task('build', plugins.sequence('generateModulesList', 'webpack', ['compileCSS', 'copyHTML', 'copyFonts']));
 gulp.task('dev', ['build', 'serverStart', 'watch']);
-gulp.task('minify', ['minifyCSS', 'minifyJS']);
 gulp.task('prod', plugins.sequence('build', 'minify'));
 gulp.task('default', ['build']);
