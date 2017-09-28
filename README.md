@@ -59,7 +59,7 @@ $ docker run --name=start_server_myownportfolio --volume=$(pwd):/root/project -i
 #### Avec docker-compose
 - Création et lancement des deux containers ci-dessus:
 ```bash
-$ docker-compose up -d
+$ docker-compose -f ./etc/docker-compose.yml up -d
 ```
 
 #### Dans les deux cas
