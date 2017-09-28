@@ -54,7 +54,7 @@ const configWebpack = {
   // ]
 };
 
-gulp.task('documentation', () => gulp.src('./tools/node/generate_doc.js')
+gulp.task('documentation', () => gulp.src('./etc/scripts/generate_doc.js')
   .pipe(plugins.exec('node <%= file.path %>', execOptions))
   .pipe(plugins.exec.reporter(execReportOptions))
   .pipe(plugins.exec('browserify ./docs/json_schema/script.js -o ./docs/json_schema/bundle.js', execOptions))
@@ -98,12 +98,12 @@ gulp.task('minifyJS', () => gulp.src(`${dest}/script/bundle.js`)
   }))
   .pipe(gulp.dest(`${dest}/script/`)));
 
-gulp.task('generateModulesList', () => gulp.src('./tools/node/generate_modules_list.js')
+gulp.task('generateModulesList', () => gulp.src('./etc/scripts/generate_modules_list.js')
   .pipe(plugins.exec('node <%= file.path %>', execOptions))
   .pipe(plugins.exec.reporter(execReportOptions))
   .pipe(plugins.livereload()));
 
-gulp.task('serverStart', () => gulp.src('./tools/node/express.js')
+gulp.task('serverStart', () => gulp.src('./etc/scripts/express.js')
   .pipe(plugins.exec('node <%= file.path %>', execOptions))
   .pipe(plugins.exec.reporter(execReportOptions)));
 
@@ -113,7 +113,7 @@ gulp.task('watch', () => {
   gulp.watch(`${src}/**/*.json`, plugins.sequence('generateModulesList', ['webpack', 'compileCSS']));
   gulp.watch(`${src}/**/*.jsx`, ['webpack']);
   gulp.watch(`${src}/index.html`, ['copyHTML']);
-  gulp.watch('./tools/node/*.js', ['generateModulesList']);
+  gulp.watch('./etc/node/*.js', ['generateModulesList']);
 });
 
 gulp.task('build', plugins.sequence('generateModulesList', 'webpack', ['compileCSS', 'copyHTML', 'copyFonts']));

@@ -70,9 +70,9 @@ $ docker start $container_name -d
 (avec `$container_name` valant `compile_myownportfolio` ou `start_server_myownportfolio`).
 
 #### Note
-L'image [docker utilisée](https://hub.docker.com/r/macbootglass/myownportfolio/) est disponible [ici](./tools/Dockerfile) et peut être construite localement par le biais de la commande suivante:
+L'image [docker utilisée](https://hub.docker.com/r/macbootglass/myownportfolio/) est disponible [ici](./etc/Dockerfile) et peut être construite localement par le biais de la commande suivante:
 ```bash
-$ docker build ./tools/Dockerfile/Dockerfile -t macbootglass/myownportfolio:latest
+$ docker build ./etc/Dockerfile/Dockerfile -t macbootglass/myownportfolio:latest
 ```
 
 ### Configuration optimale
@@ -169,7 +169,7 @@ Un bouton au centre du module permet de remonter en haut de l'application web.
 Permet l'affichage d'une timeline. Est utilisé dans le module [rubric](./app/modules/rubric).
 
 ### [ajv](https://github.com/epoberezkin/ajv)
-Permet la validation des schémas JSON. Est utilisé par le script de génération [generate_modules_list.js](./tools/node/generate_modules_list.js).
+Permet la validation des schémas JSON. Est utilisé par le script de génération [generate_modules_list.js](./etc/scripts/generate_modules_list.js).
 
 ### [aos](https://github.com/michalsnik/aos)
 Permet l'ajout d'animations de l'apparition à l'écran de balises HTML déterminées. Pour plus de détails cliquez [ici](https://michalsnik.github.io/aos/).
