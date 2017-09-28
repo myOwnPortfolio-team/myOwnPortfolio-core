@@ -5,8 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js",
-    "build:prod": "webpack --config webpack.config.js --env.production"
+    "documentation": "node etc/scripts/generate_doc.js && browserify docs/json_schema/script.js -o docs/json_schema/bundle.js",
+    "init": "bash etc/scripts/init.sh",
+    "compile": "node etc/scripts/generate_modules_list.js",
+    "sass": "sass app/index.scss:dist/style/index.css -t compressed -r sass-json-vars --sourcemap=none",
+    "webpack": "webpack --config webpack.config.js",
+    "webpack:prod": "webpack --config webpack.config.js --env.production",
+    "build": "npm run init && npm run compile && npm run sass && npm run webpack",
+    "build:prod": "npm run init && npm run compile && npm run sass && npm run webpack:prod",
+    "start": "node etc/scripts/express.js",
+    "clean": "bash etc/scripts/clean.sh"
   },
   "repository": {
     "type": "git",
