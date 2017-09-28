@@ -1,4 +1,3 @@
-const path = require('path');
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 
@@ -6,7 +5,6 @@ plugins.exec = require('gulp-exec');
 plugins.sass = require('gulp-ruby-sass');
 plugins.webpack = require('webpack-stream');
 
-// var webpack = require('webpack');
 const src = './app';
 const dest = './dist';
 
@@ -20,30 +18,6 @@ const execReportOptions = {
   err: true, // default = true, false means don't write err
   stderr: true, // default = true, false means don't write stderr
   stdout: true, // default = true, false means don't write stdout
-};
-
-const configWebpack = {
-  output: {
-    filename: 'bundle.js',
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        include: path.resolve(__dirname, 'app'),
-        loader: 'babel',
-      },
-      {
-        test: /\.json$/,
-        loader: 'json',
-      },
-    ],
-  },
-  resolve: {
-    alias: {
-      react: path.join(__dirname, '/node_modules/react'),
-    },
-  },
 };
 
 gulp.task('documentation', () => gulp.src('./etc/scripts/generate_doc.js')
@@ -61,8 +35,8 @@ gulp.task('copyFonts', () => gulp.src('./node_modules/font-awesome/fonts/*')
   .pipe(plugins.livereload()));
 
 gulp.task('webpack', () => gulp.src(`${src}/index.jsx`)
-  .pipe(plugins.webpack(configWebpack))
-  .pipe(gulp.dest(`${dest}/script`))
+  .pipe(plugins.exec('npm run build', execOptions))
+  .pipe(plugins.exec.reporter(execReportOptions))
   .pipe(plugins.livereload()));
 
 gulp.task('compileCSS', () => plugins.sass(`${src}/index.scss`, {
