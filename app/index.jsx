@@ -8,6 +8,6 @@ import ModulesLoader from './classes/ModulesLoader.jsx';
 AOS.init();
 injectTapEventPlugin();
 
-var racine =  document.getElementById('app');
+const racine = document.getElementById('app');
 
-ReactDOM.render(<ModulesLoader/>, racine);
+ReactDOM.render(<ModulesLoader />, racine);
