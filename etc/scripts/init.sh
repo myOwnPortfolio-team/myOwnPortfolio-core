@@ -1,5 +1,5 @@
 if [ ! -d dist ]; then
-  mkdir dist
+  mkdir -p dist/style
 fi
 npm install
 cp -r ./node_modules/font-awesome/fonts dist/fonts
