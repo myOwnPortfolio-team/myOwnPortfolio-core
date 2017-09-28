@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 
 plugins.exec = require('gulp-exec');
-plugins.sass = require('gulp-ruby-sass');
 plugins.webpack = require('webpack-stream');
 
 const src = './app';
