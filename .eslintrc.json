@@ -1,6 +1,7 @@
 {
-    "extends": "airbnb",
-    "rules": {
-      "react/prefer-stateless-function": "off"
-    }
+  "extends": "airbnb",
+  "rules": {
+    "react/prefer-stateless-function": "off",
+    "import/extensions": "off"
+  }
 }
