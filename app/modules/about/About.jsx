@@ -2,7 +2,6 @@
 
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import PropTypes from 'prop-types';
 import LogoLink from './classes/LogoLink.jsx';
 
 const slug = require('slug');
@@ -60,20 +59,5 @@ class About extends React.Component {
     );
   }
 }
-
-About.propTypes = {
-  id: PropTypes.string.isRequired,
-  properties: PropTypes.shape({
-    module_animation: PropTypes.string,
-    content_animation: PropTypes.string,
-    links: PropTypes.array,
-    resume_link: PropTypes.string,
-  }).isRequired,
-  content: PropTypes.shape({
-    title: PropTypes.string,
-    text: PropTypes.array,
-    download: PropTypes.string,
-  }).isRequired,
-};
 
 module.exports = About;

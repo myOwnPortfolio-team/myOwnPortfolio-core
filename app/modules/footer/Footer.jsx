@@ -2,7 +2,6 @@
 
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import PropTypes from 'prop-types';
 
 class Footer extends React.Component {
   render() {
@@ -33,13 +32,5 @@ class Footer extends React.Component {
     );
   }
 }
-
-Footer.propTypes = {
-  id: PropTypes.string.isRequired,
-  content: PropTypes.shape({
-    content_left: PropTypes.array,
-    content_right: PropTypes.string,
-  }).isRequired,
-};
 
 module.exports = Footer;

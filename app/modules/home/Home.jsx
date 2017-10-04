@@ -1,17 +1,20 @@
+/* global window */
+
 import React from 'react';
+import ReactRotatingText from 'react-rotating-text';
+
 import AnimatedBackground from './classes/AnimatedBackground.jsx';
 import Avatar from './classes/Avatar.jsx';
-import ReactRotatingText from 'react-rotating-text';
 
 class Home extends React.Component {
   render() {
-    return(
+    return (
       <div
         id={this.props.id}
         className="module_home"
       >
         <div className="module_home_content">
-          <Avatar properties={this.props.properties.avatar}/>
+          <Avatar properties={this.props.properties.avatar} />
           <div className="module_home_typewriter">
             <span>{this.props.content.before_typewriter}</span>
             <ReactRotatingText
@@ -25,14 +28,12 @@ class Home extends React.Component {
           </div>
           <button
             className="module_home_button btn btn-default"
-            onClick={function() {
-              window.scrollTo(0, window.innerHeight);
-            }}
+            onClick={() => window.scrollTo(0, window.innerHeight)}
           >
-            <i className="fa fa-chevron-down" aria-hidden="true"></i>
+            <i className="fa fa-chevron-down" aria-hidden="true" />
           </button>
         </div>
-        <AnimatedBackground properties={this.props.properties.background}/>
+        <AnimatedBackground properties={this.props.properties.background} />
       </div>
     );
   }

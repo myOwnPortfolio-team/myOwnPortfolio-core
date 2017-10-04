@@ -2,7 +2,7 @@ import React from 'react';
 
 class Avatar extends React.Component {
   render() {
-    return(
+    return (
       <img
         src={this.props.properties.src}
         alt={this.props.properties.alt}

@@ -6,8 +6,8 @@ class AnimatedBackground extends React.Component {
     Particles.init({
       selector: '.module_home_background',
       color: this.props.properties.color,
-      maxParticles:	this.props.properties.maxParticles,
-      sizeVariations:	this.props.properties.sizeVariations,
+      maxParticles: this.props.properties.maxParticles,
+      sizeVariations: this.props.properties.sizeVariations,
       speed: this.props.properties.speed,
       minDistance: this.props.properties.minDistance,
       connectParticles: this.props.properties.connectParticles,
@@ -16,9 +16,7 @@ class AnimatedBackground extends React.Component {
   }
 
   render() {
-    return(
-      <canvas className="module_home_background" />
-    );
+    return (<canvas className="module_home_background" />);
   }
 }
 
