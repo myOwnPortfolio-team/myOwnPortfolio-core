@@ -1,17 +1,19 @@
+/* global window */
+
 import React from 'react';
 
 class Project extends React.Component {
   render() {
-    var button = undefined;
-    if (this.props.content.href && this.props.content.href !== "" ) {
+    let button = null;
+    if (this.props.content.href && this.props.content.href !== '') {
       button = (
         <button
           className="btn"
-          onClick={() => { window.open(this.props.content.href); }}
+          onClick={() => window.open(this.props.content.href)}
         >
           {this.props.buttonText}
         </button>
-      )
+      );
     }
 
     return (
