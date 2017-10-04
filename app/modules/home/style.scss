@@ -21,7 +21,7 @@ $module_home_button_size: 50px;
   border-color: white;
   border-width: 2px;
   border-style: solid;
-  @include shadowBox($gray);
+  @include shadowBox($secondary-color);
 }
 
 .module_home_typewriter {
