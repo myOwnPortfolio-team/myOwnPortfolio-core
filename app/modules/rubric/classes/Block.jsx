@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+
 const slug = require('slug');
 
 class Block extends React.Component {
   generateBlocs(block) {
     return block.map((obj, pos) => {
-      let key = slug("module rubric block " + obj.title + " " + pos, {lower: true, replacement: "_"});
+      const key = slug(`module rubric block ${obj.title} ${pos}`, { lower: true, replacement: '_' });
       return (
         <div
           key={key}
@@ -17,17 +18,17 @@ class Block extends React.Component {
           </div>
           <ReactMarkdown
             className="module_rubric_content"
-            source={obj.content.join(" \n")}
+            source={obj.content.join(' \n')}
           />
         </div>
-      )
+      );
     });
   }
 
   render() {
     return (
       <div className="timeline-block">
-        <div className="timeline-icon"></div>
+        <div className="timeline-icon" />
         <div
           className="timeline-content"
           data-aos={this.props.properties.bloc_animation}

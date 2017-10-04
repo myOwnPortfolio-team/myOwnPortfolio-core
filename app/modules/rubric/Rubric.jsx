@@ -1,11 +1,12 @@
 import React from 'react';
 import Block from './classes/Block.jsx';
+
 const slug = require('slug');
 
 class Rubric extends React.Component {
   generateRubric(rubric) {
     return rubric.map((obj, pos) => {
-      let key = slug("module rubric block " + pos, {lower: true, replacement: "_"});
+      const key = slug(`module rubric block ${pos}`, { lower: true, replacement: '_' });
       return (
         <Block
           content={obj}
@@ -30,7 +31,7 @@ class Rubric extends React.Component {
         </h2>
 
         <div className="timeline timeline-left gray-blue">
-        	{this.generateRubric(this.props.content.rubric)}
+          {this.generateRubric(this.props.content.rubric)}
         </div>
       </section>
     );
