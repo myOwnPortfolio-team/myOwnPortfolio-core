@@ -1,5 +1,8 @@
+/* global window */
+
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import PropTypes from 'prop-types';
 
 class Footer extends React.Component {
   render() {
@@ -17,11 +20,9 @@ class Footer extends React.Component {
         >
           <button
             className="btn"
-            onClick={function() {
-              window.scrollTo(0, 0);
-            }}
+            onClick={() => window.scrollTo(0, 0)}
           >
-            <i className="fa fa-chevron-up" aria-hidden="true"></i>
+            <i className="fa fa-chevron-up" aria-hidden="true" />
           </button>
         </div>
         <ReactMarkdown
@@ -32,5 +33,13 @@ class Footer extends React.Component {
     );
   }
 }
+
+Footer.propTypes = {
+  id: PropTypes.string.isRequired,
+  content: PropTypes.shape({
+    content_left: PropTypes.array,
+    content_right: PropTypes.string,
+  }).isRequired,
+};
 
 module.exports = Footer;
