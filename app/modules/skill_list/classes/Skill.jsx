@@ -1,5 +1,5 @@
 import React from 'react';
-import {Line, Circle} from 'rc-progress';
+import { Circle } from 'rc-progress';
 
 class Skill extends React.Component {
   constructor(props) {
@@ -10,12 +10,8 @@ class Skill extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    let percent = nextProps.percent;
-    if (percent <= this.props.content.level) {
-      this.setState({
-        percent: percent,
-      });
-    }
+    const percent = nextProps.percent;
+    if (percent <= this.props.content.level) this.setState({ percent });
   }
 
   render() {
@@ -40,4 +36,4 @@ class Skill extends React.Component {
   }
 }
 
-module.exports =Skill;
+module.exports = Skill;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Visible from 'react-on-visible';
 import Skill from './Skill.jsx';
+
 const slug = require('slug');
 
 
@@ -18,8 +19,9 @@ class SkillGroup extends React.Component {
   }
 
   increase() {
+    const max = 100;
     let percent = this.state.percent + 1;
-    let max = 100;
+
     if (percent > max) {
       percent = max;
       clearTimeout(this.tm);
@@ -35,40 +37,39 @@ class SkillGroup extends React.Component {
       this.setState(
         {
           percent: 0,
-          visible: visible
+          visible,
         },
-        () => {
-          this.increase();
-        }
+        () => this.increase(),
       );
     }
 
     if (this.state.visible !== visible && visible === false) {
       this.setState({
         percent: 0,
-        visible: visible
+        visible,
       });
     }
   }
 
   generateSkills(skills) {
     return skills.map((obj, pos) => {
-      let key = slug("skill " + obj.name + " " + pos, {lower: true, replacement: "_"});
+      const key = slug(`skill ${obj.name} ${pos}`, { lower: true, replacement: '_' });
       return (
         <Skill
           key={key}
           content={obj}
           percent={this.state.percent}
         />
-      )
+      );
     });
   }
 
   render() {
+    const bounce = true;
     return (
       <Visible
-        onChange={(visible) => this.restart(visible)}
-        bounce={true}
+        onChange={visible => this.restart(visible)}
+        bounce={bounce}
         percent={50}
       >
         <div

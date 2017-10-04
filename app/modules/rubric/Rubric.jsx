@@ -13,7 +13,7 @@ class Rubric extends React.Component {
           properties={this.props.properties}
           key={key}
         />
-      )
+      );
     });
   }
 
