@@ -1,12 +1,15 @@
-var express = require('express');
-var app = express();
-var opener = require('opener');
-var port = 3000;
+/* eslint no-console: "off" */
 
-app.use("/", express.static('dist'));
+const express = require('express');
+// const opener = require('opener');
+
+const app = express();
+const port = 3000;
+
+app.use('/', express.static('dist'));
 
 app.listen(port, () => {
-  console.log('Server listening on port ' + port + '!')
+  console.log(`Server listening on port ${port} !`);
 });
 
 // opener('http://localhost:' + port + '/');
