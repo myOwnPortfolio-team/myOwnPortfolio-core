@@ -28,14 +28,14 @@ class Navbar extends React.Component {
         return (
           <a
             key={`link_to_${id}`}
-            className="module_navbar_link"
+            className="module-navbar-link"
             href={`#${id}`}
           >
-            <span className="module_navbar_link_text">
+            <span className="module-navbar-link-text">
               {this.props.links.name_list[pos]}
             </span>
             <i
-              className={`fa fa-2x module_navbar_link_icon ${icon}`}
+              className={`fa fa-2x module-navbar-link-icon ${icon}`}
               aria-hidden="true"
             />
           </a>
@@ -47,8 +47,8 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module_navbar">
-        <div className="module_navbar_link_group">
+      <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module-navbar">
+        <div className="module-navbar-link-group">
           {this.generateLinks(this.props.links.id_list)}
         </div>
       </nav>

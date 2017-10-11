@@ -1,58 +1,60 @@
-$module_navbar_space: 10px;
-$module_navbar_icon_size: 50px;
+// sass-lint:disable mixins-before-declarations
 
-.module_navbar {
+$module-navbar-space: 10px;
+$module-navbar-icon-size: 50px;
+
+.module-navbar {
   height: auto;
-  padding-top: $module_navbar_space;
-  padding-bottom: $module_navbar_space;
-  background-color: $module_navbar_background_color;
-  color: $module_navbar_font_color;
+  padding-top: $module-navbar-space;
+  padding-bottom: $module-navbar-space;
+  background-color: $module-navbar-background-color;
+  color: $module-navbar-font-color;
   display: inline;
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   z-index: 10;
 }
 
-.module_navbar_link {
+.module-navbar-link {
   color: $primary-font-color;
   text-decoration: none;
   margin: 10px;
-}
 
-.module_navbar_link + .module_navbar_link {
-  @include respond-to(medium) {
-    margin-left: 20px;
-    margin-right: 0px;
+  &:active {
+    @extend .module-navbar-link;
+  }
+
+  &:hover {
+    @extend .module-navbar-link;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  &:link {
+    @extend .module-navbar-link;
   }
 }
 
-.module_navbar_link:active {
-  @extend .module_navbar_link;
+.module-navbar-link + .module-navbar-link {
+  @include respond-to(medium) {
+    margin-left: 20px;
+    margin-right: 0;
+  }
 }
 
-.module_navbar_link:hover {
-  @extend .module_navbar_link;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.module_navbar_link:link {
-  @extend .module_navbar_link;
-}
-
-.module_navbar_link_group {
+.module-navbar-link-group {
   vertical-align: middle;
   float: left;
   width: 100%;
   text-align: center;
 
   @include respond-to(medium) {
-      text-align: left;
+    text-align: left;
   }
 }
 
-.module_navbar_link_text {
+.module-navbar-link-text {
   font-size: 25px;
   display: none;
 
@@ -61,30 +63,27 @@ $module_navbar_icon_size: 50px;
   }
 }
 
-.module_navbar_link_icon {
+.module-navbar-link-icon {
   display: inline-block;
-  width: $module_navbar_icon_size;
+  width: $module-navbar-icon-size;
   text-align: center;
   @include respond-to(medium) {
     display: none;
   }
 }
 
-
-
-
 .headroom {
   width: 100%;
   background-color: $primary-color;
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   will-change: transform;
   transition: transform 200ms linear;
 }
 
 .headroom--top {
-  opacity: 0.75;
+  opacity: .75;
 }
 
 .headroom--pinned {
