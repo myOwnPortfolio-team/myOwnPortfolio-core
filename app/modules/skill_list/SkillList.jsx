@@ -20,10 +20,10 @@ class SkillList extends React.Component {
     return (
       <section
         id={this.props.id}
-        className="module_skill_list"
+        className="module-skill-list"
         data-aos="flip-down"
       >
-        <h2 className="module_skill_list_title">{this.props.content.title}</h2>
+        <h2 className="module-skill-list-title">{this.props.content.title}</h2>
         {generateSkillGroup(this.props.content.skill_group)}
       </section>
     );

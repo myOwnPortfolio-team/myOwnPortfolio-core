@@ -73,7 +73,7 @@ class SkillGroup extends React.Component {
         percent={50}
       >
         <div
-          className="module_skill_list_group"
+          className="module-skill-list-group"
           data-aos="flip-left"
         >
           <h3>{this.props.content.name}</h3>

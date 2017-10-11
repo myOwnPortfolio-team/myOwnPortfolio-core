@@ -17,18 +17,18 @@ class Skill extends React.Component {
   render() {
     return (
       <div
-        className="module_skill_list_block"
+        className="module-skill-list-block"
         data-aos=""
       >
         <Circle
-          className="module_skill_list_gauge"
+          className="module-skill-list-gauge"
           percent={this.state.percent}
           strokeWidth="4"
           strokeColor="black"
           gapDegree="0"
           gapPosition="bottom"
         />
-        <span className="module_skill_list_name">
+        <span className="module-skill-list-name">
           {this.props.content.name}
         </span>
       </div>

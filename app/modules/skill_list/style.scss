@@ -1,40 +1,43 @@
-$module_skill_list_gauge_size: 50px;
-$module_skill_list_space: $space;
+// sass-lint:disable mixins-before-declarations
 
-.module_skill_list {
+$module-skill-list-gauge-size: 50px;
+$module-skill-list-space: $space;
+
+.module-skill-list {
   background-color: $secondary-color;
   padding: 10%;
-  padding-top: $module_skill_list_space;
-  padding-bottom: $module_skill_list_space;
+  padding-top: $module-skill-list-space;
+  padding-bottom: $module-skill-list-space;
 }
 
-.module_skill_list_gauge {
-  height: $module_skill_list_gauge_size;
-  width: $module_skill_list_gauge_size;
+.module-skill-list-gauge {
+  height: $module-skill-list-gauge-size;
+  width: $module-skill-list-gauge-size;
   vertical-align: middle;
   margin-right: 20px;
 }
 
-.module_skill_list_name {
+.module-skill-list-name {
   font-size: 22px;
   font-weight: 200;
 }
 
-.module_skill_list_group {
+.module-skill-list-group {
   width: 100%;
-  margin-top: $module_skill_list_space;
+  margin-top: $module-skill-list-space;
 
   h3 {
-    margin-bottom: $module_skill_list_space;
+    margin-bottom: $module-skill-list-space;
     font-weight: 300;
   }
 }
 
-.module_skill_list_block {
-  margin-bottom: $module_skill_list_space;
+.module-skill-list-block {
+  margin-bottom: $module-skill-list-space;
   text-align: left;
   display: inline-block;
   width: 100%;
+
   @include respond-to(medium) {
     width: 50%;
   };
@@ -44,7 +47,7 @@ $module_skill_list_space: $space;
   };
 }
 
-.module_skill_list_title {
+.module-skill-list-title {
   text-align: right;
   font-size: 40px;
 }
