@@ -18,7 +18,7 @@ class Project extends React.Component {
 
     return (
       <article
-        className="module_project_list_project"
+        className="module-project-list-project"
         data-aos={this.props.animation}
       >
         <h3>{this.props.content.title}</h3>

@@ -1,42 +1,44 @@
-$module_project_list_space: $space;
-$module_project_list_background: transparent;
+// sass-lint:disable mixins-before-declarations
 
-.module_project_list {
+$module-project-list-space: $space;
+$module-project-list-background: transparent;
+
+.module-project-list {
   padding: 10%;
-  padding-top: $module_project_list_space;
-  padding-bottom: $module_project_list_space;
-  @include respond-to(medium) {
-  };
+  padding-top: $module-project-list-space;
+  padding-bottom: $module-project-list-space;
 }
 
-.module_project_list_title {
+.module-project-list-title {
   text-align: right;
   font-size: 40px;
 }
 
-.module_project_list_project {
-  @include calc(width, "100% - 2 * " + $module_project_list_space);
+.module-project-list-project {
+  @include calc(width, '100% - 2 * ' + $module-project-list-space);
+  @include shadow-box($secondary-color);
+
   vertical-align: middle;
   background-color: $primary-color;
-  border-width: 0px;
+  border-width: 0;
   border-color: $secondary-color;
   border-style: solid;
   border-radius: 5px;
-  padding: $module_project_list_space;
-  margin: $module_project_list_space;
+  padding: $module-project-list-space;
+  margin: $module-project-list-space;
   text-align: center;
-  @include shadow-box($secondary-color);
+
   @include respond-to(medium) {
+    @include calc(width, '50% - 2 * ' + $module-project-list-space);
     display: inline-block;
-    @include calc(width, "50% - 2 * " + $module_project_list_space);
   }
 
   h3 {
-    margin-bottom: $module_project_list_space;
+    margin-bottom: $module-project-list-space;
   }
 
   div {
-    margin-bottom: $module_project_list_space;
+    margin-bottom: $module-project-list-space;
   }
 
   button {

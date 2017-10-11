@@ -21,11 +21,11 @@ class ProjectList extends React.Component {
   render() {
     return (
       <section
-        className="module_project_list"
+        className="module-project-list"
         id={this.props.id}
         data-aos="flip-down"
       >
-        <h2 className="module_project_list_title">
+        <h2 className="module-project-list-title">
           {this.props.content.title}
         </h2>
         {this.generateProjectList(this.props.content.project_list)}
