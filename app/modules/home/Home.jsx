@@ -11,11 +11,11 @@ class Home extends React.Component {
     return (
       <div
         id={this.props.id}
-        className="module_home"
+        className="module-home"
       >
-        <div className="module_home_content">
+        <div className="module-home-content">
           <Avatar properties={this.props.properties.avatar} />
-          <div className="module_home_typewriter">
+          <div className="module-home-typewriter">
             <span>{this.props.content.before_typewriter}</span>
             <ReactRotatingText
               items={this.props.properties.typewriter.items}
@@ -27,7 +27,7 @@ class Home extends React.Component {
             />
           </div>
           <button
-            className="module_home_button btn btn-default"
+            className="module-home-button btn btn-default"
             onClick={() => window.scrollTo(0, window.innerHeight)}
           >
             <i className="fa fa-chevron-down" aria-hidden="true" />

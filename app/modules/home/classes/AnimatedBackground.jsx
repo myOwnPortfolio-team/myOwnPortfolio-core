@@ -4,7 +4,7 @@ import Particles from 'particlesjs';
 class AnimatedBackground extends React.Component {
   componentDidMount() {
     Particles.init({
-      selector: '.module_home_background',
+      selector: '.module-home-background',
       color: this.props.properties.color,
       maxParticles: this.props.properties.maxParticles,
       sizeVariations: this.props.properties.sizeVariations,
@@ -16,7 +16,7 @@ class AnimatedBackground extends React.Component {
   }
 
   render() {
-    return (<canvas className="module_home_background" />);
+    return (<canvas className="module-home-background" />);
   }
 }
 

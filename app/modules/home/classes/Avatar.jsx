@@ -6,7 +6,7 @@ class Avatar extends React.Component {
       <img
         src={this.props.properties.src}
         alt={this.props.properties.alt}
-        className="module_home_profile_picture"
+        className="module-home-profile-picture"
       />
     );
   }
