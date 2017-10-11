@@ -8,14 +8,14 @@ class Footer extends React.Component {
     return (
       <footer
         id={this.props.id}
-        className="module_footer"
+        className="module-footer"
       >
         <ReactMarkdown
-          className="module_footer_content_left"
+          className="module-footer-content-left"
           source={this.props.content.content_left}
         />
         <div
-          className="module_footer_center"
+          className="module-footer-center"
         >
           <button
             className="btn"
@@ -25,7 +25,7 @@ class Footer extends React.Component {
           </button>
         </div>
         <ReactMarkdown
-          className="module_footer_content_right"
+          className="module-footer-content-right"
           source={this.props.content.content_right}
         />
       </footer>

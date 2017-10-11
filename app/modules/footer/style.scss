@@ -1,47 +1,48 @@
-$module_footer_space: $space;
-$module_footer_vertical_align: middle;
-$module_footer_button_size: 50px;
+$module-footer-space: $space;
+$module-footer-vertical-align: middle;
+$module-footer-button-size: 50px;
 
-.module_footer {
+.module-footer {
   width: 100%;
   background-color: $secondary-color;
+  padding: $module-footer-space;
+
   p {
-    margin: 0px;
+    margin: 0;
   }
-  padding: $module_footer_space
 }
 
-.module_footer_content_left {
+.module-footer-content-left {
   width: 45%;
   display: inline-block;
   text-align: left;
-  vertical-align: $module_footer_vertical_align;
+  vertical-align: $module-footer-vertical-align;
 }
 
-.module_footer_center {
+.module-footer-center {
   width: 10%;
   display: inline-block;
   text-align: center;
-  vertical-align: $module_footer_vertical_align;
+  vertical-align: $module-footer-vertical-align;
 
   button {
-    width: $module_footer_button_size;
-    height: $module_footer_button_size;
-    border-radius: $module_footer_button_size;
+    width: $module-footer-button-size;
+    height: $module-footer-button-size;
+    border-radius: $module-footer-button-size;
     background-color: $primary-color;
     color: $secondary-color;
-    opacity: 0.75;
+    opacity: .75;
     cursor: pointer;
-  }
 
-  button:hover {
-    opacity: 1;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
-.module_footer_content_right {
+.module-footer-content-right {
   width: 45%;
   display: inline-block;
   text-align: right;
-  vertical-align: $module_footer_vertical_align;
+  vertical-align: $module-footer-vertical-align;
 }
