@@ -1,1 +1,2 @@
-rm -rf dist .sass-cache node_modules app/import.js app/import.scss 
+#!/bin/bash
+rm -rf dist .sass-cache node_modules app/import.js app/import.scss

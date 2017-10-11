@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ ! -d dist ]; then
   mkdir -p dist/style
 fi

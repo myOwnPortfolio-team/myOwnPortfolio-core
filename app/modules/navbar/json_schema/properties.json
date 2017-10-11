@@ -6,7 +6,6 @@
     "icons_list": {
       "description": "icones à afficher lors de l'affichage mobile -> nom de classes font-awesome",
       "type": "array",
-      "description": "",
       "items": {
         "type": "string",
         "minItems": 0,
