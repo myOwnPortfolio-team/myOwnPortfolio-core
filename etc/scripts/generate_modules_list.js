@@ -66,16 +66,16 @@ const makeJS = (data, isTheLast) => {
 
 const makeSCSS = (data) => {
   const moduleName = getModuleName(data.module_path);
-  const importSCSS = `@import "${relativeModulePath}${moduleName}/style.scss";\n`;
+  const importSCSS = `@import '${relativeModulePath}${moduleName}/style';\n`;
 
   const JSONSchema = `${pwd}${absoluteModulePath}${moduleName}/json_schema/style.json`;
   let JSONData = `${pwd}${absoluteModulePath}${moduleName}/json_config/style.json`;
 
   if (data.style_path !== undefined && data.style_path !== '') {
     JSONData = `${pwd}/app${data.style_path.substring(1)}`;
-    return `@import "${checkJSON(JSONSchema, JSONData)}";\n${importSCSS}`;
+    return `@import '${checkJSON(JSONSchema, JSONData)}';\n${importSCSS}`;
   }
-  return `@import "${checkJSON(JSONSchema, JSONData)}";\n${importSCSS}`;
+  return `@import '${checkJSON(JSONSchema, JSONData)}';\n${importSCSS}`;
 };
 
 

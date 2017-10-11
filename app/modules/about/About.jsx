@@ -22,19 +22,19 @@ class About extends React.Component {
   render() {
     return (
       <section
-        className="module_about"
+        className="module-about"
         id={this.props.id}
         data-aos={this.props.properties.module_animation}
       >
         <h2
-          className="module_about_title"
+          className="module-about_title"
           data-aos={this.props.properties.content_animation}
         >
           {this.props.content.title}
         </h2>
 
         <div
-          className="module_about_content"
+          className="module-about-content"
           data-aos={this.props.properties.content_animation}
         >
           <ReactMarkdown
@@ -43,14 +43,14 @@ class About extends React.Component {
         </div>
 
         <div
-          className="module_about_links"
+          className="module-about-links"
           data-aos={this.props.properties.content_animation}
         >
           {generateLogosLinks(this.props.properties.links)}
         </div>
 
         <button
-          className="btn module_about_download"
+          className="btn module-about-download"
           onClick={() => window.open(this.props.properties.resume_link)}
         >
           {this.props.content.download}

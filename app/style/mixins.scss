@@ -1,23 +1,16 @@
 @mixin respond-to($media) {
   @if $media == medium {
     @media screen and (min-width: map-get($breakpoints, medium)) { @content; }
-  }
-  @else if $media == large {
+  } @else if $media == large {
     @media screen and (min-width: map-get($breakpoints, large)) { @content; }
   }
 }
 
-@mixin shadowBox($color) {
-  box-shadow: 0px 0px 10px 5px $color;
-  -moz-box-shadow: 2px 2px 10px 0px $color;
-  -webkit-box-shadow: 2px 2px 10px 0px $color;
-  -o-box-shadow: 2px 2px 10px 0px $color;
-  box-shadow: 2px 2px 10px 0px $color;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=$color, Direction=134, Strength=10);
+@mixin shadow-box($color) {
+  box-shadow: 2px 2px 10 0 $color;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=$color, Direction=134, Strength=10);
 }
 
 @mixin calc($property, $expression) {
-  #{$property}: -moz-calc(#{$expression}) !important;
-  #{$property}: -webkit-calc(#{$expression}) !important;
-  #{$property}: calc(#{$expression}) !important;
+  #{$property}: calc(#{$expression});
 }

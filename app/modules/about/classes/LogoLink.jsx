@@ -6,7 +6,7 @@ class LogoLink extends React.Component {
     return (
       <a href={this.props.properties.href}>
         <img
-          className="module_about_logo"
+          className="module-about-logo"
           src={this.props.properties.src}
           alt={this.props.properties.alt}
         />

@@ -1,19 +1,20 @@
-html, body{
+html,
+body {
   height: 100%;
   width: 100%;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
-.module_loader {
+.module-loader {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 section {
   background-color: $secondary-color;
-}
 
-section:nth-child(2n+1) {
-  background-color: $primary-color;
+  &:nth-child(2n+1) {
+    background-color: $primary-color;
+  }
 }

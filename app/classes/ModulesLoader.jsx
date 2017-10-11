@@ -33,7 +33,7 @@ class ModuleLoader extends React.Component {
       );
     });
     return (
-      <div className="module_loader">
+      <div className="module-loader">
         <Helmet>
           <title>{properties.title}</title>
           <link rel="icon" href="" />
