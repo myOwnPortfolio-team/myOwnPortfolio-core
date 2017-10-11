@@ -11,13 +11,12 @@ class Block extends React.Component {
         <div
           key={key}
           data-aos={this.props.properties.line_animation}
-          className="module_rubric_bloc"
         >
-          <div className="module_rubric_descriptor">
+          <div className="module-rubric-descriptor">
             {obj.title}
           </div>
           <ReactMarkdown
-            className="module_rubric_content"
+            className="module-rubric-content"
             source={obj.content.join(' \n')}
           />
         </div>

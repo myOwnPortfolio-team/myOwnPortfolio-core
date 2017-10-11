@@ -21,11 +21,11 @@ class Rubric extends React.Component {
     return (
       <section
         id={this.props.id}
-        className="module_rubric"
+        className="module-rubric"
         data-aos={this.props.properties.rubric_animation}
       >
         <h2
-          className="module_rubric_title"
+          className="module-rubric-title"
         >
           {this.props.content.title}
         </h2>
