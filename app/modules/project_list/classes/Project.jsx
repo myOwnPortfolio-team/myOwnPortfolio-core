@@ -2,31 +2,29 @@
 
 import React from 'react';
 
-class Project extends React.Component {
-  render() {
-    let button = null;
-    if (this.props.content.href && this.props.content.href !== '') {
-      button = (
-        <button
-          className="btn"
-          onClick={() => window.open(this.props.content.href)}
-        >
-          {this.props.buttonText}
-        </button>
-      );
-    }
-
-    return (
-      <article
-        className="module-project-list-project"
-        data-aos={this.props.animation}
+const Project = (props) => {
+  let button = null;
+  if (props.content.href && props.content.href !== '') {
+    button = (
+      <button
+        className="btn"
+        onClick={() => window.open(props.content.href)}
       >
-        <h3>{this.props.content.title}</h3>
-        <div>{this.props.content.description}</div>
-        {button}
-      </article>
+        {props.buttonText}
+      </button>
     );
   }
-}
+
+  return (
+    <article
+      className="module-project-list-project"
+      data-aos={props.animation}
+    >
+      <h3>{props.content.title}</h3>
+      <div>{props.content.description}</div>
+      {button}
+    </article>
+  );
+};
 
 module.exports = Project;
