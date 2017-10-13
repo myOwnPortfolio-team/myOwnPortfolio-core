@@ -6,58 +6,50 @@ import LogoLink from './classes/LogoLink.jsx';
 
 const slug = require('slug');
 
-function generateLogosLinks(links) {
-  return links.map((obj) => {
-    const key = slug(`link to ${obj.alt}`, { lower: true, replacement: '_' });
-    return (
-      <LogoLink
-        key={key}
-        properties={obj}
-      />
-    );
-  });
-}
+const generateLogosLinks = links => links.map((obj) => {
+  const key = slug(`link to ${obj.alt}`, { lower: true, replacement: '_' });
+  return (
+    <LogoLink
+      key={key}
+      properties={obj}
+    />
+  );
+});
 
-class About extends React.Component {
-  render() {
-    return (
-      <section
-        className="module-about"
-        id={this.props.id}
-        data-aos={this.props.properties.module_animation}
-      >
-        <h2
-          className="module-about_title"
-          data-aos={this.props.properties.content_animation}
-        >
-          {this.props.content.title}
-        </h2>
+const About = props => (
+  <section
+    className="module-about"
+    id={props.id}
+    data-aos={props.properties.module_animation}
+  >
+    <h2
+      className="module-about_title"
+      data-aos={props.properties.content_animation}
+    >
+      {props.content.title}
+    </h2>
 
-        <div
-          className="module-about-content"
-          data-aos={this.props.properties.content_animation}
-        >
-          <ReactMarkdown
-            source={this.props.content.text.join(' \n')}
-          />
-        </div>
+    <div
+      className="module-about-content"
+      data-aos={props.properties.content_animation}
+    >
+      <ReactMarkdown source={props.content.text.join(' \n')} />
+    </div>
 
-        <div
-          className="module-about-links"
-          data-aos={this.props.properties.content_animation}
-        >
-          {generateLogosLinks(this.props.properties.links)}
-        </div>
+    <div
+      className="module-about-links"
+      data-aos={props.properties.content_animation}
+    >
+      {generateLogosLinks(props.properties.links)}
+    </div>
 
-        <button
-          className="btn module-about-download"
-          onClick={() => window.open(this.props.properties.resume_link)}
-        >
-          {this.props.content.download}
-        </button>
-      </section>
-    );
-  }
-}
+    <button
+      className="btn module-about-download"
+      onClick={() => window.open(props.properties.resume_link)}
+    >
+      {props.content.download}
+    </button>
+  </section>
+);
 
 module.exports = About;
