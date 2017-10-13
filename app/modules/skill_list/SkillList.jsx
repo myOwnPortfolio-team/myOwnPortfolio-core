@@ -15,19 +15,15 @@ function generateSkillGroup(skillGroup) {
   });
 }
 
-class SkillList extends React.Component {
-  render() {
-    return (
-      <section
-        id={this.props.id}
-        className="module-skill-list"
-        data-aos="flip-down"
-      >
-        <h2 className="module-skill-list-title">{this.props.content.title}</h2>
-        {generateSkillGroup(this.props.content.skill_group)}
-      </section>
-    );
-  }
-}
+const SkillList = props => (
+  <section
+    id={props.id}
+    className="module-skill-list"
+    data-aos="flip-down"
+  >
+    <h2 className="module-skill-list-title">{props.content.title}</h2>
+    {generateSkillGroup(props.content.skill_group)}
+  </section>
+);
 
 module.exports = SkillList;
