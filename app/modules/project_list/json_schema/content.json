@@ -5,7 +5,8 @@
   "properties": {
     "title": {
       "description": "titre du module",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     },
     "project_list": {
       "description": "liste des différents projets à afficher",
@@ -16,15 +17,18 @@
         "properties": {
           "title": {
             "description": "titre du projet",
-            "type": "string"
+            "type": "string",
+            "input": "input-text"
           },
           "description": {
             "description": "courte description du projet",
-            "type": "string"
+            "type": "string",
+            "input": "textfield"
           },
           "url": {
             "description": "url du dépôt du projet",
-            "type": "string"
+            "type": "string",
+            "input": "input-text"
           }
         },
         "required": [
@@ -37,7 +41,8 @@
     },
     "button_text": {
       "description": "contenu textuel du bouton de redirection dans les projets",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     }
   },
   "required": [
