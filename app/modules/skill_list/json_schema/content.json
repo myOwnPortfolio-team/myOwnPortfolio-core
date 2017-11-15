@@ -5,7 +5,8 @@
   "properties": {
     "title": {
       "description": "titre du module",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     },
     "skill_group": {
       "description": "groupe de liste de compétences",
@@ -16,7 +17,8 @@
         "properties": {
           "name": {
             "description": "nom du groupe de compétences",
-            "type": "string"
+            "type": "string",
+            "input": "input-text"
           },
           "skills": {
             "description": "liste des compétences",
@@ -27,11 +29,13 @@
               "properties": {
                 "name": {
                   "description": "nom de la compétence",
-                  "type": "string"
+                  "type": "string",
+                  "input": "input-text"
                 },
                 "level": {
                   "description": "niveau de la compétence",
                   "type": "integer",
+                  "input": "slider",
                   "minimum": 0,
                   "maximum": 100
                 }
