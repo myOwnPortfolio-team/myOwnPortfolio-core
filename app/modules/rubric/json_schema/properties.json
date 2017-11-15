@@ -5,15 +5,18 @@
   "properties": {
     "rubric_animation": {
       "description": "animation lors de l'apparition de la rubric",
-      "type": "string"
+      "type": "string",
+      "input": "selection-animation"
     },
     "bloc_animation": {
       "description": "animation lors de l'apparition d'un block de la rubric",
-      "type": "string"
+      "type": "string",
+      "input": "selection-animation"
     },
     "line_animation": {
       "description": "animation lors de l'apparition d'une ligne d'un block de la rubric",
-      "type": "string"
+      "type": "string",
+      "input": "selection-animation"
     }
   },
   "required": [

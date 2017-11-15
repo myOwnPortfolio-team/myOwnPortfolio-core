@@ -5,7 +5,8 @@
   "properties": {
     "title": {
       "description": "titre de la rubric",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     },
     "rubric": {
       "description": "une rubric",
@@ -16,7 +17,8 @@
         "properties": {
           "date": {
             "description": "date",
-            "type": "integer"
+            "type": "integer",
+            "input": "input-number"
           },
           "block": {
             "type": "array",
@@ -26,14 +28,16 @@
               "properties": {
                 "title": {
                   "description": "titre du sous block",
-                  "type": "string"
+                  "type": "string",
+                  "input": "input-text"
                 },
                 "content": {
                   "description": "contenu du sous block sous la forme d'un tableau dont chaque cellule correspond à une ligne",
                   "type": "array",
                   "items": {
                     "description": "contenu textuel au format markdown: \n pour retourner à la ligne",
-                    "type": "string"
+                    "type": "string",
+                    "input": "textfield-markdown"
                   },
                   "minItems": 1,
                   "uniqueItems": false
