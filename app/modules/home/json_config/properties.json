@@ -10,7 +10,6 @@
     "speed": 0.5,
     "minDistance": 120,
     "connectParticles": true,
-    "responsive": []
   },
   "typewriter": {
     "items": [

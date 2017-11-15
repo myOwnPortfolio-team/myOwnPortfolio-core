@@ -5,7 +5,8 @@
   "properties": {
     "before_typewriter": {
       "description": "avant la machine à écrire",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     }
   },
   "required": ["before_typewriter"]

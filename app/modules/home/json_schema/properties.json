@@ -9,11 +9,13 @@
       "properties": {
         "src": {
           "type": "string",
-          "description": "URI de l'image"
+          "description": "URI de l'image",
+          "input": "input-text"
         },
         "alt": {
           "type": "string",
-          "description": "texte à afficher si l'image est introuvable"
+          "description": "texte à afficher si l'image est introuvable",
+          "input": "input-text"
         }
       },
       "required": [
@@ -27,36 +29,33 @@
       "properties": {
         "color": {
           "type": "string",
-          "description": "Color of particles and connecting lines"
+          "description": "Color of particles and connecting lines",
+          "input": "color-picker"
         },
         "maxParticles": {
           "type": "integer",
-          "description": "Maximum amount of particles"
+          "description": "Maximum amount of particles",
+          "input": "slider"
         },
         "sizeVariations": {
           "type": "integer",
-          "description": "Amount of size variations"
+          "description": "Amount of size variations",
+          "input": "slider"
         },
         "speed": {
           "type": "number",
-          "description": "Movement speed of the particles"
+          "description": "Movement speed of the particles",
+          "input": "slider"
         },
         "minDistance": {
           "type": "integer",
-          "description": "Distance in px for conntecting lines"
+          "description": "Distance in px for conntecting lines",
+          "input": "slider"
         },
         "connectParticles": {
           "type": "boolean",
-          "description": "true/false if connecting lines should be drawn"
-        },
-        "responsive": {
-          "type": "array",
-          "description": "",
-          "items": {
-            "type": "string",
-            "minItems": 0,
-            "uniqueItems": false
-          }
+          "description": "true/false if connecting lines should be drawn",
+          "input": "checkbox"
         }
       },
       "required": [
@@ -65,8 +64,7 @@
         "sizeVariations",
         "speed",
         "minDistance",
-        "connectParticles",
-        "responsive"
+        "connectParticles"
       ]
     },
     "typewriter": {
@@ -78,29 +76,35 @@
           "description": "The array of strings to be cycled through",
           "items": {
             "type": "string",
+            "input": "input-text",
             "minItems": 1,
             "uniqueItems": false
           }
         },
         "cursor": {
           "type": "boolean",
-          "description": "If set to true, it will display the cursor after the text."
+          "description": "If set to true, it will display the cursor after the text.",
+          "input": "checkbox"
         },
         "pause": {
           "type": "integer",
-          "description": "The number of milliseconds to pause after the text has just finished being typed out."
+          "description": "The number of milliseconds to pause after the text has just finished being typed out.",
+          "input": "slider"
         },
         "emptyPause": {
           "type": "integer",
-          "description": "The number of milliseconds to pause while no text is being displayed (i.e. after deleting has just finished)."
+          "description": "The number of milliseconds to pause while no text is being displayed (i.e. after deleting has just finished).",
+          "input": "slider"
         },
         "typingInterval": {
           "type": "integer",
-          "description": "The number of milliseconds between each typing action."
+          "description": "The number of milliseconds between each typing action.",
+          "input": "slider"
         },
         "deletingInterval": {
           "type": "integer",
-          "description": "The number of milliseconds between each deleting action."
+          "description": "The number of milliseconds between each deleting action.",
+          "input": "slider"
         }
       },
       "required": [
