@@ -5,14 +5,16 @@
   "properties": {
     "title": {
       "description": "titre du module",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     },
     "text": {
       "description": "texte au format markdown à afficher",
       "type": "array",
       "items": {
         "description": "une ligne du texte",
-        "type": "string"
+        "type": "string",
+        "input": "textfield-markdown"
       },
       "minItems": 0,
       "uniqueItems": false
@@ -20,7 +22,8 @@
   },
   "download": {
     "description": "texte à afficher dans le bouton de téléchargement",
-    "type": "string"
+    "type": "string",
+    "input": "input-text"
   },
   "required": [
     "title",

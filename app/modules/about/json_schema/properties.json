@@ -11,15 +11,18 @@
         "properties": {
           "href": {
             "type": "string",
-            "description": "lien vers lequelle pointe l'image"
+            "description": "lien vers lequelle pointe l'image",
+            "input": "input-text"
           },
           "src": {
             "type": "string",
-            "description": "lien de l'image du logo"
+            "description": "lien de l'image du logo",
+            "input": "input-text"
           },
           "alt": {
             "type": "string",
-            "description": "texte à afficher si l'image n est pas trouvée"
+            "description": "texte à afficher si l'image n est pas trouvée",
+            "input": "input-text"
           }
         },
         "required": [
@@ -33,15 +36,19 @@
     },
     "resume_link": {
       "description": "lien vers le cv à télécharger",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     },
     "module_animation": {
       "description": "animation lors de l'apparition du module",
-      "type": "string"
+      "type": "string",
+      "input": "input-text",
+      "input": "select-animation"
     },
     "content_animation": {
       "description": "animation lors de l'apparition d'un contenu textuel du module",
-      "type": "string"
+      "type": "string",
+      "input": "select-animation"
     }
   },
   "required": [
