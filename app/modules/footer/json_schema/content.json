@@ -5,11 +5,13 @@
   "properties": {
     "content_left": {
       "description": "contenu textuel côté gauche (markdown supporté)",
-      "type": "string"
+      "type": "string",
+      "input": "textfield-markdown"
     },
     "content_right": {
       "description": "contenu textuel côté gauche (markdown supporté)",
-      "type": "string"
+      "type": "string",
+      "input": "textfield-markdown"
     }
   },
   "required": [

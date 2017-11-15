@@ -5,7 +5,8 @@
   "properties": {
     "none": {
       "description": "none",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     }
   },
   "required": ["none"]
