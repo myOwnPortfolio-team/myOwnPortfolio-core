@@ -5,7 +5,8 @@
   "properties": {
     "title": {
       "description": "titre de la barre de navigation",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     }
   },
   "required": ["title"]

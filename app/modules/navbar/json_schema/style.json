@@ -4,13 +4,16 @@
   "type": "object",
   "properties": {
     "module_navbar_height": {
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     },
     "module_navbar_background_color": {
-      "type": "string"
+      "type": "string",
+      "input": "color-picker"
     },
     "module_navbar_font_color": {
-      "type": "string"
+      "type": "string",
+      "input": "color-picker"
     }
   },
   "required": ["module_navbar_height", "module_navbar_background_color", "module_navbar_font_color"]

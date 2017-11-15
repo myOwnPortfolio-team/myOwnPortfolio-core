@@ -9,6 +9,7 @@
       "items": {
         "type": "string",
         "minItems": 0,
+        "input": "input-text",
         "uniqueItems": false
       }
     }
