@@ -42,7 +42,6 @@
     "module_animation": {
       "description": "animation lors de l'apparition du module",
       "type": "string",
-      "input": "input-text",
       "input": "select-animation"
     },
     "content_animation": {
