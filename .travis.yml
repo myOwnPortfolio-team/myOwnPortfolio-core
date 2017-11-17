@@ -3,10 +3,13 @@ sudo: required
 services:
   - docker
 
-before_deploy:
+install:
+  - echo "install nothing!"
+
+script:
+  - echo "no tests!"
+
+after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
   - docker build . -t macbootglass/myownportfolio-core
-
-deploy:
-  provider: script
-  script: docker push macbootglass/myownportfolio-core:latest
+  - docker push macbootglass/myownportfolio-core:latest
