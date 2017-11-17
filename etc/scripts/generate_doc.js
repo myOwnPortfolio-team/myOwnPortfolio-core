@@ -15,7 +15,7 @@ const schemaName = [
 const schemas = [];
 
 fs.readdir(pwd + src, (err, moduleList) => {
-  schemas.push(require(`${pwd}/app/config/moduleList_schema`));
+  schemas.push(require(`${pwd}/app/config/modules_list_schema`));
   schemas[schemas.length - 1].group = 'moduleList';
 
   schemas.push(require(`${pwd}/app/config/app_properties_schema`));
