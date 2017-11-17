@@ -18,12 +18,12 @@
       },
       "minItems": 0,
       "uniqueItems": false
+    },
+    "download": {
+      "description": "texte à afficher dans le bouton de téléchargement",
+      "type": "string",
+      "input": "input-text"
     }
-  },
-  "download": {
-    "description": "texte à afficher dans le bouton de téléchargement",
-    "type": "string",
-    "input": "input-text"
   },
   "required": [
     "title",
