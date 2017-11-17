@@ -1,5 +1,7 @@
 sudo: required
 
+language: ruby
+
 services:
   - docker
 
@@ -7,5 +9,4 @@ before_deploy:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
   - docker build . -t macbootglass/myownportfolio-core
 
-deploy:
-  - docker push macbootglass/myownportfolio-core:latest
+deploy: docker push macbootglass/myownportfolio-core:latest
