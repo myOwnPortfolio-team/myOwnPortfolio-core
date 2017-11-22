@@ -35,22 +35,30 @@
         "maxParticles": {
           "type": "integer",
           "description": "Maximum amount of particles",
-          "input": "slider"
+          "input": "slider",
+          "minimum": 0,
+          "maximum": 600
         },
         "sizeVariations": {
           "type": "integer",
           "description": "Amount of size variations",
-          "input": "slider"
+          "input": "slider",
+          "minimum": 0,
+          "maximum": 500
         },
         "speed": {
           "type": "number",
           "description": "Movement speed of the particles",
-          "input": "slider"
+          "input": "slider",
+          "minimum": 0,
+          "maximum": 300
         },
         "minDistance": {
           "type": "integer",
           "description": "Distance in px for conntecting lines",
-          "input": "slider"
+          "input": "slider",
+          "minimum": 0,
+          "maximum": 2000
         },
         "connectParticles": {
           "type": "boolean",
