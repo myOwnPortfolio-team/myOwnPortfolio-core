@@ -6,17 +6,17 @@
     "rubric_animation": {
       "description": "animation lors de l'apparition de la rubric",
       "type": "string",
-      "input": "selection-animation"
+      "input": "select-animation"
     },
     "bloc_animation": {
       "description": "animation lors de l'apparition d'un block de la rubric",
       "type": "string",
-      "input": "selection-animation"
+      "input": "select-animation"
     },
     "line_animation": {
       "description": "animation lors de l'apparition d'une ligne d'un block de la rubric",
       "type": "string",
-      "input": "selection-animation"
+      "input": "select-animation"
     }
   },
   "required": [
