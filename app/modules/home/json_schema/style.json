@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "none": {
-      "description": "",
+      "description": "none",
       "type": "string",
       "input": "input-text"
     }
