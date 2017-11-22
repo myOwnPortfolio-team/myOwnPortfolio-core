@@ -4,14 +4,17 @@
   "type": "object",
   "properties": {
     "module_navbar_height": {
+      "description": "navbar height",
       "type": "string",
       "input": "input-text"
     },
     "module_navbar_background_color": {
+      "description": "navbar backgroung color",
       "type": "string",
       "input": "color-picker"
     },
     "module_navbar_font_color": {
+      "description": "navbar font color",
       "type": "string",
       "input": "color-picker"
     }
