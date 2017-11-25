@@ -22,6 +22,6 @@ COPY webpack.config.js /root
 RUN npm install
 
 VOLUME /root/dist
-VOLUME /root/app/config
+VOLUME /root/app/json_config
 
 CMD mkdir dist/style && npm run build:prod
