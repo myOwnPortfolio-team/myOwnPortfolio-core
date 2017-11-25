@@ -2,8 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 const slug = require('slug');
-const modules = require('../import.js').modules_list;
-const properties = require('../import.js').properties;
+const importation = require('../import.js');
 
 const links = {
   id_list: [],
@@ -11,7 +10,7 @@ const links = {
   name_unreferenced: [],
 };
 
-const modulesList = modules.map((data) => {
+const modulesList = importation.modules_list.map((data) => {
   const name = slug(`module ${data.name}`, { lower: true, replacement: '_' });
   const Module = data.module;
   links.id_list.push(name);
@@ -35,7 +34,7 @@ const modulesList = modules.map((data) => {
 const ModuleLoader = () => (
   <div className="module-loader">
     <Helmet>
-      <title>{properties.title}</title>
+      <title>{importation.properties.title}</title>
       <link rel="icon" href="" />
     </Helmet>
     { modulesList }
