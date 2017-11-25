@@ -90,20 +90,20 @@ const writeFiles = (importJS, importSCSS) => {
 };
 
 const main = () => {
-  const data = require(`${pwd}/app/config/modules_list.json`);
-  const schema = require(`${pwd}/app/config/modules_list_schema.json`);
+  const data = require(`${pwd}/app/json_config/module_list.json`);
+  const schema = require(`${pwd}/app/json_schema/module_list.json`);
 
   validateJSON(schema, data);
 
-  const appProperties = require(`${pwd}/app/config/app_properties.json`);
-  const appPropertiesSchema = require(`${pwd}/app/config/app_properties_schema.json`);
+  const appProperties = require(`${pwd}/app/json_config/app_properties.json`);
+  const appPropertiesSchema = require(`${pwd}/app/json_schema/app_properties.json`);
 
   validateJSON(appPropertiesSchema, appProperties);
 
   // TODO: VALIDATE JSON_SCHEMA
 
   let importJS = `module.exports = { \n\
-  "properties": require("${pwd}/app/config/app_properties"), \n\
+  "properties": require("${pwd}/app/json_config/app_properties"), \n\
   "modules_list": [\n`;
   let importSCSS = '';
 
