@@ -1,6 +1,6 @@
 {
   "avatar": {
-    "src": "https://fr.gravatar.com/userimage/45448759/031c14bdffe709c881b0ed4bced8e433.jpg?size=400",
+    "src": "https://fr.gravatar.com/userimage/45448759/58f117c862bab345cde1d30978d30b67.png?size=400",
     "alt": "photo de profil"
   },
   "background": {
@@ -16,7 +16,7 @@
     "items": [
       " un développeur Web ?",
       " un développeur Java ?",
-      " peut être Thibault THEOLOGIEN !"
+      " peut être Thibault THÉOLOGIEN !"
     ],
     "cursor": true,
     "pause": 1500,
