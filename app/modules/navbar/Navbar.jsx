@@ -2,15 +2,21 @@
 
 import React from 'react';
 import Headroom from 'headroom.js';
+import { Menu } from 'semantic-ui-react';
 
 const RANDOM_ID = `random_id_${parseInt(Math.random() * 10000, 10)}`;
 
-function isNameUnreferenced(unreferencedName, currentName) {
+
+const item = (id, name) => (
+  <Menu.Item key={`link_to_${id}`} name={name} />
+);
+
+const isNameUnreferenced = (unreferencedName, currentName) => {
   for (let i = 0; i < unreferencedName.length; i++) {
     if (unreferencedName[i] === currentName) return true;
   }
   return false;
-}
+};
 
 class Navbar extends React.Component {
   componentDidMount() {
@@ -22,24 +28,13 @@ class Navbar extends React.Component {
     let i = 0;
     return links.map((id, pos) => {
       if (id !== this.props.id && !isNameUnreferenced(
-        this.props.links.name_unreferenced, this.props.links.name_list[pos])) {
+        this.props.links.name_unreferenced,
+        this.props.links.name_list[pos],
+      )) {
         let icon = this.props.properties.icons_list[i++];
-        if (icon === undefined) icon = 'fa-question';
-        return (
-          <a
-            key={`link_to_${id}`}
-            className="module-navbar-link"
-            href={`#${id}`}
-          >
-            <span className="module-navbar-link-text">
-              {this.props.links.name_list[pos]}
-            </span>
-            <i
-              className={`fa fa-2x module-navbar-link-icon ${icon}`}
-              aria-hidden="true"
-            />
-          </a>
-        );
+        if (icon === undefined) icon = 'question';
+        // TODO: send the icon
+        return item(id, this.props.links.name_list[pos]);
       }
       return null;
     });
@@ -47,11 +42,9 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav id={RANDOM_ID} className="navbar navbar-light bg-faded module-navbar">
-        <div className="module-navbar-link-group">
-          {this.generateLinks(this.props.links.id_list)}
-        </div>
-      </nav>
+      <Menu id={RANDOM_ID} className="module-navbar">
+        {this.generateLinks(this.props.links.id_list)}
+      </Menu>
     );
   }
 }
