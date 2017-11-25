@@ -2,13 +2,16 @@
 
 import React from 'react';
 import Headroom from 'headroom.js';
+import Scroll from 'react-scroll';
 import { Menu } from 'semantic-ui-react';
 
 const RANDOM_ID = `random_id_${parseInt(Math.random() * 10000, 10)}`;
 
 
 const item = (id, name) => (
-  <Menu.Item key={`link_to_${id}`} name={name} />
+  <Scroll.Link key={`link_to_${id}`} to={id} duration={500}>
+    <Menu.Item name={name} />
+  </Scroll.Link>
 );
 
 const isNameUnreferenced = (unreferencedName, currentName) => {

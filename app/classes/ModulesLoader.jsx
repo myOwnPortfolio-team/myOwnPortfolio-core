@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Scroll from 'react-scroll';
 
 const slug = require('slug');
 const importation = require('../import.js');
@@ -19,15 +20,15 @@ const modulesList = importation.modules_list.map((data) => {
   if (!data.referenced) {
     links.name_unreferenced.push(data.name);
   }
-
   return (
-    <Module
-      id={name}
-      key={name}
-      content={data.content}
-      properties={data.properties}
-      links={links}
-    />
+    <Scroll.Element key={name} name={name}>
+      <Module
+        id={name}
+        content={data.content}
+        properties={data.properties}
+        links={links}
+      />
+    </Scroll.Element>
   );
 });
 
