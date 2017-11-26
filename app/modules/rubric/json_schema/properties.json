@@ -8,20 +8,29 @@
       "type": "string",
       "input": "select-animation"
     },
-    "bloc_animation": {
-      "description": "animation lors de l'apparition d'un block de la rubric",
-      "type": "string",
-      "input": "select-animation"
-    },
-    "line_animation": {
-      "description": "animation lors de l'apparition d'une ligne d'un block de la rubric",
-      "type": "string",
-      "input": "select-animation"
+    "rubric_timeline": {
+      "description": "timeline properties",
+      "type": "object",
+      "properties": {
+        "primary_color": {
+          "description": "primary color",
+          "type": "string",
+          "input": "color-picker"
+        },
+        "secondary_color": {
+          "description": "secondary color",
+          "type": "string",
+          "input": "color-picker"
+        }
+      },
+      "required": [
+        "primary_color",
+        "secondary_color"
+      ]
     }
   },
   "required": [
     "rubric_animation",
-    "bloc_animation",
-    "line_animation"
+    "rubric_timeline"
   ]
 }

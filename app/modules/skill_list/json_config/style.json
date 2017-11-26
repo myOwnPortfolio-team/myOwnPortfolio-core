@@ -1,3 +1,8 @@
 {
-  "none": "none"
+  "module_skill_list_primary_color": "$primary-color",
+  "module_skill_list_secondary_color": "$secondary-color",
+  "module_skill_list_gauge_size": "60px",
+  "module_skill_list_space": "$space",
+  "module_skill_font_size": "$font-size",
+  "module_skill_title_size": "$title-size"
 }

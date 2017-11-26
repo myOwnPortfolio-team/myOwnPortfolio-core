@@ -1,7 +1,7 @@
 {
   "rubric_animation": "flip-down",
   "rubric_timeline": {
-    "primary_color": "#75a5b7",
-    "secondary_color": "#eee"
+    "primary_color": "#eee",
+    "secondary_color": "#75a5b7"
   }
 }

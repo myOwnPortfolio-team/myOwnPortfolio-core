@@ -1,3 +1,5 @@
 {
-  "none": "none"
+  "module_footer_primary_color": "$secondary-color",
+  "module_footer_secondary_color": "$primary-color",
+  "module_footer_space": "$space"
 }

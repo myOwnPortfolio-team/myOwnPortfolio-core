@@ -1,17 +1,17 @@
 /* global window */
-
 import React from 'react';
+import { Button } from 'semantic-ui-react';
 
 const Project = (props) => {
   let button = null;
   if (props.content.href && props.content.href !== '') {
     button = (
-      <button
-        className="btn"
+      <Button
+        content={props.buttonText}
+        icon="linkify"
+        labelPosition="left"
         onClick={() => window.open(props.content.href)}
-      >
-        {props.buttonText}
-      </button>
+      />
     );
   }
 

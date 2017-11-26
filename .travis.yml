@@ -1,7 +1,13 @@
 sudo: required
 
+language: bash
+
 services:
   - docker
+
+branches:
+  only:
+    - master
 
 install:
   - echo "install nothing!"

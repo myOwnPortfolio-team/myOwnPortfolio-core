@@ -1,7 +1,7 @@
 /* global window */
-
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Button } from 'semantic-ui-react';
 
 const Footer = props => (
   <footer
@@ -12,15 +12,13 @@ const Footer = props => (
       className="module-footer-content-left"
       source={props.content.content_left}
     />
-    <div
-      className="module-footer-center"
-    >
-      <button
-        className="btn"
+    <div className="module-footer-center" >
+      <Button
+        circular
+        icon="chevron up"
+        className="module-footer-button"
         onClick={() => window.scrollTo(0, 0)}
-      >
-        <i className="fa fa-chevron-up" aria-hidden="true" />
-      </button>
+      />
     </div>
     <ReactMarkdown
       className="module-footer-content-right"
