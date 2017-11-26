@@ -1,10 +1,8 @@
-$module-footer-space: $space;
-$module-footer-vertical-align: middle;
-$module-footer-button-size: 50px;
+// sass-lint:disable no-important
 
 .module-footer {
   width: 100%;
-  background-color: $secondary-color;
+  background-color: $module-footer-primary-color;
   padding: $module-footer-space;
 
   p {
@@ -16,27 +14,25 @@ $module-footer-button-size: 50px;
   width: 45%;
   display: inline-block;
   text-align: left;
-  vertical-align: $module-footer-vertical-align;
+  vertical-align: middle;
 }
 
 .module-footer-center {
   width: 10%;
   display: inline-block;
   text-align: center;
-  vertical-align: $module-footer-vertical-align;
+  vertical-align: middle;
 
-  button {
-    width: $module-footer-button-size;
-    height: $module-footer-button-size;
-    border-radius: $module-footer-button-size;
-    background-color: $primary-color;
-    color: $secondary-color;
+}
+
+.module-footer-button {
+  background-color: $module-footer-secondary-color !important;
+  color: $module-footer-primary-color !important;
+  opacity: 1;
+  cursor: pointer;
+
+  &:hover {
     opacity: .75;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 }
 
@@ -44,5 +40,5 @@ $module-footer-button-size: 50px;
   width: 45%;
   display: inline-block;
   text-align: right;
-  vertical-align: $module-footer-vertical-align;
+  vertical-align: middle;
 }

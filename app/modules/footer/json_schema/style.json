@@ -3,11 +3,25 @@
   "description": "schema du style du module footer",
   "type": "object",
   "properties": {
-    "none": {
-      "description": "none",
+    "module_footer_primary_color": {
+      "description": "primary color",
+      "type": "string",
+      "input": "color-picker"
+    },
+    "module_footer_secondary_color": {
+      "description": "secondary color",
+      "type": "string",
+      "input": "color-picker"
+    },
+    "module_footer_space": {
+      "description": "space",
       "type": "string",
       "input": "input-text"
     }
   },
-  "required": ["none"]
+  "required": [
+    "module_footer_primary_color",
+    "module_footer_secondary_color",
+    "module_footer_space"
+  ]
 }
