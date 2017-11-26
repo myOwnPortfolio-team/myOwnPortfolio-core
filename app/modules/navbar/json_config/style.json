@@ -1,5 +1,6 @@
 {
   "module_navbar_height" : "60px",
   "module_navbar_background_color" : "$primary-color",
-  "module_navbar_font_color" : "$secondary-color"
+  "module_navbar_font_color" : "$secondary-color",
+  "module_navbar_font_size" : "$font-size"
 }

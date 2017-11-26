@@ -11,7 +11,7 @@
 
   .item {
     color: $module-navbar-font-color !important;
-    font-size: 1.25rem;
+    font-size: $module-navbar-font-size;
   }
 }
 

@@ -9,6 +9,7 @@
   ],
   "title": "Thibault THÉOLOGIEN",
   "space": "1.5rem",
-  "font_size": "1.5rem",
+  "font_size": "1.25rem",
+  "title_size": "2.5rem",
   "border_space": "10%"
 }

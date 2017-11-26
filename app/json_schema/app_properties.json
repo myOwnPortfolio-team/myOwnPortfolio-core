@@ -41,6 +41,10 @@
       "description": "size of the font",
       "type": "string"
     },
+    "title_size": {
+      "description": "size of the titles",
+      "type": "string"
+    },
     "border_space": {
       "description": "lenght of the spaces in the border",
       "type": "string"
@@ -55,6 +59,7 @@
     "lang",
     "space",
     "font_size",
+    "title_size",
     "border_space"
   ]
 }
