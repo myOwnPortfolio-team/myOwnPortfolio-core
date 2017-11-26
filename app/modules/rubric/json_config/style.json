@@ -1,3 +1,7 @@
 {
-  "none": "none"
+  "module_rubric_primary_color": "$secondary-color",
+  "module_rubric_secondary_color": "$primary-color",
+  "module_rubric_font_size": "$font-size",
+  "module_rubric_title_size": "$title-size",
+  "module_rubric_space": "$space"
 }

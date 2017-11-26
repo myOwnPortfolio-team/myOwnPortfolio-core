@@ -1,41 +1,52 @@
 import React from 'react';
-import Block from './classes/Block.jsx';
+import { Timeline, TimelineEvent } from 'react-event-timeline';
+import { Icon } from 'semantic-ui-react';
+import ReactMarkdown from 'react-markdown';
 
 const slug = require('slug');
 
-class Rubric extends React.Component {
-  generateRubric(rubric) {
-    return rubric.map((obj, pos) => {
-      const key = slug(`module rubric block ${pos}`, { lower: true, replacement: '_' });
-      return (
-        <Block
-          content={obj}
-          properties={this.props.properties}
-          key={key}
-        />
-      );
-    });
-  }
+const generateContent = blockList => blockList.map((block, pos) => (
+  <div
+    className="module-rubric-block"
+    key={slug(`module rubric block ${block.title} ${pos}`, { lower: true, replacement: '_' })}
+  >
+    <div className="module-rubric-descriptor">
+      {block.title}
+    </div>
+    <ReactMarkdown
+      className="module-rubric-content"
+      source={block.content.join(' \n')}
+    />
+  </div>
+));
 
-  render() {
-    return (
-      <section
-        id={this.props.id}
-        className="module-rubric"
-        data-aos={this.props.properties.rubric_animation}
-      >
-        <h2
-          className="module-rubric-title"
-        >
-          {this.props.content.title}
-        </h2>
+const generateRubric = rubric => rubric.map((obj, pos) => (
+  <TimelineEvent
+    title={obj.title}
+    createdAt={obj.date}
+    key={slug(`module rubric block ${pos}`, { lower: true, replacement: '_' })}
+    icon={<Icon name="graduation" />}
+  >
+    {generateContent(obj.block)}
+  </TimelineEvent>
+));
 
-        <div className="timeline timeline-left gray-blue">
-          {this.generateRubric(this.props.content.rubric)}
-        </div>
-      </section>
-    );
-  }
-}
+const Rubric = props => (
+  <section
+    id={props.id}
+    className="module-rubric"
+    data-aos={props.properties.rubric_animation}
+  >
+    <h2
+      className="module-rubric-title"
+    >
+      {props.content.title}
+    </h2>
+
+    <Timeline>
+      {generateRubric(props.content.rubric)}
+    </Timeline>
+  </section>
+);
 
 module.exports = Rubric;

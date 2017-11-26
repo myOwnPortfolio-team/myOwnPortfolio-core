@@ -2,15 +2,12 @@
   "title": "EXPÉRIENCES",
   "rubric": [
     {
-      "date": 2017,
+      "date": "2017",
+      "title": "Saagie",
       "block": [
         {
           "title": "Poste",
           "content": ["Développeur"]
-        },
-        {
-          "title": "Entreprise",
-          "content": ["Saagie"]
         },
         {
           "title": "Détails",
@@ -28,15 +25,12 @@
       ]
     },
     {
-      "date": 2015,
+      "date": "2015",
+      "title": "Espace Courbe",
       "block": [
         {
           "title": "Poste",
           "content": ["Développeur web junior"]
-        },
-        {
-          "title": "Entreprise",
-          "content": ["Espace Courbe"]
         },
         {
           "title": "Détails",
@@ -45,15 +39,12 @@
       ]
     },
     {
-      "date": 2013,
+      "date": "2013",
+      "title": "Mairie de Ymare",
       "block": [
         {
           "title": "Poste",
           "content": ["Agent de voierie"]
-        },
-        {
-          "title": "Entreprise",
-          "content": ["Mairie de Ymare"]
         },
         {
           "title": "Détails",

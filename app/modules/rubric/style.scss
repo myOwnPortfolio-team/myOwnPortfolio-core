@@ -1,61 +1,25 @@
 // sass-lint:disable mixins-before-declarations no-important
-
-$module-rubric-space: $space;
-$module-rubric-background: transparent;
 $module-rubric-timeline-space-mobile: 64px;
 $module-rubric-timeline-space-desktop: 10%;
 
 
 .module-rubric {
-  padding: $module-rubric-space;
-
-  .timeline {
-    height: auto;
-
-    &::before {
-      @include calc(margin-left, $module-rubric-timeline-space-mobile + ' - 34px');
-      @include respond-to(medium) {
-        @include calc(margin-left, $module-rubric-timeline-space-desktop + ' - 34px');
-      };
-    }
-  }
-
-
-  .timeline-block {
-    margin-left: $module-rubric-timeline-space-mobile !important;
-
-    @include respond-to(medium) {
-      @include calc(margin-right, $module-rubric-timeline-space-desktop + ' - 34px');
-      margin-left: $module-rubric-timeline-space-desktop !important;
-    };
-  }
-
-  .timeline-date {
-    text-align: right;
-    font-size: 20px;
-    display: none;
-    @include respond-to(medium) {
-      display: block;
-    };
-  }
-
-  .timeline-content {
-    border-radius: 5px;
-  }
+  padding: $border-space;
+  padding-top: $module-rubric-space;
+  padding-bottom: $module-rubric-space;
+  background-color: $module-rubric-primary-color;
 }
 
 .module-rubric-title {
   text-align: right;
-  font-size: 40px;
+  font-size: $module-rubric-title-size;
 }
 
 .module-rubric-descriptor {
   font-weight: 200;
-  font-size: 25px;
+  font-size: $module-rubric-font-size;
 }
 
 .module-rubric-content {
-  width: 90%;
-  margin-left: 10%;
-  font-size: 22px;
+  font-size: $module-rubric-font-size;
 }

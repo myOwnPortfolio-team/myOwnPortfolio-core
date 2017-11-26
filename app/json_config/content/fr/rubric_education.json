@@ -2,12 +2,9 @@
   "title": "FORMATION",
   "rubric": [
     {
-      "date": 2018,
+      "date": "2018",
+      "title": "INSA Rouen Normandie",
       "block": [
-        {
-          "title": "École",
-          "content": ["INSA Rouen Normandie"]
-        },
         {
           "title": "Diplôme",
           "content": ["Ingénieur ASI (Architecture des Systèmes d'Information)"]
@@ -19,12 +16,9 @@
       ]
     },
     {
-      "date": 2015,
+      "date": "2015",
+      "title": "IUT du Havre",
       "block": [
-        {
-          "title": "École",
-          "content": ["IUT du Havre"]
-        },
         {
           "title": "Diplôme",
           "content": ["DUT informatique"]
@@ -36,12 +30,9 @@
       ]
     },
     {
-      "date": 2013,
+      "date": "2013",
+      "title": "Lycée Galilée",
       "block": [
-        {
-          "title": "École",
-          "content": ["Lycée Galilée"]
-        },
         {
           "title": "Diplôme",
           "content": ["Baccalauréat scientifique spécialité mathématiques"]

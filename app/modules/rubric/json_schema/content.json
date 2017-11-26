@@ -17,8 +17,13 @@
         "properties": {
           "date": {
             "description": "date",
-            "type": "integer",
-            "input": "input-number"
+            "type": "string",
+            "input": "input-text"
+          },
+          "title": {
+            "description": "title",
+            "type": "string",
+            "input": "input-text"
           },
           "block": {
             "type": "array",
@@ -53,6 +58,8 @@
           }
         },
         "required": [
+          "date",
+          "title",
           "block"
         ]
       },
