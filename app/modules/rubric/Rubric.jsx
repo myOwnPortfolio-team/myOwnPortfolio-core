@@ -45,6 +45,7 @@ const Rubric = props => (
     id={props.id}
     className="module-rubric"
     data-aos={props.properties.rubric_animation}
+    style={{ backgroundColor: props.properties.rubric_timeline.secondary_color }}
   >
     <h2 className="module-rubric-title">
       {props.content.title}
