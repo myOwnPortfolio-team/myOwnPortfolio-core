@@ -5,7 +5,7 @@ import Headroom from 'headroom.js';
 import Scroll from 'react-scroll';
 import { Menu } from 'semantic-ui-react';
 
-const RANDOM_ID = `random_id_${parseInt(Math.random() * 10000, 10)}`;
+const RANDOM_ID = `module_navbar_${parseInt(Math.random() * 10000, 10)}`;
 
 
 const item = (id, name) => (
