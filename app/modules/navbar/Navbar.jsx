@@ -3,14 +3,15 @@
 import React from 'react';
 import Headroom from 'headroom.js';
 import Scroll from 'react-scroll';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Responsive } from 'semantic-ui-react';
 
 const RANDOM_ID = `module_navbar_${parseInt(Math.random() * 10000, 10)}`;
+const BREAKDOWN = 900;
 
-
-const item = (id, name) => (
+const item = (id, name, icon) => (
   <Scroll.Link key={`link_to_${id}`} to={id} duration={500}>
-    <Menu.Item name={name} />
+    <Responsive as={Menu.Item} maxWidth={BREAKDOWN - 1} icon={icon} />
+    <Responsive as={Menu.Item} minWidth={BREAKDOWN} name={name} icon={icon} />
   </Scroll.Link>
 );
 
@@ -36,8 +37,7 @@ class Navbar extends React.Component {
       )) {
         let icon = this.props.properties.icons_list[i++];
         if (icon === undefined) icon = 'question';
-        // TODO: send the icon
-        return item(id, this.props.links.name_list[pos]);
+        return item(id, this.props.links.name_list[pos], icon);
       }
       return null;
     });

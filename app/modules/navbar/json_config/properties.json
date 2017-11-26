@@ -1,10 +1,10 @@
 {
   "icons_list": [
-    "fa-home",
-    "fa-user",
-    "fa-github",
-    "fa-bolt",
-    "fa-graduation-cap",
-    "fa-briefcase"
+    "home",
+    "user",
+    "github",
+    "trophy",
+    "graduation",
+    "briefcase"
   ]
 }
