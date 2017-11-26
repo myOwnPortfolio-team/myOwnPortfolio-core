@@ -1,56 +1,26 @@
 {
-  "title": "FORMATION",
+  "title": "Formation",
   "rubric": [
     {
-      "date": 2018,
-      "block": [
-        {
-          "title": "École",
-          "content": ["INSA Rouen Normandie"]
-        },
-        {
-          "title": "Diplôme",
-          "content": ["Ingénieur ASI (Architecture des Systèmes d'Information)"]
-        },
-        {
-          "title": "Détails",
-          "content": ["2015 à 2018 - _Rouen, FRANCE_"]
-        }
-      ]
+      "date": "2015 - 2018",
+      "title": "Ingénieur ASI (Architecture des Systèmes d'Information)",
+      "subtitle": "INSA Rouen Normandie",
+      "icon": "graduation",
+      "content": []
     },
     {
-      "date": 2015,
-      "block": [
-        {
-          "title": "École",
-          "content": ["IUT du Havre"]
-        },
-        {
-          "title": "Diplôme",
-          "content": ["DUT informatique"]
-        },
-        {
-          "title": "Détails",
-          "content": ["2013 à 2015 - _Le Havre, FRANCE_"]
-        }
-      ]
+      "date": "2013 - 2015",
+      "title": "DUT informatique",
+      "subtitle": "IUT du Havre",
+      "icon": "graduation",
+      "content": []
     },
     {
-      "date": 2013,
-      "block": [
-        {
-          "title": "École",
-          "content": ["Lycée Galilée"]
-        },
-        {
-          "title": "Diplôme",
-          "content": ["Baccalauréat scientifique spécialité mathématiques"]
-        },
-        {
-          "title": "Détails",
-          "content": ["2010 à 2013 - _Franqueville Saint Pierre, FRANCE_"]
-        }
-      ]
+      "date": "2013",
+      "title": "Baccalauréat scientifique spécialité mathématiques",
+      "subtitle": " Lycée Galilée",
+      "icon": "graduation",
+      "content": []
     }
   ]
 }

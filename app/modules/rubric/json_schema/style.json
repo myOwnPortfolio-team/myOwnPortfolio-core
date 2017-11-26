@@ -3,11 +3,37 @@
   "description": "schema du style du module rubric",
   "type": "object",
   "properties": {
-    "none": {
-      "description": "none",
+    "module_rubric_primary_color": {
+      "description": "primary color",
+      "type": "string",
+      "input": "color-picker"
+    },
+    "module_rubric_secondary_color": {
+      "description": "secondary color",
+      "type": "string",
+      "input": "color-picker"
+    },
+    "module_rubric_font_size": {
+      "description": "font size",
+      "type": "string",
+      "input": "input-text"
+    },
+    "module_rubric_title_size": {
+      "description": "title font size",
+      "type": "string",
+      "input": "input-text"
+    },
+    "module_rubric_space": {
+      "description": "space",
       "type": "string",
       "input": "input-text"
     }
   },
-  "required": ["none"]
+  "required": [
+    "module_rubric_primary_color",
+    "module_rubric_secondary_color",
+    "module_rubric_font_size",
+    "module_rubric_title_size",
+    "module_rubric_space"
+  ]
 }

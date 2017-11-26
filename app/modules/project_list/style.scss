@@ -1,31 +1,32 @@
-// sass-lint:disable mixins-before-declarations
+// sass-lint:disable mixins-before-declarations no-important
 
 $module-project-list-space: $space;
-$module-project-list-background: transparent;
 
 .module-project-list {
-  padding: 10%;
+  padding: $border-space;
   padding-top: $module-project-list-space;
   padding-bottom: $module-project-list-space;
+  background-color: $module-project-list-primary-color;
 }
 
 .module-project-list-title {
   text-align: right;
-  font-size: 40px;
+  font-size: $module-project-list-title-size;
 }
 
 .module-project-list-project {
   @include calc(width, '100% - 2 * ' + $module-project-list-space);
-  @include shadow-box($secondary-color);
+  @include shadow-box($module-project-list-primary-color);
 
   vertical-align: middle;
-  background-color: $primary-color;
+  background-color: $module-project-list-secondary-color;
   border-width: 0;
-  border-color: $secondary-color;
+  border-color: $module-project-list-primary-color;
   border-style: solid;
   border-radius: 5px;
   padding: $module-project-list-space;
   margin: $module-project-list-space;
+  font-size: $module-project-list-font-size;
   text-align: center;
 
   @include respond-to(medium) {
@@ -43,5 +44,6 @@ $module-project-list-background: transparent;
 
   button {
     cursor: pointer;
+    background-color: $module-project-list-primary-color !important;
   }
 }

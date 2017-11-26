@@ -1,11 +1,10 @@
-$module-about-space: $space;
-$module-about-logo-size: 60px;
-
+// sass-lint:disable no-important
 .module-about {
-  padding: 10%;
+  padding: $border-space;
   padding-top: $module-about-space;
   padding-bottom: $module-about-space;
   text-align: center;
+  background-color: $module-about-primary-color;
 }
 
 .module-about-logo {
@@ -14,21 +13,25 @@ $module-about-logo-size: 60px;
   border-radius: $module-about-logo-size;
   border-width: 2px;
   border-style: solid;
-  border-color: $primary-color;
+  border-color: $module-about-primary-color;
   margin-left: $space / 2;
   margin-right: $space / 2;
 
   &:hover {
-    border-color: $secondary-color;
+    border-color: $module-about-secondary-color;
   }
 }
 
+.module-about-title {
+  font-size: $module-about-title-size;
+}
+
 .module-about-content {
-  font-size: 20px;
+  font-size: $module-about-font-size;
   padding-top: $module-about-space;
   padding-bottom: $module-about-space;
   border-bottom-style: solid;
-  border-bottom-color: $primary-font-color;
+  border-bottom-color: $module-about-secondary-color;
   border-bottom-width: 1px;
 }
 
@@ -37,6 +40,7 @@ $module-about-logo-size: 60px;
 }
 
 .module-about-download {
-  margin-top: $space;
+  margin-top: $space !important;
+  background-color: $module-about-secondary-color !important;
   cursor: pointer;
 }

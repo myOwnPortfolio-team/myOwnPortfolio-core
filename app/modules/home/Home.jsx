@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
+import { Button } from 'semantic-ui-react';
 
 import AnimatedBackground from './classes/AnimatedBackground.jsx';
 import Avatar from './classes/Avatar.jsx';
@@ -24,12 +25,12 @@ const Home = props => (
           deletingInterval={props.properties.typewriter.deletingInterval}
         />
       </div>
-      <button
-        className="module-home-button btn btn-default"
+      <Button
+        circular
+        icon="chevron down"
+        className="module-home-button"
         onClick={() => window.scrollTo(0, window.innerHeight)}
-      >
-        <i className="fa fa-chevron-down" aria-hidden="true" />
-      </button>
+      />
     </div>
     <AnimatedBackground properties={props.properties.background} />
   </div>

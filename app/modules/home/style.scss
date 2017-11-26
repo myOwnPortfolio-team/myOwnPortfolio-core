@@ -1,3 +1,5 @@
+// sass-lint:disable no-important
+
 $module-home-content-padding: 20%;
 $module-home-profile-picture-height: 200px;
 $module-home-button-size: 50px;
@@ -7,6 +9,7 @@ $module-home-button-size: 50px;
   width: 100%;
   text-align: center;
   display: flex;
+  background-color: rgba($module-home-secondary-color, .25);
 }
 
 .module-home-content {
@@ -15,11 +18,11 @@ $module-home-button-size: 50px;
 }
 
 .module-home-profile-picture {
-  @include shadow-box($secondary-color);
+  @include shadow-box($module-home-secondary-color);
   width: $module-home-profile-picture-height;
   height: $module-home-profile-picture-height;
   border-radius: $module-home-profile-picture-height;
-  border-color: #eee;
+  border-color: $module-home-secondary-color;
   border-width: 2px;
   border-style: solid;
 }
@@ -47,11 +50,11 @@ $module-home-button-size: 50px;
   border-radius: $module-home-button-size;
   position: absolute;
   cursor: pointer;
-  background-color: $primary-color;
-  color: $primary-font-color;
-  opacity: .75;
+  background-color: $module-home-primary-color !important;
+  color: $module-home-secondary-color !important;
+  opacity: 1;
 
   &:hover {
-    opacity: 1;
+    opacity: .75;
   }
 }

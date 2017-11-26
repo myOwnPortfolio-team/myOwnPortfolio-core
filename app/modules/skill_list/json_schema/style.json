@@ -3,11 +3,43 @@
   "description": "schema du style du module skill_list",
   "type": "object",
   "properties": {
-    "none": {
-      "description": "none",
+    "module_skill_list_primary_color": {
+      "description": "primary color",
+      "type": "string",
+      "input": "color-picker"
+    },
+    "module_skill_list_secondary_color": {
+      "description": "secondary color",
+      "type": "string",
+      "input": "color-picker"
+    },
+    "module_skill_list_gauge_size": {
+      "description": "gauge size",
+      "type": "string",
+      "input": "input-text"
+    },
+    "module_skill_list_space": {
+      "description": "space",
+      "type": "string",
+      "input": "input-text"
+    },
+    "module_skill_font_size": {
+      "description": "font size",
+      "type": "string",
+      "input": "input-text"
+    },
+    "module_skill_title_size": {
+      "description": "title size",
       "type": "string",
       "input": "input-text"
     }
   },
-  "required": ["none"]
+  "required": [
+    "module_skill_list_primary_color",
+    "module_skill_list_secondary_color",
+    "module_skill_list_gauge_size",
+    "module_skill_list_space",
+    "module_skill_font_size",
+    "module_skill_title_size"
+  ]
 }

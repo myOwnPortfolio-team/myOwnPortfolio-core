@@ -3,11 +3,43 @@
   "description": "schema du style du module about",
   "type": "object",
   "properties": {
-    "none": {
-      "description": "none",
+    "module_about_primary_color": {
+      "description": "primary color",
+      "type": "string",
+      "input": "color-picker"
+    },
+    "module_about_secondary_color": {
+      "description": "secondary color",
+      "type": "string",
+      "input": "color-picker"
+    },
+    "module_about_font_size": {
+      "description": "size of the font",
+      "type": "string",
+      "input": "input-text"
+    },
+    "module_about_title_size": {
+      "description": "font size of the title",
+      "type": "string",
+      "input": "input-text"
+    },
+    "module_about_logo_size": {
+      "description": "size of the logos",
+      "type": "string",
+      "input": "input-text"
+    },
+    "module_about_space": {
+      "description": "lenght of the spaces",
       "type": "string",
       "input": "input-text"
     }
   },
-  "required": ["none"]
+  "required": [
+    "module_about_primary_color",
+    "module_about_secondary_color",
+    "module_about_font_size",
+    "module_about_title_size",
+    "module_about_logo_size",
+    "module_about_space"
+  ]
 }

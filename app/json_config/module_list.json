@@ -40,6 +40,8 @@
     "name": "Formation",
     "module_path": "./modules/rubric/Rubric.jsx",
     "content_path": "./json_config/content/fr/rubric_education.json",
+    "properties_path": "./json_config/properties/rubric_education.json",
+    "style_path": "./json_config/style/rubric_education.json",
     "referenced": true
   },
   {

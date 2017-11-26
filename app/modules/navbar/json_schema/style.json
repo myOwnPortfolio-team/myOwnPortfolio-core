@@ -17,7 +17,17 @@
       "description": "navbar font color",
       "type": "string",
       "input": "color-picker"
+    },
+    "module_navbar_font_size": {
+      "description": "navbar font size",
+      "type": "string",
+      "input": "input-text"
     }
   },
-  "required": ["module_navbar_height", "module_navbar_background_color", "module_navbar_font_color"]
+  "required": [
+    "module_navbar_height",
+    "module_navbar_background_color",
+    "module_navbar_font_color",
+    "module_navbar_font_size"
+  ]
 }
