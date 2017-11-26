@@ -28,6 +28,13 @@ const generateRubric = (rubric, properties) => rubric.map((block, pos) => (
       color: properties.primary_color,
       backgroundColor: properties.secondary_color,
     }}
+    contentStyle={{
+      backgroundColor: properties.secondary_color,
+      borderBottomColor: properties.primary_color,
+      borderBottomWidth: 2,
+      borderBottomStyle: 'solid',
+      boxShadow: '',
+    }}
   >
     {blockContent(block.content)}
   </TimelineEvent>
