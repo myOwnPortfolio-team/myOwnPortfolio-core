@@ -8,6 +8,28 @@ $module-rubric-timeline-space-desktop: 10%;
   padding-top: $module-rubric-space;
   padding-bottom: $module-rubric-space;
   background-color: $module-rubric-primary-color;
+
+  .module-rubric-block-title {
+    font-size: $module-rubric-font-size;
+    font-weight: bold;
+  }
+
+  .module-rubric-block-subtitle {
+    font-size: $module-rubric-font-size;
+    font-style: oblique;
+  }
+
+  .module-rubric-block-date {
+    font-size: $module-rubric-font-size;
+  }
+
+  .module-rubric-block-icon {
+    margin: auto;
+  }
+
+  .module-rubric-block-content {
+    font-size: $module-rubric-font-size;
+  }
 }
 
 .module-rubric-title {

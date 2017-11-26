@@ -5,29 +5,31 @@ import ReactMarkdown from 'react-markdown';
 
 const slug = require('slug');
 
-const generateContent = blockList => blockList.map((block, pos) => (
-  <div
-    className="module-rubric-block"
-    key={slug(`module rubric block ${block.title} ${pos}`, { lower: true, replacement: '_' })}
-  >
-    <div className="module-rubric-descriptor">
-      {block.title}
-    </div>
-    <ReactMarkdown
-      className="module-rubric-content"
-      source={block.content.join(' \n')}
-    />
-  </div>
-));
+const blockTitle = title => <div className="module-rubric-block-title">{title}</div>;
+const blockDate = date => <div className="module-rubric-block-date">{date}</div>;
+const blockSubtitle = subtitle => <div className="module-rubric-block-subtitle">{subtitle}</div>;
+const blockIcon = icon => <Icon className="module-rubric-block-icon" name={icon} />;
+const blockContent = content => (
+  <ReactMarkdown
+    className="module-rubric-block-content"
+    source={content.join(' \n')}
+  />
+);
 
-const generateRubric = rubric => rubric.map((obj, pos) => (
+const generateRubric = (rubric, properties) => rubric.map((block, pos) => (
   <TimelineEvent
-    title={obj.title}
-    createdAt={obj.date}
+    title={blockTitle(block.title)}
+    subtitle={blockSubtitle(block.subtitle)}
+    createdAt={blockDate(block.date)}
     key={slug(`module rubric block ${pos}`, { lower: true, replacement: '_' })}
-    icon={<Icon name="graduation" />}
+    icon={blockIcon(block.icon)}
+    bubbleStyle={{
+      borderColor: properties.primary_color,
+      color: properties.primary_color,
+      backgroundColor: properties.secondary_color,
+    }}
   >
-    {generateContent(obj.block)}
+    {blockContent(block.content)}
   </TimelineEvent>
 ));
 
@@ -37,14 +39,12 @@ const Rubric = props => (
     className="module-rubric"
     data-aos={props.properties.rubric_animation}
   >
-    <h2
-      className="module-rubric-title"
-    >
+    <h2 className="module-rubric-title">
       {props.content.title}
     </h2>
 
     <Timeline>
-      {generateRubric(props.content.rubric)}
+      {generateRubric(props.content.rubric, props.properties.rubric_timeline)}
     </Timeline>
   </section>
 );

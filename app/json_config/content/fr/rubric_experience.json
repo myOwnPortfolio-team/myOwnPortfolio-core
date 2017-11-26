@@ -2,55 +2,30 @@
   "title": "EXPÉRIENCES",
   "rubric": [
     {
-      "date": "2017",
-      "title": "Saagie",
-      "block": [
-        {
-          "title": "Poste",
-          "content": ["Développeur"]
-        },
-        {
-          "title": "Détails",
-          "content": ["Depuis janvier 2017 - _Rouen, FRANCE_"]
-        },
-        {
-          "title": "Description",
-          "content": [
-            "__Resumé__ : Projet de Deep Learning, en méthode agile, pour l'entreprise Saagie dans un groupe de 9 élèves ingénieurs à l'INSA de Rouen. \n",
-            "__Role__ : Développeur Full-Stack / Responsable infrastructure réseau et sytème d'exploitation de l'environnement de travail. \n",
-            "__Technologies__ : TensorFlow, Angular2 \n",
-            "__Contrôle de qualité__ : ISO 9001:2015 \n"
-          ]
-        }
+      "date": "Depuis janvier 2017",
+      "title": "Développeur",
+      "subtitle": "Saagie, Rouen FRANCE",
+      "icon": "code",
+      "content": [
+        "__Resumé__ : Projet de Deep Learning, en méthode agile, pour l'entreprise Saagie dans un groupe de 9 élèves ingénieurs à l'INSA de Rouen. \n",
+        "__Role__ : Développeur Full-Stack / Responsable infrastructure réseau et sytème d'exploitation de l'environnement de travail. \n",
+        "__Technologies__ : TensorFlow, Angular2 \n",
+        "__Contrôle de qualité__ : ISO 9001:2015 \n"
       ]
     },
     {
-      "date": "2015",
-      "title": "Espace Courbe",
-      "block": [
-        {
-          "title": "Poste",
-          "content": ["Développeur web junior"]
-        },
-        {
-          "title": "Détails",
-          "content": ["Avril 2015 à juin 2015 - _Montréal, CANADA_"]
-        }
-      ]
+      "date": "Avril 2015 à juin 2015",
+      "title": "Développeur web junior",
+      "subtitle": "Espace Courbe, Montréal CANADA",
+      "icon": "code",
+      "content": []
     },
     {
-      "date": "2013",
-      "title": "Mairie de Ymare",
-      "block": [
-        {
-          "title": "Poste",
-          "content": ["Agent de voierie"]
-        },
-        {
-          "title": "Détails",
-          "content": ["Été 2013 - _Ymare, FRANCE_"]
-        }
-      ]
+      "date": "Été 2013",
+      "title": "Agent de voierie",
+      "subtitle": "Mairie de Ymare, Ymare FRANCE",
+      "icon": "code",
+      "content": []
     }
   ]
 }
