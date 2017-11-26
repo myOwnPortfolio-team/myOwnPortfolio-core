@@ -3,10 +3,19 @@
   "description": "schema du style du module home",
   "type": "object",
   "properties": {
-    "none": {
-      "description": "none",
+    "module_navbar_home_primary_color": {
+      "description": "navbar height",
       "type": "string",
-      "input": "input-text"
+      "input": "color-picker"
+    },
+    "module_navbar_home_secondary_color": {
+      "description": "navbar backgroung color",
+      "type": "string",
+      "input": "color-picker"
     }
-  }
+  },
+  "required": [
+    "module_navbar_home_primary_color",
+    "module_navbar_home_secondary_color"
+  ]
 }

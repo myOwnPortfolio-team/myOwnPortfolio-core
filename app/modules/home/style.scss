@@ -1,3 +1,5 @@
+// sass-lint:disable no-important
+
 $module-home-content-padding: 20%;
 $module-home-profile-picture-height: 200px;
 $module-home-button-size: 50px;
@@ -47,8 +49,8 @@ $module-home-button-size: 50px;
   border-radius: $module-home-button-size;
   position: absolute;
   cursor: pointer;
-  background-color: $primary-color;
-  color: $primary-font-color;
+  background-color: $module-navbar-home-primary-color !important;
+  color: $module-navbar-home-secondary-color !important;
   opacity: .75;
 
   &:hover {

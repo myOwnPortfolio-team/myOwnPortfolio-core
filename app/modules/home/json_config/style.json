@@ -1,1 +1,4 @@
-{}
+{
+  "module_navbar_home_primary_color": "$primary-color",
+  "module_navbar_home_secondary_color": "$secondary-color"
+}
