@@ -1,4 +1,4 @@
 {
-  "module_navbar_home_primary_color": "$primary-color",
-  "module_navbar_home_secondary_color": "$secondary-color"
+  "module_home_primary_color": "$primary-color",
+  "module_home_secondary_color": "$secondary-color"
 }
