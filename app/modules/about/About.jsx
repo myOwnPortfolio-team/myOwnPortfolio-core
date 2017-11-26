@@ -24,7 +24,7 @@ const About = props => (
     data-aos={props.properties.module_animation}
   >
     <h2
-      className="module-about_title"
+      className="module-about-title"
       data-aos={props.properties.content_animation}
     >
       {props.content.title}

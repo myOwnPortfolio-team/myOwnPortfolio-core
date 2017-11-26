@@ -1,9 +1,4 @@
 // sass-lint:disable no-important
-
-$module-about-space: $space;
-$module-about-logo-size: 60px;
-$module-about-font-size: 1.5rem;
-
 .module-about {
   padding: $border-space;
   padding-top: $module-about-space;
@@ -27,6 +22,10 @@ $module-about-font-size: 1.5rem;
   }
 }
 
+.module-about-title {
+  font-size: $module-about-title-size;
+}
+
 .module-about-content {
   font-size: $module-about-font-size;
   padding-top: $module-about-space;
@@ -41,7 +40,6 @@ $module-about-font-size: 1.5rem;
 }
 
 .module-about-download {
-  font-size: $module-about-font-size !important;
   margin-top: $space !important;
   background-color: $module-about-secondary-color !important;
   cursor: pointer;
