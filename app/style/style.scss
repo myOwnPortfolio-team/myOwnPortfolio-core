@@ -10,10 +10,7 @@ body {
   overflow-y: auto;
 }
 
-div[class^='module_'] {
-  background-color: $secondary-color;
-
-  &:nth-child(2n+1) {
-    background-color: $primary-color;
-  }
+b,
+strong {
+  font-weight: bold;
 }

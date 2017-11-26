@@ -1,5 +1,5 @@
 {
-  "title": "EXPÉRIENCES",
+  "title": "Expérience",
   "rubric": [
     {
       "date": "Depuis janvier 2017",
@@ -14,11 +14,28 @@
       ]
     },
     {
-      "date": "Avril 2015 à juin 2015",
+      "date": "Juin 2017 - Juin Août 2017",
+      "title": "Développeur web FullStack",
+      "subtitle": "Signeer, London United-Kingdom",
+      "icon": "code",
+      "content": [
+        "Développement d'applications web utilisant les Frameworks Django et VueJS.\n",
+        "Exploitation de l'API Facebook."
+      ]
+    },
+    {
+      "date": "Avril 2015 - Juin 2015",
       "title": "Développeur web junior",
       "subtitle": "Espace Courbe, Montréal CANADA",
       "icon": "code",
-      "content": []
+      "content": [
+        "__Projets menés:__\n",
+        "* Application de messagerie instantanée avec authentification via les réseaux sociaux\n",
+        "* Application de géolocalisation d'utilisateurs et d'images à partir de la plateforme web Flickr\n",
+        "* Application de visualisation, et de capture, de contenu visuel ou audio, fonctionnant sans connexion internet\n\n",
+        "__Technologies utilisées:__",
+        "HTML5, CSS3, NodeJS, JavaScript, Bootstrap3, PhoneGap Cordova\n"
+      ]
     },
     {
       "date": "Été 2013",

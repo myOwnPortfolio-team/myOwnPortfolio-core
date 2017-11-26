@@ -33,6 +33,9 @@ const generateRubric = (rubric, properties) => rubric.map((block, pos) => (
       borderBottomColor: properties.primary_color,
       borderBottomWidth: 2,
       borderBottomStyle: 'solid',
+      borderLeftColor: properties.primary_color,
+      borderLeftWidth: 2,
+      borderLeftStyle: 'solid',
       boxShadow: '',
     }}
   >
