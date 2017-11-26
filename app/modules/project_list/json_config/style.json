@@ -1,3 +1,6 @@
 {
-  "none": "none"
+  "module_project_list_primary_color": "$secondary-color",
+  "module_project_list_secondary_color": "$primary-color",
+  "module_project_list_title_size": "$title-size",
+  "module_project_list_font_size": "$font-size"
 }
