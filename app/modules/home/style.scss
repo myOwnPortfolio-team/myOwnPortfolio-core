@@ -52,9 +52,9 @@ $module-home-button-size: 50px;
   cursor: pointer;
   background-color: $module-home-primary-color !important;
   color: $module-home-secondary-color !important;
-  opacity: .75;
+  opacity: 1;
 
   &:hover {
-    opacity: 1;
+    opacity: .75;
   }
 }

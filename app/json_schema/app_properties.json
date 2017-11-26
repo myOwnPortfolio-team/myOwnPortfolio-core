@@ -3,19 +3,19 @@
   "description": "Liste des propriétés globales de l'application",
   "type": "object",
   "properties": {
-    "primary-color": {
+    "primary_color": {
       "description": "couleur principale des composants",
       "type": "string"
     },
-    "secondary-color": {
+    "secondary_color": {
       "description": "couleur secondaire des composants",
       "type": "string"
     },
-    "primary-font-color": {
+    "primary_font_color": {
       "description": "couleur de police principale",
       "type": "string"
     },
-    "secondary-font-color": {
+    "secondary_font_color": {
       "description": "couleur secondaire des composants",
       "type": "string"
     },
@@ -32,14 +32,29 @@
         "minItems": 1,
         "uniqueItems": true
       }
+    },
+    "space": {
+      "description": "lenght of the spaces",
+      "type": "string"
+    },
+    "font_size": {
+      "description": "size of the font",
+      "type": "string"
+    },
+    "border_space": {
+      "description": "lenght of the spaces in the border",
+      "type": "string"
     }
   },
   "required": [
-    "primary-color",
-    "secondary-color",
-    "primary-font-color",
-    "secondary-font-color",
+    "primary_color",
+    "secondary_color",
+    "primary_font_color",
+    "secondary_font_color",
     "title",
-    "lang"
+    "lang",
+    "space",
+    "font_size",
+    "border_space"
   ]
 }

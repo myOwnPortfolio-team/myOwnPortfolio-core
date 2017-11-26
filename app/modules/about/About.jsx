@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Button } from 'semantic-ui-react';
 import LogoLink from './classes/LogoLink.jsx';
 
 const slug = require('slug');
@@ -43,12 +44,13 @@ const About = props => (
       {generateLogosLinks(props.properties.links)}
     </div>
 
-    <button
+    <Button
+      content={props.content.download}
+      icon="download"
+      labelPosition="left"
       className="btn module-about-download"
       onClick={() => window.open(props.properties.resume_link)}
-    >
-      {props.content.download}
-    </button>
+    />
   </section>
 );
 

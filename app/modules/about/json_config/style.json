@@ -1,3 +1,7 @@
 {
-  "none": "none"
+  "module_about_primary_color": "$primary-color",
+  "module_about_secondary_color": "$secondary-color",
+  "module_about_font_size": "$font-size",
+  "module_about_logo_size": "60px",
+  "module_about_space": "$space"
 }

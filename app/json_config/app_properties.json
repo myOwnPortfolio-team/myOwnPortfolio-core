@@ -1,11 +1,14 @@
 {
-  "primary-color": "#75a5b7",
-  "secondary-color": "#eee",
-  "primary-font-color": "#eee",
-  "secondary-font-color": "#000",
+  "primary_color": "#75a5b7",
+  "secondary_color": "#eee",
+  "primary_font_color": "#eee",
+  "secondary_font_color": "#000",
   "lang": [
     "fr",
     "en"
   ],
-  "title": "Thibault THÉOLOGIEN"
+  "title": "Thibault THÉOLOGIEN",
+  "space": "1.5rem",
+  "font_size": "1.5rem",
+  "border_space": "10%"
 }
