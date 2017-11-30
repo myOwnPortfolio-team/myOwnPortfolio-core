@@ -1,44 +1,44 @@
 [
   {
     "name": "navbar",
-    "module_path": "./modules/navbar/Navbar.jsx",
+    "module_path": "./modules/navbar/index.jsx",
     "referenced": false
   },
   {
     "name": "Accueil",
-    "module_path": "./modules/home/Home.jsx",
+    "module_path": "./modules/home/index.jsx",
     "content_path": "./json_config/content/fr/home.json",
     "properties_path": "./json_config/properties/home.json",
     "referenced": true
   },
   {
     "name": "À propos de moi",
-    "module_path": "./modules/about/About.jsx",
+    "module_path": "./modules/about/index.jsx",
     "content_path": "./json_config/content/fr/about.json",
     "properties_path": "./json_config/properties/about.json",
     "referenced": true
   },
   {
     "name": "Projets",
-    "module_path": "./modules/project_list/ProjectList.jsx",
+    "module_path": "./modules/project_list/index.jsx",
     "content_path": "./json_config/content/fr/project_list.json",
     "referenced": true
   },
   {
     "name": "Compétences",
-    "module_path": "./modules/skill_list/SkillList.jsx",
+    "module_path": "./modules/skill_list/index.jsx",
     "content_path": "./json_config/content/fr/skill_list.json",
     "referenced": true
   },
   {
     "name": "Experience",
-    "module_path": "./modules/rubric/Rubric.jsx",
+    "module_path": "./modules/rubric/index.jsx",
     "content_path": "./json_config/content/fr/rubric_experience.json",
     "referenced": true
   },
   {
     "name": "Formation",
-    "module_path": "./modules/rubric/Rubric.jsx",
+    "module_path": "./modules/rubric/index.jsx",
     "content_path": "./json_config/content/fr/rubric_education.json",
     "properties_path": "./json_config/properties/rubric_education.json",
     "style_path": "./json_config/style/rubric_education.json",
@@ -46,7 +46,7 @@
   },
   {
     "name": "footer",
-    "module_path": "./modules/footer/Footer.jsx",
+    "module_path": "./modules/footer/index.jsx",
     "referenced": false
   }
 ]
