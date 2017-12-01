@@ -15,7 +15,7 @@ install:
 script:
   - echo "no tests!"
 
-after_success:
-  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-  - docker build . -t macbootglass/myownportfolio-core
-  - docker push macbootglass/myownportfolio-core:latest
+# after_success:
+#   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+#   - docker build . -t macbootglass/myownportfolio-core
+#   - docker push macbootglass/myownportfolio-core:latest
