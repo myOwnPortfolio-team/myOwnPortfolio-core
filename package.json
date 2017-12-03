@@ -1,5 +1,5 @@
 {
-  "name": "myownportfolio",
+  "name": "myownportfolio-core",
   "version": "1.0.0",
   "description": "Permet la création rapide d'un portfolio à partir de modules ReactJS personnalisés",
   "main": "index.js",
@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/MacBootglass/myOwnPortfolio.git"
   },
-  "author": "thibault.theologien@insa-rouen.fr",
+  "author": "Thibault THEOLOGIEN <thibault.theologien@insa-rouen.fr>",
   "license": "ISC",
   "dependencies": {
     "ajv": "^5.5.0",
