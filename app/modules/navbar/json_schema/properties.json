@@ -8,10 +8,10 @@
       "type": "array",
       "items": {
         "type": "string",
-        "minItems": 0,
-        "input": "input-text",
-        "uniqueItems": false
-      }
+        "input": "input-text"
+      },
+      "minItems": 0,
+      "uniqueItems": false
     }
   },
   "required": ["icons_list"]
