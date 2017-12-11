@@ -28,10 +28,10 @@
       "type": "array",
       "items": {
         "description": "un nom de langue correspondant au dossier les contenant",
-        "type": "string",
-        "minItems": 1,
-        "uniqueItems": true
-      }
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "space": {
       "description": "lenght of the spaces",

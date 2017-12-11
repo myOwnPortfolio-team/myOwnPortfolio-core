@@ -29,10 +29,10 @@
           "href",
           "src",
           "alt"
-        ],
-        "minItems": 0,
-        "uniqueItems": false
-      }
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": false
     },
     "resume_link": {
       "description": "lien vers le cv à télécharger",
