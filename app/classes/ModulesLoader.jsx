@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Scroll from 'react-scroll';
 
+const Scroll = require('react-scroll');
 const slug = require('slug');
 const importation = require('../import.js');
 
