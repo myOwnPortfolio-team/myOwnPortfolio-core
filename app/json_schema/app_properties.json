@@ -5,49 +5,59 @@
   "properties": {
     "primary_color": {
       "description": "couleur principale des composants",
-      "type": "string"
+      "type": "string",
+      "input": "color-picker"
     },
     "secondary_color": {
       "description": "couleur secondaire des composants",
-      "type": "string"
+      "type": "string",
+      "input": "color-picker"
     },
     "primary_font_color": {
       "description": "couleur de police principale",
-      "type": "string"
+      "type": "string",
+      "input": "color-picker"
     },
     "secondary_font_color": {
-      "description": "couleur secondaire des composants",
-      "type": "string"
+      "description": "couleur de police secondaire",
+      "type": "string",
+      "input": "color-picker"
     },
     "title": {
       "description": "titre de l'application, affiché au niveau de l'onglet",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     },
     "lang": {
       "description": "tableau comprenant les noms des langues utilisées",
       "type": "array",
       "items": {
         "description": "un nom de langue correspondant au dossier les contenant",
-        "type": "string"
+        "type": "string",
+        "input": "input-text"
       },
       "minItems": 1,
       "uniqueItems": true
     },
     "space": {
-      "description": "lenght of the spaces",
-      "type": "string"
+      "description": "length of the spaces",
+      "type": "string",
+      "input": "input-text"
     },
     "font_size": {
       "description": "size of the font",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     },
     "title_size": {
       "description": "size of the titles",
-      "type": "string"
+      "type": "string",
+      "input": "input-text"
     },
     "border_space": {
-      "description": "lenght of the spaces in the border",
-      "type": "string"
+      "description": "length of the spaces in the border",
+      "type": "string",
+      "input": "input-text"
     }
   },
   "required": [
